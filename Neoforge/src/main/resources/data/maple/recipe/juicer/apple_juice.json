@@ -1,0 +1,12 @@
+{
+    "type": "maple:maple_juicer",
+    "category": "misc",
+    "ingredient": [
+        "minecraft:apple",
+        "minecraft:glass_bottle"
+    ],
+    "result": {
+        "count": 1,
+        "id": "maple:apple_juice"
+    }
+}

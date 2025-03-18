@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:sugar",
+    "maple:mochi",
+    "maple:soybean",
+    "minecraft:bamboo"
+  ],
+  "result": {
+    "count": 1,
+    "id": "maple:kinako_dango"
+  }
+}

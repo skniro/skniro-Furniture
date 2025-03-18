@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "PPP",
+        "P P"
+    ],
+    "key": {
+        "P": "maple:ginkgo_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "maple:ginkgo_plank_chair"
+    }
+}
