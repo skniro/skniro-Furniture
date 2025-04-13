@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/ginkgo_green_cushion"
+    "model": "skniro_furniture:block/ginkgo_green_cushion"
   }
 }

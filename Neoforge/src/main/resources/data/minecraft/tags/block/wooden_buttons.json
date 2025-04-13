@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:bamboo_button",
-    "maple:cherry_button",
-    "maple:maple_button"
+    "skniro_furniture:bamboo_button",
+    "skniro_furniture:cherry_button",
+    "skniro_furniture:maple_button"
   ]
 }

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_pressure_plate",
-    "maple:bamboo_pressure_plate",
-    "maple:cherry_pressure_plate"
+    "skniro_furniture:maple_pressure_plate",
+    "skniro_furniture:bamboo_pressure_plate",
+    "skniro_furniture:cherry_pressure_plate"
   ]
 }

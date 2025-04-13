@@ -1,6 +1,0 @@
-{
-  "parent": "maple:block/table",
-  "textures": {
-    "plank": "maple:block/ginkgo_planks"
-  }
-}

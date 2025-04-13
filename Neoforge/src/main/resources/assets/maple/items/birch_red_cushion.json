@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/birch_red_cushion"
+    "model": "skniro_furniture:block/birch_red_cushion"
   }
 }

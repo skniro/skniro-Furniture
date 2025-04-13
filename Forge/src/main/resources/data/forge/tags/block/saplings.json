@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_sapling",
-    "maple:cherry_sapling"
+    "skniro_furniture:maple_sapling",
+    "skniro_furniture:cherry_sapling"
   ]
 }

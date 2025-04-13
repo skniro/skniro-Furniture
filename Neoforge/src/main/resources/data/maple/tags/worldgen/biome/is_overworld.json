@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_grove",
-    "maple:sakura"
+    "skniro_furniture:maple_grove",
+    "skniro_furniture:sakura"
   ]
 }

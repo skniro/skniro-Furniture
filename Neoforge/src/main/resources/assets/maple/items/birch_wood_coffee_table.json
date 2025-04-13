@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/birch_wood_coffee_table"
+    "model": "skniro_furniture:block/birch_wood_coffee_table"
   }
 }

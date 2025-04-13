@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "maple:block/ginkgo_hanging_sign"
+      "model": "skniro_furniture:block/ginkgo_hanging_sign"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/bamboo_wood_chair"
+    "model": "skniro_furniture:block/bamboo_wood_chair"
   }
 }

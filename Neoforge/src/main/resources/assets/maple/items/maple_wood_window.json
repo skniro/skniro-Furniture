@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/maple_wood_window"
+    "model": "skniro_furniture:block/maple_wood_window"
   }
 }

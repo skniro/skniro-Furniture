@@ -1,8 +1,8 @@
 {
   "values": [
-    "maple:ginkgo_log",
-    "maple:ginkgo_wood",
-    "maple:stripped_ginkgo_log",
-    "maple:stripped_ginkgo_wood"
+    "skniro_furniture:ginkgo_log",
+    "skniro_furniture:ginkgo_wood",
+    "skniro_furniture:stripped_ginkgo_log",
+    "skniro_furniture:stripped_ginkgo_wood"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "maple:block/bamboo_sign"
+      "model": "skniro_furniture:block/bamboo_sign"
     }
   }
 }

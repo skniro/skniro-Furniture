@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_log",
-    "maple:maple_wood",
-    "maple:stripped_maple_log",
-    "maple:stripped_maple_wood",
-    "maple:cherry_log",
-    "maple:cherry_wood",
-    "maple:stripped_cherry_log",
-    "maple:stripped_cherry_wood",
-    "maple:bamboo_block",
-    "maple:stripped_bamboo_block"
+    "skniro_furniture:maple_log",
+    "skniro_furniture:maple_wood",
+    "skniro_furniture:stripped_maple_log",
+    "skniro_furniture:stripped_maple_wood",
+    "skniro_furniture:cherry_log",
+    "skniro_furniture:cherry_wood",
+    "skniro_furniture:stripped_cherry_log",
+    "skniro_furniture:stripped_cherry_wood",
+    "skniro_furniture:bamboo_block",
+    "skniro_furniture:stripped_bamboo_block"
   ]
 }

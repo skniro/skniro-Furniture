@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/warped_table"
+    "model": "skniro_furniture:block/warped_table"
   }
 }

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/dark_oak_white_cushion"
+    "model": "skniro_furniture:block/dark_oak_white_cushion"
   }
 }

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_slab",
-    "maple:bamboo_slab",
-    "maple:cherry_slab"
+    "skniro_furniture:maple_slab",
+    "skniro_furniture:bamboo_slab",
+    "skniro_furniture:cherry_slab"
   ]
 }

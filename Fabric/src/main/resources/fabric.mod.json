@@ -9,24 +9,21 @@
   ],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/maple/icon.png",
+  "icon": "assets/skniro_furniture/icon.png",
   "environment": "*",
   "entrypoints": {
-    "terrablender": [
-      "com.skniro.maple.Maple"
-    ],
     "client": [
-      "com.skniro.maple.client.MapleClient"
+      "com.skniro.skniro_furniture.client.MapleClient"
     ],
     "main": [
-      "com.skniro.maple.Maple"
+      "com.skniro.skniro_furniture.Furniture"
     ],
     "fabric-datagen": [
-      "com.skniro.maple.datagen.MapleDataGeneration"
+      "com.skniro.skniro_furniture.datagen.MapleDataGeneration"
     ]
   },
   "mixins": [
-    "maple.mixins.json"
+    "skniro_furniture.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.9",

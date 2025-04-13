@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:maple_trapdoor",
-    "maple:bamboo_trapdoor",
-    "maple:cherry_trapdoor"
+    "skniro_furniture:maple_trapdoor",
+    "skniro_furniture:bamboo_trapdoor",
+    "skniro_furniture:cherry_trapdoor"
   ]
 }

@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:bamboo_planks",
-    "maple:cherry_planks",
-    "maple:maple_planks"
+    "skniro_furniture:bamboo_planks",
+    "skniro_furniture:cherry_planks",
+    "skniro_furniture:maple_planks"
   ]
 }

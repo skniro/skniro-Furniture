@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/ginkgo_plank_coffee_table"
+    "model": "skniro_furniture:block/ginkgo_plank_coffee_table"
   }
 }

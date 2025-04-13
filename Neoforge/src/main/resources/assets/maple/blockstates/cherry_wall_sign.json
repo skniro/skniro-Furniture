@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "maple:block/cherry_sign"
+      "model": "skniro_furniture:block/cherry_sign"
     }
   }
 }

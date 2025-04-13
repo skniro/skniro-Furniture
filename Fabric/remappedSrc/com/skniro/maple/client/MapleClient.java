@@ -137,8 +137,8 @@ public class MapleClient implements ClientModInitializer {
 
         FluidRenderHandlerRegistry.INSTANCE.register(MapleFluids.STILL_Hot_Spring, MapleFluids.FLOWING_Hot_Spring,
                 new SimpleFluidRenderHandler(
-                        ResourceLocation.parse("maple:block/spring_still"),
-                        ResourceLocation.parse("maple:block/spring_flow"),
+                        ResourceLocation.parse("skniro_furniture:block/spring_still"),
+                        ResourceLocation.parse("skniro_furniture:block/spring_flow"),
                         0x5DB7EF
                 ));
 

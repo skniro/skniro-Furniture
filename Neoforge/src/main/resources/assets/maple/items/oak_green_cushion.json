@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/oak_green_cushion"
+    "model": "skniro_furniture:block/oak_green_cushion"
   }
 }

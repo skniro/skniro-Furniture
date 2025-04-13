@@ -1,19 +1,19 @@
 {
   "values": [
-    "maple:green_plaster",
-    "maple:plaster",
-    "maple:orange_plaster",
-    "maple:magenta_plaster",
-    "maple:light_blue_plaster",
-    "maple:yellow_plaster",
-    "maple:lime_plaster",
-    "maple:pink_plaster",
-    "maple:gray_plaster",
-    "maple:light_gray_plaster",
-    "maple:cyan_plaster",
-    "maple:purple_plaster",
-    "maple:blue_plaster",
-    "maple:brown_plaster",
-    "maple:red_plaster"
+    "skniro_furniture:green_plaster",
+    "skniro_furniture:plaster",
+    "skniro_furniture:orange_plaster",
+    "skniro_furniture:magenta_plaster",
+    "skniro_furniture:light_blue_plaster",
+    "skniro_furniture:yellow_plaster",
+    "skniro_furniture:lime_plaster",
+    "skniro_furniture:pink_plaster",
+    "skniro_furniture:gray_plaster",
+    "skniro_furniture:light_gray_plaster",
+    "skniro_furniture:cyan_plaster",
+    "skniro_furniture:purple_plaster",
+    "skniro_furniture:blue_plaster",
+    "skniro_furniture:brown_plaster",
+    "skniro_furniture:red_plaster"
   ]
 }

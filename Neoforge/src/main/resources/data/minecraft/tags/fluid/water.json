@@ -2,7 +2,7 @@
   "replace": false,
   "values":
   [
-    "maple:hot_spring",
-    "maple:flowing_hot_spring_water"
+    "skniro_furniture:hot_spring",
+    "skniro_furniture:flowing_hot_spring_water"
   ]
 }

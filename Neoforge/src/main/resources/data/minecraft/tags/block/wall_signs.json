@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "maple:bamboo_wall_sign",
-    "maple:cherry_wall_sign",
-    "maple:maple_wall_sign"
+    "skniro_furniture:bamboo_wall_sign",
+    "skniro_furniture:cherry_wall_sign",
+    "skniro_furniture:maple_wall_sign"
   ]
 }

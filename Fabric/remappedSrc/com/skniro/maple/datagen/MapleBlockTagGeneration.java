@@ -11,7 +11,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import java.util.concurrent.CompletableFuture;
 
-import static com.skniro.maple.datagen.MapleBlockTagGeneration.ModBlockTags.*;
 import static net.minecraft.tags.BlockTags.*;
 
 

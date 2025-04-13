@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "maple:block/jungle_wood_chair",
+      "model": "skniro_furniture:block/jungle_wood_chair",
       "y": 90
     },
     "facing=north": {
-      "model": "maple:block/jungle_wood_chair"
+      "model": "skniro_furniture:block/jungle_wood_chair"
     },
     "facing=south": {
-      "model": "maple:block/jungle_wood_chair",
+      "model": "skniro_furniture:block/jungle_wood_chair",
       "y": 180
     },
     "facing=west": {
-      "model": "maple:block/jungle_wood_chair",
+      "model": "skniro_furniture:block/jungle_wood_chair",
       "y": 270
     }
   }

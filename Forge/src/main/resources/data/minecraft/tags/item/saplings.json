@@ -1,9 +1,9 @@
 {
   "values": [
-    "maple:maple_sapling",
-    "maple:cherry_sapling",
-    "maple:ginkgo_sapling",
-    "maple:sakura_sapling",
-    "maple:red_maple_sapling"
+    "skniro_furniture:maple_sapling",
+    "skniro_furniture:cherry_sapling",
+    "skniro_furniture:ginkgo_sapling",
+    "skniro_furniture:sakura_sapling",
+    "skniro_furniture:red_maple_sapling"
   ]
 }

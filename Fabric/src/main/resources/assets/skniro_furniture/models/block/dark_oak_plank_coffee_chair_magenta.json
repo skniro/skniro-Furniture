@@ -1,0 +1,7 @@
+{
+  "parent": "skniro_furniture:block/coffee_chair",
+  "textures": {
+    "wool": "minecraft:block/magenta_wool",
+    "plank": "minecraft:block/dark_oak_planks"
+  }
+}

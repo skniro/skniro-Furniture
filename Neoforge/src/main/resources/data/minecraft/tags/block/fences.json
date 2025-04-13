@@ -1,7 +1,7 @@
 {
   "values": [
-    "maple:maple_fence",
-    "maple:cherry_fence",
-    "maple:bamboo_fence"
+    "skniro_furniture:maple_fence",
+    "skniro_furniture:cherry_fence",
+    "skniro_furniture:bamboo_fence"
   ]
 }

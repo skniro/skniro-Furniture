@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "maple:deepslate_salt_ore",
-    "maple:salt_ore",
-    "maple:diamond_ore",
-    "maple:emerald_ore",
-    "maple:gold_ore",
-    "maple:redstone_ore"
+    "skniro_furniture:deepslate_salt_ore",
+    "skniro_furniture:salt_ore",
+    "skniro_furniture:diamond_ore",
+    "skniro_furniture:emerald_ore",
+    "skniro_furniture:gold_ore",
+    "skniro_furniture:redstone_ore"
   ]
 }

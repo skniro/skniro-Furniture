@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "maple:block/warped_lime_cushion"
+    "model": "skniro_furniture:block/warped_lime_cushion"
   }
 }
