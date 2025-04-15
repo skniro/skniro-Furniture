@@ -2,9 +2,12 @@ package com.skniro.skniro_furniture.client;
 
 import com.skniro.skniro_furniture.FurnitureContent;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
+import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class MapleClient implements ClientModInitializer {
@@ -57,5 +60,6 @@ public class MapleClient implements ClientModInitializer {
 
         FurnitureContent.registerClientEntityRenderer();
         FurnitureContent.registerClientParticle();
+        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
     }
 }

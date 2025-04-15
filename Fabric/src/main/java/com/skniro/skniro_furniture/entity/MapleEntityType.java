@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.entity;
 
 import com.mojang.datafixers.types.Type;
 import com.skniro.skniro_furniture.Furniture;
+import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
 import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
 import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
 import net.minecraft.datafixer.TypeReferences;

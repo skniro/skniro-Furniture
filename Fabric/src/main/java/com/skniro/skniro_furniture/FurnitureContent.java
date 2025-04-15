@@ -1,6 +1,8 @@
 package com.skniro.skniro_furniture;
 
 
+import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
+import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
@@ -10,6 +12,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
 
 public class FurnitureContent {
@@ -20,6 +23,7 @@ public class FurnitureContent {
     }
     public static void registerBlock(){
         MapleFurnitureBlocks.registerCushionBlocks();
+        FurnitureBlockEntityType.registerMapleBlockEntityType();
     }
 
     public static void registerFluid(){
@@ -340,6 +344,207 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.END_TABLE_CHERRY);
             content.add(MapleFurnitureBlocks.END_TABLE_MAPLE);
             content.add(MapleFurnitureBlocks.END_TABLE_GINKGO);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_COFFEE_CHAIR_BLACK);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_WHITE);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_ORANGE);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_MAGENTA);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_YELLOW);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_LIME);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_PINK);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_GRAY);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_CYAN);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_PURPLE);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_BLUE);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_BROWN);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_GREEN);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_RED);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_BLACK);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_WOOD_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_PLANK_TRIPLE_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_WOOD_TRIPLE_CABINET);
+
         });
 
 
@@ -372,6 +577,7 @@ public class FurnitureContent {
     public static void registerClientEntityRenderer() {
         EntityRendererRegistry.register(MapleEntityType.CHAIR_ENTITY, ChairRenderer::new);
         EntityRendererRegistry.register(MapleEntityType.Cushion_ENTITY, CushinoRenderer::new);
+
 
 
     }

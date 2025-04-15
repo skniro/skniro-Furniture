@@ -1,6 +1,6 @@
 package com.skniro.skniro_furniture.item;
 
-import com.skniro.skniro_furniture.Maple;
+import com.skniro.skniro_furniture.Furniture;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -14,8 +14,8 @@ import java.util.function.Function;
 public class MapleItems {
 
     private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        Item item = factory.apply(settings.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Maple.MOD_ID, name))));
-        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Maple.MOD_ID, name)), item);
+        Item item = factory.apply(settings.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name))));
+        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name)), item);
     }
 
     private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
@@ -25,6 +25,6 @@ public class MapleItems {
     }
 
     public static void registerModItems() {
-        Maple.LOGGER.info("Registering Mod Items for " + Maple.MOD_ID);
+        Furniture.LOGGER.info("Registering Mod Items for " + Furniture.MOD_ID);
     }
 }

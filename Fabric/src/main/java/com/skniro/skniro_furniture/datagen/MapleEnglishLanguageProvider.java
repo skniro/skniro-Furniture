@@ -340,11 +340,11 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_MAPLE,"Maple End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_GINKGO,"Ginkgo End Table");
 
-        try {
+/*        try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);
-        }
+        }*/
     }
 }

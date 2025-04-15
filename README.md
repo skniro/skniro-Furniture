@@ -1,5 +1,4 @@
-# GrowableOres
-GrowableOres Mod is a modification that contains a good amount of content to help to farm ores.
+# skniro furniture
 ![GrowableOres](https://s2.loli.net/2023/07/18/BlKiGRb9VecTmwz.png)
 ![Downloads](https://cf.way2muchnoise.eu/885625.svg)  ![curseforge](https://cf.way2muchnoise.eu/versions/885625.svg)
 

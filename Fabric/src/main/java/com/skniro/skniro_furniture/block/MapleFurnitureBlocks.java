@@ -547,6 +547,31 @@ public class MapleFurnitureBlocks {
     public static final Block WARPED_PLANK_COFFEE_CHAIR_RED = registerBlock("warped_plank_coffee_chair_red", CoffeeChairBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
     public static final Block WARPED_PLANK_COFFEE_CHAIR_BLACK = registerBlock("warped_plank_coffee_chair_black", CoffeeChairBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
 
+
+    //triple cabinet
+    public static final Block OAK_PLANK_TRIPLE_CABINET = registerBlock("oak_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_WOOD_TRIPLE_CABINET = registerBlock("oak_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANK_TRIPLE_CABINET = registerBlock("spruce_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_TRIPLE_CABINET = registerBlock("spruce_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANK_TRIPLE_CABINET = registerBlock("birch_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_TRIPLE_CABINET = registerBlock("birch_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANK_TRIPLE_CABINET = registerBlock("jungle_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_TRIPLE_CABINET = registerBlock("jungle_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANK_TRIPLE_CABINET = registerBlock("acacia_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_TRIPLE_CABINET = registerBlock("acacia_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANK_TRIPLE_CABINET = registerBlock("dark_oak_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_TRIPLE_CABINET = registerBlock("dark_oak_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANK_TRIPLE_CABINET = registerBlock("mangrove_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_TRIPLE_CABINET = registerBlock("mangrove_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANK_TRIPLE_CABINET = registerBlock("cherry_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_TRIPLE_CABINET = registerBlock("cherry_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANK_TRIPLE_CABINET = registerBlock("bamboo_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_WOOD_TRIPLE_CABINET = registerBlock("bamboo_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANK_TRIPLE_CABINET = registerBlock("crimson_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_WOOD_TRIPLE_CABINET = registerBlock("crimson_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANK_TRIPLE_CABINET = registerBlock("warped_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_WOOD_TRIPLE_CABINET = registerBlock("warped_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));
         registerBlockItem(name, block);

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/spruce_plank_coffee_chair_light_gray",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/spruce_plank_coffee_chair_light_gray"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/spruce_plank_coffee_chair_light_gray",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/spruce_plank_coffee_chair_light_gray",
+      "y": 270
+    }
+  }
+}
