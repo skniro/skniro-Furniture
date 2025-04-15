@@ -55,6 +55,8 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
 
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_WOOD_TRIPLE_CABINET, renderLayer3);
+
 
         RenderLayer renderLayer4 = RenderLayer.getTranslucent();
 

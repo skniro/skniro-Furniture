@@ -1,7 +1,6 @@
 package com.skniro.skniro_furniture.block.renderer;
 
 import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
-import com.skniro.skniro_furniture.block.init.TripleCabinetBlock;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.OverlayTexture;
@@ -19,8 +18,8 @@ import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 
-public class CabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBlockEntity> {
-    public CabinetBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
+public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBlockEntity> {
+    public OtherCabinetBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
     }
 
     @Override
@@ -48,18 +47,17 @@ public class CabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBl
             }
         }
 
-        matrices.translate(0.46f, 0.80f, 0.7f);
-        matrices.scale(0.26f, 0.26f, 0.26f);
-        float spacing = 1.2f;
-        float spacing2 = 1.19f;
+        matrices.translate(0.2f, 0.95f, 0.2f); // 整体抬高
+        matrices.scale(0.25f, 0.25f, 0.25f); // 缩小尺寸
 
         for (int i = 0; i < 9; i++) {
             ItemStack stack = entity.getStack(i);
             if (!stack.isEmpty()) {
                 matrices.push();
-                int row = i / 3;
-                float col = (i % 3) * 1.1f;
-                matrices.translate((col - 1) * spacing2, -(row * spacing), 0);
+                float x = (i % 3) * 1.1f;
+                float z = (i / 3) * 1.1f;
+                matrices.translate(x, 0, z);
+                System.out.println("Slot " + i + ": " + stack);
                 itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
                 matrices.pop();
             }
