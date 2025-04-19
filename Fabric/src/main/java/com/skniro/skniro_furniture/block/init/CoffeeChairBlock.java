@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CoffeeChairBlock extends HorizontalFacingBlock {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 8.0, 14.0);
     public static final MapCodec<CoffeeChairBlock> CODEC = createCodec(CoffeeChairBlock::new);
     public CoffeeChairBlock(Settings settings) {
         super(settings);

@@ -27,7 +27,7 @@ public class Furniture implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM_GROUP, Maple_Group_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(MapleFurnitureBlocks.CUSHION_MAPLE_YELLOW))
+                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK))
                 .displayName(Text.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                 .build());
         FurnitureContent.registerItem();

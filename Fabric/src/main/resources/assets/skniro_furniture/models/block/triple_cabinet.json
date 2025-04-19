@@ -1,12 +1,14 @@
 {
-	"parent": "block/thin_block",
 	"credit": "Made with Blockbench",
+	"parent": "block/thin_block",
+	"textures": {
+		"particle": "#plank"
+	},
 	"elements": [
 		{
-			"from": [0, 1, 8],
+			"from": [0, 1, 10],
 			"to": [1, 15, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 15]},
-			"color": 8,
 			"faces": {
 				"north": {"uv": [0, 0, 1, 14], "texture": "#plank"},
 				"east": {"uv": [0, 0, 7, 14], "texture": "#plank"},
@@ -17,10 +19,9 @@
 			}
 		},
 		{
-			"from": [15, 1, 8],
+			"from": [15, 1, 10],
 			"to": [16, 15, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 15]},
-			"color": 8,
 			"faces": {
 				"north": {"uv": [0, 0, 1, 14], "texture": "#plank"},
 				"east": {"uv": [0, 0, 7, 14], "texture": "#plank"},
@@ -31,10 +32,9 @@
 			}
 		},
 		{
-			"from": [0, 0, 8],
+			"from": [0, 0, 10],
 			"to": [16, 1, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 15]},
-			"color": 7,
 			"faces": {
 				"north": {"uv": [0, 0, 16, 1], "texture": "#plank"},
 				"east": {"uv": [0, 0, 8, 1], "texture": "#plank"},
@@ -45,10 +45,9 @@
 			}
 		},
 		{
-			"from": [0, 15, 8],
+			"from": [0, 15, 10],
 			"to": [16, 16, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 15]},
-			"color": 7,
 			"faces": {
 				"north": {"uv": [0, 0, 16, 1], "texture": "#plank"},
 				"east": {"uv": [0, 0, 8, 1], "texture": "#plank"},
@@ -62,7 +61,6 @@
 			"from": [0, 1, 15],
 			"to": [16, 15, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 15]},
-			"color": 1,
 			"faces": {
 				"north": {"uv": [0, 0, 16, 14], "texture": "#plank"},
 				"east": {"uv": [0, 0, 1, 14], "texture": "#plank"},
@@ -73,10 +71,9 @@
 			}
 		},
 		{
-			"from": [1, 5, 8],
+			"from": [1, 5, 10],
 			"to": [15, 6, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [5, 7, 15]},
-			"color": 5,
 			"faces": {
 				"north": {"uv": [0, 0, 14, 1], "texture": "#plank"},
 				"east": {"uv": [0, 0, 7, 1], "texture": "#plank"},
@@ -87,10 +84,9 @@
 			}
 		},
 		{
-			"from": [1, 10, 8],
+			"from": [1, 10, 10],
 			"to": [15, 11, 15],
 			"rotation": {"angle": 0, "axis": "y", "origin": [5, 7, 15]},
-			"color": 5,
 			"faces": {
 				"north": {"uv": [0, 0, 14, 1], "texture": "#plank"},
 				"east": {"uv": [0, 0, 7, 1], "texture": "#plank"},

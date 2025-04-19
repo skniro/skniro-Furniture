@@ -163,22 +163,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_MANGROVE_GREEN, "Green Mangrove Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_MANGROVE_RED, "Red Mangrove Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_MANGROVE_BLACK, "Black Mangrove Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_WHITE, "White Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_ORANGE, "Orange Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_MAGENTA, "Magenta Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_LIGHT_BLUE, "Light Blue Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_YELLOW, "Yellow Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_LIME, "Lime Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_PINK, "Pink Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_GRAY, "Gray Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_LIGHT_GRAY, "Light Gray Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_CYAN, "Cyan Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_PURPLE, "Purple Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_BLUE, "Blue Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_BROWN, "Brown Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_GREEN, "Green Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_RED, "Red Maple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_MAPLE_BLACK, "Black Maple Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_WHITE, "White Cherry Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_ORANGE, "Orange Cherry Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_MAGENTA, "Magenta Cherry Cushion");
@@ -195,22 +179,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_GREEN, "Green Cherry Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_RED, "Red Cherry Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_CHERRY_BLACK, "Black Cherry Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_WHITE, "White Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_ORANGE, "Orange Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_MAGENTA, "Magenta Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_LIGHT_BLUE, "Light Blue Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_YELLOW, "Yellow Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_LIME, "Lime Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_PINK, "Pink Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_GRAY, "Gray Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_LIGHT_GRAY, "Light Gray Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_CYAN, "Cyan Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_PURPLE, "Purple Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_BLUE, "Blue Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_BROWN, "Brown Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_GREEN, "Green Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_RED, "Red Ginkgo Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_GINKGO_BLACK, "Black Ginkgo Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_BAMBOO_WHITE, "White Bamboo Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_BAMBOO_ORANGE, "Orange Bamboo Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_BAMBOO_MAGENTA, "Magenta Bamboo Cushion");
@@ -240,13 +208,9 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.TABLE_MANGROVE, "Mangrove Table");
         translationBuilder.add(MapleFurnitureBlocks.TABLE_BAMBOO, "Bamboo Table");
         translationBuilder.add(MapleFurnitureBlocks.TABLE_CHERRY, "Cherry Table");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_MAPLE, "Maple Table");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_GINKGO, "Ginkgo Table");
 
 
         //Window
-        translationBuilder.add(MapleFurnitureBlocks.Window_Wood_GINKGO, "Ginkgo Wood Window");
-        translationBuilder.add(MapleFurnitureBlocks.Window_Wood_MAPLE, "Maple Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_OAK, "Oak Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_BIRCH, "Birch Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_SPRUCE, "Spruce Wood Window");
@@ -267,8 +231,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_CHERRY, "Cherry Plank Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_CRIMSON, "Crimson Plank Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_WARPED, "Warped Plank Window");
-        translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_GINKGO, "Ginkgo Plank Window");
-        translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_MAPLE, "Maple Plank Window");
 
         //CoffeeTable
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK,"Oak Wood Coffee Table");
@@ -282,8 +244,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_MANGROVE,"Mangrove Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_BAMBOO,"Bamboo Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_CHERRY,"Cherry Wood Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_Wood_MAPLE,"Maple Wood Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_Wood_GINKGO,"Ginkgo Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK,"Oak Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE,"Spruce Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH,"Birch Plank Coffee Table");
@@ -295,8 +255,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_MANGROVE,"Mangrove Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_BAMBOO,"Bamboo Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_CHERRY,"Cherry Plank Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_MAPLE,"Maple Plank Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_GINKGO,"Ginkgo Plank Coffee Table");
 
         //Chair
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_OAK,"Oak Wood Chair");
@@ -310,8 +268,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_MANGROVE,"Mangrove Wood Chair");;
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_BAMBOO,"Bamboo Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_CHERRY,"Cherry Wood Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_Wood_MAPLE,"Maple Wood Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_Wood_GINKGO,"Ginkgo Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_OAK,"Oak Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_SPRUCE,"Spruce Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_BIRCH,"Birch Plank Chair");
@@ -323,8 +279,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_MANGROVE,"Mangrove Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_BAMBOO,"Bamboo Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_CHERRY,"Cherry Plank Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_MAPLE,"Maple Plank Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_GINKGO,"Ginkgo Plank Chair");
 
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_OAK,"Oak End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_SPRUCE,"Spruce End Table");
@@ -337,8 +291,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_MANGROVE,"Mangrove End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BAMBOO,"Bamboo End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CHERRY,"Cherry End Table");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_MAPLE,"Maple End Table");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_GINKGO,"Ginkgo End Table");
 
 /*        try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/en_us.existing.json").get();

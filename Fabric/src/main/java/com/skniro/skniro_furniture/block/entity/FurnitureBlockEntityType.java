@@ -40,7 +40,30 @@ public class FurnitureBlockEntityType {
                             MapleFurnitureBlocks.CHERRY_PLANK_TRIPLE_CABINET,
                             MapleFurnitureBlocks.CHERRY_WOOD_TRIPLE_CABINET,
                             MapleFurnitureBlocks.BAMBOO_PLANK_TRIPLE_CABINET,
-                            MapleFurnitureBlocks.BAMBOO_WOOD_TRIPLE_CABINET
+                            MapleFurnitureBlocks.BAMBOO_WOOD_TRIPLE_CABINET,
+                            MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.BIRCH_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.JUNGLE_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.JUNGLE_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.ACACIA_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.ACACIA_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.DARK_OAK_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.DARK_OAK_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.MANGROVE_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.MANGROVE_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.CRIMSON_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.CRIMSON_HYPHAE_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.WARPED_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.WARPED_HYPHAE_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.CHERRY_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.CHERRY_WOOD_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.BAMBOO_PLANKS_Four_Grid_Cabinet,
+                            MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet
+
                     )
             );
 

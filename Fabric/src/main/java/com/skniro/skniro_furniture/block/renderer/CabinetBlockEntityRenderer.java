@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.block.renderer;
 
 import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
+import com.skniro.skniro_furniture.block.init.FourGridCabinetBlock;
 import com.skniro.skniro_furniture.block.init.TripleCabinetBlock;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
@@ -28,10 +29,8 @@ public class CabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBl
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         Direction direction = entity.getCachedState().get(Properties.HORIZONTAL_FACING);
-
         matrices.push();
-        //if (entity.getCachedState().getBlock() instanceof TripleCabinetBlock) {
-        // 方向修正
+
         switch (direction) {
             case NORTH -> {}
             case SOUTH -> {
@@ -48,26 +47,46 @@ public class CabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBl
             }
         }
 
-        matrices.translate(0.46f, 0.80f, 0.7f);
-        matrices.scale(0.26f, 0.26f, 0.26f);
-        float spacing = 1.2f;
-        float spacing2 = 1.19f;
+        if (entity.getCachedState().getBlock() instanceof TripleCabinetBlock) {
+            float spacing = 1.2f;
+            float spacing2 = 1.19f;
+            matrices.translate(0.46f, 0.80f, 0.7f);
+            matrices.scale(0.26f, 0.26f, 0.26f);
 
-        for (int i = 0; i < 9; i++) {
-            ItemStack stack = entity.getStack(i);
-            if (!stack.isEmpty()) {
-                matrices.push();
-                int row = i / 3;
-                float col = (i % 3) * 1.1f;
-                matrices.translate((col - 1) * spacing2, -(row * spacing), 0);
-                itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
-                matrices.pop();
+            for (int i = 0; i < 9; i++) {
+                ItemStack stack = entity.getStack(i);
+                if (!stack.isEmpty()) {
+                    matrices.push();
+                    int row = i / 3;
+                    float col = (i % 3) * 1.1f;
+                    matrices.translate((col - 1) * spacing2, -(row * spacing), 0);
+                    itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+                    matrices.pop();
+                }
+            }
+        }
+
+        if (entity.getCachedState().getBlock() instanceof FourGridCabinetBlock) {
+            float spacing = 1.2f;
+            float spacing2 = 1.05f;
+            matrices.translate(0.68f, 0.70f, 0.7f);
+            matrices.scale(0.4f, 0.4f, 0.4f);
+
+            for (int i = 0; i < 4; i++) {
+                ItemStack stack = entity.getStack(i);
+                if (!stack.isEmpty()) {
+                    matrices.push();
+                    int row = i / 2;
+                    float col = (i % 2) * 1.1f;
+                    matrices.translate((col - 1) * spacing2, -(row * spacing), 0);
+                    itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+                    matrices.pop();
+                }
             }
         }
 
         matrices.pop();
     }
-    //}
 
     private int getLightLevel(World world, BlockPos pos) {
         int bLight = world.getLightLevel(LightType.BLOCK, pos);

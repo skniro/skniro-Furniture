@@ -1,6 +1,6 @@
 {
   "parent": "skniro_furniture:block/triple_cabinet",
   "textures": {
-    "plank": "minecraft:block/jungle_wood"
+    "plank": "minecraft:block/stripped_jungle_log"
   }
 }

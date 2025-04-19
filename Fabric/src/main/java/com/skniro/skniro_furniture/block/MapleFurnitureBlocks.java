@@ -183,24 +183,6 @@ public class MapleFurnitureBlocks {
     public static final Block CUSHION_MANGROVE_RED = registerBlock("mangrove_red_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS)));
     public static final Block CUSHION_MANGROVE_BLACK = registerBlock("mangrove_black_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS)));
 
-    // Maple Cushion Blocks
-    public static final Block CUSHION_MAPLE_WHITE = registerBlock("maple_white_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_ORANGE = registerBlock("maple_orange_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_MAGENTA = registerBlock("maple_magenta_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_LIGHT_BLUE = registerBlock("maple_light_blue_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_YELLOW = registerBlock("maple_yellow_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_LIME = registerBlock("maple_lime_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_PINK = registerBlock("maple_pink_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_GRAY = registerBlock("maple_gray_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_LIGHT_GRAY = registerBlock("maple_light_gray_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_CYAN = registerBlock("maple_cyan_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_PURPLE = registerBlock("maple_purple_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_BLUE = registerBlock("maple_blue_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_BROWN = registerBlock("maple_brown_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_GREEN = registerBlock("maple_green_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_RED = registerBlock("maple_red_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_MAPLE_BLACK = registerBlock("maple_black_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-
     // CHERRY Cushion Blocks
     public static final Block CUSHION_CHERRY_WHITE = registerBlock("cherry_white_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
     public static final Block CUSHION_CHERRY_ORANGE = registerBlock("cherry_orange_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
@@ -218,24 +200,6 @@ public class MapleFurnitureBlocks {
     public static final Block CUSHION_CHERRY_GREEN = registerBlock("cherry_green_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
     public static final Block CUSHION_CHERRY_RED = registerBlock("cherry_red_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
     public static final Block CUSHION_CHERRY_BLACK = registerBlock("cherry_black_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
-
-    // GINKGO Cushion Blocks
-    public static final Block CUSHION_GINKGO_WHITE = registerBlock("ginkgo_white_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_ORANGE = registerBlock("ginkgo_orange_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_MAGENTA = registerBlock("ginkgo_magenta_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_LIGHT_BLUE = registerBlock("ginkgo_light_blue_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_YELLOW = registerBlock("ginkgo_yellow_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_LIME = registerBlock("ginkgo_lime_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_PINK = registerBlock("ginkgo_pink_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_GRAY = registerBlock("ginkgo_gray_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_LIGHT_GRAY = registerBlock("ginkgo_light_gray_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_CYAN = registerBlock("ginkgo_cyan_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_PURPLE = registerBlock("ginkgo_purple_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_BLUE = registerBlock("ginkgo_blue_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_BROWN = registerBlock("ginkgo_brown_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_GREEN = registerBlock("ginkgo_green_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_RED = registerBlock("ginkgo_red_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
-    public static final Block CUSHION_GINKGO_BLACK = registerBlock("ginkgo_black_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
     // BAMBOO Cushion Blocks
     public static final Block CUSHION_BAMBOO_WHITE = registerBlock("bamboo_white_cushion", CushionBlock::new, (AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS)));
@@ -268,12 +232,8 @@ public class MapleFurnitureBlocks {
     public static final Block TABLE_MANGROVE = registerBlock("mangrove_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque()));
     public static final Block TABLE_BAMBOO = registerBlock("bamboo_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
     public static final Block TABLE_CHERRY = registerBlock("cherry_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
-    public static final Block TABLE_MAPLE = registerBlock("maple_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
-    public static final Block TABLE_GINKGO = registerBlock("ginkgo_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
 
     //Window
-    public static final Block Window_Wood_GINKGO = registerBlock("ginkgo_wood_window", (settings)-> new WindowBlock(settings, BlockSetType.OAK), AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
-    public static final Block Window_Wood_MAPLE = registerBlock("maple_wood_window", (settings)-> new WindowBlock(settings, BlockSetType.OAK), AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block Window_WOOD_OAK = registerBlock("oak_wood_window", (settings)-> new WindowBlock(settings, BlockSetType.OAK),AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block Window_WOOD_BIRCH = registerBlock("birch_wood_window", (settings)-> new WindowBlock(settings,BlockSetType.BIRCH),AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
     public static final Block Window_WOOD_SPRUCE = registerBlock("spruce_wood_window", (settings)-> new WindowBlock(settings,BlockSetType.SPRUCE),AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
@@ -294,12 +254,8 @@ public class MapleFurnitureBlocks {
     public static final Block Window_PLANK_CHERRY = registerBlock("cherry_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.CHERRY),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
     public static final Block Window_PLANK_CRIMSON = registerBlock("crimson_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.CRIMSON),AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
     public static final Block Window_PLANK_WARPED = registerBlock("warped_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.WARPED),AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
-    public static final Block Window_PLANK_GINKGO = registerBlock("ginkgo_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.OAK),AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
-    public static final Block Window_PLANK_MAPLE = registerBlock("maple_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.OAK), AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
 
     // Coffee Table Blocks
-    public static final Block Coffee_Table_Wood_GINKGO = registerBlock("ginkgo_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
-    public static final Block Coffee_Table_Wood_MAPLE = registerBlock("maple_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_WOOD_OAK = registerBlock("oak_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_WOOD_BIRCH = registerBlock("birch_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_WOOD_SPRUCE = registerBlock("spruce_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque()));
@@ -322,12 +278,8 @@ public class MapleFurnitureBlocks {
     public static final Block Coffee_Table_PLANK_CHERRY = registerBlock("cherry_plank_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_PLANK_CRIMSON = registerBlock("crimson_plank_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_PLANK_WARPED = registerBlock("warped_plank_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
-    public static final Block Coffee_Table_PLANK_GINKGO = registerBlock("ginkgo_plank_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
-    public static final Block Coffee_Table_PLANK_MAPLE = registerBlock("maple_plank_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
 
     //Chair
-    public static final Block Chair_Wood_GINKGO = registerBlock("ginkgo_wood_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
-    public static final Block Chair_Wood_MAPLE = registerBlock("maple_wood_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Chair_WOOD_OAK = registerBlock("oak_wood_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Chair_WOOD_BIRCH = registerBlock("birch_wood_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque()));
     public static final Block Chair_WOOD_SPRUCE = registerBlock("spruce_wood_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque()));
@@ -350,8 +302,6 @@ public class MapleFurnitureBlocks {
     public static final Block Chair_PLANK_CHERRY = registerBlock("cherry_plank_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
     public static final Block Chair_PLANK_CRIMSON = registerBlock("crimson_plank_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
     public static final Block Chair_PLANK_WARPED = registerBlock("warped_plank_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
-    public static final Block Chair_PLANK_GINKGO = registerBlock("ginkgo_plank_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
-    public static final Block Chair_PLANK_MAPLE = registerBlock("maple_plank_chair", ChairBlock::new, (AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
 
     //End Table
     public static final Block END_TABLE_OAK = registerBlock("oak_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
@@ -365,8 +315,6 @@ public class MapleFurnitureBlocks {
     public static final Block END_TABLE_MANGROVE = registerBlock("mangrove_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque()));
     public static final Block END_TABLE_BAMBOO = registerBlock("bamboo_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
     public static final Block END_TABLE_CHERRY = registerBlock("cherry_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
-    public static final Block END_TABLE_MAPLE = registerBlock("maple_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
-    public static final Block END_TABLE_GINKGO = registerBlock("ginkgo_end_table", EndTableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
 
 
 
@@ -571,6 +519,30 @@ public class MapleFurnitureBlocks {
     public static final Block CRIMSON_WOOD_TRIPLE_CABINET = registerBlock("crimson_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
     public static final Block WARPED_PLANK_TRIPLE_CABINET = registerBlock("warped_plank_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
     public static final Block WARPED_WOOD_TRIPLE_CABINET = registerBlock("warped_wood_triple_cabinet", TripleCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+
+    public static final Block OAK_WOOD_Four_Grid_Cabinet = registerBlock("oak_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_PLANKS_Four_Grid_Cabinet = registerBlock("oak_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_Four_Grid_Cabinet = registerBlock("spruce_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANKS_Four_Grid_Cabinet = registerBlock("spruce_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_Four_Grid_Cabinet = registerBlock("birch_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANKS_Four_Grid_Cabinet = registerBlock("birch_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_Four_Grid_Cabinet = registerBlock("jungle_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANKS_Four_Grid_Cabinet = registerBlock("jungle_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_Four_Grid_Cabinet = registerBlock("acacia_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANKS_Four_Grid_Cabinet = registerBlock("acacia_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_Four_Grid_Cabinet = registerBlock("dark_oak_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANKS_Four_Grid_Cabinet = registerBlock("dark_oak_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_Four_Grid_Cabinet = registerBlock("mangrove_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANKS_Four_Grid_Cabinet = registerBlock("mangrove_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_Four_Grid_Cabinet = registerBlock("cherry_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANKS_Four_Grid_Cabinet = registerBlock("cherry_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CRIMSON_HYPHAE_Four_Grid_Cabinet = registerBlock("crimson_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANKS_Four_Grid_Cabinet = registerBlock("crimson_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_HYPHAE_Four_Grid_Cabinet = registerBlock("warped_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANKS_Four_Grid_Cabinet = registerBlock("warped_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block BAMBOO_BLOCK_Four_Grid_Cabinet = registerBlock("bamboo_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANKS_Four_Grid_Cabinet = registerBlock("bamboo_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));

@@ -1,6 +1,6 @@
 {
   "parent": "skniro_furniture:block/triple_cabinet",
   "textures": {
-    "plank": "minecraft:block/dark_oak_wood"
+    "plank": "minecraft:block/stripped_dark_oak_log"
   }
 }

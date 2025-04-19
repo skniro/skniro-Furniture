@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.init.CabinetBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LockableContainerBlockEntity;
@@ -123,6 +124,12 @@ public class CabinetBlockEntity extends LockableContainerBlockEntity {
         double e = (double)this.pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)this.pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
         this.world.playSound((PlayerEntity)null, d, e, f, soundEvent, SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
+    }
+
+    @Override
+    public void markDirty() {
+        world.updateListeners(pos, getCachedState(), getCachedState(), 3);
+        super.markDirty();
     }
 
     @Nullable
