@@ -67,6 +67,28 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<CabinetBlockEntity> Drawer_BLOCK_ENTITY =
+            create("drawer_block_entity",
+                    FabricBlockEntityTypeBuilder.create(DrawerBlockEntity::new,
+                            MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.LIME_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.PINK_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER,
+                            MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER
+                    )
+            );
+
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);
         return (BlockEntityType) Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(Furniture.MOD_ID,id), builder.build(null));

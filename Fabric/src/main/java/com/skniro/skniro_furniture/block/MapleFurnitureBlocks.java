@@ -543,6 +543,40 @@ public class MapleFurnitureBlocks {
     public static final Block BAMBOO_BLOCK_Four_Grid_Cabinet = registerBlock("bamboo_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_PLANKS_Four_Grid_Cabinet = registerBlock("bamboo_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
+    public static final Block WHITE_KITCHEN_COUNTER = registerBlock("white_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_KITCHEN_COUNTER = registerBlock("orange_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_KITCHEN_COUNTER = registerBlock("magenta_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_KITCHEN_COUNTER = registerBlock("light_blue_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_KITCHEN_COUNTER = registerBlock("yellow_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_KITCHEN_COUNTER = registerBlock("lime_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_KITCHEN_COUNTER = registerBlock("pink_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_KITCHEN_COUNTER = registerBlock("gray_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_KITCHEN_COUNTER = registerBlock("light_gray_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_KITCHEN_COUNTER = registerBlock("cyan_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_KITCHEN_COUNTER = registerBlock("purple_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_KITCHEN_COUNTER = registerBlock("blue_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_KITCHEN_COUNTER = registerBlock("brown_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_KITCHEN_COUNTER = registerBlock("green_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_KITCHEN_COUNTER = registerBlock("red_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_KITCHEN_COUNTER = registerBlock("black_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+
+    public static final Block WHITE_KITCHEN_COUNTER_DRAWER = registerBlock("white_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_KITCHEN_COUNTER_DRAWER = registerBlock("orange_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_KITCHEN_COUNTER_DRAWER = registerBlock("magenta_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_KITCHEN_COUNTER_DRAWER = registerBlock("light_blue_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_KITCHEN_COUNTER_DRAWER = registerBlock("yellow_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_KITCHEN_COUNTER_DRAWER = registerBlock("lime_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_KITCHEN_COUNTER_DRAWER = registerBlock("pink_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_KITCHEN_COUNTER_DRAWER = registerBlock("gray_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_KITCHEN_COUNTER_DRAWER = registerBlock("light_gray_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_KITCHEN_COUNTER_DRAWER = registerBlock("cyan_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_KITCHEN_COUNTER_DRAWER = registerBlock("purple_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_KITCHEN_COUNTER_DRAWER = registerBlock("blue_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_KITCHEN_COUNTER_DRAWER = registerBlock("brown_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_KITCHEN_COUNTER_DRAWER = registerBlock("green_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_KITCHEN_COUNTER_DRAWER = registerBlock("red_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_KITCHEN_COUNTER_DRAWER = registerBlock("black_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));

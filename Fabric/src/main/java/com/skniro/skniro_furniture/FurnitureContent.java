@@ -520,7 +520,40 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet);
             content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_Four_Grid_Cabinet);
 
+            content.add(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.LIME_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.PINK_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.RED_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER);
 
+
+            content.add(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.LIME_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.PINK_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER);
         });
 
 

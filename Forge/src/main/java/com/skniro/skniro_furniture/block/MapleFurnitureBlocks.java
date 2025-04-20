@@ -1,7 +1,6 @@
 package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
-import com.skniro.maple.block.init.*;
 import com.skniro.skniro_furniture.block.init.*;
 import com.skniro.skniro_furniture.item.MapleItems;
 import net.minecraft.core.registries.Registries;

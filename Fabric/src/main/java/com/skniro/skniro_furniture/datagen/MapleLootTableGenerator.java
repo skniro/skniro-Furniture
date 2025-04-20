@@ -489,5 +489,39 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_Four_Grid_Cabinet);
 
+        addDrop(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.LIME_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.PINK_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.RED_KITCHEN_COUNTER);
+        addDrop(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER);
+
+        addDrop(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.LIME_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.PINK_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER);
+        addDrop(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER);
+
     }
 }

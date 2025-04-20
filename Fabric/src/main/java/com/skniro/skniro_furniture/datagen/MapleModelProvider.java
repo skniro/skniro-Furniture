@@ -486,7 +486,22 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_Four_Grid_Cabinet);
 
-
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MAGENTA_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.YELLOW_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIME_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PINK_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GRAY_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CYAN_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PURPLE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLUE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BROWN_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER);
     }
 
     @Override

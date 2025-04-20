@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.client;
 
 import com.skniro.skniro_furniture.FurnitureContent;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;

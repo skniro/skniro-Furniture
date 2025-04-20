@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/kitchen_counter",
+    "textures": {
+        "clay": "skniro_furniture:block/purple_terracotta",
+        "quartz": "minecraft:block/quartz_block_top"
+    }
+}
