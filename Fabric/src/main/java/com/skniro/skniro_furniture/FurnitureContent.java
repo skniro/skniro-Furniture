@@ -537,6 +537,28 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.RED_KITCHEN_COUNTER);
             content.add(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER);
 
+            content.add(MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.CRIMSON_HYPHAE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.WARPED_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.WARPED_HYPHAE_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_COUNTER);
+            content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_COUNTER);
 
             content.add(MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER);
             content.add(MapleFurnitureBlocks.ORANGE_KITCHEN_COUNTER_DRAWER);
@@ -554,6 +576,94 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER);
             content.add(MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER);
             content.add(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.CRIMSON_HYPHAE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.WARPED_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.WARPED_HYPHAE_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_COUNTER_DRAWER);
+            content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_COUNTER_DRAWER);
+
+            content.add(MapleFurnitureBlocks.WHITE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.ORANGE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.MAGENTA_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.YELLOW_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.LIME_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.PINK_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.GRAY_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.CYAN_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.PURPLE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BLUE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BROWN_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.GREEN_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.RED_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BLACK_KITCHEN_CABINET);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_HYPHAE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_HYPHAE_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_CABINET);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.CRIMSON_HYPHAE_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.WARPED_HYPHAE_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET);
+            content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET);
+
+
         });
 
 

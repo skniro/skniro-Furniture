@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/kitchen_cabinet",
+  "textures": {
+    "clay": "minecraft:block/stripped_acacia_log",
+    "quartz": "minecraft:block/stripped_acacia_log",
+    "white": "minecraft:block/stripped_acacia_log"
+  }
+}

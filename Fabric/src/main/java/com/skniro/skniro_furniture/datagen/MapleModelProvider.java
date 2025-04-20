@@ -502,6 +502,93 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GREEN_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.RED_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLACK_KITCHEN_COUNTER_DRAWER);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_WOOD_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_HYPHAE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_HYPHAE_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_COUNTER_DRAWER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_COUNTER_DRAWER);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WHITE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ORANGE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MAGENTA_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_BLUE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.YELLOW_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIME_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PINK_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GRAY_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_GRAY_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CYAN_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PURPLE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLUE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BROWN_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GREEN_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.RED_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLACK_KITCHEN_CABINET);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_WOOD_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_HYPHAE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_HYPHAE_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_CABINET);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_WOOD_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_HYPHAE_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_HYPHAE_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET);
+
     }
 
     @Override

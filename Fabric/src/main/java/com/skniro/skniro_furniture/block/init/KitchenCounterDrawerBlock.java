@@ -44,7 +44,6 @@ public class KitchenCounterDrawerBlock extends BlockWithEntity {
             if (var8 instanceof DrawerBlockEntity KitchenCounterDrawerBlockEntity) {
                 player.openHandledScreen(KitchenCounterDrawerBlockEntity);
                 player.incrementStat(Stats.OPEN_BARREL);
-                PiglinBrain.onGuardedBlockInteracted(serverWorld, player, true);
             }
         }
 

@@ -45,7 +45,6 @@ public class CabinetBlock extends BlockWithEntity {
             if (var8 instanceof CabinetBlockEntity CabinetBlockEntity) {
                 player.openHandledScreen(CabinetBlockEntity);
                 player.incrementStat(Stats.OPEN_BARREL);
-                PiglinBrain.onGuardedBlockInteracted(serverWorld, player, true);
             }
         }
 
