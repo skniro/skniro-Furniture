@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/warped_planks_oven",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/warped_planks_oven"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/warped_planks_oven",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/warped_planks_oven",
+      "y": 270
+    }
+  }
+}

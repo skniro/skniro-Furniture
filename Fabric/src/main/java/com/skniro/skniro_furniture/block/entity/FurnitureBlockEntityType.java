@@ -67,7 +67,7 @@ public class FurnitureBlockEntityType {
                     )
             );
 
-    public static final BlockEntityType<CabinetBlockEntity> Drawer_BLOCK_ENTITY =
+    public static final BlockEntityType<DrawerBlockEntity> Drawer_BLOCK_ENTITY =
             create("drawer_block_entity",
                     FabricBlockEntityTypeBuilder.create(DrawerBlockEntity::new,
                             MapleFurnitureBlocks.WHITE_KITCHEN_COUNTER_DRAWER,
@@ -113,7 +113,7 @@ public class FurnitureBlockEntityType {
 
     public static final BlockEntityType<BedsideCabinetBlockEntity> Bedside_Cabinet_BLOCK_ENTITY =
             create("bedside_cabinet_block_entity",
-                    FabricBlockEntityTypeBuilder.create(DrawerBlockEntity::new,
+                    FabricBlockEntityTypeBuilder.create(BedsideCabinetBlockEntity::new,
                             MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET,
                             MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET,
                             MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET,
@@ -141,7 +141,7 @@ public class FurnitureBlockEntityType {
 
     public static final BlockEntityType<KitchenCabinetBlockEntity> Kitchen_Cabinet_BLOCK_ENTITY =
             create("kitchen_cabinet_block_entity",
-                    FabricBlockEntityTypeBuilder.create(DrawerBlockEntity::new,
+                    FabricBlockEntityTypeBuilder.create(KitchenCabinetBlockEntity::new,
                             MapleFurnitureBlocks.OAK_PLANKS_KITCHEN_CABINET,
                             MapleFurnitureBlocks.OAK_WOOD_KITCHEN_CABINET,
                             MapleFurnitureBlocks.SPRUCE_PLANKS_KITCHEN_CABINET,
@@ -180,6 +180,50 @@ public class FurnitureBlockEntityType {
                             MapleFurnitureBlocks.GREEN_KITCHEN_CABINET,
                             MapleFurnitureBlocks.RED_KITCHEN_CABINET,
                             MapleFurnitureBlocks.BLACK_KITCHEN_CABINET
+                    )
+            );
+
+    public static final BlockEntityType<OvenBlockEntity> OVEN_BLOCK_ENTITY =
+            create("oven_block_entity",
+                    FabricBlockEntityTypeBuilder.create(OvenBlockEntity::new,
+                            MapleFurnitureBlocks.OAK_PLANKS_OVEN,
+                            MapleFurnitureBlocks.OAK_WOOD_OVEN,
+                            MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN,
+                            MapleFurnitureBlocks.SPRUCE_WOOD_OVEN,
+                            MapleFurnitureBlocks.BIRCH_PLANKS_OVEN,
+                            MapleFurnitureBlocks.BIRCH_WOOD_OVEN,
+                            MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN,
+                            MapleFurnitureBlocks.JUNGLE_WOOD_OVEN,
+                            MapleFurnitureBlocks.ACACIA_PLANKS_OVEN,
+                            MapleFurnitureBlocks.ACACIA_WOOD_OVEN,
+                            MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN,
+                            MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN,
+                            MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN,
+                            MapleFurnitureBlocks.MANGROVE_WOOD_OVEN,
+                            MapleFurnitureBlocks.CHERRY_PLANKS_OVEN,
+                            MapleFurnitureBlocks.CHERRY_WOOD_OVEN,
+                            MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN,
+                            MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN,
+                            MapleFurnitureBlocks.WARPED_PLANKS_OVEN,
+                            MapleFurnitureBlocks.WARPED_HYPHAE_OVEN,
+                            MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN,
+                            MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN,
+                            MapleFurnitureBlocks.WHITE_OVEN,
+                            MapleFurnitureBlocks.ORANGE_OVEN,
+                            MapleFurnitureBlocks.MAGENTA_OVEN,
+                            MapleFurnitureBlocks.LIGHT_BLUE_OVEN,
+                            MapleFurnitureBlocks.YELLOW_OVEN,
+                            MapleFurnitureBlocks.LIME_OVEN,
+                            MapleFurnitureBlocks.PINK_OVEN,
+                            MapleFurnitureBlocks.GRAY_OVEN,
+                            MapleFurnitureBlocks.LIGHT_GRAY_OVEN,
+                            MapleFurnitureBlocks.CYAN_OVEN,
+                            MapleFurnitureBlocks.PURPLE_OVEN,
+                            MapleFurnitureBlocks.BLUE_OVEN,
+                            MapleFurnitureBlocks.BROWN_OVEN,
+                            MapleFurnitureBlocks.GREEN_OVEN,
+                            MapleFurnitureBlocks.RED_OVEN,
+                            MapleFurnitureBlocks.BLACK_OVEN
                     )
             );
 

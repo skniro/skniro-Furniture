@@ -566,6 +566,46 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_CABINET);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WHITE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ORANGE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MAGENTA_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_BLUE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.YELLOW_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIME_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PINK_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GRAY_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.LIGHT_GRAY_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CYAN_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PURPLE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLUE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BROWN_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.GREEN_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.RED_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BLACK_OVEN);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.JUNGLE_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.ACACIA_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.MANGROVE_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CHERRY_WOOD_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_HYPHAE_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN);
+
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);

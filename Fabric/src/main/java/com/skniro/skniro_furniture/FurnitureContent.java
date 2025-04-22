@@ -640,6 +640,46 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_CABINET);
             content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_CABINET);
 
+            content.add(MapleFurnitureBlocks.WHITE_OVEN);
+            content.add(MapleFurnitureBlocks.ORANGE_OVEN);
+            content.add(MapleFurnitureBlocks.MAGENTA_OVEN);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_OVEN);
+            content.add(MapleFurnitureBlocks.YELLOW_OVEN);
+            content.add(MapleFurnitureBlocks.LIME_OVEN);
+            content.add(MapleFurnitureBlocks.PINK_OVEN);
+            content.add(MapleFurnitureBlocks.GRAY_OVEN);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_OVEN);
+            content.add(MapleFurnitureBlocks.CYAN_OVEN);
+            content.add(MapleFurnitureBlocks.PURPLE_OVEN);
+            content.add(MapleFurnitureBlocks.BLUE_OVEN);
+            content.add(MapleFurnitureBlocks.BROWN_OVEN);
+            content.add(MapleFurnitureBlocks.GREEN_OVEN);
+            content.add(MapleFurnitureBlocks.RED_OVEN);
+            content.add(MapleFurnitureBlocks.BLACK_OVEN);
+
+            content.add(MapleFurnitureBlocks.OAK_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.OAK_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.SPRUCE_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.BIRCH_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.BIRCH_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.JUNGLE_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.ACACIA_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.ACACIA_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.MANGROVE_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.CHERRY_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.CHERRY_WOOD_OVEN);
+            content.add(MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN);
+            content.add(MapleFurnitureBlocks.WARPED_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.WARPED_HYPHAE_OVEN);
+            content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN);
+            content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN);
+
             content.add(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
             content.add(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
             content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);

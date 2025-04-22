@@ -50,7 +50,45 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_WOOD_TRIPLE_CABINET, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WHITE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ORANGE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MAGENTA_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIGHT_BLUE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.YELLOW_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIME_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PINK_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.GRAY_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIGHT_GRAY_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CYAN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PURPLE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BLUE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BROWN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.GREEN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.RED_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BLACK_OVEN, renderLayer3);
+
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.SPRUCE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BIRCH_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BIRCH_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.JUNGLE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ACACIA_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ACACIA_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MANGROVE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CHERRY_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CHERRY_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_HYPHAE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN, renderLayer3);
 
 
         RenderLayer renderLayer4 = RenderLayer.getTranslucent();

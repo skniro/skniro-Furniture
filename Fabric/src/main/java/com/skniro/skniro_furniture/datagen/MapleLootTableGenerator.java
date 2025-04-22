@@ -609,6 +609,46 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_KITCHEN_CABINET);
         addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_KITCHEN_CABINET);
 
+        addDrop(MapleFurnitureBlocks.WHITE_OVEN);
+        addDrop(MapleFurnitureBlocks.ORANGE_OVEN);
+        addDrop(MapleFurnitureBlocks.MAGENTA_OVEN);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_OVEN);
+        addDrop(MapleFurnitureBlocks.YELLOW_OVEN);
+        addDrop(MapleFurnitureBlocks.LIME_OVEN);
+        addDrop(MapleFurnitureBlocks.PINK_OVEN);
+        addDrop(MapleFurnitureBlocks.GRAY_OVEN);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_OVEN);
+        addDrop(MapleFurnitureBlocks.CYAN_OVEN);
+        addDrop(MapleFurnitureBlocks.PURPLE_OVEN);
+        addDrop(MapleFurnitureBlocks.BLUE_OVEN);
+        addDrop(MapleFurnitureBlocks.BROWN_OVEN);
+        addDrop(MapleFurnitureBlocks.GREEN_OVEN);
+        addDrop(MapleFurnitureBlocks.RED_OVEN);
+        addDrop(MapleFurnitureBlocks.BLACK_OVEN);
+
+        addDrop(MapleFurnitureBlocks.OAK_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.OAK_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.BIRCH_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.BIRCH_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.JUNGLE_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.ACACIA_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.ACACIA_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.MANGROVE_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.CHERRY_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.CHERRY_WOOD_OVEN);
+        addDrop(MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN);
+        addDrop(MapleFurnitureBlocks.WARPED_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.WARPED_HYPHAE_OVEN);
+        addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN);
+        addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN);
+
         addDrop(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
         addDrop(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);

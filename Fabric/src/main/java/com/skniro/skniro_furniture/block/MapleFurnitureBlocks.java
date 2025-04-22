@@ -688,6 +688,47 @@ public class MapleFurnitureBlocks {
     public static final Block BAMBOO_PLANKS_BEDSIDE_CABINET = registerBlock("bamboo_planks_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_BLOCK_BEDSIDE_CABINET = registerBlock("bamboo_wood_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
+    public static final Block WHITE_OVEN = registerBlock("white_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_OVEN = registerBlock("orange_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_OVEN = registerBlock("magenta_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_OVEN = registerBlock("light_blue_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_OVEN = registerBlock("yellow_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_OVEN = registerBlock("lime_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_OVEN = registerBlock("pink_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_OVEN = registerBlock("gray_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_OVEN = registerBlock("light_gray_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_OVEN = registerBlock("cyan_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_OVEN = registerBlock("purple_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_OVEN = registerBlock("blue_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_OVEN = registerBlock("brown_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_OVEN = registerBlock("green_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_OVEN = registerBlock("red_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_OVEN = registerBlock("black_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+
+    public static final Block OAK_PLANKS_OVEN = registerBlock("oak_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_WOOD_OVEN = registerBlock("oak_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANKS_OVEN = registerBlock("spruce_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_OVEN = registerBlock("spruce_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANKS_OVEN = registerBlock("birch_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_OVEN = registerBlock("birch_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANKS_OVEN = registerBlock("jungle_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_OVEN = registerBlock("jungle_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANKS_OVEN = registerBlock("acacia_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_OVEN = registerBlock("acacia_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANKS_OVEN = registerBlock("dark_oak_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_OVEN = registerBlock("dark_oak_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANKS_OVEN = registerBlock("mangrove_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_OVEN = registerBlock("mangrove_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANKS_OVEN = registerBlock("cherry_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_OVEN = registerBlock("cherry_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANKS_OVEN = registerBlock("crimson_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_HYPHAE_OVEN = registerBlock("crimson_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANKS_OVEN = registerBlock("warped_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_HYPHAE_OVEN = registerBlock("warped_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANKS_OVEN = registerBlock("bamboo_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_BLOCK_OVEN = registerBlock("bamboo_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));
         registerBlockItem(name, block);
