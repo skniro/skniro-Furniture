@@ -1,13 +1,13 @@
 package com.skniro.skniro_furniture;
 
 
+import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.item.MapleItems;
-import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -23,6 +23,9 @@ public class FurnitureContent {
     }
     public static void registerBlock(){
         MapleFurnitureBlocks.registerCushionBlocks();
+        FurnitureBedroomBlocks.registerBedroomBlocks();
+        FurnitureKitchenBlocks.registerKitchenBlocks();
+        FurnitureLivingroomBlocks.registerLivingroomBlocks();
         FurnitureBlockEntityType.registerMapleBlockEntityType();
     }
 
@@ -474,6 +477,31 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_RED);
             content.add(MapleFurnitureBlocks.WARPED_PLANK_COFFEE_CHAIR_BLACK);
 
+            content.add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.BIRCH_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.ACACIA_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.MANGROVE_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.CHERRY_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+
+            content.add(MapleFurnitureBlocks.SPRUCE_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.BIRCH_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.JUNGLE_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.ACACIA_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.DARK_OAK_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.MANGROVE_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.CHERRY_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.BAMBOO_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.CRIMSON_CHISELED_BOOKSHELF);
+            content.add(MapleFurnitureBlocks.WARPED_CHISELED_BOOKSHELF);
+        });
+
+
+        ItemGroupEvents.modifyEntriesEvent(Furniture.Furniture_Group_Kitchen_Furniture).register(content -> {
             content.add(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET);
             content.add(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET);
             content.add(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET);
@@ -680,6 +708,10 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN);
             content.add(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN);
 
+        });
+
+
+        ItemGroupEvents.modifyEntriesEvent(Furniture.Furniture_Group_Bedroom_Furniture).register(content -> {
             content.add(MapleFurnitureBlocks.OAK_PLANKS_BEDSIDE_CABINET);
             content.add(MapleFurnitureBlocks.OAK_WOOD_BEDSIDE_CABINET);
             content.add(MapleFurnitureBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);

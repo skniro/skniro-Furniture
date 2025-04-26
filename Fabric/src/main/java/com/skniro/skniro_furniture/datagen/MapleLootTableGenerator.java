@@ -3,6 +3,7 @@ package com.skniro.skniro_furniture.datagen;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -671,6 +672,28 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.WARPED_HYPHAE_BEDSIDE_CABINET);
         addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET);
         addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET);
+
+        addDrop(MapleFurnitureBlocks.SPRUCE_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.BIRCH_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.JUNGLE_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.ACACIA_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.MANGROVE_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.CHERRY_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+
+        addDrop(MapleFurnitureBlocks.SPRUCE_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.BIRCH_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.JUNGLE_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.ACACIA_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.MANGROVE_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.CHERRY_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.BAMBOO_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.CRIMSON_CHISELED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.WARPED_CHISELED_BOOKSHELF);
 
     }
 }

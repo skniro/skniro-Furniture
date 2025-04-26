@@ -1,8 +1,10 @@
 package com.skniro.skniro_furniture.datagen;
 
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.api.registry.MapleModelDatagenHelper;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 
@@ -628,6 +630,29 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.WARPED_HYPHAE_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET);
+
+        MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.JUNGLE_BOOKSHELF, Blocks.JUNGLE_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.ACACIA_BOOKSHELF, Blocks.ACACIA_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF, Blocks.DARK_OAK_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.MANGROVE_BOOKSHELF, Blocks.MANGROVE_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.CHERRY_BOOKSHELF, Blocks.CHERRY_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
+        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
+
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.SPRUCE_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.BIRCH_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.JUNGLE_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.ACACIA_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.DARK_OAK_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.MANGROVE_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.CHERRY_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.BAMBOO_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.CRIMSON_CHISELED_BOOKSHELF);
+        furnitureModelDatagenHelper.registerModChiseledBookshelf(MapleFurnitureBlocks.WARPED_CHISELED_BOOKSHELF);
 
     }
 

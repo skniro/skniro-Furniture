@@ -2,16 +2,15 @@ package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.*;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
@@ -542,6 +541,29 @@ public class MapleFurnitureBlocks {
     public static final Block BAMBOO_BLOCK_Four_Grid_Cabinet = registerBlock("bamboo_wood_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_PLANKS_Four_Grid_Cabinet = registerBlock("bamboo_plank_four_grid_cabinet", FourGridCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
+    public static final Block SPRUCE_BOOKSHELF = registerBlock("spruce_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block BIRCH_BOOKSHELF = registerBlock("birch_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block JUNGLE_BOOKSHELF = registerBlock("jungle_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block ACACIA_BOOKSHELF = registerBlock("acacia_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block DARK_OAK_BOOKSHELF = registerBlock("dark_oak_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block MANGROVE_BOOKSHELF = registerBlock("mangrove_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.RED).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block CHERRY_BOOKSHELF = registerBlock("cherry_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.PINK).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+    public static final Block WARPED_BOOKSHELF = registerBlock("warped_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
+
+    public static final Block SPRUCE_CHISELED_BOOKSHELF = registerBlock("spruce_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block BIRCH_CHISELED_BOOKSHELF = registerBlock("birch_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block JUNGLE_CHISELED_BOOKSHELF = registerBlock("jungle_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block ACACIA_CHISELED_BOOKSHELF = registerBlock("acacia_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block DARK_OAK_CHISELED_BOOKSHELF = registerBlock("dark_oak_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block MANGROVE_CHISELED_BOOKSHELF = registerBlock("mangrove_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.RED).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block CHERRY_CHISELED_BOOKSHELF = registerBlock("cherry_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PINK).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block BAMBOO_CHISELED_BOOKSHELF = registerBlock("bamboo_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block CRIMSON_CHISELED_BOOKSHELF = registerBlock("crimson_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+    public static final Block WARPED_CHISELED_BOOKSHELF = registerBlock("warped_chiseled_bookshelf", ChiseledBookshelfBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable());
+
+
     public static final Block WHITE_KITCHEN_COUNTER = registerBlock("white_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
     public static final Block ORANGE_KITCHEN_COUNTER = registerBlock("orange_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
     public static final Block MAGENTA_KITCHEN_COUNTER = registerBlock("magenta_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
@@ -727,7 +749,6 @@ public class MapleFurnitureBlocks {
     public static final Block WARPED_HYPHAE_OVEN = registerBlock("warped_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
     public static final Block BAMBOO_PLANKS_OVEN = registerBlock("bamboo_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_BLOCK_OVEN = registerBlock("bamboo_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
-
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));

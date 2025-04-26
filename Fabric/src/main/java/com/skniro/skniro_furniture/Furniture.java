@@ -22,13 +22,27 @@ public class Furniture implements ModInitializer {
     public static final ModContainer MOD_CONTAINER = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow();
 
     public static final RegistryKey<ItemGroup> Maple_Group_Furniture = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MOD_ID, "maple_group_furniture"));
-
+    public static final RegistryKey<ItemGroup> Furniture_Group_Kitchen_Furniture = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MOD_ID, "furniture_kitchen_group_furniture"));
+    public static final RegistryKey<ItemGroup> Furniture_Group_Bedroom_Furniture = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MOD_ID, "furniture_bedroom_group_furniture"));
+    public static final RegistryKey<ItemGroup> Furniture_Group_Livingroom_Furniture = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MOD_ID, "furniture_livingroom_group_furniture"));
 
     @Override
     public void onInitialize() {
         Registry.register(Registries.ITEM_GROUP, Maple_Group_Furniture, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK))
                 .displayName(Text.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
+                .build());
+        Registry.register(Registries.ITEM_GROUP, Furniture_Group_Kitchen_Furniture, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
+                .build());
+        Registry.register(Registries.ITEM_GROUP, Furniture_Group_Bedroom_Furniture, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
+                .build());
+        Registry.register(Registries.ITEM_GROUP, Furniture_Group_Livingroom_Furniture, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                 .build());
         FurnitureContent.registerItem();
         FurnitureContent.registerBlock();
