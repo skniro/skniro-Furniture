@@ -641,6 +641,22 @@ public class MapleFurnitureBlocks {
     public static final Block CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
     public static final Block WARPED_BOOKSHELF = registerBlock("warped_bookshelf", Block::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable());
 
+    public static final Block WHITE_Ceiling_Lamp = registerBlock("white_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_Ceiling_Lamp = registerBlock("orange_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_Ceiling_Lamp = registerBlock("magenta_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_Ceiling_Lamp = registerBlock("light_blue_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_Ceiling_Lamp = registerBlock("yellow_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_Ceiling_Lamp = registerBlock("lime_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_Ceiling_Lamp = registerBlock("pink_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_Ceiling_Lamp = registerBlock("gray_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_Ceiling_Lamp = registerBlock("light_gray_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_Ceiling_Lamp = registerBlock("cyan_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_Ceiling_Lamp = registerBlock("purple_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_Ceiling_Lamp = registerBlock("blue_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_Ceiling_Lamp = registerBlock("brown_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_Ceiling_Lamp = registerBlock("green_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_Ceiling_Lamp = registerBlock("red_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_Ceiling_Lamp = registerBlock("black_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
 
 
 

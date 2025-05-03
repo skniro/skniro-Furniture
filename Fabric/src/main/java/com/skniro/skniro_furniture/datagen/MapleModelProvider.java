@@ -777,6 +777,7 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
 
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
     }
 
     @Override

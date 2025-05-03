@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static net.minecraft.client.data.BlockStateModelGenerator.createBooleanModelMap;
 import static net.minecraft.client.data.BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates;
 
 public class MapleModelDatagenHelper {
@@ -44,6 +45,13 @@ public class MapleModelDatagenHelper {
         Identifier identifier = Models.CUBE_COLUMN.upload(block, textureMap, generator.modelCollector);
         generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, identifier));
     }
+
+    public void registerLamp(Block block) {
+        Identifier identifier = Identifier.of(block.toString());
+        Identifier identifier2 = Identifier.of(block.toString() + "_on");
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
+    }
+
 
     public void registerModChiseledBookshelf(Block block) {
         Identifier identifier = ModelIds.getBlockModelId(block);
