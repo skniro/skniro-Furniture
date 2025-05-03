@@ -261,5 +261,8 @@
   "block.skniro_furniture.warped_wood_coffee_table": "诡异木咖啡桌",
   "block.skniro_furniture.warped_wood_window": "诡异木木窗",
   "block.skniro_furniture.warped_yellow_cushion": "黄色诡异木坐垫",
-  "itemGroup.skniro_furniture.maple_group_furniture": "枫-家具"
+  "itemGroup.skniro_furniture.furniture_bedroom_group_furniture": "卧室家具",
+  "itemGroup.skniro_furniture.furniture_kitchen_group_furniture": "厨房家具",
+  "itemGroup.skniro_furniture.furniture_livingroom_group_furniture": "起居室家具",
+  "itemGroup.skniro_furniture.maple_group_furniture": "Skniro的家具"
 }

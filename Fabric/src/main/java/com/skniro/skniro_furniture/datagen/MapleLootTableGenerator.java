@@ -721,8 +721,6 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN);
         addDrop(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN);
 
-
-
         addDrop(MapleFurnitureBlocks.SPRUCE_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.BIRCH_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.JUNGLE_BOOKSHELF);
@@ -733,5 +731,91 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+
+        addDrop(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.JUNGLE_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.JUNGLE_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.ACACIA_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.ACACIA_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.MANGROVE_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.MANGROVE_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.CHERRY_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.CHERRY_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.BAMBOO_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.BAMBOO_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.CRIMSON_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.CRIMSON_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.WARPED_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.WARPED_WOOD_Glass_TRIPLE_CABINET);
+
+        addDrop(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.BIRCH_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.JUNGLE_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.JUNGLE_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.ACACIA_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.ACACIA_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.MANGROVE_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.MANGROVE_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.CHERRY_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.CHERRY_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.CRIMSON_HYPHAE_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.CRIMSON_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.WARPED_HYPHAE_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.WARPED_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_Glass_Four_Grid_Cabinet);
+
+        addDrop(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.BIRCH_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.JUNGLE_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.JUNGLE_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.ACACIA_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.ACACIA_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.DARK_OAK_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.MANGROVE_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.MANGROVE_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.CHERRY_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.CHERRY_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.CRIMSON_HYPHAE_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.CRIMSON_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.WARPED_HYPHAE_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.WARPED_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.BAMBOO_BLOCK_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.BAMBOO_PLANKS_Wall_Cabinet);
+
+        addDrop(MapleFurnitureBlocks.WHITE_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.ORANGE_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.MAGENTA_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.YELLOW_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.LIME_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.PINK_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.GRAY_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.CYAN_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.PURPLE_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.BLUE_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.BROWN_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.GREEN_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.RED_Wall_CABINET);
+        addDrop(MapleFurnitureBlocks.BLACK_Wall_CABINET);
     }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/wall_cabinet",
+  "textures": {
+    "clay": "minecraft:block/mangrove_planks",
+    "quartz": "minecraft:block/mangrove_planks",
+    "white": "minecraft:block/mangrove_planks"
+  }
+}

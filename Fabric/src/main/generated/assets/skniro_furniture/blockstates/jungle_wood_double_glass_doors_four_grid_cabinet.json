@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/jungle_wood_double_glass_doors_four_grid_cabinet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/jungle_wood_double_glass_doors_four_grid_cabinet"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/jungle_wood_double_glass_doors_four_grid_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/jungle_wood_double_glass_doors_four_grid_cabinet",
+      "y": 270
+    }
+  }
+}

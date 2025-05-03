@@ -1,21 +1,18 @@
 package com.skniro.skniro_furniture.block.init;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import com.mojang.serialization.MapCodec;
+import net.minecraft.block.BlockWithEntity;
 
-public class TripleCabinetBlock extends CabinetBlock{
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 6.0);
+public class TripleCabinetBlock extends AbstractWallCabinetBlock {
+    public static final MapCodec<TripleCabinetBlock> CODEC = createCodec(TripleCabinetBlock::new);
 
     public TripleCabinetBlock(Settings settings) {
         super(settings);
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
+    protected MapCodec<? extends BlockWithEntity> getCodec() {
+        return CODEC;
     }
+
 }

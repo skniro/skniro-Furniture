@@ -4,7 +4,6 @@ import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.ScreenHandler;
@@ -26,15 +25,14 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class CabinetBlock extends BlockWithEntity {
-    public static final MapCodec<CabinetBlock> CODEC = createCodec(CabinetBlock::new);
+public abstract class AbstractWallCabinetBlock extends BlockWithEntity {
     public static final EnumProperty<Direction> FACING;
+    private static final VoxelShape NORTH_SHAPE;
+    private static final VoxelShape SOUTH_SHAPE;
+    private static final VoxelShape EAST_SHAPE;
+    private static final VoxelShape WEST_SHAPE;
 
-    public MapCodec<CabinetBlock> getCodec() {
-        return CODEC;
-    }
-
-    public CabinetBlock(AbstractBlock.Settings settings) {
+    public AbstractWallCabinetBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
     }
@@ -95,7 +93,27 @@ public class CabinetBlock extends BlockWithEntity {
         builder.add(FACING);
     }
 
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        Direction direction = state.get(FACING);
+        switch (direction){
+            case EAST:
+                return EAST_SHAPE;
+            case SOUTH:
+                return SOUTH_SHAPE;
+            case WEST:
+                return WEST_SHAPE;
+            case NORTH:
+            default:
+                return NORTH_SHAPE;
+        }
+    }
+
     static {
         FACING = Properties.HORIZONTAL_FACING;
+        NORTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 10.0, 16.0, 16.0, 16.0);
+        SOUTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 6.0);
+        EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 6.0, 16.0, 16.0);
+        WEST_SHAPE = Block.createCuboidShape(10.0, 0.0, 0.0, 16.0, 16.0, 16.0);
     }
 }

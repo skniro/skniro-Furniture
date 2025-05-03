@@ -1,0 +1,6 @@
+{
+  "parent": "skniro_furniture:block/furniture/double_glass_doors_triple_cabinet",
+  "textures": {
+    "plank": "minecraft:block/birch_planks"
+  }
+}

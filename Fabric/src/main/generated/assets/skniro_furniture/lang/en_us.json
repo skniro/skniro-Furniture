@@ -261,5 +261,8 @@
   "block.skniro_furniture.warped_wood_coffee_table": "Warped Wood Coffee Table",
   "block.skniro_furniture.warped_wood_window": "Warped Wood Window",
   "block.skniro_furniture.warped_yellow_cushion": "Yellow Warped Cushion",
-  "itemGroup.skniro_furniture.maple_group_furniture": "Maple Furniture"
+  "itemGroup.skniro_furniture.furniture_bedroom_group_furniture": "Bedroom Furniture",
+  "itemGroup.skniro_furniture.furniture_kitchen_group_furniture": "Kitchen Furniture",
+  "itemGroup.skniro_furniture.furniture_livingroom_group_furniture": "Livingroom Furniture",
+  "itemGroup.skniro_furniture.maple_group_furniture": "Skniro's Furniture"
 }

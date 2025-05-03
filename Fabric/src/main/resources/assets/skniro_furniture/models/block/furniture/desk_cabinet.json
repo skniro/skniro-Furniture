@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/thin_block",
 	"textures": {
-		"particle": "#white"
+		"particle": "#quartz"
 	},
 	"elements": [
 		{
