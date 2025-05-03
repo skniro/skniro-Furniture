@@ -1,10 +1,12 @@
 package com.skniro.skniro_furniture.datagen;
 
+import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -38,5 +40,16 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
         getOrCreateTagBuilder(C_PLASTER);
         getOrCreateTagBuilder(CEILING_HANGING_SIGNS);
         getOrCreateTagBuilder(WALL_HANGING_SIGNS);
+        getOrCreateTagBuilder(ENCHANTMENT_POWER_PROVIDER)
+                .add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF)
+                .add(MapleFurnitureBlocks.BIRCH_BOOKSHELF)
+                .add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF)
+                .add(MapleFurnitureBlocks.ACACIA_BOOKSHELF)
+                .add(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF)
+                .add(MapleFurnitureBlocks.MANGROVE_BOOKSHELF)
+                .add(MapleFurnitureBlocks.CHERRY_BOOKSHELF)
+                .add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF)
+                .add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF)
+                .add(MapleFurnitureBlocks.WARPED_BOOKSHELF);
     }
 }

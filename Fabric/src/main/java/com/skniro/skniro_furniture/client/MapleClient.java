@@ -1,10 +1,12 @@
 package com.skniro.skniro_furniture.client;
 
 import com.skniro.skniro_furniture.FurnitureContent;
+import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -50,51 +52,51 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WHITE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ORANGE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MAGENTA_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIGHT_BLUE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.YELLOW_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIME_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PINK_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.GRAY_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.LIGHT_GRAY_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CYAN_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PURPLE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BLUE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BROWN_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.GREEN_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.RED_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BLACK_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WHITE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.ORANGE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.MAGENTA_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.LIGHT_BLUE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.YELLOW_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.LIME_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PINK_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.GRAY_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.LIGHT_GRAY_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.CYAN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PURPLE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BLUE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BROWN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.GREEN_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.RED_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BLACK_OVEN, renderLayer3);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.SPRUCE_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.SPRUCE_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BIRCH_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BIRCH_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.JUNGLE_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.JUNGLE_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ACACIA_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.ACACIA_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.DARK_OAK_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MANGROVE_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.MANGROVE_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CHERRY_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CHERRY_WOOD_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CRIMSON_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CRIMSON_HYPHAE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_HYPHAE_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_BLOCK_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.OAK_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.OAK_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BIRCH_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.JUNGLE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.JUNGLE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.ACACIA_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.ACACIA_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.DARK_OAK_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.DARK_OAK_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.MANGROVE_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.MANGROVE_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.CHERRY_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.CHERRY_WOOD_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.CRIMSON_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.CRIMSON_HYPHAE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WARPED_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WARPED_HYPHAE_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN, renderLayer3);
+
 
 
         RenderLayer renderLayer4 = RenderLayer.getTranslucent();
 
         FurnitureContent.registerClientEntityRenderer();
         FurnitureContent.registerClientParticle();
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
     }
 }

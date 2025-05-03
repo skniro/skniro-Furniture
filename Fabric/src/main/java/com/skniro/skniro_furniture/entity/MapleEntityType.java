@@ -5,6 +5,7 @@ import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
 import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
 import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
+import com.skniro.skniro_furniture.entity.furniture.SofaEntity;
 import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -28,6 +29,10 @@ public class MapleEntityType {
 
     public static final EntityType<CushionEntity> Cushion_ENTITY =
             register("cushion_entity",  EntityType.Builder.create(CushionEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.5f, 0.5f));
+
+    public static final EntityType<SofaEntity> SOFA_ENTITY =
+            register("sofa_entity",  EntityType.Builder.create(SofaEntity::new, SpawnGroup.MISC)
                     .dimensions(0.5f, 0.5f));
 
 

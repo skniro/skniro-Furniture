@@ -1,5 +1,8 @@
 package com.skniro.skniro_furniture;
 
+import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
+import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -33,15 +36,15 @@ public class Furniture implements ModInitializer {
                 .displayName(Text.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                 .build());
         Registry.register(Registries.ITEM_GROUP, Furniture_Group_Kitchen_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .icon(() -> new ItemStack(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
                 .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                 .build());
         Registry.register(Registries.ITEM_GROUP, Furniture_Group_Bedroom_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .icon(() -> new ItemStack(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET))
                 .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                 .build());
         Registry.register(Registries.ITEM_GROUP, Furniture_Group_Livingroom_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .icon(() -> new ItemStack(FurnitureLivingroomBlocks.Sofa_WHITE))
                 .displayName(Text.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                 .build());
         FurnitureContent.registerItem();

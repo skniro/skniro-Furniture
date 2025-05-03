@@ -16,7 +16,10 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
-        translationBuilder.add(Furniture.Maple_Group_Furniture,"Maple Furniture");
+        translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro's Furniture");
+        translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"Bedroom Furniture");
+        translationBuilder.add(Furniture.Furniture_Group_Kitchen_Furniture,"Kitchen Furniture");
+        translationBuilder.add(Furniture.Furniture_Group_Livingroom_Furniture,"Livingroom Furniture");
 
         //Cushion
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_OAK_WHITE, "White Oak Cushion");

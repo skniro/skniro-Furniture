@@ -17,7 +17,10 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
 
-        translationBuilder.add(Furniture.Maple_Group_Furniture,"枫-家具");
+        translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro的家具");
+        translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"卧室家具");
+        translationBuilder.add(Furniture.Furniture_Group_Kitchen_Furniture,"厨房家具");
+        translationBuilder.add(Furniture.Furniture_Group_Livingroom_Furniture,"起居室家具");
 
         //cushion
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_OAK_WHITE,"白色橡木坐垫");
