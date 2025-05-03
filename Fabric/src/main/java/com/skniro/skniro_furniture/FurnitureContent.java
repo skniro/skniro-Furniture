@@ -621,6 +621,24 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
             content.add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
             content.add(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+
+            content.add(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.WHITE_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.ORANGE_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.MAGENTA_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.YELLOW_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.LIME_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.PINK_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.GRAY_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.CYAN_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.PURPLE_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.BLUE_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.BROWN_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.RED_Ceiling_Lamp);
+            content.add(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
         });
 
 

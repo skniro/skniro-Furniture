@@ -817,5 +817,23 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.GREEN_Wall_CABINET);
         addDrop(MapleFurnitureBlocks.RED_Wall_CABINET);
         addDrop(MapleFurnitureBlocks.BLACK_Wall_CABINET);
+
+        addDrop(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.WHITE_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.ORANGE_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.MAGENTA_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.YELLOW_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.LIME_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.PINK_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.GRAY_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.CYAN_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.PURPLE_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.BLUE_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.BROWN_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.RED_Ceiling_Lamp);
+        addDrop(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
     }
 }

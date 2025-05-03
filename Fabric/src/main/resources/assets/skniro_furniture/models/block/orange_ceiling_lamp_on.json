@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/ceiling_lamp",
+    "textures": {
+        "clay": "skniro_furniture:block/orange_terracotta",
+        "glass": "block/white_stained_glass_lit_on"
+    }
+}

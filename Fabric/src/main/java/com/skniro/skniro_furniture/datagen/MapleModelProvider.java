@@ -778,6 +778,21 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
 
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.WHITE_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.ORANGE_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.MAGENTA_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.LIGHT_BLUE_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.YELLOW_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.LIME_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.PINK_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.GRAY_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.LIGHT_GRAY_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.CYAN_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.PURPLE_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BLUE_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BROWN_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
+        furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.RED_Ceiling_Lamp);
     }
 
     @Override

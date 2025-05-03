@@ -47,8 +47,8 @@ public class MapleModelDatagenHelper {
     }
 
     public void registerLamp(Block block) {
-        Identifier identifier = Identifier.of(block.toString());
-        Identifier identifier2 = Identifier.of(block.toString() + "_on");
+        Identifier identifier = ModelIds.getBlockModelId(block);
+        Identifier identifier2 = ModelIds.getBlockSubModelId(block,"_on");
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 

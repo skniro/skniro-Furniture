@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "skniro_furniture:block/light_gray_ceiling_lamp"
+    },
+    "lit=true": {
+      "model": "skniro_furniture:block/light_gray_ceiling_lamp_on"
+    }
+  }
+}
