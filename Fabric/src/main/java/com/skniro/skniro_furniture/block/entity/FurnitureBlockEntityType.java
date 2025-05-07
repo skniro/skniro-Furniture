@@ -229,9 +229,9 @@ public class FurnitureBlockEntityType {
                     )
             );
 
-    public static final BlockEntityType<KitchenCabinetBlockEntity> Desk_Cabinet_BLOCK_ENTITY =
+    public static final BlockEntityType<DeskCabinetBlockEntity> Desk_Cabinet_BLOCK_ENTITY =
             create("desk_cabinet_block_entity",
-                    FabricBlockEntityTypeBuilder.create(KitchenCabinetBlockEntity::new,
+                    FabricBlockEntityTypeBuilder.create(DeskCabinetBlockEntity::new,
                             FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET,
                             FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET,
                             FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET,

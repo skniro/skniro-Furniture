@@ -225,6 +225,8 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.TABLE_MANGROVE);
             content.add(MapleFurnitureBlocks.TABLE_BAMBOO);
             content.add(MapleFurnitureBlocks.TABLE_CHERRY);
+
+            //Window
             content.add(MapleFurnitureBlocks.Window_WOOD_OAK);
             content.add(MapleFurnitureBlocks.Window_WOOD_BIRCH);
             content.add(MapleFurnitureBlocks.Window_WOOD_SPRUCE);
@@ -245,6 +247,27 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.Window_PLANK_CHERRY);
             content.add(MapleFurnitureBlocks.Window_PLANK_CRIMSON);
             content.add(MapleFurnitureBlocks.Window_PLANK_WARPED);
+            content.add(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_DARK_OAK_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_ACACIA_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_MANGROVE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_DARK_OAK_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_ACACIA_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_MANGROVE_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2);
+            content.add(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2);
+
             content.add(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK);
             content.add(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE);
             content.add(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH);

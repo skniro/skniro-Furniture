@@ -255,6 +255,28 @@ public class MapleFurnitureBlocks {
     public static final Block Window_PLANK_CRIMSON = registerBlock("crimson_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.CRIMSON),AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
     public static final Block Window_PLANK_WARPED = registerBlock("warped_plank_window", (settings)-> new WindowBlock(settings, BlockSetType.WARPED),AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
 
+    //Window Style2
+    public static final Block Window_WOOD_OAK_STYLE2 = registerBlock("oak_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.OAK), AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_BIRCH_STYLE2 = registerBlock("birch_wood_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.BIRCH),AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_SPRUCE_STYLE2 = registerBlock("spruce_wood_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.SPRUCE),AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_JUNGLE_STYLE2 = registerBlock("jungle_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.JUNGLE),AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_DARK_OAK_STYLE2 = registerBlock("dark_oak_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.DARK_OAK),AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_ACACIA_STYLE2 = registerBlock("acacia_wood_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.ACACIA),AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_MANGROVE_STYLE2 = registerBlock("mangrove_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.MANGROVE),AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_CHERRY_STYLE2 = registerBlock("cherry_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.CHERRY),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_CRIMSON_STYLE2 = registerBlock("crimson_wood_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.CRIMSON),AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block Window_WOOD_WARPED_STYLE2 = registerBlock("warped_wood_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.WARPED),AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_OAK_STYLE2 = registerBlock("oak_plank_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.OAK),AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_BIRCH_STYLE2 = registerBlock("birch_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.BIRCH),AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_SPRUCE_STYLE2 = registerBlock("spruce_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.SPRUCE),AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_JUNGLE_STYLE2 = registerBlock("jungle_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.JUNGLE),AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_DARK_OAK_STYLE2 = registerBlock("dark_oak_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.DARK_OAK),AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_ACACIA_STYLE2 = registerBlock("acacia_plank_window_style2", (settings)-> new WindowBlock(settings,BlockSetType.ACACIA),AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_MANGROVE_STYLE2 = registerBlock("mangrove_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.MANGROVE),AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_CHERRY_STYLE2 = registerBlock("cherry_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.CHERRY),AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_CRIMSON_STYLE2 = registerBlock("crimson_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.CRIMSON),AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block Window_PLANK_WARPED_STYLE2 = registerBlock("warped_plank_window_style2", (settings)-> new WindowBlock(settings, BlockSetType.WARPED),AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+
     // Coffee Table Blocks
     public static final Block Coffee_Table_WOOD_OAK = registerBlock("oak_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Coffee_Table_WOOD_BIRCH = registerBlock("birch_wood_coffee_table", TableBlock::new, (AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque()));

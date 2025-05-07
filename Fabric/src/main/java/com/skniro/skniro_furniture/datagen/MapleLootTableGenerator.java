@@ -835,5 +835,46 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
         addDrop(MapleFurnitureBlocks.RED_Ceiling_Lamp);
         addDrop(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
+
+        addDrop(MapleFurnitureBlocks.Window_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_BIRCH);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_SPRUCE);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_JUNGLE);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_DARK_OAK);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_ACACIA);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_MANGROVE);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_CHERRY);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_CRIMSON);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_WARPED);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_OAK);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_BIRCH);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_SPRUCE);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_JUNGLE);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_DARK_OAK);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_ACACIA);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_MANGROVE);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_CHERRY);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_CRIMSON);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_WARPED);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_DARK_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_ACACIA_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_MANGROVE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_DARK_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_ACACIA_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_MANGROVE_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2);
     }
 }

@@ -9,9 +9,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -52,19 +54,13 @@ public class SofaBlock extends HorizontalFacingBlock {
 
         if (world.isClient()) return;
 
-        Direction direction = (Direction) state.get(FACING);
-        BlockState blockState = world.getBlockState(pos.offset(direction));
-        if (isCounter(blockState)) {
-            Direction direction2 = (Direction) blockState.get(FACING);
-            if (direction2.getAxis() != ((Direction) state.get(FACING)).getAxis() && isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
-                boolean leftConnected = isLeftConnected(world, pos, direction);
-                boolean rightConnected = isRightConnected(world, pos, direction);
+        Direction direction = state.get(FACING);
+        boolean leftConnected = isLeftConnected(world, pos, direction);
+        boolean rightConnected = isRightConnected(world, pos, direction);
 
-                BlockState newState = state.with(LEFT, leftConnected).with(RIGHT, rightConnected);
-                if (!newState.equals(state)) {
-                    world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
-                }
-            }
+        BlockState newState = state.with(LEFT, leftConnected).with(RIGHT, rightConnected);
+        if (!newState.equals(state)) {
+            world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
         }
     }
 
@@ -84,13 +80,14 @@ public class SofaBlock extends HorizontalFacingBlock {
     }
 
 
-    public static boolean isCounter(BlockState state) {
+    public static boolean isSofa(BlockState state) {
         return state.getBlock() instanceof SofaBlock;
     }
 
-    private static boolean isDifferentOrientation(BlockState state, BlockView world, BlockPos pos, Direction dir) {
-        BlockState blockState = world.getBlockState(pos.offset(dir));
-        return !isCounter(blockState) || blockState.get(FACING) != state.get(FACING);
+    @Override
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        super.onPlaced(world, pos, state, placer, itemStack);
+        neighborUpdate(state, world, pos, null, null, false);
     }
 
     private boolean isLeftConnected(World world, BlockPos pos, Direction facing) {
