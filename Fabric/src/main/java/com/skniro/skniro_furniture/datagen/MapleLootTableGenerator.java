@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.datagen;
 
 import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -876,5 +877,45 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2);
+
+        addDrop(FurnitureLivingroomBlocks.Sofa_WHITE);
+        addDrop(FurnitureLivingroomBlocks.Sofa_ORANGE);
+        addDrop(FurnitureLivingroomBlocks.Sofa_MAGENTA);
+        addDrop(FurnitureLivingroomBlocks.Sofa_LIGHT_BLUE);
+        addDrop(FurnitureLivingroomBlocks.Sofa_YELLOW);
+        addDrop(FurnitureLivingroomBlocks.Sofa_LIME);
+        addDrop(FurnitureLivingroomBlocks.Sofa_PINK);
+        addDrop(FurnitureLivingroomBlocks.Sofa_GRAY);
+        addDrop(FurnitureLivingroomBlocks.Sofa_LIGHT_GRAY);
+        addDrop(FurnitureLivingroomBlocks.Sofa_CYAN);
+        addDrop(FurnitureLivingroomBlocks.Sofa_PURPLE);
+        addDrop(FurnitureLivingroomBlocks.Sofa_BLUE);
+        addDrop(FurnitureLivingroomBlocks.Sofa_BROWN);
+        addDrop(FurnitureLivingroomBlocks.Sofa_GREEN);
+        addDrop(FurnitureLivingroomBlocks.Sofa_RED);
+        addDrop(FurnitureLivingroomBlocks.Sofa_BLACK);
+
+        addDrop(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.BIRCH_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.JUNGLE_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.JUNGLE_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.ACACIA_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.ACACIA_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.DARK_OAK_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.DARK_OAK_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.MANGROVE_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.MANGROVE_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.CHERRY_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.CHERRY_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.CRIMSON_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.CRIMSON_HYPHAE_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.WARPED_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
     }
 }

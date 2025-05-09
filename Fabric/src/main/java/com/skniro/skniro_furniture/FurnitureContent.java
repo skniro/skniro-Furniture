@@ -917,6 +917,30 @@ public class FurnitureContent {
             content.add(FurnitureLivingroomBlocks.Sofa_GREEN);
             content.add(FurnitureLivingroomBlocks.Sofa_RED);
             content.add(FurnitureLivingroomBlocks.Sofa_BLACK);
+
+            content.add(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.BIRCH_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.JUNGLE_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.JUNGLE_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.ACACIA_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.ACACIA_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.DARK_OAK_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.DARK_OAK_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.MANGROVE_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.MANGROVE_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.CHERRY_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.CHERRY_WOOD_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.CRIMSON_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.CRIMSON_HYPHAE_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.WARPED_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
+            content.add(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
+
         });
     }
 

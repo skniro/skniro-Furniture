@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
+import com.skniro.skniro_furniture.block.init.TvStandBlock;
 import com.skniro.skniro_furniture.block.init.SofaBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -33,6 +34,29 @@ public class FurnitureLivingroomBlocks {
     public static final Block Sofa_GREEN = registerBlock("green_sofa", SofaBlock::new, (AbstractBlock.Settings.copy(Blocks.GREEN_WOOL).nonOpaque()));
     public static final Block Sofa_RED = registerBlock("red_sofa", SofaBlock::new, (AbstractBlock.Settings.copy(Blocks.RED_WOOL).nonOpaque()));
     public static final Block Sofa_BLACK = registerBlock("black_sofa", SofaBlock::new, (AbstractBlock.Settings.copy(Blocks.BLACK_WOOL).nonOpaque()));
+
+    public static final Block OAK_PLANKS_TV_STAND = registerBlock("oak_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_WOOD_TV_STAND = registerBlock("oak_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANKS_TV_STAND = registerBlock("spruce_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_TV_STAND = registerBlock("spruce_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANKS_TV_STAND = registerBlock("birch_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_TV_STAND = registerBlock("birch_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANKS_TV_STAND = registerBlock("jungle_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_TV_STAND = registerBlock("jungle_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANKS_TV_STAND = registerBlock("acacia_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_TV_STAND = registerBlock("acacia_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANKS_TV_STAND = registerBlock("dark_oak_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_TV_STAND = registerBlock("dark_oak_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANKS_TV_STAND = registerBlock("mangrove_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_TV_STAND = registerBlock("mangrove_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANKS_TV_STAND = registerBlock("cherry_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_TV_STAND = registerBlock("cherry_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANKS_TV_STAND = registerBlock("crimson_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_HYPHAE_TV_STAND = registerBlock("crimson_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANKS_TV_STAND = registerBlock("warped_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_HYPHAE_TV_STAND = registerBlock("warped_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANKS_TV_STAND = registerBlock("bamboo_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_BLOCK_TV_STAND = registerBlock("bamboo_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
 
 

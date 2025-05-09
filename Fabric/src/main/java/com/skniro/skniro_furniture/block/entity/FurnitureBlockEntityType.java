@@ -4,6 +4,7 @@ import com.mojang.datafixers.types.Type;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntity;
@@ -342,6 +343,34 @@ public class FurnitureBlockEntityType {
                             MapleFurnitureBlocks.GREEN_Wall_CABINET,
                             MapleFurnitureBlocks.RED_Wall_CABINET,
                             MapleFurnitureBlocks.BLACK_Wall_CABINET
+                    )
+            );
+
+    public static final BlockEntityType<TvStandBlockEntity> TV_Stand_BLOCK_ENTITY =
+            create("tv_stand_block_entity",
+                    FabricBlockEntityTypeBuilder.create(TvStandBlockEntity::new,
+                            FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.BIRCH_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.JUNGLE_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.JUNGLE_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.ACACIA_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.ACACIA_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.DARK_OAK_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.DARK_OAK_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.MANGROVE_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.MANGROVE_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.CHERRY_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.CHERRY_WOOD_TV_STAND,
+                            FurnitureLivingroomBlocks.CRIMSON_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.CRIMSON_HYPHAE_TV_STAND,
+                            FurnitureLivingroomBlocks.WARPED_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND,
+                            FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND,
+                            FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND
                     )
             );
 

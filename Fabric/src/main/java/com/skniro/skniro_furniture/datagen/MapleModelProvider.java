@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.datagen;
 
 import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.api.registry.MapleModelDatagenHelper;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -765,6 +766,29 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.BAMBOO_PLANKS_BOOK_Desk);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.BAMBOO_BLOCK_BOOK_Desk);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BIRCH_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.JUNGLE_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.JUNGLE_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.ACACIA_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.ACACIA_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.DARK_OAK_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.DARK_OAK_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.MANGROVE_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.MANGROVE_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.CHERRY_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.CHERRY_WOOD_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.CRIMSON_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.CRIMSON_HYPHAE_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.WARPED_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
@@ -793,6 +817,7 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BROWN_Ceiling_Lamp);
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.RED_Ceiling_Lamp);
+
     }
 
     @Override
