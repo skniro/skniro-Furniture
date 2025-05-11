@@ -789,6 +789,46 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.WHITE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.MAGENTA_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.LIGHT_BLUE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.YELLOW_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.LIME_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PINK_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.GRAY_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.LIGHT_GRAY_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.CYAN_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PURPLE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BLUE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BROWN_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.GREEN_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.RED_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BLACK_KITCHEN_SINK);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.JUNGLE_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.JUNGLE_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.ACACIA_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.DARK_OAK_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.DARK_OAK_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.MANGROVE_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.MANGROVE_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.CHERRY_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.CHERRY_WOOD_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.CRIMSON_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.CRIMSON_HYPHAE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.WARPED_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
@@ -818,6 +858,22 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.RED_Ceiling_Lamp);
 
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.WHITE_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.ORANGE_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.MAGENTA_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.LIGHT_BLUE_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.YELLOW_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.LIME_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.PINK_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.GRAY_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.LIGHT_GRAY_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.CYAN_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.PURPLE_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.BLUE_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.BROWN_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.GREEN_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.RED_Fridge);
+        furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.BLACK_Fridge);
     }
 
     @Override

@@ -1,10 +1,7 @@
 package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
-import com.skniro.skniro_furniture.block.init.KitchenCabinetBlock;
-import com.skniro.skniro_furniture.block.init.KitchenCounterBlock;
-import com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock;
-import com.skniro.skniro_furniture.block.init.OvenBlock;
+import com.skniro.skniro_furniture.block.init.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -181,7 +178,62 @@ public class FurnitureKitchenBlocks {
     public static final Block BAMBOO_PLANKS_KITCHEN_CABINET = registerBlock("bamboo_planks_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_BLOCK_KITCHEN_CABINET = registerBlock("bamboo_wood_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
+    public static final Block WHITE_Fridge = registerBlock("white_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_Fridge = registerBlock("orange_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_Fridge = registerBlock("magenta_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_Fridge = registerBlock("light_blue_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_Fridge = registerBlock("yellow_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_Fridge = registerBlock("lime_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_Fridge = registerBlock("pink_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_Fridge = registerBlock("gray_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_Fridge = registerBlock("light_gray_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_Fridge = registerBlock("cyan_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_Fridge = registerBlock("purple_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_Fridge = registerBlock("blue_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_Fridge = registerBlock("brown_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_Fridge = registerBlock("green_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_Fridge = registerBlock("red_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_Fridge = registerBlock("black_fridge", FridgeBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
 
+    public static final Block WHITE_KITCHEN_SINK = registerBlock("white_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_KITCHEN_SINK = registerBlock("orange_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_KITCHEN_SINK = registerBlock("magenta_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_KITCHEN_SINK = registerBlock("light_blue_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_KITCHEN_SINK = registerBlock("yellow_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_KITCHEN_SINK = registerBlock("lime_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_KITCHEN_SINK = registerBlock("pink_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_KITCHEN_SINK = registerBlock("gray_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_KITCHEN_SINK = registerBlock("light_gray_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_KITCHEN_SINK = registerBlock("cyan_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_KITCHEN_SINK = registerBlock("purple_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_KITCHEN_SINK = registerBlock("blue_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_KITCHEN_SINK = registerBlock("brown_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_KITCHEN_SINK = registerBlock("green_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_KITCHEN_SINK = registerBlock("red_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_KITCHEN_SINK = registerBlock("black_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+
+    public static final Block OAK_PLANKS_KITCHEN_SINK = registerBlock("oak_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_WOOD_KITCHEN_SINK = registerBlock("oak_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANKS_KITCHEN_SINK = registerBlock("spruce_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_KITCHEN_SINK = registerBlock("spruce_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANKS_KITCHEN_SINK = registerBlock("birch_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_KITCHEN_SINK = registerBlock("birch_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANKS_KITCHEN_SINK = registerBlock("jungle_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_KITCHEN_SINK = registerBlock("jungle_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANKS_KITCHEN_SINK = registerBlock("acacia_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_KITCHEN_SINK = registerBlock("acacia_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANKS_KITCHEN_SINK = registerBlock("dark_oak_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_KITCHEN_SINK = registerBlock("dark_oak_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANKS_KITCHEN_SINK = registerBlock("mangrove_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_KITCHEN_SINK = registerBlock("mangrove_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANKS_KITCHEN_SINK = registerBlock("cherry_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_KITCHEN_SINK = registerBlock("cherry_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANKS_KITCHEN_SINK = registerBlock("crimson_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_HYPHAE_KITCHEN_SINK = registerBlock("crimson_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANKS_KITCHEN_SINK = registerBlock("warped_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_HYPHAE_KITCHEN_SINK = registerBlock("warped_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANKS_KITCHEN_SINK = registerBlock("bamboo_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_BLOCK_KITCHEN_SINK = registerBlock("bamboo_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
 
 

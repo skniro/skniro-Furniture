@@ -45,7 +45,7 @@ public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof BedsideCabinetBlockEntity) {
+        if (blockEntity instanceof KitchenCabinetBlockEntity) {
             ((KitchenCabinetBlockEntity)blockEntity).tick();
         }
 

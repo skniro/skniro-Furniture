@@ -7,6 +7,8 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.enums.DoorHinge;
+import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.client.data.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -18,8 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static net.minecraft.client.data.BlockStateModelGenerator.createBooleanModelMap;
-import static net.minecraft.client.data.BlockStateModelGenerator.createNorthDefaultHorizontalRotationStates;
+import static net.minecraft.client.data.BlockStateModelGenerator.*;
 
 public class MapleModelDatagenHelper {
     private final BlockStateModelGenerator generator;
@@ -52,6 +53,31 @@ public class MapleModelDatagenHelper {
         generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 
+    public void registerFridge(Block block) {
+        Identifier bottomModel = ModelIds.getBlockSubModelId(block, "_bottom");
+        Identifier topModel = ModelIds.getBlockSubModelId(block, "_top");
+
+        BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> variantMap =
+                BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.DOUBLE_BLOCK_HALF);
+
+        fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.LOWER, bottomModel);
+        fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.UPPER, topModel);
+
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+    }
+
+
+    public static BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> fillSimpleDoubleVariantMap(
+            BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> variantMap,
+            DoubleBlockHalf targetHalf,
+            Identifier baseModelId
+    ) {
+        return variantMap
+                .register(Direction.NORTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId))
+                .register(Direction.EAST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                .register(Direction.SOUTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .register(Direction.WEST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R270));
+    }
 
     public void registerModChiseledBookshelf(Block block) {
         Identifier identifier = ModelIds.getBlockModelId(block);

@@ -917,5 +917,62 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
+
+        doorDrops(FurnitureKitchenBlocks.WHITE_Fridge);
+        doorDrops(FurnitureKitchenBlocks.ORANGE_Fridge);
+        doorDrops(FurnitureKitchenBlocks.MAGENTA_Fridge);
+        doorDrops(FurnitureKitchenBlocks.LIGHT_BLUE_Fridge);
+        doorDrops(FurnitureKitchenBlocks.YELLOW_Fridge);
+        doorDrops(FurnitureKitchenBlocks.LIME_Fridge);
+        doorDrops(FurnitureKitchenBlocks.PINK_Fridge);
+        doorDrops(FurnitureKitchenBlocks.GRAY_Fridge);
+        doorDrops(FurnitureKitchenBlocks.LIGHT_GRAY_Fridge);
+        doorDrops(FurnitureKitchenBlocks.CYAN_Fridge);
+        doorDrops(FurnitureKitchenBlocks.PURPLE_Fridge);
+        doorDrops(FurnitureKitchenBlocks.BLUE_Fridge);
+        doorDrops(FurnitureKitchenBlocks.BROWN_Fridge);
+        doorDrops(FurnitureKitchenBlocks.GREEN_Fridge);
+        doorDrops(FurnitureKitchenBlocks.RED_Fridge);
+        doorDrops(FurnitureKitchenBlocks.BLACK_Fridge);
+
+        addDrop(FurnitureKitchenBlocks.WHITE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.MAGENTA_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.LIGHT_BLUE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.YELLOW_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.LIME_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.PINK_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.GRAY_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.LIGHT_GRAY_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.CYAN_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.PURPLE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BLUE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BROWN_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.GREEN_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.RED_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BLACK_KITCHEN_SINK);
+
+        addDrop(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BIRCH_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.JUNGLE_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.JUNGLE_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.ACACIA_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.DARK_OAK_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.DARK_OAK_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.MANGROVE_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.MANGROVE_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.CHERRY_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.CHERRY_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.CRIMSON_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.CRIMSON_HYPHAE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.WARPED_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
     }
 }

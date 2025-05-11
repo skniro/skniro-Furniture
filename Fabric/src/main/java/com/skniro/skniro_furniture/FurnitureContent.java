@@ -826,6 +826,62 @@ public class FurnitureContent {
             content.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN);
             content.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN);
 
+            content.add(FurnitureKitchenBlocks.WHITE_Fridge);
+            content.add(FurnitureKitchenBlocks.ORANGE_Fridge);
+            content.add(FurnitureKitchenBlocks.MAGENTA_Fridge);
+            content.add(FurnitureKitchenBlocks.LIGHT_BLUE_Fridge);
+            content.add(FurnitureKitchenBlocks.YELLOW_Fridge);
+            content.add(FurnitureKitchenBlocks.LIME_Fridge);
+            content.add(FurnitureKitchenBlocks.PINK_Fridge);
+            content.add(FurnitureKitchenBlocks.GRAY_Fridge);
+            content.add(FurnitureKitchenBlocks.LIGHT_GRAY_Fridge);
+            content.add(FurnitureKitchenBlocks.CYAN_Fridge);
+            content.add(FurnitureKitchenBlocks.PURPLE_Fridge);
+            content.add(FurnitureKitchenBlocks.BLUE_Fridge);
+            content.add(FurnitureKitchenBlocks.BROWN_Fridge);
+            content.add(FurnitureKitchenBlocks.GREEN_Fridge);
+            content.add(FurnitureKitchenBlocks.RED_Fridge);
+            content.add(FurnitureKitchenBlocks.BLACK_Fridge);
+
+            content.add(FurnitureKitchenBlocks.WHITE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.MAGENTA_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.LIGHT_BLUE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.YELLOW_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.LIME_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.PINK_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.GRAY_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.LIGHT_GRAY_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.CYAN_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.PURPLE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BLUE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BROWN_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.GREEN_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.RED_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BLACK_KITCHEN_SINK);
+
+            content.add(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BIRCH_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.JUNGLE_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.JUNGLE_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.ACACIA_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.DARK_OAK_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.DARK_OAK_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.MANGROVE_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.MANGROVE_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.CHERRY_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.CHERRY_WOOD_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.CRIMSON_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.CRIMSON_HYPHAE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.WARPED_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
+            content.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
         });
 
 

@@ -374,6 +374,28 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<FridgeBlockEntity> Fridge_BLOCK_ENTITY =
+            create("fridge_block_entity",
+                    FabricBlockEntityTypeBuilder.create(FridgeBlockEntity::new,
+                            FurnitureKitchenBlocks.WHITE_Fridge,
+                            FurnitureKitchenBlocks.ORANGE_Fridge,
+                            FurnitureKitchenBlocks.MAGENTA_Fridge,
+                            FurnitureKitchenBlocks.LIGHT_BLUE_Fridge,
+                            FurnitureKitchenBlocks.YELLOW_Fridge,
+                            FurnitureKitchenBlocks.LIME_Fridge,
+                            FurnitureKitchenBlocks.PINK_Fridge,
+                            FurnitureKitchenBlocks.GRAY_Fridge,
+                            FurnitureKitchenBlocks.LIGHT_GRAY_Fridge,
+                            FurnitureKitchenBlocks.CYAN_Fridge,
+                            FurnitureKitchenBlocks.PURPLE_Fridge,
+                            FurnitureKitchenBlocks.BLUE_Fridge,
+                            FurnitureKitchenBlocks.BROWN_Fridge,
+                            FurnitureKitchenBlocks.GREEN_Fridge,
+                            FurnitureKitchenBlocks.RED_Fridge,
+                            FurnitureKitchenBlocks.BLACK_Fridge
+                    )
+            );
+
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);
