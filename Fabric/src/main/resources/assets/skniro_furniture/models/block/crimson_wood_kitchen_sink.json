@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/kitchen_sink",
+  "textures": {
+    "clay": "minecraft:block/stripped_crimson_log",
+    "quartz": "minecraft:block/stripped_crimson_log",
+    "white": "minecraft:block/stripped_crimson_log"
+  }
+}
