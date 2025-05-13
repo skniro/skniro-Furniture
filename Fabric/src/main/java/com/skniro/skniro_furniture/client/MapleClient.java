@@ -7,8 +7,11 @@ import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
+import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
+import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
@@ -161,7 +164,7 @@ public class MapleClient implements ClientModInitializer {
 
 
         RenderLayer renderLayer4 = RenderLayer.getTranslucent();
-
+        HandledScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler, KitchenSinkBlockScreen::new);
         FurnitureContent.registerClientEntityRenderer();
         FurnitureContent.registerClientParticle();
     }

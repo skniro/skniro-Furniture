@@ -4,12 +4,15 @@ package com.skniro.skniro_furniture;
 import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.item.MapleItems;
+import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
+import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -1004,9 +1007,11 @@ public class FurnitureContent {
     }
 
     public static void registerRecipeType() {
+        FurnitureRecipeType.registerRecipes();
     }
 
     public static void registerScreenType() {
+        FurnitureScreenHandlerType.RegisterFurnitureScreenHandlerType();
     }
 
     public static void registerOthers() {
@@ -1030,6 +1035,7 @@ public class FurnitureContent {
         EntityRendererRegistry.register(MapleEntityType.SOFA_ENTITY, SofaRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)

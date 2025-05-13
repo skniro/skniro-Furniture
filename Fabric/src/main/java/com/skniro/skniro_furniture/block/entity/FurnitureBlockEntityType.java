@@ -396,6 +396,51 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<KitchenSinkBlockEntity> Kitchen_Sink_BLOCK_ENTITY =
+            create("kitchen_sink_block_entity",
+                    FabricBlockEntityTypeBuilder.create(KitchenSinkBlockEntity::new,
+                            FurnitureKitchenBlocks.WHITE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.MAGENTA_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.LIGHT_BLUE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.YELLOW_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.LIME_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.PINK_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.GRAY_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.LIGHT_GRAY_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.CYAN_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.PURPLE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BLUE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BROWN_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.GREEN_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.RED_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BLACK_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BIRCH_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.JUNGLE_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.JUNGLE_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.ACACIA_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.DARK_OAK_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.DARK_OAK_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.MANGROVE_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.MANGROVE_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.CHERRY_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.CHERRY_WOOD_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.CRIMSON_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.CRIMSON_HYPHAE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.WARPED_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK,
+                            FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK
+                    )
+            );
+
+
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);

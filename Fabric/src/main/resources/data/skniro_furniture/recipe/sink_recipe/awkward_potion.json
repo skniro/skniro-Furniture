@@ -1,0 +1,16 @@
+{
+    "type": "skniro_furniture:kitchen_sink",
+    "ingredient": [
+        {
+            "item": "minecraft:potion",
+            "nbt": "{Potion:\"minecraft:water\"}"
+        }
+    ],
+    "result": {
+        "id":"minecraft:potion",
+        "components":{
+            "nbt": "{Potion:\"minecraft:awkward\"}"
+        },
+        "count": 1
+    }
+}

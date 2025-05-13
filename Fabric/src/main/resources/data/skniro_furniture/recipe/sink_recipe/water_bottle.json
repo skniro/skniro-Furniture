@@ -1,0 +1,9 @@
+{
+    "type": "skniro_furniture:kitchen_sink",
+    "ingredient": "minecraft:glass_bottle",
+    "result": {
+        "id":"minecraft:potion",
+        "nbt": "{Potion:\"minecraft:water\"}",
+        "count": 1
+    }
+}
