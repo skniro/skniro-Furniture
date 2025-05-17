@@ -37,6 +37,22 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.CUSHION_OAK_GREEN);
         addDrop(MapleFurnitureBlocks.CUSHION_OAK_RED);
         addDrop(MapleFurnitureBlocks.CUSHION_OAK_BLACK);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_WHITE);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_ORANGE);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_MAGENTA);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_BLUE);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_YELLOW);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIME);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_PINK);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_GRAY);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_GRAY);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_CYAN);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_PURPLE);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLUE);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_BROWN);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_GREEN);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_RED);
+        addDrop(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLACK);
         addDrop(MapleFurnitureBlocks.CUSHION_SPRUCE_WHITE);
         addDrop(MapleFurnitureBlocks.CUSHION_SPRUCE_ORANGE);
         addDrop(MapleFurnitureBlocks.CUSHION_SPRUCE_MAGENTA);
@@ -199,6 +215,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.CUSHION_BAMBOO_BLACK);
 
         addDrop(MapleFurnitureBlocks.TABLE_OAK);
+        addDrop(MapleFurnitureBlocks.TABLE_PALE_OAK);
         addDrop(MapleFurnitureBlocks.TABLE_SPRUCE);
         addDrop(MapleFurnitureBlocks.TABLE_BIRCH);
         addDrop(MapleFurnitureBlocks.TABLE_JUNGLE);
@@ -212,6 +229,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         //CoffeeTable
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE);
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH);
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_JUNGLE);
@@ -223,6 +241,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_BAMBOO);
         addDrop(MapleFurnitureBlocks.Coffee_Table_WOOD_CHERRY);
         addDrop(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK);
+        addDrop(MapleFurnitureBlocks.Coffee_Table_PLANK_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE);
         addDrop(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH);
         addDrop(MapleFurnitureBlocks.Coffee_Table_PLANK_JUNGLE);
@@ -236,6 +255,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         //Chair
         addDrop(MapleFurnitureBlocks.Chair_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Chair_WOOD_SPRUCE);
         addDrop(MapleFurnitureBlocks.Chair_WOOD_BIRCH);
         addDrop(MapleFurnitureBlocks.Chair_WOOD_JUNGLE);
@@ -247,6 +267,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Chair_WOOD_BAMBOO);
         addDrop(MapleFurnitureBlocks.Chair_WOOD_CHERRY);
         addDrop(MapleFurnitureBlocks.Chair_PLANK_OAK);
+        addDrop(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Chair_PLANK_SPRUCE);
         addDrop(MapleFurnitureBlocks.Chair_PLANK_BIRCH);
         addDrop(MapleFurnitureBlocks.Chair_PLANK_JUNGLE);
@@ -259,6 +280,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Chair_PLANK_CHERRY);
 
         addDrop(MapleFurnitureBlocks.END_TABLE_OAK);
+        addDrop(MapleFurnitureBlocks.END_TABLE_PALE_OAK);
         addDrop(MapleFurnitureBlocks.END_TABLE_SPRUCE);
         addDrop(MapleFurnitureBlocks.END_TABLE_BIRCH);
         addDrop(MapleFurnitureBlocks.END_TABLE_JUNGLE);
@@ -286,6 +308,22 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN);
         addDrop(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED);
         addDrop(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_WHITE);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_ORANGE);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_MAGENTA);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_YELLOW);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIME);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PINK);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GRAY);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_CYAN);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PURPLE);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLUE);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BROWN);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GREEN);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_RED);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLACK);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA);
@@ -449,6 +487,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET);
@@ -472,6 +512,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet);
@@ -495,6 +537,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET);
         addDrop(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET);
         addDrop(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);
         addDrop(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET);
         addDrop(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET);
@@ -518,6 +562,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET);
         addDrop(FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET);
         addDrop(FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET);
         addDrop(FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET);
         addDrop(FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET);
@@ -541,6 +587,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk);
         addDrop(FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BOOK_Desk);
+        addDrop(FurnitureBedroomBlocks.PALE_OAK_WOOD_BOOK_Desk);
         addDrop(FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk);
         addDrop(FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk);
         addDrop(FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk);
@@ -581,6 +629,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER);
         addDrop(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER);
         addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER);
         addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER);
         addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER);
@@ -621,6 +671,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
         addDrop(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER);
         addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER);
         addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER);
         addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER);
@@ -661,6 +713,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET);
         addDrop(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET);
         addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET);
         addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET);
         addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET);
@@ -701,6 +755,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureKitchenBlocks.OAK_PLANKS_OVEN);
         addDrop(FurnitureKitchenBlocks.OAK_WOOD_OVEN);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN);
         addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN);
         addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN);
         addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN);
@@ -732,9 +788,12 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
         addDrop(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);
 
         addDrop(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET);
         addDrop(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET);
@@ -758,6 +817,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet);
         addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet);
@@ -781,6 +842,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet);
         addDrop(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet);
+        addDrop(MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet);
         addDrop(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet);
         addDrop(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet);
@@ -838,6 +901,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
 
         addDrop(MapleFurnitureBlocks.Window_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Window_WOOD_BIRCH);
         addDrop(MapleFurnitureBlocks.Window_WOOD_SPRUCE);
         addDrop(MapleFurnitureBlocks.Window_WOOD_JUNGLE);
@@ -845,9 +909,11 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Window_WOOD_ACACIA);
         addDrop(MapleFurnitureBlocks.Window_WOOD_MANGROVE);
         addDrop(MapleFurnitureBlocks.Window_WOOD_CHERRY);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_BAMBOO);
         addDrop(MapleFurnitureBlocks.Window_WOOD_CRIMSON);
         addDrop(MapleFurnitureBlocks.Window_WOOD_WARPED);
         addDrop(MapleFurnitureBlocks.Window_PLANK_OAK);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_PALE_OAK);
         addDrop(MapleFurnitureBlocks.Window_PLANK_BIRCH);
         addDrop(MapleFurnitureBlocks.Window_PLANK_SPRUCE);
         addDrop(MapleFurnitureBlocks.Window_PLANK_JUNGLE);
@@ -855,9 +921,11 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Window_PLANK_ACACIA);
         addDrop(MapleFurnitureBlocks.Window_PLANK_MANGROVE);
         addDrop(MapleFurnitureBlocks.Window_PLANK_CHERRY);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_BAMBOO);
         addDrop(MapleFurnitureBlocks.Window_PLANK_CRIMSON);
         addDrop(MapleFurnitureBlocks.Window_PLANK_WARPED);
         addDrop(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2);
@@ -865,9 +933,11 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Window_WOOD_ACACIA_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_MANGROVE_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_WOOD_BAMBOO_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2);
@@ -875,6 +945,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.Window_PLANK_ACACIA_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_MANGROVE_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2);
+        addDrop(MapleFurnitureBlocks.Window_PLANK_BAMBOO_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2);
         addDrop(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2);
 
@@ -897,6 +968,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND);
+        addDrop(FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
@@ -954,6 +1027,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);

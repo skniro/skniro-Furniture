@@ -50,6 +50,7 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
                 .add(MapleFurnitureBlocks.CHERRY_BOOKSHELF)
                 .add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF)
                 .add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF)
-                .add(MapleFurnitureBlocks.WARPED_BOOKSHELF);
+                .add(MapleFurnitureBlocks.WARPED_BOOKSHELF)
+                .add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);
     }
 }

@@ -296,7 +296,7 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CHERRY,"Cherry End Table");
 
         try {
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/en_us.existing.json").get();
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);

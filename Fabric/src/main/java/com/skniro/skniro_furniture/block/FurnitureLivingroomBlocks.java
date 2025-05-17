@@ -37,6 +37,8 @@ public class FurnitureLivingroomBlocks {
 
     public static final Block OAK_PLANKS_TV_STAND = registerBlock("oak_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_TV_STAND = registerBlock("oak_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_TV_STAND = registerBlock("pale_oak_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_TV_STAND = registerBlock("pale_oak_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_TV_STAND = registerBlock("spruce_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_TV_STAND = registerBlock("spruce_wood_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_TV_STAND = registerBlock("birch_planks_tv_stand", TvStandBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());

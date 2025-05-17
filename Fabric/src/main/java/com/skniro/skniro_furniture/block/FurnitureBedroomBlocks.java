@@ -20,6 +20,8 @@ import java.util.function.Function;
 public class FurnitureBedroomBlocks {
     public static final Block OAK_PLANKS_BEDSIDE_CABINET = registerBlock("oak_planks_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_BEDSIDE_CABINET = registerBlock("oak_wood_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_BEDSIDE_CABINET = registerBlock("pale_oak_planks_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_BEDSIDE_CABINET = registerBlock("pale_oak_wood_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_BEDSIDE_CABINET = registerBlock("spruce_planks_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_BEDSIDE_CABINET = registerBlock("spruce_wood_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_BEDSIDE_CABINET = registerBlock("birch_planks_bedside_cabinet", BedsideCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -43,6 +45,8 @@ public class FurnitureBedroomBlocks {
 
     public static final Block OAK_PLANKS_Desk_CABINET = registerBlock("oak_planks_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_Desk_CABINET = registerBlock("oak_wood_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_Desk_CABINET = registerBlock("pale_oak_planks_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_Desk_CABINET = registerBlock("pale_oak_wood_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_Desk_CABINET = registerBlock("spruce_planks_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_Desk_CABINET = registerBlock("spruce_wood_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_Desk_CABINET = registerBlock("birch_planks_desk_cabinet", DeskCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -66,6 +70,8 @@ public class FurnitureBedroomBlocks {
 
     public static final Block OAK_PLANKS_BOOK_Desk = registerBlock("oak_planks_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_BOOK_Desk = registerBlock("oak_wood_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_BOOK_Desk = registerBlock("pale_oak_planks_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_BOOK_Desk = registerBlock("pale_oak_wood_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_BOOK_Desk = registerBlock("spruce_planks_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_BOOK_Desk = registerBlock("spruce_wood_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_BOOK_Desk = registerBlock("birch_planks_book_desk", DeskBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());

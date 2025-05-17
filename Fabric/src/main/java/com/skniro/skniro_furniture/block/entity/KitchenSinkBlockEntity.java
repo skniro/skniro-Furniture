@@ -69,7 +69,11 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     public ItemStack getRenderStack() {
+        if (this.getStack(INPUT_SLOT).isEmpty()){
+            return this.getStack(OUTPUT_SLOT);
+        } else {
             return this.getStack(INPUT_SLOT);
+        }
     }
 
     @Override

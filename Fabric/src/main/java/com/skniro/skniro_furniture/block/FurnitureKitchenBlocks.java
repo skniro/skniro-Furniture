@@ -35,6 +35,8 @@ public class FurnitureKitchenBlocks {
 
     public static final Block OAK_PLANKS_OVEN = registerBlock("oak_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_OVEN = registerBlock("oak_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_OVEN = registerBlock("pale_oak_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_OVEN = registerBlock("pale_oak_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_OVEN = registerBlock("spruce_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_OVEN = registerBlock("spruce_wood_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_OVEN = registerBlock("birch_planks_oven", OvenBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -75,6 +77,8 @@ public class FurnitureKitchenBlocks {
 
     public static final Block OAK_PLANKS_KITCHEN_COUNTER = registerBlock("oak_planks_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_KITCHEN_COUNTER = registerBlock("oak_wood_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_KITCHEN_COUNTER = registerBlock("pale_oak_planks_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_KITCHEN_COUNTER = registerBlock("pale_oak_wood_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_KITCHEN_COUNTER = registerBlock("spruce_planks_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_KITCHEN_COUNTER = registerBlock("spruce_wood_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_KITCHEN_COUNTER = registerBlock("birch_planks_kitchen_counter", KitchenCounterBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -117,6 +121,8 @@ public class FurnitureKitchenBlocks {
 
     public static final Block OAK_PLANKS_KITCHEN_COUNTER_DRAWER = registerBlock("oak_planks_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_KITCHEN_COUNTER_DRAWER = registerBlock("oak_wood_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER = registerBlock("pale_oak_planks_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER = registerBlock("pale_oak_wood_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER = registerBlock("spruce_planks_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER = registerBlock("spruce_wood_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER = registerBlock("birch_planks_kitchen_counter_drawer", KitchenCounterDrawerBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -157,6 +163,8 @@ public class FurnitureKitchenBlocks {
 
     public static final Block OAK_PLANKS_KITCHEN_CABINET = registerBlock("oak_planks_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_KITCHEN_CABINET = registerBlock("oak_wood_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_KITCHEN_CABINET = registerBlock("pale_oak_planks_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_KITCHEN_CABINET = registerBlock("pale_oak_wood_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_KITCHEN_CABINET = registerBlock("spruce_planks_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_KITCHEN_CABINET = registerBlock("spruce_wood_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_KITCHEN_CABINET = registerBlock("birch_planks_kitchen_cabinet", KitchenCabinetBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
@@ -214,6 +222,8 @@ public class FurnitureKitchenBlocks {
 
     public static final Block OAK_PLANKS_KITCHEN_SINK = registerBlock("oak_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
     public static final Block OAK_WOOD_KITCHEN_SINK = registerBlock("oak_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_KITCHEN_SINK = registerBlock("pale_oak_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_KITCHEN_SINK = registerBlock("pale_oak_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
     public static final Block SPRUCE_PLANKS_KITCHEN_SINK = registerBlock("spruce_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block SPRUCE_WOOD_KITCHEN_SINK = registerBlock("spruce_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
     public static final Block BIRCH_PLANKS_KITCHEN_SINK = registerBlock("birch_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());

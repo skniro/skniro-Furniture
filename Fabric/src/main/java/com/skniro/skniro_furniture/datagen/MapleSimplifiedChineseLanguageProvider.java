@@ -300,7 +300,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
 
 
         try {
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/zh_cn.existing.json").get();
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);

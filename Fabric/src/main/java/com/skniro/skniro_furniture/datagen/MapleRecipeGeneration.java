@@ -6,6 +6,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
+import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Util;
 
@@ -28,6 +31,8 @@ public class MapleRecipeGeneration extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, exporter) {
             @Override
             public void generate() {
+
+                createShapeless(RecipeCategory.FOOD,Items.SWEET_BERRIES).input(Items.SWEET_BERRIES,3).input(Items.POTION).criterion("has_base_item", conditionsFromItem(Items.SWEET_BERRIES)).offerTo(exporter);
 
             }
         };

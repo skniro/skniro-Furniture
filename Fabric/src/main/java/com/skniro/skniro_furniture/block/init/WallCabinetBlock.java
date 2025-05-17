@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
+import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
 import com.skniro.skniro_furniture.block.entity.WallCabinetBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -26,6 +27,18 @@ public class WallCabinetBlock extends AbstractWallCabinetBlock {
     public WallCabinetBlock(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
+    }
+
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+        if (world instanceof ServerWorld serverWorld) {
+            BlockEntity var8 = world.getBlockEntity(pos);
+            if (var8 instanceof WallCabinetBlockEntity BlockEntity) {
+                player.openHandledScreen(BlockEntity);
+                player.incrementStat(Stats.OPEN_BARREL);
+            }
+        }
+
+        return ActionResult.SUCCESS;
     }
 
     @Override
