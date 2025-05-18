@@ -2,7 +2,7 @@
     "type": "skniro_furniture:kitchen_sink",
     "ingredient": "minecraft:bucket",
     "result": {
-        "id":"minecraft:water_bucket",
+        "id": "minecraft:water_bucket",
         "count": 1
     }
 }

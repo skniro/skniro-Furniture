@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:mangrove_wood_triple_cabinet",
+        "minecraft:glass_pane"
+    ],
+    "result": {
+        "id": "skniro_furniture:mangrove_wood_double_glass_doors_triple_cabinet",
+        "count": 1
+    }
+}

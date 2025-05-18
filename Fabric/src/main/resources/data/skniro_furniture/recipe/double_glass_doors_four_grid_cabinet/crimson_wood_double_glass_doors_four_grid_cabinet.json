@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:crimson_wood_four_grid_cabinet",
+        "minecraft:glass_pane"
+    ],
+    "result": {
+        "id": "skniro_furniture:crimson_wood_double_glass_doors_four_grid_cabinet",
+        "count": 1
+    }
+}

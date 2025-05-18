@@ -1,20 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PPP",
-    "PWP",
-    "PPP"
-  ],
-  "key": {
-    "W": {
-      "item": "minecraft:glass"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        "PWP",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:glass",
+        "P": "minecraft:stripped_pale_oak_log"
     },
-    "P": {
-      "item": "minecraft:stripped_pale_oak_log"
+    "result": {
+        "id": "skniro_furniture:pale_oak_wood_window",
+        "count": 4
     }
-  },
-  "result": {
-    "item": "skniro_furniture:pale_oak_wood_window",
-    "count": 4
-  }
 }

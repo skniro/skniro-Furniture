@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "XXX",
+        "###"
+    ],
+    "key": {
+        "X": "minecraft:book",
+        "#": "minecraft:acacia_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:acacia_bookshelf"
+    }
+}

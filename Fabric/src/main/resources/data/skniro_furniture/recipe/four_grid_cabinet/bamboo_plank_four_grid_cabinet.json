@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "WWW",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:stick",
+        "P": "minecraft:bamboo_slab"
+    },
+    "result": {
+        "id": "skniro_furniture:bamboo_plank_four_grid_cabinet",
+        "count": 2
+    }
+}
