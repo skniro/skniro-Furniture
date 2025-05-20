@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        " A ",
+        "   "
+    ],
+    "key": {
+        "P": "minecraft:redstone",
+        "A": "minecraft:glowstone",
+        "W": "minecraft:lime_terracotta"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:lime_ceiling_lamp"
+    }
+}

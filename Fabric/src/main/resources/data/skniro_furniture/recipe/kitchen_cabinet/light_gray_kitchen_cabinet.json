@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "AWA",
+        "PWP"
+    ],
+    "key": {
+        "A": "minecraft:quartz_block",
+        "P": "minecraft:light_gray_terracotta",
+        "W": "minecraft:stick"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:light_gray_kitchen_cabinet"
+    }
+}

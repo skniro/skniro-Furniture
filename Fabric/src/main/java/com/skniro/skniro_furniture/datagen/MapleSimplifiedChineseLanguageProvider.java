@@ -329,27 +329,27 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_PALE_OAK, "苍白橡木茶几");
 
         translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET, "橡木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET, "橡木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET, "橡木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET, "苍白橡木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET, "苍白橡木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET, "苍白橡木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET, "云杉木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET, "云杉木床旁柜");
+        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET, "云杉木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET, "桦木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_WOOD_BEDSIDE_CABINET, "桦木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_WOOD_BEDSIDE_CABINET, "桦木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_PLANKS_BEDSIDE_CABINET, "丛林木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_WOOD_BEDSIDE_CABINET, "丛林木床旁柜");
-        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET, "金合欢木板床边柜");
-        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_WOOD_BEDSIDE_CABINET, "金合欢木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_WOOD_BEDSIDE_CABINET, "丛林木床头柜");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET, "金合欢木板床头柜");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_WOOD_BEDSIDE_CABINET, "金合欢木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_PLANKS_BEDSIDE_CABINET, "深色橡木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_WOOD_BEDSIDE_CABINET, "深色橡木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_WOOD_BEDSIDE_CABINET, "深色橡木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_PLANKS_BEDSIDE_CABINET, "红树林木板床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_WOOD_BEDSIDE_CABINET, "红树林木床柜");
         translationBuilder.add(FurnitureBedroomBlocks.CHERRY_PLANKS_BEDSIDE_CABINET, "樱桃木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_WOOD_BEDSIDE_CABINET, "樱桃木床旁柜");
+        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_WOOD_BEDSIDE_CABINET, "樱桃木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_PLANKS_BEDSIDE_CABINET, "绯红木板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_HYPHAE_BEDSIDE_CABINET, "绯红木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_HYPHAE_BEDSIDE_CABINET, "绯红木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.WARPED_PLANKS_BEDSIDE_CABINET, "弯曲板床头柜");
-        translationBuilder.add(FurnitureBedroomBlocks.WARPED_HYPHAE_BEDSIDE_CABINET, "诡异木床边柜");
+        translationBuilder.add(FurnitureBedroomBlocks.WARPED_HYPHAE_BEDSIDE_CABINET, "诡异木床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET, "竹木板床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET, "竹木床头柜");
 

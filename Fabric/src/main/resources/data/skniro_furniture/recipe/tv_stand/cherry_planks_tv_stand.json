@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": "minecraft:cherry_slab",
+        "W": "minecraft:cherry_planks"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:cherry_planks_tv_stand"
+    }
+}

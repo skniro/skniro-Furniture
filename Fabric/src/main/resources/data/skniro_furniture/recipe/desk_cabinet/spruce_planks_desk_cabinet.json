@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:spruce_plank_book_desk",
+        "minecraft:{wood}_planks"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:spruce_planks_desk_cabinet"
+    }
+}

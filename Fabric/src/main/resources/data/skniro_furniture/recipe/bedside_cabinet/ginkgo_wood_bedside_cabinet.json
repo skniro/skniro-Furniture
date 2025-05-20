@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PPP",
+        "PPP"
+    ],
+    "key": {
+        "P": "minecraft:ginkgo_slab",
+        "W": "minecraft:stripped_ginkgo_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:ginkgo_wood_bedside_cabinet"
+    }
+}

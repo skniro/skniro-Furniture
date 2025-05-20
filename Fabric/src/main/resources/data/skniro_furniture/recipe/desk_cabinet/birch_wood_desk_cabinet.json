@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:birch_wood_book_desk",
+        "minecraft:stripped_{wood}_log"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:birch_wood_desk_cabinet"
+    }
+}

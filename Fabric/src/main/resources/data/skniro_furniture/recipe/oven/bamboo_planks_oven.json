@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:bamboo_planks_kitchen_counter",
+        "minecraft:furnace"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:bamboo_planks_oven"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "P P"
+    ],
+    "key": {
+        "P": "minecraft:mangrove_slab",
+        "W": "minecraft:stripped_mangrove_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:mangrove_wood_book_desk"
+    }
+}

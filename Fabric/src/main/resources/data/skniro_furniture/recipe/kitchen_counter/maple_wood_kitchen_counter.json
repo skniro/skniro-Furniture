@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:maple_slab",
+        "P": "minecraft:stripped_maple_log"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:maple_wood_kitchen_counter"
+    }
+}

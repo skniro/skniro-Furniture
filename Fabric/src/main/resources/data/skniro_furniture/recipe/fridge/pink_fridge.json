@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "WTW",
+        "WGW"
+    ],
+    "key": {
+        "T": "minecraft:chest",
+        "G": "minecraft:dispenser",
+        "W": "minecraft:pink_terracotta"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:pink_fridge"
+    }
+}

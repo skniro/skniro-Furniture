@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "P P"
+    ],
+    "key": {
+        "P": "minecraft:birch_slab",
+        "W": "minecraft:stripped_birch_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:birch_wood_book_desk"
+    }
+}

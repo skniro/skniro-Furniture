@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:oak_planks_kitchen_counter",
+        "minecraft:{wood}_planks"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:oak_planks_kitchen_counter_drawer"
+    }
+}
