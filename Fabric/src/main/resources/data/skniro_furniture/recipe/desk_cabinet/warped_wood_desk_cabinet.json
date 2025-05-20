@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:warped_wood_book_desk",
-        "minecraft:stripped_{wood}_log"
+        "minecraft:stripped_warped_stem"
     ],
     "result": {
         "count": 1,

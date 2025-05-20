@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:warped_planks_kitchen_counter",
-        "minecraft:{wood}_planks"
+        "minecraft:barrel"
     ],
     "result": {
         "count": 1,

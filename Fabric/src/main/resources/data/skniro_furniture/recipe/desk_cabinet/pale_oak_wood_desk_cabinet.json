@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:pale_oak_wood_book_desk",
-        "minecraft:stripped_{wood}_log"
+        "minecraft:stripped_pale_oak_log"
     ],
     "result": {
         "count": 1,

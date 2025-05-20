@@ -1,7 +1,7 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:pale_oak_kitchen_counter",
+        "skniro_furniture:gray_kitchen_counter",
         "minecraft:cauldron"
     ],
     "result": {

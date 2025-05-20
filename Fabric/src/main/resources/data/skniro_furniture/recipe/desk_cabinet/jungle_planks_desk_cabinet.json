@@ -1,8 +1,8 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:jungle_plank_book_desk",
-        "minecraft:{wood}_planks"
+        "skniro_furniture:jungle_planks_book_desk",
+        "minecraft:jungle_planks"
     ],
     "result": {
         "count": 1,

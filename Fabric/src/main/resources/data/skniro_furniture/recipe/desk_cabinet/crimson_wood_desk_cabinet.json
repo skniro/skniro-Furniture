@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:crimson_wood_book_desk",
-        "minecraft:stripped_{wood}_log"
+        "minecraft:stripped_crimson_stem"
     ],
     "result": {
         "count": 1,

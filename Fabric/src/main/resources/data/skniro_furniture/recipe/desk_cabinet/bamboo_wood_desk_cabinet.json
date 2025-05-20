@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:bamboo_wood_book_desk",
-        "minecraft:stripped_{wood}_log"
+        "minecraft:stripped_bamboo_block"
     ],
     "result": {
         "count": 1,

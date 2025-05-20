@@ -1,8 +1,8 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:birch_plank_book_desk",
-        "minecraft:{wood}_planks"
+        "skniro_furniture:birch_planks_book_desk",
+        "minecraft:birch_planks"
     ],
     "result": {
         "count": 1,
