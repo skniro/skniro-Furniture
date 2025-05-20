@@ -32,10 +32,15 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
         var facing = state.get(Properties.HORIZONTAL_FACING);
 
         if (!(state.getBlock() instanceof OvenBlock)) return;
-
         matrices.push();
 
-        matrices.translate(0.5, 0.5, 0.5);
+        switch (facing) {
+            case NORTH -> matrices.translate(0.5, 0.4, 0.15);
+            case SOUTH -> matrices.translate(0.5, 0.4, 0.85);
+            case WEST -> matrices.translate(0.15, 0.4, 0.5);
+            case EAST -> matrices.translate(0.85, 0.4, 0.5);
+        }
+
         float angle = switch (facing) {
             case NORTH -> 0f;
             case SOUTH -> 180f;
@@ -43,8 +48,9 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
             case EAST -> -90f;
             default -> 0f;
         };
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(angle));
-        matrices.translate(0.0, 0.0, -0.501);
+
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(angle)); // 按 Y 轴旋转
+
         Matrix4f mat = matrices.peek().getPositionMatrix();
 
         if (state.get(OvenBlock.LIT)){
@@ -52,33 +58,33 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
             drawQuad(mat, glowVc, 0x80FFFF00, light);
         }
 
-        ItemStack stack = entity.getStack(0);
+        ItemStack stack = entity.getRenderStack();
         if (!stack.isEmpty()) {
-            renderItemAsIcon(stack, matrices, vertexConsumers, light, overlay);
+            renderItemAsIcon(facing, stack, matrices, vertexConsumers, light, overlay);
         }
         matrices.pop();
     }
 
     private void drawQuad(Matrix4f mat, VertexConsumer vc, int color, int light) {
-        vc.vertex(mat, -0.25F,  0.25F, 0F)
+        vc.vertex(mat, -0.3F,  0.21F, 0F)
                 .color(color)
                 .texture(0F, 0F)
                 .overlay(OverlayTexture.DEFAULT_UV)
                 .light(light)
                 .normal(0F, 0F, -1F);
-        vc.vertex(mat,  0.25F,  0.25F, 0F)
+        vc.vertex(mat,  0.3F,  0.21F, 0F)
                 .color(color)
                 .texture(1F, 0F)
                 .overlay(OverlayTexture.DEFAULT_UV)
                 .light(light)
                 .normal(0F, 0F, -1F);
-        vc.vertex(mat,  0.25F, -0.25F, 0F)
+        vc.vertex(mat,  0.3F, -0.21F, 0F)
                 .color(color)
                 .texture(1F, 1F)
                 .overlay(OverlayTexture.DEFAULT_UV)
                 .light(light)
                 .normal(0F, 0F, -1F);
-        vc.vertex(mat, -0.25F, -0.25F, 0F)
+        vc.vertex(mat, -0.3F, -0.21F, 0F)
                 .color(color)
                 .texture(0F, 1F)
                 .overlay(OverlayTexture.DEFAULT_UV)
@@ -86,13 +92,12 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
                 .normal(0F, 0F, -1F);
     }
 
-    private void renderItemAsIcon(ItemStack stack, MatrixStack matrices,
+    private void renderItemAsIcon(Direction direction, ItemStack stack, MatrixStack matrices,
                                   VertexConsumerProvider vertexConsumers, int light, int overlay) {
 
         matrices.push();
-        matrices.translate(0, 0, 0.001);
         matrices.scale(0.4f, 0.4f, 0.4f);
-        matrices.translate(-0.5f, -0.5f, 0);
+        matrices.translate(0.0, 0.3, 0.3);
 
         MinecraftClient.getInstance().getItemRenderer()
                 .renderItem(stack, ModelTransformationMode.GUI, light, overlay, matrices, vertexConsumers, null, 0);

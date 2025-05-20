@@ -40,6 +40,14 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
         super.markDirty();
     }
 
+    public ItemStack getRenderStack() {
+        if (this.getStack(INPUT_SLOT_INDEX).isEmpty()){
+            return this.getStack(OUTPUT_SLOT_INDEX);
+        } else {
+            return this.getStack(INPUT_SLOT_INDEX);
+        }
+    }
+
     @Nullable
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {

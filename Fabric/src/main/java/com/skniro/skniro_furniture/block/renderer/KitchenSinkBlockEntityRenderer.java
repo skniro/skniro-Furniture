@@ -34,12 +34,12 @@ public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<Kitch
         Direction direction = entity.getCachedState().get(Properties.HORIZONTAL_FACING);
         matrices.push();
         switch (direction) {
-            case NORTH -> matrices.translate(0.5f, 0.5f, -0.01f);
-            case SOUTH -> matrices.translate(0.5f, 0.5f, 1.01f);
-            case WEST -> matrices.translate(-0.01f, 0.5f, 0.5f);
-            case EAST -> matrices.translate(1.01f, 0.5f, 0.5f);
+            case NORTH -> matrices.translate(0.5f, 1.0f, 0.65f);
+            case SOUTH -> matrices.translate(0.5f, 1.0f, 0.35f);
+            case WEST -> matrices.translate(0.65f, 1.0f, 0.5f);
+            case EAST -> matrices.translate(0.35f, 1.0f, 0.5f);
         }
-        matrices.scale(0.35f, 0.35f, 0.35f);
+        matrices.scale(0.5f, 0.5f, 0.5f);
         switch (direction) {
             case NORTH -> matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(0));
             case SOUTH -> matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(180));
