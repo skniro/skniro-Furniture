@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.GenericContainerScreenHandler;
@@ -14,7 +15,7 @@ public class DrawerBlockEntity extends AbstractFurnitureContainerBlockEntity {
     }
 
     protected Text getContainerName() {
-        return Text.translatable("container.barrel");
+        return Text.translatable(FurnitureStrings.Drawer);
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {

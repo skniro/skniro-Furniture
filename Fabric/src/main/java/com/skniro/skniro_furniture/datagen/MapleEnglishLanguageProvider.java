@@ -5,6 +5,7 @@ import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -1048,6 +1049,17 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.GREEN_Ceiling_Lamp, "Green Ceiling Lamp");
         translationBuilder.add(MapleFurnitureBlocks.RED_Ceiling_Lamp, "Red Ceiling Lamp");
         translationBuilder.add(MapleFurnitureBlocks.BLACK_Ceiling_Lamp, "Black Ceiling Lamp");
+
+        translationBuilder.add(FurnitureStrings.Kitchen_Sink,"Kitchen Sink");
+        translationBuilder.add(FurnitureStrings.Bedside_Cabinet,"Bedside Cabinet");
+        translationBuilder.add(FurnitureStrings.Cabinet,"Cabinet");
+        translationBuilder.add(FurnitureStrings.Drawer,"Drawer");
+        translationBuilder.add(FurnitureStrings.Desk_Cabinet,"Desk Cabinet");
+        translationBuilder.add(FurnitureStrings.Fridge,"Fridge");
+        translationBuilder.add(FurnitureStrings.Kitchen_Cabinet,"Kitchen Cabinet");
+        translationBuilder.add(FurnitureStrings.Oven,"Oven");
+        translationBuilder.add(FurnitureStrings.TV_Stand,"TV Stand");
+        translationBuilder.add(FurnitureStrings.Wall_Cabinet,"Wall Cabinet");
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();

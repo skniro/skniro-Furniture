@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.api.entity.ImplementedInventory;
+import com.skniro.skniro_furniture.init.FurnitureStrings;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.recipe.KitchenSinkRecipe;
 import com.skniro.skniro_furniture.recipe.KitchenSinkRecipeInput;
@@ -94,7 +95,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable("gui.skniro_furniture.kitchen_sink");
+        return Text.translatable(FurnitureStrings.Kitchen_Sink);
     }
 
     @Nullable

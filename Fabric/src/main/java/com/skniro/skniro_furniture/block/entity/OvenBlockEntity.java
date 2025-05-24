@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -23,7 +24,7 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
     }
 
     protected Text getContainerName() {
-        return Text.translatable("container.furnace");
+        return Text.translatable(FurnitureStrings.Oven);
     }
 
     protected int getFuelTime(FuelRegistry fuelRegistry, ItemStack stack) {
