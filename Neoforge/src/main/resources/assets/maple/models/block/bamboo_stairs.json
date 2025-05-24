@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "skniro_furniture:block/bamboo_planks",
-    "side": "skniro_furniture:block/bamboo_planks",
-    "top": "skniro_furniture:block/bamboo_planks"
-  }
-}

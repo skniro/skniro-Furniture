@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/tv_stand",
+  "textures": {
+    "clay": "minecraft:block/stripped_bamboo_block",
+    "quartz": "minecraft:block/stripped_bamboo_block",
+    "white": "minecraft:block/stripped_bamboo_block"
+  }
+}

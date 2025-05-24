@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/wall_cabinet",
+    "textures": {
+        "clay": "skniro_furniture:block/magenta_terracotta",
+        "quartz": "minecraft:block/quartz_block_top"
+    }
+}

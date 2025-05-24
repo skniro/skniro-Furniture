@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/kitchen_counter_drawer",
+  "textures": {
+    "clay": "minecraft:block/acacia_planks",
+    "quartz": "minecraft:block/acacia_planks",
+    "white": "minecraft:block/acacia_planks"
+  }
+}

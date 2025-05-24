@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "skniro_furniture:block/stripped_ginkgo_log_top",
-    "side": "skniro_furniture:block/stripped_ginkgo_log"
-  }
-}

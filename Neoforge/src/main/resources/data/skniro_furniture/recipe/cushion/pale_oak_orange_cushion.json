@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:orange_carpet",
+        "P": "minecraft:pale_oak_planks"
+    },
+    "result": {
+        "id": "skniro_furniture:pale_oak_orange_cushion",
+        "count": 1
+    }
+}

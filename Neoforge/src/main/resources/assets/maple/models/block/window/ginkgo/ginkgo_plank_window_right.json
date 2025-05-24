@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/window/window_right",
-  "textures": {
-    "front": "skniro_furniture:block/ginkgo_planks",
-    "side": "skniro_furniture:block/ginkgo_planks",
-    "glass": "minecraft:block/glass"
-  }
-}

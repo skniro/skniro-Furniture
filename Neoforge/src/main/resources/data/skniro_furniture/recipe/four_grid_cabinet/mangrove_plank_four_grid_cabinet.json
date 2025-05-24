@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "WWW",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:stick",
+        "P": "minecraft:mangrove_slab"
+    },
+    "result": {
+        "id": "skniro_furniture:mangrove_plank_four_grid_cabinet",
+        "count": 1
+    }
+}

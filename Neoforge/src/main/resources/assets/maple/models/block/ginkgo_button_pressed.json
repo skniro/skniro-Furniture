@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "skniro_furniture:block/ginkgo_planks"
-  }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "skniro_furniture:block/triple_cabinet",
+  "textures": {
+    "plank": "minecraft:block/mangrove_planks"
+  }
+}

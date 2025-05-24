@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/flowerbed_1",
-  "textures": {
-    "flowerbed": "skniro_furniture:block/pink_petals",
-    "stem": "skniro_furniture:block/pink_petals_stem"
-  },
-  "render_type": "cutout"
-}

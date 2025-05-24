@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/bamboo_plank_coffee_chair_cyan",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/bamboo_plank_coffee_chair_cyan"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/bamboo_plank_coffee_chair_cyan",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/bamboo_plank_coffee_chair_cyan",
+      "y": 270
+    }
+  }
+}

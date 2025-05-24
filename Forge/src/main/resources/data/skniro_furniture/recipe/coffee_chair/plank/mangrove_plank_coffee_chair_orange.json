@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        " P ",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:orange_carpet",
+        "P": "minecraft:mangrove_planks"
+    },
+    "result": {
+        "id": "skniro_furniture:mangrove_plank_coffee_chair_orange",
+        "count": 2
+    }
+}

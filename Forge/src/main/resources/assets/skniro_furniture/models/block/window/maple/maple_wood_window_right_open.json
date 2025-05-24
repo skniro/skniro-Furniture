@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/window/window_right_open",
-  "textures": {
-    "front": "skniro_furniture:block/stripped_maple_log",
-    "side": "skniro_furniture:block/stripped_maple_log",
-    "glass": "minecraft:block/glass"
-  }
-}

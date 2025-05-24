@@ -1,0 +1,6 @@
+{
+    "parent": "skniro_furniture:block/furniture/sofa_right",
+    "textures": {
+        "quartz": "skniro_furniture:block/purple_terracotta"
+    }
+}

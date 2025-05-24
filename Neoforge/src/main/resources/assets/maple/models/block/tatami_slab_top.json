@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "skniro_furniture:block/tatami",
-    "side": "skniro_furniture:block/tatami",
-    "top": "skniro_furniture:block/tatami"
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/kitchen_sink",
+  "textures": {
+    "clay": "minecraft:block/warped_planks",
+    "quartz": "minecraft:block/warped_planks",
+    "white": "minecraft:block/warped_planks"
+  }
+}

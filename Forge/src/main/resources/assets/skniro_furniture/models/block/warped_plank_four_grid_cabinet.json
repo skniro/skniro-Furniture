@@ -1,0 +1,6 @@
+{
+  "parent": "skniro_furniture:block/four_grid_cabinet",
+  "textures": {
+    "plank": "minecraft:block/warped_planks"
+  }
+}

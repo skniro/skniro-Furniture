@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:crimson_slab",
+        "P": "minecraft:stripped_crimson_stem"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_wood_kitchen_counter"
+    }
+}

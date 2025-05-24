@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:stick",
+        "P": "minecraft:stripped_crimson_stem"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:crimson_wood_kitchen_cabinet"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:pale_oak_slab",
+        "P": "minecraft:stripped_pale_oak_log"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:pale_oak_wood_kitchen_counter"
+    }
+}

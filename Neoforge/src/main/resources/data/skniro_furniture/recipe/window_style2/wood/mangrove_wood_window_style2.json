@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:glass",
+        "P": "minecraft:stripped_mangrove_log"
+    },
+    "result": {
+        "id": "skniro_furniture:mangrove_wood_window_style2",
+        "count": 4
+    }
+}

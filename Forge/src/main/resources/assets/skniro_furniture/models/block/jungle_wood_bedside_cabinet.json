@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/bedside_cabinet",
+  "textures": {
+    "clay": "minecraft:block/stripped_jungle_log",
+    "quartz": "minecraft:block/stripped_jungle_log",
+    "white": "minecraft:block/stripped_jungle_log"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "P": "minecraft:stick",
+        "W": "minecraft:stripped_birch_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:birch_wood_wall_cabinet"
+    }
+}

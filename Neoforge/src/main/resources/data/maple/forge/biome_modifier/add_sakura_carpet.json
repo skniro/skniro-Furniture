@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#skniro_furniture:is_sakura",
-  "features": "skniro_furniture:sakura_carpet_placed",
-  "step": "vegetal_decoration"
-}

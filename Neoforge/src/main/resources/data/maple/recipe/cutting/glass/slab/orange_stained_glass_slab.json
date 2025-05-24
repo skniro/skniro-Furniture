@@ -1,8 +1,0 @@
-{
-    "type": "minecraft:stonecutting",
-    "ingredient": "minecraft:orange_stained_glass",
-    "result": {
-        "id": "skniro_furniture:orange_stained_glass_slab",
-        "count": 2
-    }
-}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/warped_plank_coffee_chair_magenta",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/warped_plank_coffee_chair_magenta"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/warped_plank_coffee_chair_magenta",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/warped_plank_coffee_chair_magenta",
+      "y": 270
+    }
+  }
+}

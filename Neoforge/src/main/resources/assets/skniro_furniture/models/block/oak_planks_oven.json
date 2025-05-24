@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/oven",
+  "textures": {
+    "clay": "minecraft:block/oak_planks",
+    "quartz": "minecraft:block/oak_planks",
+    "white": "minecraft:block/oak_planks"
+  }
+}

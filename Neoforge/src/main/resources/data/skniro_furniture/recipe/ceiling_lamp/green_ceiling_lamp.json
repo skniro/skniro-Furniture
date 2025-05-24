@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        " A ",
+        "   "
+    ],
+    "key": {
+        "P": "minecraft:redstone",
+        "A": "minecraft:glowstone",
+        "W": "minecraft:green_terracotta"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:green_ceiling_lamp"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:crimson_planks_kitchen_counter",
+        "minecraft:barrel"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:crimson_planks_kitchen_counter_drawer"
+    }
+}

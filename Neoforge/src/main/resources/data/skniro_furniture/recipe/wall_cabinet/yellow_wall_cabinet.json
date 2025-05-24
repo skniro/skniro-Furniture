@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "AWA",
+        "PWP"
+    ],
+    "key": {
+        "A": "minecraft:quartz_block",
+        "P": "minecraft:stick",
+        "W": "minecraft:yellow_terracotta"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:yellow_wall_cabinet"
+    }
+}

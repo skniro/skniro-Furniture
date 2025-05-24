@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        " P ",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:green_carpet",
+        "P": "minecraft:bamboo_planks"
+    },
+    "result": {
+        "id": "skniro_furniture:bamboo_plank_coffee_chair_green",
+        "count": 2
+    }
+}

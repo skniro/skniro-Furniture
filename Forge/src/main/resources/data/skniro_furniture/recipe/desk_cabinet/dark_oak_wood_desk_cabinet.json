@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:dark_oak_wood_book_desk",
+        "minecraft:stripped_dark_oak_log"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:dark_oak_wood_desk_cabinet"
+    }
+}

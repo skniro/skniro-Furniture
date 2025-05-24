@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/kitchen_sink",
+    "textures": {
+        "clay": "skniro_furniture:block/light_gray_terracotta",
+        "quartz": "minecraft:block/quartz_block_top"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:oak_plank_triple_cabinet",
+        "minecraft:glass_pane"
+    ],
+    "result": {
+        "id": "skniro_furniture:oak_plank_double_glass_doors_triple_cabinet",
+        "count": 1
+    }
+}

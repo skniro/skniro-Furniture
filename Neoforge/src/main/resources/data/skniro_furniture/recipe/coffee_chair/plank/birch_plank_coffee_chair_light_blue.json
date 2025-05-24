@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        " P ",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:light_blue_carpet",
+        "P": "minecraft:birch_planks"
+    },
+    "result": {
+        "id": "skniro_furniture:birch_plank_coffee_chair_light_blue",
+        "count": 2
+    }
+}

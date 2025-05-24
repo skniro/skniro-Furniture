@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "P": "minecraft:stick",
+        "W": "minecraft:stripped_dark_oak_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:dark_oak_wood_wall_cabinet"
+    }
+}

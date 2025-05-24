@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#skniro_furniture:is_maple_grove",
-  "features": "skniro_furniture:maple_carpet_placed",
-  "step": "vegetal_decoration"
-}

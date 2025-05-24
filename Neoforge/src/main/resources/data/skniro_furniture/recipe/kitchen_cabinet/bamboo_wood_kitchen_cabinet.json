@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": "minecraft:stick",
+        "P": "minecraft:stripped_bamboo_block"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:bamboo_wood_kitchen_cabinet"
+    }
+}

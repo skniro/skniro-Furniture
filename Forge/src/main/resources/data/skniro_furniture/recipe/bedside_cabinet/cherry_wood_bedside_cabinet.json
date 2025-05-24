@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PPP",
+        "PPP"
+    ],
+    "key": {
+        "P": "minecraft:cherry_slab",
+        "W": "minecraft:stripped_cherry_log"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:cherry_wood_bedside_cabinet"
+    }
+}

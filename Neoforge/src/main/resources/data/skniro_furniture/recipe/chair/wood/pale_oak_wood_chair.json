@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "PPP",
+        "P P"
+    ],
+    "key": {
+        "P": "minecraft:stripped_pale_oak_log"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:pale_oak_wood_chair"
+    }
+}

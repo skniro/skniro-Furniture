@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "AWA",
+        "AWA"
+    ],
+    "key": {
+        "A": "minecraft:quartz_block",
+        "W": "minecraft:black_terracotta"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:black_kitchen_counter"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "AWA",
+        "PWP"
+    ],
+    "key": {
+        "A": "minecraft:quartz_block",
+        "P": "minecraft:stick",
+        "W": "minecraft:red_terracotta"
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:red_wall_cabinet"
+    }
+}

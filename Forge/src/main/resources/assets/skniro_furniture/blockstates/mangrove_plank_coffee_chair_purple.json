@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/mangrove_plank_coffee_chair_purple",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/mangrove_plank_coffee_chair_purple"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/mangrove_plank_coffee_chair_purple",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/mangrove_plank_coffee_chair_purple",
+      "y": 270
+    }
+  }
+}
