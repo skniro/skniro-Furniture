@@ -1,5 +1,5 @@
 bundles:
   - 1
 files:
-  - source: /Fabric/src/main/generated/assets/maple/lang/en_us.json
-    translation: /Fabric/src/main/resources/assets/maple/lang/%locale%.json
+  - source: /Fabric/src/main/generated/assets/skniro_furniture/lang/en_us.json
+    translation: /Fabric/src/main/resources/assets/skniro_furniture/lang/%locale%.json
