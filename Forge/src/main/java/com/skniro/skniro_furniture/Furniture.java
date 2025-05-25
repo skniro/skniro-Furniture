@@ -1,12 +1,9 @@
 package com.skniro.skniro_furniture;
 
 import com.mojang.logging.LogUtils;
-import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
-import com.skniro.skniro_furniture.util.MapleLootModifiers;
-import com.skniro.skniro_furniture.item.MapleItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -26,22 +23,27 @@ public class Furniture {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "skniro_furniture";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+
+
+
 
 
     public Furniture(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
         // Register the commonSetup method for modloading
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        MapleFurnitureBlocks.registerMapleBlocks(modEventBus);
-
-
-        // Register the Deferred Register to the mod event bus so items get registered
-        MapleItems.registerModItems(modEventBus);
-
-        MapleEntityType.register(modEventBus);
-        MapleLootModifiers.register(modEventBus);
+        FurnitureContent.registerItem(modEventBus);
+        FurnitureContent.registerBlock(modEventBus);
+        FurnitureContent.registerFluid(modEventBus);
+        FurnitureContent.CreativeTab(modEventBus);
+        FurnitureContent.generateWorldGen(modEventBus);
+        FurnitureContent.registerOthers(modEventBus);
+        FurnitureContent.registerCommand(modEventBus);
+        FurnitureContent.registerMapleLootTable(modEventBus);
+        FurnitureContent.registerMapleCompostableItems(modEventBus);
+        FurnitureContent.registerScreenType(modEventBus);
+        FurnitureContent.registerRecipeType(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

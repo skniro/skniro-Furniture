@@ -3,7 +3,6 @@ package com.skniro.skniro_furniture.block.init;
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
-import net.minecraft.world.entity.EntitySpawnReason;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -11,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
