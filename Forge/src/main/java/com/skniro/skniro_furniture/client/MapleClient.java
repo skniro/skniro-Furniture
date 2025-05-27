@@ -34,6 +34,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_MANGROVE.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_BAMBOO.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_CHERRY.get(),renderLayer2);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_PALE_OAK.get(),renderLayer2);
 
         RenderType renderLayer3 = RenderType.cutout();
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_OAK.get(), renderLayer3);
@@ -46,6 +47,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CHERRY.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CRIMSON.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_WARPED.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_PALE_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BIRCH.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_SPRUCE.get(), renderLayer3);
@@ -56,6 +58,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CHERRY.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CRIMSON.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_WARPED.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_PALE_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2.get(), renderLayer3);
@@ -66,6 +69,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2.get(), renderLayer3);
@@ -76,6 +80,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2.get(), renderLayer3);
 
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.WHITE_OVEN.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.ORANGE_OVEN.get(), renderLayer3);
@@ -116,6 +121,8 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.WARPED_HYPHAE_OVEN.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN.get(), renderLayer3);
 
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET.get(), renderLayer3);
@@ -139,6 +146,8 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.CRIMSON_WOOD_Glass_TRIPLE_CABINET.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.WARPED_PLANK_Glass_TRIPLE_CABINET.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.WARPED_WOOD_Glass_TRIPLE_CABINET.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET.get(), renderLayer3);
 
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get(), renderLayer3);
@@ -162,6 +171,8 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.WARPED_PLANKS_Glass_Four_Grid_Cabinet.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.BAMBOO_BLOCK_Glass_Four_Grid_Cabinet.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.BAMBOO_PLANKS_Glass_Four_Grid_Cabinet.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet.get(), renderLayer3);
 
 
 
