@@ -1103,20 +1103,5 @@ public class FurnitureContent {
 
     public static void registerMapleCompostableItems() {
     }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientEntityRenderer() {
-        EntityRendererRegistry.register(MapleEntityType.CHAIR_ENTITY, ChairRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.Cushion_ENTITY, CushinoRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.SOFA_ENTITY, SofaRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientParticle() {
-
-    }
 }
 

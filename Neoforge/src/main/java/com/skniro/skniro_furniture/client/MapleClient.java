@@ -18,6 +18,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -26,12 +27,12 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
-@EventBusSubscriber(modid = Furniture.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = Furniture.MOD_ID, value = Dist.CLIENT)
 public class MapleClient {
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-        RenderType renderLayer2 = RenderType.cutoutMipped();
+        ChunkSectionLayer renderLayer2 = ChunkSectionLayer.CUTOUT_MIPPED;
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_OAK.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_SPRUCE.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_BIRCH.get(),renderLayer2);
@@ -45,7 +46,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_CHERRY.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_PALE_OAK.get(),renderLayer2);
 
-        RenderType renderLayer3 = RenderType.cutout();
+        ChunkSectionLayer renderLayer3 = ChunkSectionLayer.CUTOUT;
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BIRCH.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_SPRUCE.get(), renderLayer3);
@@ -185,7 +186,7 @@ public class MapleClient {
 
 
 
-        RenderType renderLayer4 = RenderType.translucent();
+        ChunkSectionLayer renderLayer4 = ChunkSectionLayer.TRANSLUCENT;
         registerClientEntityRenderer();
         registerClientParticle();
     }

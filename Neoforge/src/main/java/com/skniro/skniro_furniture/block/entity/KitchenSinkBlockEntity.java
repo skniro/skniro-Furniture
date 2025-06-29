@@ -26,6 +26,8 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -99,19 +101,19 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     @Override
-    protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider registryLookup) {
-        super.saveAdditional(nbt, registryLookup);
-        ContainerHelper.saveAllItems(nbt, inventory, registryLookup);
+    protected void saveAdditional(ValueOutput nbt) {
+        super.saveAdditional(nbt);
+        ContainerHelper.saveAllItems(nbt, inventory);
         nbt.putInt("kitchen_sink.progress", progress);
         nbt.putInt("kitchen_sink.max_progress", maxProgress);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider registryLookup) {
-        ContainerHelper.loadAllItems(nbt, inventory, registryLookup);
-        progress = nbt.getInt("kitchen_sink.progress");
-        maxProgress = nbt.getInt("kitchen_sink.max_progress");
-        super.loadAdditional(nbt, registryLookup);
+    protected void loadAdditional(ValueInput nbt) {
+        ContainerHelper.loadAllItems(nbt, inventory);
+        progress = nbt.getInt("kitchen_sink.progress").orElse(0);
+        maxProgress = nbt.getInt("kitchen_sink.max_progress").orElse(72);
+        super.loadAdditional(nbt);
     }
 
     public void tick(Level world, BlockPos pos, BlockState state) {

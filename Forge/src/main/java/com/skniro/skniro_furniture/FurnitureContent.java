@@ -17,18 +17,17 @@ import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 
 
 public class FurnitureContent {
 
 
-    public static void registerItem(IEventBus modEventBus){
+    public static void registerItem(BusGroup modEventBus){
         FurnitureItems.registerModItems(modEventBus);
     }
-    public static void registerBlock(IEventBus modEventBus){
+    public static void registerBlock(BusGroup modEventBus){
         MapleFurnitureBlocks.registerCushionBlocks(modEventBus);
         FurnitureBedroomBlocks.registerBedroomBlocks(modEventBus);
         FurnitureKitchenBlocks.registerKitchenBlocks(modEventBus);
@@ -36,36 +35,36 @@ public class FurnitureContent {
         FurnitureBlockEntityType.registerMapleBlockEntityType(modEventBus);
     }
 
-    public static void registerFluid(IEventBus modEventBus){
+    public static void registerFluid(BusGroup modEventBus){
     }
 
-    public static void CreativeTab(IEventBus modEventBus) {
+    public static void CreativeTab(BusGroup modEventBus) {
         FurnitureCreativeModeTabs.registerMapleCreativeModeTabs(modEventBus);
     }
 
-    public static void generateWorldGen(IEventBus modEventBus) {
+    public static void generateWorldGen(BusGroup modEventBus) {
     }
 
-    public static void registerRecipeType(IEventBus modEventBus) {
+    public static void registerRecipeType(BusGroup modEventBus) {
         FurnitureRecipeType.registerRecipes(modEventBus);
     }
 
-    public static void registerScreenType(IEventBus modEventBus) {
+    public static void registerScreenType(BusGroup modEventBus) {
         FurnitureScreenHandlerType.RegisterFurnitureScreenHandlerType(modEventBus);
     }
 
-    public static void registerOthers(IEventBus modEventBus) {
+    public static void registerOthers(BusGroup modEventBus) {
         MapleEntityType.registerMapleEntityType(modEventBus);
     }
 
-    public static void registerCommand(IEventBus modEventBus) {
+    public static void registerCommand(BusGroup modEventBus) {
     }
 
-    public static void registerMapleLootTable(IEventBus modEventBus) {
+    public static void registerMapleLootTable(BusGroup modEventBus) {
 
     }
 
-    public static void registerMapleCompostableItems(IEventBus modEventBus) {
+    public static void registerMapleCompostableItems(BusGroup modEventBus) {
     }
 
     @Mod.EventBusSubscriber(modid = Furniture.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

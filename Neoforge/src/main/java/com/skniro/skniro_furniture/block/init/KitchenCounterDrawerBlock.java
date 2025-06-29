@@ -51,9 +51,10 @@ public class KitchenCounterDrawerBlock extends BaseEntityBlock {
         return InteractionResult.SUCCESS;
     }
 
-    protected void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        Containers.dropContentsOnDestroy(state, newState, world, pos);
-        super.onRemove(state, world, pos, newState, moved);
+    @Override
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
+        Containers.updateNeighboursAfterDestroy(state, world, pos);
+        super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
 
     protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {

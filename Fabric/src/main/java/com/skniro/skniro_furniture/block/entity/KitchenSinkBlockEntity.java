@@ -22,6 +22,8 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -105,19 +107,19 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     @Override
-    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.writeNbt(nbt, registryLookup);
-        Inventories.writeNbt(nbt, inventory, registryLookup);
+    protected void writeData(WriteView nbt) {
+        super.writeData(nbt);
+        Inventories.writeData(nbt, inventory);
         nbt.putInt("kitchen_sink.progress", progress);
         nbt.putInt("kitchen_sink.max_progress", maxProgress);
     }
 
     @Override
-    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        Inventories.readNbt(nbt, inventory, registryLookup);
-        progress = nbt.getInt("kitchen_sink.progress");
-        maxProgress = nbt.getInt("kitchen_sink.max_progress");
-        super.readNbt(nbt, registryLookup);
+    protected void readData(ReadView nbt) {
+        Inventories.readData(nbt, inventory);
+        progress = nbt.getInt("kitchen_sink.progress",0);
+        maxProgress = nbt.getInt("kitchen_sink.max_progress",72);
+        super.readData(nbt);
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {

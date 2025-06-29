@@ -9,12 +9,13 @@ import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemDisplayContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ModelTransformationMode;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LightType;
 import net.minecraft.world.World;
 
@@ -24,7 +25,7 @@ public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<Cabi
 
     @Override
     public void render(CabinetBlockEntity entity, float tickDelta, MatrixStack matrices,
-                       VertexConsumerProvider vertexConsumers, int light, int overlay) {
+                       VertexConsumerProvider vertexConsumers, int light, int overlay, Vec3d cameraPos) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         Direction direction = entity.getCachedState().get(Properties.HORIZONTAL_FACING);
 
@@ -58,7 +59,7 @@ public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<Cabi
                 float z = (i / 3) * 1.1f;
                 matrices.translate(x, 0, z);
                 System.out.println("Slot " + i + ": " + stack);
-                itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+                itemRenderer.renderItem(stack, ItemDisplayContext.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
                 matrices.pop();
             }
         }

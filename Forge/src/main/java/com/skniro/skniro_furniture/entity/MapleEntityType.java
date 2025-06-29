@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -36,7 +36,7 @@ public class MapleEntityType {
         return ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name));
     }
 
-    public static void registerMapleEntityType(IEventBus eventBus) {
+    public static void registerMapleEntityType(BusGroup eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
 }

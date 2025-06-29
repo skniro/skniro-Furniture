@@ -32,7 +32,7 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(SAPLINGS);
+        /*getOrCreateTagBuilder(SAPLINGS);
         getOrCreateTagBuilder(C_SAPLING);
         getOrCreateTagBuilder(C_MAPLE_LOGS);
         getOrCreateTagBuilder(C_CHERRY_LOGS);
@@ -51,6 +51,6 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
                 .add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF)
                 .add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF)
                 .add(MapleFurnitureBlocks.WARPED_BOOKSHELF)
-                .add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);
+                .add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);*/
     }
 }

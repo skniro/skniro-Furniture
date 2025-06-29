@@ -10,10 +10,13 @@ import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariantOperator;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.AxisRotation;
 import net.minecraft.util.math.Direction;
 
 import java.util.HashMap;
@@ -23,8 +26,7 @@ import java.util.Map;
 import static net.minecraft.client.data.BlockStateModelGenerator.*;
 
 public class MapleModelDatagenHelper {
-    private final BlockStateModelGenerator generator;
-    private static final Map<ChiseledBookshelfModelCacheKey, Identifier> CHISELED_BOOKSHELF_MODEL_CACHE = new HashMap();;
+    private final BlockStateModelGenerator generator;;
 
     public MapleModelDatagenHelper(BlockStateModelGenerator generator) {
         this.generator = generator;
@@ -32,9 +34,9 @@ public class MapleModelDatagenHelper {
 
     public void registerModSweetBerryBush(Item fruititem, Block block) {
         generator.registerItemModel(fruititem);
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block)
-                .coordinate(BlockStateVariantMap.create(Properties.AGE_3).register(stage ->
-                        BlockStateVariant.create().put(VariantSettings.MODEL,
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block)
+                .with(BlockStateVariantMap.models(Properties.AGE_3).generate(stage ->
+                                createWeightedVariant(
                                 generator.createSubModel(block, "_stage" + stage, Models.CROSS, TextureMap::cross)
                         )
                 ))
@@ -43,70 +45,39 @@ public class MapleModelDatagenHelper {
 
     public void registerModBookshelf(Block block, Block plank) {
         TextureMap textureMap = TextureMap.sideEnd(TextureMap.getId(block), TextureMap.getId(plank));
-        Identifier identifier = Models.CUBE_COLUMN.upload(block, textureMap, generator.modelCollector);
+        WeightedVariant identifier = createWeightedVariant(Models.CUBE_COLUMN.upload(block, textureMap, generator.modelCollector));
         generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, identifier));
     }
 
     public void registerLamp(Block block) {
-        Identifier identifier = ModelIds.getBlockModelId(block);
-        Identifier identifier2 = ModelIds.getBlockSubModelId(block,"_on");
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
+        WeightedVariant identifier = createWeightedVariant(ModelIds.getBlockModelId(block));
+        WeightedVariant identifier2 = createWeightedVariant(ModelIds.getBlockSubModelId(block,"_on"));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 
     public void registerFridge(Block block) {
         Identifier bottomModel = ModelIds.getBlockSubModelId(block, "_bottom");
         Identifier topModel = ModelIds.getBlockSubModelId(block, "_top");
 
-        BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> variantMap =
-                BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, Properties.DOUBLE_BLOCK_HALF);
+        BlockStateVariantMap.DoubleProperty<WeightedVariant,Direction, DoubleBlockHalf> variantMap =
+                BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, Properties.DOUBLE_BLOCK_HALF);
 
         fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.LOWER, bottomModel);
         fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.UPPER, topModel);
 
-        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variantMap));
     }
 
 
-    public static BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> fillSimpleDoubleVariantMap(
-            BlockStateVariantMap.DoubleProperty<Direction, DoubleBlockHalf> variantMap,
+    public static BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, DoubleBlockHalf> fillSimpleDoubleVariantMap(
+            BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, DoubleBlockHalf> variantMap,
             DoubleBlockHalf targetHalf,
             Identifier baseModelId
     ) {
         return variantMap
-                .register(Direction.NORTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId))
-                .register(Direction.EAST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .register(Direction.SOUTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                .register(Direction.WEST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R270));
-    }
-
-    public void registerModChiseledBookshelf(Block block) {
-        Identifier identifier = ModelIds.getBlockModelId(block);
-        MultipartBlockStateSupplier multipartBlockStateSupplier = MultipartBlockStateSupplier.create(block);
-        List.of(Pair.of(Direction.NORTH, VariantSettings.Rotation.R0), Pair.of(Direction.EAST, VariantSettings.Rotation.R90), Pair.of(Direction.SOUTH, VariantSettings.Rotation.R180), Pair.of(Direction.WEST, VariantSettings.Rotation.R270)).forEach((pair) -> {
-            Direction direction = (Direction)pair.getFirst();
-            VariantSettings.Rotation rotation = (VariantSettings.Rotation)pair.getSecond();
-            When.PropertyCondition propertyCondition = When.create().set(Properties.HORIZONTAL_FACING, direction);
-            multipartBlockStateSupplier.with(propertyCondition, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, rotation).put(VariantSettings.UVLOCK, true));
-            generator.supplyChiseledBookshelfModels(multipartBlockStateSupplier, propertyCondition, rotation);
-        });
-        generator.blockStateCollector.accept(multipartBlockStateSupplier);
-        generator.registerParentedItemModel(block, ModelIds.getBlockSubModelId(block, "_inventory"));
-        CHISELED_BOOKSHELF_MODEL_CACHE.clear();
-    }
-
-    @Environment(EnvType.CLIENT)
-    static record ChiseledBookshelfModelCacheKey(Model template, String modelSuffix) {
-        ChiseledBookshelfModelCacheKey(Model template, String modelSuffix) {
-            this.template = template;
-            this.modelSuffix = modelSuffix;
-        }
-
-        public Model template() {
-            return this.template;
-        }
-
-        public String modelSuffix() {
-            return this.modelSuffix;
-        }
+                .register(Direction.NORTH, targetHalf, createWeightedVariant(baseModelId))
+                .register(Direction.EAST, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R90)))
+                .register(Direction.SOUTH, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R180)))
+                .register(Direction.WEST, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R270)));
     }
 }

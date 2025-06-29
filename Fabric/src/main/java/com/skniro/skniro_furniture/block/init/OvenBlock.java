@@ -56,7 +56,7 @@ public class OvenBlock extends AbstractFurnaceBlock {
             double e = (double)pos.getY();
             double f = (double)pos.getZ() + 0.5;
             if (random.nextDouble() < 0.1) {
-                world.playSound(d, e, f, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                world.playSoundClient(d, e, f, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
 
             Direction direction = (Direction)state.get(FACING);

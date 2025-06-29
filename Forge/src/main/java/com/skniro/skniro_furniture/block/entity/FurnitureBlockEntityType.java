@@ -6,7 +6,7 @@ import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -482,7 +482,7 @@ public class FurnitureBlockEntityType {
                     )
             );
 
-    public static void registerMapleBlockEntityType(IEventBus eventBus) {
+    public static void registerMapleBlockEntityType(BusGroup eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
 }

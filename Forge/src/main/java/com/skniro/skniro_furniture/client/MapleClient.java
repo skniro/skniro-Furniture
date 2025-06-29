@@ -10,9 +10,9 @@ import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -22,7 +22,7 @@ public class MapleClient {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
 
-        RenderType renderLayer2 = RenderType.cutoutMipped();
+        ChunkSectionLayer renderLayer2 = ChunkSectionLayer.CUTOUT_MIPPED;
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_OAK.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_SPRUCE.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_BIRCH.get(),renderLayer2);
@@ -36,7 +36,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_CHERRY.get(),renderLayer2);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.TABLE_PALE_OAK.get(),renderLayer2);
 
-        RenderType renderLayer3 = RenderType.cutout();
+        ChunkSectionLayer renderLayer3 = ChunkSectionLayer.CUTOUT;
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BIRCH.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_SPRUCE.get(), renderLayer3);
@@ -176,7 +176,7 @@ public class MapleClient {
 
 
 
-        RenderType renderLayer4 = RenderType.translucent();
+        ChunkSectionLayer renderLayer4 = ChunkSectionLayer.TRANSLUCENT;
         MenuScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler.get(), KitchenSinkBlockScreen::new);
         FurnitureContent.ClientModEvents.registerClientEntityRenderer();
         FurnitureContent.ClientModEvents.registerClientParticle();

@@ -8,10 +8,8 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -30,7 +28,7 @@ public class Furniture {
 
 
     public Furniture(FMLJavaModLoadingContext context) {
-        IEventBus modEventBus = context.getModEventBus();
+        var modEventBus = context.getModBusGroup();
         // Register the commonSetup method for modloading
 
         FurnitureContent.registerItem(modEventBus);
@@ -44,9 +42,6 @@ public class Furniture {
         FurnitureContent.registerMapleCompostableItems(modEventBus);
         FurnitureContent.registerScreenType(modEventBus);
         FurnitureContent.registerRecipeType(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

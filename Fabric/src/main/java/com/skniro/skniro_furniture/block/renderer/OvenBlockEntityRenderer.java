@@ -3,16 +3,13 @@ package com.skniro.skniro_furniture.block.renderer;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.entity.OvenBlockEntity;
 import com.skniro.skniro_furniture.block.init.OvenBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FurnaceBlock;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.data.VariantSettings;
 import net.minecraft.client.render.*;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemDisplayContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ModelTransformationMode;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.*;
@@ -26,7 +23,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
 
     @Override
     public void render(OvenBlockEntity entity, float tickDelta, MatrixStack matrices,
-                       VertexConsumerProvider vertexConsumers, int light, int overlay) {
+                       VertexConsumerProvider vertexConsumers, int light, int overlay, Vec3d cameraPos) {
 
         var state = entity.getCachedState();
         var facing = state.get(Properties.HORIZONTAL_FACING);
@@ -100,7 +97,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
         matrices.translate(0.0, 0.3, 0.3);
 
         MinecraftClient.getInstance().getItemRenderer()
-                .renderItem(stack, ModelTransformationMode.GUI, light, overlay, matrices, vertexConsumers, null, 0);
+                .renderItem(stack, ItemDisplayContext.GUI, light, overlay, matrices, vertexConsumers, null, 0);
         matrices.pop();
     }
 }

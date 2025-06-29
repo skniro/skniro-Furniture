@@ -17,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 
 public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEntity> {
@@ -27,7 +28,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
 
     @Override
     public void render(OvenBlockEntity entity, float tickDelta, PoseStack matrices,
-                       MultiBufferSource vertexConsumers, int light, int overlay) {
+                       MultiBufferSource vertexConsumers, int light, int overlay, Vec3 cameraPos) {
 
         var state = entity.getBlockState();
         var facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);

@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.block.init;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Containers;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -25,11 +26,10 @@ public abstract class AbstractFurnitureContainerBlock extends BaseEntityBlock {
         this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
-    protected void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        Containers.dropContentsOnDestroy(state, newState, world, pos);
-        super.onRemove(state, world, pos, newState, moved);
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
+        Containers.updateNeighboursAfterDestroy(state, world, pos);
+        super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
-
     protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }

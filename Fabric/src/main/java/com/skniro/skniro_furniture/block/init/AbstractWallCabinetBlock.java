@@ -49,9 +49,9 @@ public abstract class AbstractWallCabinetBlock extends BlockWithEntity {
         return ActionResult.SUCCESS;
     }
 
-    protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        ItemScatterer.onStateReplaced(state, newState, world, pos);
-        super.onStateReplaced(state, world, pos, newState, moved);
+    public void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
+        ItemScatterer.onStateReplaced(state, world, pos);
+        super.onStateReplaced(state, world, pos, moved);
     }
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

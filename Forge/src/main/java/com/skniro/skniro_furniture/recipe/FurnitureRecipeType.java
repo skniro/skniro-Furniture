@@ -4,7 +4,7 @@ import com.skniro.skniro_furniture.Furniture;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -25,7 +25,7 @@ public interface FurnitureRecipeType<T extends Recipe<?>> {
                 }
             });
 
-    public static void registerRecipes(IEventBus eventBus) {
+    public static void registerRecipes(BusGroup eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);
     }

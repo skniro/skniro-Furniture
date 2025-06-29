@@ -8,8 +8,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import com.skniro.skniro_furniture.item.FurnitureItems;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -18,7 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -123,7 +121,7 @@ public class FurnitureBedroomBlocks {
                 new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name)))));
     }
 
-    public static void registerBedroomBlocks(IEventBus eventBus) {
+    public static void registerBedroomBlocks(BusGroup eventBus) {
         BLOCKS.register(eventBus);
     }
 }

@@ -5,6 +5,7 @@ import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.screen.KitchenSinkBlockScreenHandler;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -28,18 +29,16 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
 
     @Override
     protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY) {
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-        context.blit(RenderType::guiTextured, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
+        context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
 
         renderProgressArrow(context, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics context, int x, int y) {
         if(menu.isCrafting()) {
-            context.blit(RenderType::guiTextured, TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
+            context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
         }
     }
 
