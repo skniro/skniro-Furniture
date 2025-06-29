@@ -19,7 +19,7 @@ public class FurnitureCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Furniture.MOD_ID);
 
     public static final Supplier<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         //Cushion
@@ -710,7 +710,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final Supplier<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get());
@@ -791,7 +791,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final Supplier<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.Sofa_WHITE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureLivingroomBlocks.Sofa_WHITE.get());
@@ -839,7 +839,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final Supplier<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_CABINET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureKitchenBlocks.WHITE_KITCHEN_COUNTER.get());

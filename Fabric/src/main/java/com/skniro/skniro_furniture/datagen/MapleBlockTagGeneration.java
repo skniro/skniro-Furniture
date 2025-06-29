@@ -32,15 +32,15 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        /*getOrCreateTagBuilder(SAPLINGS);
-        getOrCreateTagBuilder(C_SAPLING);
-        getOrCreateTagBuilder(C_MAPLE_LOGS);
-        getOrCreateTagBuilder(C_CHERRY_LOGS);
-        getOrCreateTagBuilder(FENCES);
-        getOrCreateTagBuilder(C_PLASTER);
-        getOrCreateTagBuilder(CEILING_HANGING_SIGNS);
-        getOrCreateTagBuilder(WALL_HANGING_SIGNS);
-        getOrCreateTagBuilder(ENCHANTMENT_POWER_PROVIDER)
+        valueLookupBuilder(SAPLINGS);
+        valueLookupBuilder(C_SAPLING);
+        valueLookupBuilder(C_MAPLE_LOGS);
+        valueLookupBuilder(C_CHERRY_LOGS);
+        valueLookupBuilder(FENCES);
+        valueLookupBuilder(C_PLASTER);
+        valueLookupBuilder(CEILING_HANGING_SIGNS);
+        valueLookupBuilder(WALL_HANGING_SIGNS);
+        valueLookupBuilder(ENCHANTMENT_POWER_PROVIDER)
                 .add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF)
                 .add(MapleFurnitureBlocks.BIRCH_BOOKSHELF)
                 .add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF)
@@ -51,6 +51,6 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
                 .add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF)
                 .add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF)
                 .add(MapleFurnitureBlocks.WARPED_BOOKSHELF)
-                .add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);*/
+                .add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);
     }
 }
