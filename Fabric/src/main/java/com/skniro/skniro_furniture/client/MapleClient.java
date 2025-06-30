@@ -6,6 +6,7 @@ import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.PlateBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
@@ -52,6 +53,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_PALE_OAK, renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_SPRUCE, renderLayer3);
@@ -63,6 +65,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_PALE_OAK, renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2, renderLayer3);
@@ -74,6 +77,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2, renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2, renderLayer3);
@@ -85,6 +89,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2, renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO_STYLE2, renderLayer3);
 
         BlockRenderLayerMap.putBlock(FurnitureKitchenBlocks.WHITE_OVEN, renderLayer3);
         BlockRenderLayerMap.putBlock(FurnitureKitchenBlocks.ORANGE_OVEN, renderLayer3);
@@ -195,6 +200,7 @@ public class MapleClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)
