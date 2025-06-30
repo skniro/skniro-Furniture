@@ -635,7 +635,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_PINK, "粉红色沙发");
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_GRAY, "灰色沙发");
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_LIGHT_GRAY, "淡灰色沙发");
-        translationBuilder.add(FurnitureLivingroomBlocks.Sofa_CYAN, "黄色沙发");
+        translationBuilder.add(FurnitureLivingroomBlocks.Sofa_CYAN, "青色沙发");
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_PURPLE, "紫色沙发");
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_BLUE, "蓝色沙发");
         translationBuilder.add(FurnitureLivingroomBlocks.Sofa_BROWN, "棕色沙发");
