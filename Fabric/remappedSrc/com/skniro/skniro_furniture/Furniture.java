@@ -32,19 +32,19 @@ public class Furniture implements ModInitializer {
     @Override
     public void onInitialize() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Maple_Group_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK))
+                .icon(() -> new ItemStack(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet))
                 .title(Component.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                 .build());
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Furniture_Group_Kitchen_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_CABINET))
+                .icon(() -> new ItemStack(FurnitureKitchenBlocks.OAK_PLANKS_OVEN))
                 .title(Component.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                 .build());
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Furniture_Group_Bedroom_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET))
+                .icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET))
                 .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                 .build());
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Furniture_Group_Livingroom_Furniture, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(FurnitureLivingroomBlocks.Sofa_WHITE))
+                .icon(() -> new ItemStack(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND))
                 .title(Component.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                 .build());
         FurnitureContent.registerItem();

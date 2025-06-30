@@ -8,6 +8,7 @@ import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Set;
@@ -478,6 +479,54 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK.get()
+                            )
+                    )
+            );
+
+    public static final Supplier<BlockEntityType<PlateBlockEntity>> Plate_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("plate_block_entity",
+                    () -> new BlockEntityType<>(PlateBlockEntity::new,
+                            Set.of(
+                    FurnitureKitchenBlocks.WHITE_Plate.get(),
+                    FurnitureKitchenBlocks.ORANGE_Plate.get(),
+                    FurnitureKitchenBlocks.MAGENTA_Plate.get(),
+                    FurnitureKitchenBlocks.LIGHT_BLUE_Plate.get(),
+                    FurnitureKitchenBlocks.YELLOW_Plate.get(),
+                    FurnitureKitchenBlocks.LIME_Plate.get(),
+                    FurnitureKitchenBlocks.PINK_Plate.get(),
+                    FurnitureKitchenBlocks.GRAY_Plate.get(),
+                    FurnitureKitchenBlocks.LIGHT_GRAY_Plate.get(),
+                    FurnitureKitchenBlocks.CYAN_Plate.get(),
+                    FurnitureKitchenBlocks.PURPLE_Plate.get(),
+                    FurnitureKitchenBlocks.BLUE_Plate.get(),
+                    FurnitureKitchenBlocks.BROWN_Plate.get(),
+                    FurnitureKitchenBlocks.GREEN_Plate.get(),
+                    FurnitureKitchenBlocks.RED_Plate.get(),
+                    FurnitureKitchenBlocks.BLACK_Plate.get(),
+                    FurnitureKitchenBlocks.OAK_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.OAK_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.SPRUCE_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.BIRCH_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.BIRCH_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.JUNGLE_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.ACACIA_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.ACACIA_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.MANGROVE_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.CHERRY_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.CHERRY_WOOD_Plate.get(),
+                    FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate.get(),
+                    FurnitureKitchenBlocks.WARPED_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.WARPED_HYPHAE_Plate.get(),
+                    FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate.get(),
+                    FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate.get()
                             )
                     )
             );

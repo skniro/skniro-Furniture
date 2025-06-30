@@ -6,6 +6,7 @@ import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
 import com.skniro.skniro_furniture.block.entity.OvenBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.*;
 import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
@@ -62,15 +63,13 @@ public class KitchenSinkBlock extends BaseEntityBlock {
     }
 
     @Override
-    public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof KitchenSinkBlockEntity) {
-                Containers.dropContents(world, pos, (Container) blockEntity);
-                world.updateNeighbourForOutputSignal(pos,this);
-            }
-            super.onRemove(state, world, pos, newState, moved);
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof KitchenSinkBlockEntity) {
+            Containers.dropContents(world, pos, (Container) blockEntity);
+            world.updateNeighbourForOutputSignal(pos,this);
         }
+        super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
 
     @Override

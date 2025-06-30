@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "P": "minecraft:mangrove_slab",
+        "W": "minecraft:stripped_mangrove_log"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:mangrove_wood_plate"
+    }
+}

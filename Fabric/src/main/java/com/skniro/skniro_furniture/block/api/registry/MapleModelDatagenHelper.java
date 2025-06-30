@@ -55,6 +55,10 @@ public class MapleModelDatagenHelper {
         generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(createBooleanModelMap(Properties.LIT, identifier2, identifier)));
     }
 
+    public final void registerBlockState(Block block) {
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block, createWeightedVariant(ModelIds.getBlockModelId(block))));
+    }
+
     public void registerFridge(Block block) {
         Identifier bottomModel = ModelIds.getBlockSubModelId(block, "_bottom");
         Identifier topModel = ModelIds.getBlockSubModelId(block, "_top");

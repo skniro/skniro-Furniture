@@ -4,7 +4,6 @@ package com.skniro.skniro_furniture.block.renderer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
-import com.skniro.skniro_furniture.block.init.KitchenSinkBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -19,14 +18,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.joml.Matrix4f;
+import net.minecraft.world.phys.Vec3;
 
 public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<KitchenSinkBlockEntity> {
     public KitchenSinkBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
     }
     @Override
     public void render(KitchenSinkBlockEntity entity, float tickDelta, PoseStack matrices,
-                       MultiBufferSource vertexConsumers, int light, int overlay) {
+                       MultiBufferSource vertexConsumers, int light, int overlay, Vec3 cameraPos) {
         ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
         ItemStack stack = entity.getRenderStack();
         Direction direction = entity.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);

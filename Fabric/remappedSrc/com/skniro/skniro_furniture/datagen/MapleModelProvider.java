@@ -893,6 +893,48 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
         blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
 
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.WHITE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.ORANGE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.MAGENTA_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.LIGHT_BLUE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.YELLOW_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.LIME_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.PINK_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.GRAY_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.LIGHT_GRAY_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.CYAN_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.PURPLE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BLUE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BROWN_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.GREEN_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.RED_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BLACK_Plate);
+
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.OAK_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.OAK_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BIRCH_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.ACACIA_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.CHERRY_WOOD_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.WARPED_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);

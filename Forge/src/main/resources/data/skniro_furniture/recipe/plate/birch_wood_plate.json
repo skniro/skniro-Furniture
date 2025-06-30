@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "P": "minecraft:birch_slab",
+        "W": "minecraft:stripped_birch_log"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:birch_wood_plate"
+    }
+}

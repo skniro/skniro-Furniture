@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:dark_oak_slab",
+        "W": "minecraft:dark_oak_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:dark_oak_plank_plate"
+    }
+}

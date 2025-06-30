@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:cherry_slab",
+        "W": "minecraft:cherry_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:cherry_plank_plate"
+    }
+}

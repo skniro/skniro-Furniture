@@ -17,6 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.phys.Vec3;
 
 public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBlockEntity> {
     public OtherCabinetBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
@@ -24,7 +25,7 @@ public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<Cabi
 
     @Override
     public void render(CabinetBlockEntity entity, float tickDelta, PoseStack matrices,
-                       MultiBufferSource vertexConsumers, int light, int overlay) {
+                       MultiBufferSource vertexConsumers, int light, int overlay, Vec3 cameraPos) {
         ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
         Direction direction = entity.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
 

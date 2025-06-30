@@ -30,15 +30,15 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        tag(SAPLINGS);
-        tag(C_SAPLING);
-        tag(C_MAPLE_LOGS);
-        tag(C_CHERRY_LOGS);
-        tag(FENCES);
-        tag(C_PLASTER);
-        tag(CEILING_HANGING_SIGNS);
-        tag(WALL_HANGING_SIGNS);
-        tag(ENCHANTMENT_POWER_PROVIDER)
+        valueLookupBuilder(SAPLINGS);
+        valueLookupBuilder(C_SAPLING);
+        valueLookupBuilder(C_MAPLE_LOGS);
+        valueLookupBuilder(C_CHERRY_LOGS);
+        valueLookupBuilder(FENCES);
+        valueLookupBuilder(C_PLASTER);
+        valueLookupBuilder(CEILING_HANGING_SIGNS);
+        valueLookupBuilder(WALL_HANGING_SIGNS);
+        valueLookupBuilder(ENCHANTMENT_POWER_PROVIDER)
                 .add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF)
                 .add(MapleFurnitureBlocks.BIRCH_BOOKSHELF)
                 .add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF)

@@ -250,6 +250,48 @@ public class FurnitureKitchenBlocks {
     public static final Supplier<Block> BAMBOO_PLANKS_KITCHEN_SINK = registerBlock("bamboo_planks_kitchen_sink", KitchenSinkBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
     public static final Supplier<Block> BAMBOO_BLOCK_KITCHEN_SINK = registerBlock("bamboo_wood_kitchen_sink", KitchenSinkBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
 
+    public static final Supplier<Block> OAK_WOOD_Plate = registerBlock("oak_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> OAK_PLANKS_Plate = registerBlock("oak_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> PALE_OAK_WOOD_Plate = registerBlock("pale_oak_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> PALE_OAK_PLANKS_Plate = registerBlock("pale_oak_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> SPRUCE_WOOD_Plate = registerBlock("spruce_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion());
+    public static final Supplier<Block> SPRUCE_PLANKS_Plate = registerBlock("spruce_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion());
+    public static final Supplier<Block> BIRCH_WOOD_Plate = registerBlock("birch_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion());
+    public static final Supplier<Block> BIRCH_PLANKS_Plate = registerBlock("birch_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion());
+    public static final Supplier<Block> JUNGLE_WOOD_Plate = registerBlock("jungle_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion());
+    public static final Supplier<Block> JUNGLE_PLANKS_Plate = registerBlock("jungle_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion());
+    public static final Supplier<Block> ACACIA_WOOD_Plate = registerBlock("acacia_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion());
+    public static final Supplier<Block> ACACIA_PLANKS_Plate = registerBlock("acacia_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion());
+    public static final Supplier<Block> DARK_OAK_WOOD_Plate = registerBlock("dark_oak_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> DARK_OAK_PLANKS_Plate = registerBlock("dark_oak_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion());
+    public static final Supplier<Block> MANGROVE_WOOD_Plate = registerBlock("mangrove_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion());
+    public static final Supplier<Block> MANGROVE_PLANKS_Plate = registerBlock("mangrove_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion());
+    public static final Supplier<Block> CHERRY_WOOD_Plate = registerBlock("cherry_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion());
+    public static final Supplier<Block> CHERRY_PLANKS_Plate = registerBlock("cherry_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion());
+    public static final Supplier<Block> CRIMSON_HYPHAE_Plate = registerBlock("crimson_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion());
+    public static final Supplier<Block> CRIMSON_PLANKS_Plate = registerBlock("crimson_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion());
+    public static final Supplier<Block> WARPED_HYPHAE_Plate = registerBlock("warped_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion());
+    public static final Supplier<Block> WARPED_PLANKS_Plate = registerBlock("warped_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion());
+    public static final Supplier<Block> BAMBOO_BLOCK_Plate = registerBlock("bamboo_wood_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
+    public static final Supplier<Block> BAMBOO_PLANKS_Plate = registerBlock("bamboo_plank_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
+
+    public static final Supplier<Block> WHITE_Plate = registerBlock("white_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> ORANGE_Plate = registerBlock("orange_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> MAGENTA_Plate = registerBlock("magenta_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> LIGHT_BLUE_Plate = registerBlock("light_blue_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> YELLOW_Plate = registerBlock("yellow_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> LIME_Plate = registerBlock("lime_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> PINK_Plate = registerBlock("pink_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> GRAY_Plate = registerBlock("gray_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> LIGHT_GRAY_Plate = registerBlock("light_gray_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> CYAN_Plate = registerBlock("cyan_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> PURPLE_Plate = registerBlock("purple_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> BLUE_Plate = registerBlock("blue_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> BROWN_Plate = registerBlock("brown_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> GREEN_Plate = registerBlock("green_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> RED_Plate = registerBlock("red_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+    public static final Supplier<Block> BLACK_Plate = registerBlock("black_plate", PlateBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).noOcclusion());
+
     public static <B extends Block> Supplier<Block> register(String name, Function<BlockBehaviour.Properties, ? extends B> func, BlockBehaviour.Properties props) {
         return BLOCKS.register(name, () -> {
             return (Block)func.apply(props.setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name))));

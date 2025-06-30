@@ -1049,5 +1049,47 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
+
+        addDrop(FurnitureKitchenBlocks.WHITE_Plate);
+        addDrop(FurnitureKitchenBlocks.ORANGE_Plate);
+        addDrop(FurnitureKitchenBlocks.MAGENTA_Plate);
+        addDrop(FurnitureKitchenBlocks.LIGHT_BLUE_Plate);
+        addDrop(FurnitureKitchenBlocks.YELLOW_Plate);
+        addDrop(FurnitureKitchenBlocks.LIME_Plate);
+        addDrop(FurnitureKitchenBlocks.PINK_Plate);
+        addDrop(FurnitureKitchenBlocks.GRAY_Plate);
+        addDrop(FurnitureKitchenBlocks.LIGHT_GRAY_Plate);
+        addDrop(FurnitureKitchenBlocks.CYAN_Plate);
+        addDrop(FurnitureKitchenBlocks.PURPLE_Plate);
+        addDrop(FurnitureKitchenBlocks.BLUE_Plate);
+        addDrop(FurnitureKitchenBlocks.BROWN_Plate);
+        addDrop(FurnitureKitchenBlocks.GREEN_Plate);
+        addDrop(FurnitureKitchenBlocks.RED_Plate);
+        addDrop(FurnitureKitchenBlocks.BLACK_Plate);
+
+        addDrop(FurnitureKitchenBlocks.OAK_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.OAK_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.BIRCH_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.ACACIA_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.CHERRY_WOOD_Plate);
+        addDrop(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate);
+        addDrop(FurnitureKitchenBlocks.WARPED_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate);
+        addDrop(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
+        addDrop(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
     }
 }

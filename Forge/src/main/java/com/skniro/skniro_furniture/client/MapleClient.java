@@ -5,12 +5,23 @@ import com.skniro.skniro_furniture.FurnitureContent;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 
+import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
+import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.PlateBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
+import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
+import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
+import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
+import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -48,6 +59,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CRIMSON.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_WARPED.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_PALE_OAK.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BAMBOO.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_OAK.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BIRCH.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_SPRUCE.get(), renderLayer3);
@@ -59,6 +71,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CRIMSON.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_WARPED.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_PALE_OAK.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BAMBOO.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2.get(), renderLayer3);
@@ -70,6 +83,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_WOOD_BAMBOO_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2.get(), renderLayer3);
@@ -81,6 +95,7 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2.get(), renderLayer3);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Window_PLANK_BAMBOO_STYLE2.get(), renderLayer3);
 
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.WHITE_OVEN.get(), renderLayer3);
         ItemBlockRenderTypes.setRenderLayer(FurnitureKitchenBlocks.ORANGE_OVEN.get(), renderLayer3);
@@ -178,7 +193,21 @@ public class MapleClient {
 
         ChunkSectionLayer renderLayer4 = ChunkSectionLayer.TRANSLUCENT;
         MenuScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler.get(), KitchenSinkBlockScreen::new);
-        FurnitureContent.ClientModEvents.registerClientEntityRenderer();
-        FurnitureContent.ClientModEvents.registerClientParticle();
+        registerClientEntityRenderer();
+        registerClientParticle();
     }
+
+    public static void registerClientEntityRenderer() {
+        EntityRenderers.register(MapleEntityType.CHAIR_ENTITY.get(), ChairRenderer::new);
+        EntityRenderers.register(MapleEntityType.Cushion_ENTITY.get(), CushinoRenderer::new);
+        EntityRenderers.register(MapleEntityType.SOFA_ENTITY.get(), SofaRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY.get(), CabinetBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY.get(), OvenBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY.get(), KitchenSinkBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY.get(), PlateBlockEntityRenderer::new);
+    }
+
+    public static void registerClientParticle() {
+    }
+
 }

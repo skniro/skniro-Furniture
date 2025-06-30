@@ -6,6 +6,7 @@ import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.PlateBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
@@ -65,21 +66,6 @@ public class FurnitureContent {
     }
 
     public static void registerMapleCompostableItems(BusGroup modEventBus) {
-    }
-
-    @Mod.EventBusSubscriber(modid = Furniture.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        public static void registerClientEntityRenderer() {
-            EntityRenderers.register(MapleEntityType.CHAIR_ENTITY.get(), ChairRenderer::new);
-            EntityRenderers.register(MapleEntityType.Cushion_ENTITY.get(), CushinoRenderer::new);
-            EntityRenderers.register(MapleEntityType.SOFA_ENTITY.get(), SofaRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY.get(), CabinetBlockEntityRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY.get(), OvenBlockEntityRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY.get(), KitchenSinkBlockEntityRenderer::new);
-        }
-
-        public static void registerClientParticle() {
-        }
     }
 }
 

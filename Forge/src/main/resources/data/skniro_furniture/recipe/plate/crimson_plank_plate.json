@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:crimson_slab",
+        "W": "minecraft:crimson_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_plank_plate"
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "skniro_furniture:block/furniture/plate",
+  "textures": {
+    "clay": "minecraft:block/stripped_spruce_log",
+    "quartz": "minecraft:block/stripped_spruce_log"
+  }
+}

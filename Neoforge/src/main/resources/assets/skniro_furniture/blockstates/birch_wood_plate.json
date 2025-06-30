@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/birch_wood_plate",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/birch_wood_plate"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/birch_wood_plate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/birch_wood_plate",
+      "y": 270
+    }
+  }
+}

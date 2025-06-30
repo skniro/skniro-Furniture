@@ -1060,6 +1060,48 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureStrings.TV_Stand,"TV Stand");
         translationBuilder.add(FurnitureStrings.Wall_Cabinet,"Wall Cabinet");
 
+        translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_Plate, "Oak Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_Plate, "Oak Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate, "Pale Oak Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate, "Pale Oak Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate, "Spruce Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate, "Spruce Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BIRCH_WOOD_Plate, "Birch Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate, "Birch Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate, "Jungle Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate, "Jungle Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.ACACIA_WOOD_Plate, "Acacia Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate, "Acacia Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate, "Dark Oak Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate, "Dark Oak Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate, "Mangrove Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate, "Mangrove Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.CHERRY_WOOD_Plate, "Cherry Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate, "Cherry Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate, "Crimson Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate, "Crimson Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate, "Warped Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.WARPED_PLANKS_Plate, "Warped Plank Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate, "Bamboo Wood Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate, "Bamboo Plank Plate");
+
+        translationBuilder.add(FurnitureKitchenBlocks.WHITE_Plate, "White Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.ORANGE_Plate, "Orange Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.MAGENTA_Plate, "Magenta Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.LIGHT_BLUE_Plate, "Light Blue Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.YELLOW_Plate, "Yellow Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.LIME_Plate, "Lime Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.PINK_Plate, "Pink Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.GRAY_Plate, "Gray Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.LIGHT_GRAY_Plate, "Light Gray Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.CYAN_Plate, "Cyan Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.PURPLE_Plate, "Purple Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BLUE_Plate, "Blue Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BROWN_Plate, "Brown Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.GREEN_Plate, "Green Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.RED_Plate, "Red Plate");
+        translationBuilder.add(FurnitureKitchenBlocks.BLACK_Plate, "Black Plate");
+
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
