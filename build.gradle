@@ -1,6 +1,7 @@
 subprojects {
     
     apply plugin: 'java'
+    apply plugin: 'idea'
     
     java.toolchain.languageVersion = JavaLanguageVersion.of(21)
     java.withSourcesJar()

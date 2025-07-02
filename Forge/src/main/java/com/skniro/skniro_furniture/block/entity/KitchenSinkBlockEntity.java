@@ -207,6 +207,6 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
 
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+        return saveCustomOnly(registryLookup);
     }
 }

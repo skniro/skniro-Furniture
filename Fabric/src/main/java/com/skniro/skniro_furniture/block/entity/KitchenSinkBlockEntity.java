@@ -212,6 +212,6 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
 
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+        return createComponentlessNbt(registryLookup);
     }
 }
