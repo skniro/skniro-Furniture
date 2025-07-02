@@ -58,7 +58,7 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveCustomOnly(registryLookup);
+        return saveWithoutMetadata(registryLookup);
     }
 
 }

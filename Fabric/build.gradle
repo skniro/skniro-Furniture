@@ -138,11 +138,4 @@ publishing {
             }
         }
     }
-
-    idea {
-        module {
-            downloadJavadoc = false
-            downloadSources = false
-        }
-    }
 }

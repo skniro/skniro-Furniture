@@ -58,7 +58,7 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createComponentlessNbt(registryLookup);
+        return createNbt(registryLookup);
     }
 
 }
