@@ -464,6 +464,51 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<PlateBlockEntity> Plate_BLOCK_ENTITY =
+            create("plate_block_entity",
+                    FabricBlockEntityTypeBuilder.create(PlateBlockEntity::new,
+                            FurnitureKitchenBlocks.WHITE_Plate,
+                            FurnitureKitchenBlocks.ORANGE_Plate,
+                            FurnitureKitchenBlocks.MAGENTA_Plate,
+                            FurnitureKitchenBlocks.LIGHT_BLUE_Plate,
+                            FurnitureKitchenBlocks.YELLOW_Plate,
+                            FurnitureKitchenBlocks.LIME_Plate,
+                            FurnitureKitchenBlocks.PINK_Plate,
+                            FurnitureKitchenBlocks.GRAY_Plate,
+                            FurnitureKitchenBlocks.LIGHT_GRAY_Plate,
+                            FurnitureKitchenBlocks.CYAN_Plate,
+                            FurnitureKitchenBlocks.PURPLE_Plate,
+                            FurnitureKitchenBlocks.BLUE_Plate,
+                            FurnitureKitchenBlocks.BROWN_Plate,
+                            FurnitureKitchenBlocks.GREEN_Plate,
+                            FurnitureKitchenBlocks.RED_Plate,
+                            FurnitureKitchenBlocks.BLACK_Plate,
+                            FurnitureKitchenBlocks.OAK_PLANKS_Plate,
+                            FurnitureKitchenBlocks.OAK_WOOD_Plate,
+                            FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate,
+                            FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate,
+                            FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate,
+                            FurnitureKitchenBlocks.SPRUCE_WOOD_Plate,
+                            FurnitureKitchenBlocks.BIRCH_PLANKS_Plate,
+                            FurnitureKitchenBlocks.BIRCH_WOOD_Plate,
+                            FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate,
+                            FurnitureKitchenBlocks.JUNGLE_WOOD_Plate,
+                            FurnitureKitchenBlocks.ACACIA_PLANKS_Plate,
+                            FurnitureKitchenBlocks.ACACIA_WOOD_Plate,
+                            FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate,
+                            FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate,
+                            FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate,
+                            FurnitureKitchenBlocks.MANGROVE_WOOD_Plate,
+                            FurnitureKitchenBlocks.CHERRY_PLANKS_Plate,
+                            FurnitureKitchenBlocks.CHERRY_WOOD_Plate,
+                            FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate,
+                            FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate,
+                            FurnitureKitchenBlocks.WARPED_PLANKS_Plate,
+                            FurnitureKitchenBlocks.WARPED_HYPHAE_Plate,
+                            FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate,
+                            FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate
+                    )
+            );
 
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {

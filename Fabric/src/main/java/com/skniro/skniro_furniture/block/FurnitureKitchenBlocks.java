@@ -245,6 +245,48 @@ public class FurnitureKitchenBlocks {
     public static final Block BAMBOO_PLANKS_KITCHEN_SINK = registerBlock("bamboo_planks_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
     public static final Block BAMBOO_BLOCK_KITCHEN_SINK = registerBlock("bamboo_wood_kitchen_sink", KitchenSinkBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
 
+    //Plate
+    public static final Block OAK_WOOD_Plate = registerBlock("oak_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block OAK_PLANKS_Plate = registerBlock("oak_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_WOOD_Plate = registerBlock("pale_oak_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block PALE_OAK_PLANKS_Plate = registerBlock("pale_oak_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_OAK_PLANKS).nonOpaque());
+    public static final Block SPRUCE_WOOD_Plate = registerBlock("spruce_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block SPRUCE_PLANKS_Plate = registerBlock("spruce_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
+    public static final Block BIRCH_WOOD_Plate = registerBlock("birch_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block BIRCH_PLANKS_Plate = registerBlock("birch_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
+    public static final Block JUNGLE_WOOD_Plate = registerBlock("jungle_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block JUNGLE_PLANKS_Plate = registerBlock("jungle_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
+    public static final Block ACACIA_WOOD_Plate = registerBlock("acacia_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block ACACIA_PLANKS_Plate = registerBlock("acacia_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_WOOD_Plate = registerBlock("dark_oak_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block DARK_OAK_PLANKS_Plate = registerBlock("dark_oak_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
+    public static final Block MANGROVE_WOOD_Plate = registerBlock("mangrove_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block MANGROVE_PLANKS_Plate = registerBlock("mangrove_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
+    public static final Block CHERRY_WOOD_Plate = registerBlock("cherry_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CHERRY_PLANKS_Plate = registerBlock("cherry_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
+    public static final Block CRIMSON_HYPHAE_Plate = registerBlock("crimson_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block CRIMSON_PLANKS_Plate = registerBlock("crimson_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque());
+    public static final Block WARPED_HYPHAE_Plate = registerBlock("warped_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block WARPED_PLANKS_Plate = registerBlock("warped_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque());
+    public static final Block BAMBOO_BLOCK_Plate = registerBlock("bamboo_wood_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+    public static final Block BAMBOO_PLANKS_Plate = registerBlock("bamboo_plank_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque());
+
+    public static final Block WHITE_Plate = registerBlock("white_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block ORANGE_Plate = registerBlock("orange_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block MAGENTA_Plate = registerBlock("magenta_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_BLUE_Plate = registerBlock("light_blue_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block YELLOW_Plate = registerBlock("yellow_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIME_Plate = registerBlock("lime_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PINK_Plate = registerBlock("pink_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GRAY_Plate = registerBlock("gray_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block LIGHT_GRAY_Plate = registerBlock("light_gray_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block CYAN_Plate = registerBlock("cyan_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block PURPLE_Plate = registerBlock("purple_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLUE_Plate = registerBlock("blue_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BROWN_Plate = registerBlock("brown_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block GREEN_Plate = registerBlock("green_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block RED_Plate = registerBlock("red_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
+    public static final Block BLACK_Plate = registerBlock("black_plate", PlateBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque());
 
 
 

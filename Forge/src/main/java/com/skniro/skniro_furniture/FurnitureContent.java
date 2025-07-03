@@ -67,20 +67,5 @@ public class FurnitureContent {
 
     public static void registerMapleCompostableItems(IEventBus modEventBus) {
     }
-
-    @Mod.EventBusSubscriber(modid = Furniture.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        public static void registerClientEntityRenderer() {
-            EntityRenderers.register(MapleEntityType.CHAIR_ENTITY.get(), ChairRenderer::new);
-            EntityRenderers.register(MapleEntityType.Cushion_ENTITY.get(), CushinoRenderer::new);
-            EntityRenderers.register(MapleEntityType.SOFA_ENTITY.get(), SofaRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY.get(), CabinetBlockEntityRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY.get(), OvenBlockEntityRenderer::new);
-            BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY.get(), KitchenSinkBlockEntityRenderer::new);
-        }
-
-        public static void registerClientParticle() {
-        }
-    }
 }
 

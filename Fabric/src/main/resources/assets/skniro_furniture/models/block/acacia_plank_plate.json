@@ -1,0 +1,7 @@
+{
+  "parent": "skniro_furniture:block/furniture/plate",
+  "textures": {
+    "clay": "minecraft:block/acacia_planks",
+    "quartz": "minecraft:block/acacia_planks"
+  }
+}

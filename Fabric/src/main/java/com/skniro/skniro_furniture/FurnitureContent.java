@@ -1,23 +1,16 @@
 package com.skniro.skniro_furniture;
 
 
-import com.skniro.skniro_furniture.block.*;
+import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
+import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
+import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
-import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
-import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
-import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
-import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.item.MapleItems;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
 
 public class FurnitureContent {
@@ -953,6 +946,48 @@ public class FurnitureContent {
             content.add(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
             content.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
             content.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
+
+            content.add(FurnitureKitchenBlocks.WHITE_Plate);
+            content.add(FurnitureKitchenBlocks.ORANGE_Plate);
+            content.add(FurnitureKitchenBlocks.MAGENTA_Plate);
+            content.add(FurnitureKitchenBlocks.LIGHT_BLUE_Plate);
+            content.add(FurnitureKitchenBlocks.YELLOW_Plate);
+            content.add(FurnitureKitchenBlocks.LIME_Plate);
+            content.add(FurnitureKitchenBlocks.PINK_Plate);
+            content.add(FurnitureKitchenBlocks.GRAY_Plate);
+            content.add(FurnitureKitchenBlocks.LIGHT_GRAY_Plate);
+            content.add(FurnitureKitchenBlocks.CYAN_Plate);
+            content.add(FurnitureKitchenBlocks.PURPLE_Plate);
+            content.add(FurnitureKitchenBlocks.BLUE_Plate);
+            content.add(FurnitureKitchenBlocks.BROWN_Plate);
+            content.add(FurnitureKitchenBlocks.GREEN_Plate);
+            content.add(FurnitureKitchenBlocks.RED_Plate);
+            content.add(FurnitureKitchenBlocks.BLACK_Plate);
+
+            content.add(FurnitureKitchenBlocks.OAK_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.OAK_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.BIRCH_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.ACACIA_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.CHERRY_WOOD_Plate);
+            content.add(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate);
+            content.add(FurnitureKitchenBlocks.WARPED_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate);
+            content.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
+            content.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
         });
 
 
@@ -1102,21 +1137,6 @@ public class FurnitureContent {
     }
 
     public static void registerMapleCompostableItems() {
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientEntityRenderer() {
-        EntityRendererRegistry.register(MapleEntityType.CHAIR_ENTITY, ChairRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.Cushion_ENTITY, CushinoRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.SOFA_ENTITY, SofaRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientParticle() {
-
     }
 }
 

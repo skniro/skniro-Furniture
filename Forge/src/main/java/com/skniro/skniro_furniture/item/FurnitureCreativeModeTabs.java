@@ -18,7 +18,7 @@ public class FurnitureCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Furniture.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.ACACIA_PLANK_COFFEE_CHAIR_BLACK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         //Cushion
@@ -709,7 +709,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.ACACIA_PLANKS_BEDSIDE_CABINET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get());
@@ -790,7 +790,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.Sofa_WHITE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureLivingroomBlocks.Sofa_WHITE.get());
@@ -838,7 +838,7 @@ public class FurnitureCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.ACACIA_PLANKS_KITCHEN_CABINET.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureKitchenBlocks.WHITE_KITCHEN_COUNTER.get());
@@ -1067,6 +1067,48 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK.get());
+
+                        pOutput.accept(FurnitureKitchenBlocks.WHITE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.ORANGE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.MAGENTA_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.LIGHT_BLUE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.YELLOW_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.LIME_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.PINK_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.GRAY_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.LIGHT_GRAY_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.CYAN_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.PURPLE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BLUE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BROWN_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.GREEN_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.RED_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BLACK_Plate.get());
+
+                        pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BIRCH_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.ACACIA_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.CHERRY_WOOD_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.WARPED_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate.get());
+                        pOutput.accept(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate.get());
                     })
                     .build());
 
