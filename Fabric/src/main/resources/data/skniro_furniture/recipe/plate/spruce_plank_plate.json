@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:spruce_slab",
+        "W": "minecraft:spruce_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:spruce_plank_plate"
+    }
+}

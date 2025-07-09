@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:bamboo_slab",
+        "W": "minecraft:bamboo_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:bamboo_plank_plate"
+    }
+}
