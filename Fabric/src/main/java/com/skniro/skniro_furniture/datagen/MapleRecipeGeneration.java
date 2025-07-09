@@ -32,8 +32,6 @@ public class MapleRecipeGeneration extends FabricRecipeProvider {
             @Override
             public void generate() {
 
-                createShapeless(RecipeCategory.FOOD,Items.SWEET_BERRIES).input(Items.SWEET_BERRIES,3).input(Items.POTION).criterion("has_base_item", conditionsFromItem(Items.SWEET_BERRIES)).offerTo(exporter);
-
             }
         };
     }
