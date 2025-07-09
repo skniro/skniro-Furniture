@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " A "
+    ],
+    "key": {
+        "A": "minecraft:quartz",
+        "P": "minecraft:gray_terracotta"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:gray_plate"
+    }
+}

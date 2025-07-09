@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " W "
+    ],
+    "key": {
+        "P": "minecraft:acacia_slab",
+        "W": "minecraft:acacia_planks"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:acacia_plank_plate"
+    }
+}
