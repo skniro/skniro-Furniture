@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:jungle_wood_book_desk",
-        "minecraft:stripped_jungle_log"
+        {
+            "item": "skniro_furniture:jungle_wood_book_desk"
+        },
+        {
+            "item": "minecraft:stripped_jungle_log"
+        }
     ],
     "result": {
         "count": 1,

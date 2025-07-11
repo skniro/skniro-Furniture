@@ -2,7 +2,6 @@ package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
-import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
 import com.skniro.skniro_furniture.entity.furniture.SofaEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,8 +11,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -24,7 +23,6 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -49,8 +47,8 @@ public class SofaBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, @Nullable Orientation wireOrientation, boolean notify) {
-        super.neighborChanged(state, world, pos, sourceBlock, wireOrientation, notify);
+    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        super.neighborChanged(state, world, pos, sourceBlock, sourcePos, notify);
 
         if (world.isClientSide()) return;
 
@@ -70,7 +68,7 @@ public class SofaBlock extends HorizontalDirectionalBlock {
             Entity entity = null;
             List<SofaEntity> entities = level.getEntities(MapleEntityType.SOFA_ENTITY, new AABB(pos), chair -> true);
             if(entities.isEmpty()) {
-                entity = MapleEntityType.SOFA_ENTITY.spawn(((ServerLevel) level), pos, EntitySpawnReason.TRIGGERED);
+                entity = MapleEntityType.SOFA_ENTITY.spawn(((ServerLevel) level), pos, MobSpawnType.TRIGGERED);
             } else {
                 entity = entities.get(0);
             }

@@ -6,7 +6,9 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:stripped_cherry_log"
+        "P": {
+            "item": "minecraft:stripped_cherry_log"
+        }
     },
     "result": {
         "count": 3,

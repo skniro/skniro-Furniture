@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:birch_slab",
-        "P": "minecraft:stripped_birch_log"
+        "W": {
+            "item": "minecraft:birch_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_birch_log"
+        }
     },
     "result": {
         "count": 3,

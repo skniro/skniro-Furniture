@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "P": "minecraft:stick",
-        "W": "minecraft:stripped_warped_stem"
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:stripped_warped_stem"
+        }
     },
     "result": {
         "count": 2,

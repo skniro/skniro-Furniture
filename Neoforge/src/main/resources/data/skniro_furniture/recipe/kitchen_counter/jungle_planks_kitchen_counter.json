@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:jungle_slab",
-        "P": "minecraft:jungle_planks"
+        "W": {
+            "item": "minecraft:jungle_slab"
+        },
+        "P": {
+            "item": "minecraft:jungle_planks"
+        }
     },
     "result": {
         "count": 2,

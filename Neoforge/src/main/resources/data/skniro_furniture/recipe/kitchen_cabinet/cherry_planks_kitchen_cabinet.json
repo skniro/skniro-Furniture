@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:cherry_planks"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:cherry_planks"
+        }
     },
     "result": {
         "count": 1,

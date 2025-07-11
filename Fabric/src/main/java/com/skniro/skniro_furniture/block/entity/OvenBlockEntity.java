@@ -4,7 +4,6 @@ import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.FuelRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -27,8 +26,8 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
         return Text.translatable(FurnitureStrings.Oven);
     }
 
-    protected int getFuelTime(FuelRegistry fuelRegistry, ItemStack stack) {
-        return super.getFuelTime(fuelRegistry, stack) / 2;
+    protected int getFuelTime(ItemStack stack) {
+        return super.getFuelTime(stack) / 2;
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {

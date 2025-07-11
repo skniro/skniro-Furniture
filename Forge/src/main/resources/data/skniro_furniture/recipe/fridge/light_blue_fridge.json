@@ -6,9 +6,15 @@
         "WGW"
     ],
     "key": {
-        "T": "minecraft:chest",
-        "G": "minecraft:dispenser",
-        "W": "minecraft:light_blue_terracotta"
+        "T": {
+            "item": "minecraft:chest"
+        },
+        "G": {
+            "item": "minecraft:dispenser"
+        },
+        "W": {
+            "item": "minecraft:light_blue_terracotta"
+        }
     },
     "result": {
         "count": 1,

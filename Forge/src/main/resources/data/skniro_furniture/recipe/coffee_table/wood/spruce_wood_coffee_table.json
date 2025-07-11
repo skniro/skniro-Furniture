@@ -6,7 +6,9 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:stripped_spruce_log"
+        "P": {
+            "item": "minecraft:stripped_spruce_log"
+        }
     },
     "result": {
         "count": 3,

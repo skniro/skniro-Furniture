@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:spruce_slab",
-        "W": "minecraft:stripped_spruce_log"
+        "P": {
+            "item": "minecraft:spruce_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_spruce_log"
+        }
     },
     "result": {
         "count": 2,

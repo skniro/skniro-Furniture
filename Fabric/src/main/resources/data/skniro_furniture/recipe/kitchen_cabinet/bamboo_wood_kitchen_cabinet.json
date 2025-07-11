@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:stripped_bamboo_block"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:stripped_bamboo_block"
+        }
     },
     "result": {
         "count": 1,

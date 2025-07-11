@@ -6,7 +6,9 @@
         "WWW"
     ],
     "key": {
-        "W": "minecraft:light_gray_terracotta"
+        "W": {
+            "item": "minecraft:light_gray_terracotta"
+        }
     },
     "result": {
         "count": 1,

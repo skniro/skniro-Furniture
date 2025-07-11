@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "P": "minecraft:stick",
-        "W": "minecraft:stripped_dark_oak_log"
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
     },
     "result": {
         "count": 2,

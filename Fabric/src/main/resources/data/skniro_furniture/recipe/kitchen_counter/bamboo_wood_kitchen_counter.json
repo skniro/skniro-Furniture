@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:bamboo_slab",
-        "P": "minecraft:stripped_bamboo_block"
+        "W": {
+            "item": "minecraft:bamboo_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_bamboo_block"
+        }
     },
     "result": {
         "count": 3,

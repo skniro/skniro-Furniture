@@ -42,22 +42,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_OAK_GREEN, "Green Oak Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_OAK_RED, "Red Oak Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_OAK_BLACK, "Black Oak Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_WHITE, "Pale Oak White Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_ORANGE, "Pale Oak Orange Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_MAGENTA, "Pale Oak Magenta Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_BLUE, "Pale Oak Light Blue Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_YELLOW, "Pale Oak Yellow Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIME, "Pale Oak Lime Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_PINK, "Pale Oak Pink Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_GRAY, "Pale Oak Gray Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_GRAY, "Pale Oak Light Gray Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_CYAN, "Pale Oak Cyan Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_PURPLE, "Pale Oak Purple Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLUE, "Pale Oak Blue Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_BROWN, "Pale Oak Brown Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_GREEN, "Pale Oak Green Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_RED, "Pale Oak Red Cushion");
-        translationBuilder.add(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLACK, "Pale Oak Black Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_SPRUCE_WHITE, "White Spruce Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_SPRUCE_ORANGE, "Orange Spruce Cushion");
         translationBuilder.add(MapleFurnitureBlocks.CUSHION_SPRUCE_MAGENTA, "Magenta Spruce Cushion");
@@ -221,8 +205,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET, "Oak Planks Bedside Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET, "Oak Wood Bedside Cabinet");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET, "Pale Oak Planks Bedside Cabinet");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET, "Pale Oak Wood Bedside Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET, "Spruce Planks Bedside Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET, "Spruce Wood Bedside Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET, "Birch Planks Bedside Cabinet");
@@ -246,8 +228,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET, "Oak Planks Desk Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET, "Oak Wood Desk Cabinet");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET, "Pale Oak Planks Desk Cabinet");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET, "Pale Oak Wood Desk Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET, "Spruce Planks Desk Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET, "Spruce Wood Desk Cabinet");
         translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET, "Birch Planks Desk Cabinet");
@@ -271,8 +251,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk, "Oak Planks Book Desk");
 
         translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk, "Oak Wood Book Desk");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BOOK_Desk, "Pale Oak Planks Book Desk");
-        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_BOOK_Desk, "Pale Oak Wood Book Desk");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk, "Spruce Planks Book Desk");
         translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk, "Spruce Wood Book Desk");
         translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk, "Birch Planks Book Desk");
@@ -312,8 +290,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureKitchenBlocks.BLACK_OVEN, "Black Oven");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_OVEN, "Oak Planks Oven");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_OVEN, "Oak Wood Oven");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN, "Pale Oak Planks Oven");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN, "Pale Oak Wood Oven");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN, "Spruce Planks Oven");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN, "Spruce Wood Oven");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN, "Birch Planks Oven");
@@ -353,8 +329,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureKitchenBlocks.BLACK_KITCHEN_COUNTER, "Black Kitchen Counter");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER, "Oak Planks Kitchen Counter");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER, "Oak Wood Kitchen Counter");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER, "Pale Oak Planks Kitchen Counter");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER, "Pale Oak Wood Kitchen Counter");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER, "Spruce Planks Kitchen Counter");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER, "Spruce Wood Kitchen Counter");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER, "Birch Planks Kitchen Counter");
@@ -394,8 +368,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureKitchenBlocks.BLACK_KITCHEN_COUNTER_DRAWER, "Black Kitchen Counter Drawer");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER, "Oak Planks Kitchen Counter Drawer");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER, "Oak Wood Kitchen Counter Drawer");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER, "Pale Oak Planks Kitchen Counter Drawer");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER, "Pale Oak Wood Kitchen Counter Drawer");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER, "Spruce Planks Kitchen Counter Drawer");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER, "Spruce Wood Kitchen Counter Drawer");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER, "Birch Planks Kitchen Counter Drawer");
@@ -435,8 +407,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureKitchenBlocks.BLACK_KITCHEN_CABINET, "Black Kitchen Cabinet");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET, "Oak Planks Kitchen Cabinet");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET, "Oak Wood Kitchen Cabinet");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET, "Pale Oak Planks Kitchen Cabinet");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET, "Pale Oak Wood Kitchen Cabinet");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET, "Spruce Planks Kitchen Cabinet");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET, "Spruce Wood Kitchen Cabinet");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET, "Birch Planks Kitchen Cabinet");
@@ -493,8 +463,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureKitchenBlocks.BLACK_KITCHEN_SINK, "Black Kitchen Sink");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK, "Oak Planks Kitchen Sink");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK, "Oak Wood Kitchen Sink");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK, "Pale Oak Planks Kitchen Sink");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK, "Pale Oak Wood Kitchen Sink");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK, "Spruce Planks Kitchen Sink");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK, "Spruce Wood Kitchen Sink");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK, "Birch Planks Kitchen Sink");
@@ -535,8 +503,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND, "Oak Planks Tv Stand");
         translationBuilder.add(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND, "Oak Wood Tv Stand");
-        translationBuilder.add(FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND, "Pale Oak Planks Tv Stand");
-        translationBuilder.add(FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND, "Pale Oak Wood Tv Stand");
         translationBuilder.add(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND, "Spruce Planks Tv Stand");
         translationBuilder.add(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND, "Spruce Wood Tv Stand");
         translationBuilder.add(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND, "Birch Planks Tv Stand");
@@ -560,7 +526,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         //Table
         translationBuilder.add(MapleFurnitureBlocks.TABLE_OAK, "Oak Table");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_PALE_OAK, "Pale Oak Table");
         translationBuilder.add(MapleFurnitureBlocks.TABLE_SPRUCE, "Spruce Table");
         translationBuilder.add(MapleFurnitureBlocks.TABLE_BIRCH, "Birch Table");
         translationBuilder.add(MapleFurnitureBlocks.TABLE_JUNGLE, "Jungle Table");
@@ -574,7 +539,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         //Window
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_OAK, "Oak Wood Window");
-        translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_PALE_OAK, "Pale Oak Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_BIRCH, "Birch Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_SPRUCE, "Spruce Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_JUNGLE, "Jungle Wood Window");
@@ -586,7 +550,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_CRIMSON, "Crimson Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_WARPED, "Warped Wood Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_OAK, "Oak Plank Window");
-        translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_PALE_OAK, "Pale Oak Plank Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_BIRCH, "Birch Plank Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_SPRUCE, "Spruce Plank Window");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_JUNGLE, "Jungle Plank Window");
@@ -599,7 +562,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_WARPED, "Warped Plank Window");
 
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2, "Oak Wood Window(Style2)");
-        translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2, "Pale Oak Wood Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2, "Birch Wood Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2, "Spruce Wood Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2, "Jungle Wood Window(Style2)");
@@ -611,7 +573,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2, "Crimson Wood Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2, "Warped Wood Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2, "Oak Plank Window(Style2)");
-        translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2, "Pale Oak Plank Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2, "Birch Plank Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2, "Spruce Plank Window(Style2)");
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2, "Jungle Plank Window(Style2)");
@@ -624,7 +585,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2, "Warped Plank Window(Style2)");
 
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK, "Oak Wood Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_PALE_OAK, "Pale Oak Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH, "Birch Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE, "Spruce Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_JUNGLE, "Jungle Wood Coffee Table");
@@ -636,7 +596,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_CRIMSON, "Crimson Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_WOOD_WARPED, "Warped Wood Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK, "Oak Plank Coffee Table");
-        translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_PALE_OAK, "Pale Oak Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH, "Birch Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE, "Spruce Plank Coffee Table");
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_JUNGLE, "Jungle Plank Coffee Table");
@@ -649,7 +608,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Coffee_Table_PLANK_WARPED, "Warped Plank Coffee Table");
 
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_OAK, "Oak Wood Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK, "Pale Oak Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_BIRCH, "Birch Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_SPRUCE, "Spruce Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_JUNGLE, "Jungle Wood Chair");
@@ -661,7 +619,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_CRIMSON, "Crimson Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_WARPED, "Warped Wood Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_OAK, "Oak Plank Chair");
-        translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK, "Pale Oak Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_BIRCH, "Birch Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_SPRUCE, "Spruce Plank Chair");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_JUNGLE, "Jungle Plank Chair");
@@ -674,7 +631,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_WARPED, "Warped Plank Chair");
 
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_OAK, "Oak End Table");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_PALE_OAK, "Pale Oak End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_SPRUCE, "Spruce End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BIRCH, "Birch End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_JUNGLE, "Jungle End Table");
@@ -702,22 +658,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN, "Oak Plank Coffee Chair Green");
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED, "Oak Plank Coffee Chair Red");
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK, "Oak Plank Coffee Chair Black");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_WHITE, "Pale Oak Plank Coffee Chair White");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_ORANGE, "Pale Oak Plank Coffee Chair Orange");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_MAGENTA, "Pale Oak Plank Coffee Chair Magenta");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE, "Pale Oak Plank Coffee Chair Light Blue");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_YELLOW, "Pale Oak Plank Coffee Chair Yellow");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIME, "Pale Oak Plank Coffee Chair Lime");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PINK, "Pale Oak Plank Coffee Chair Pink");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GRAY, "Pale Oak Plank Coffee Chair Gray");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY, "Pale Oak Plank Coffee Chair Light Gray");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_CYAN, "Pale Oak Plank Coffee Chair Cyan");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PURPLE, "Pale Oak Plank Coffee Chair Purple");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLUE, "Pale Oak Plank Coffee Chair Blue");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BROWN, "Pale Oak Plank Coffee Chair Brown");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GREEN, "Pale Oak Plank Coffee Chair Green");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_RED, "Pale Oak Plank Coffee Chair Red");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLACK, "Pale Oak Plank Coffee Chair Black");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE, "Spruce Plank Coffee Chair White");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE, "Spruce Plank Coffee Chair Orange");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA, "Spruce Plank Coffee Chair Magenta");
@@ -881,8 +821,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET, "Oak Plank Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET, "Oak Wood Triple Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET, "Pale Oak Plank Triple Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET, "Pale Oak Wood Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET, "Spruce Plank Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET, "Spruce Wood Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET, "Birch Plank Triple Cabinet");
@@ -906,8 +844,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet, "Oak Wood Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet, "Oak Plank Four Grid Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet, "Pale Oak Wood Four Grid Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet, "Pale Oak Plank Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet, "Spruce Wood Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet, "Spruce Plank Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet, "Birch Wood Four Grid Cabinet");
@@ -931,8 +867,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET, "Oak Plank Double Glass Doors Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET, "Oak Wood Double Glass Doors Triple Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET, "Pale Oak Plank Double Glass Doors Triple Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET, "Pale Oak Wood Double Glass Doors Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET, "Spruce Plank Double Glass Doors Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET, "Spruce Wood Double Glass Doors Triple Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET, "Birch Plank Double Glass Doors Triple Cabinet");
@@ -956,8 +890,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet, "Oak Wood Double Glass Doors Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet, "Oak Plank Double Glass Doors Four Grid Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet, "Pale Oak Wood Double Glass Doors Four Grid Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet, "Pale Oak Plank Double Glass Doors Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet, "Spruce Wood Double Glass Doors Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet, "Spruce Plank Double Glass Doors Four Grid Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet, "Birch Wood Double Glass Doors Four Grid Cabinet");
@@ -981,8 +913,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet, "Oak Wood Wall Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet, "Oak Plank Wall Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet, "Pale Oak Wood Wall Cabinet");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet, "Pale Oak Plank Wall Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet, "Spruce Wood Wall Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet, "Spruce Plank Wall Cabinet");
         translationBuilder.add(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet, "Birch Wood Wall Cabinet");
@@ -1031,7 +961,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF, "Bamboo Bookshelf");
         translationBuilder.add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, "Crimson Bookshelf");
         translationBuilder.add(MapleFurnitureBlocks.WARPED_BOOKSHELF, "Warped Bookshelf");
-        translationBuilder.add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF, "Pale Oak Bookshelf");
 
         translationBuilder.add(MapleFurnitureBlocks.WHITE_Ceiling_Lamp, "White Ceiling Lamp");
         translationBuilder.add(MapleFurnitureBlocks.ORANGE_Ceiling_Lamp, "Orange Ceiling Lamp");
@@ -1063,8 +992,6 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_Plate, "Oak Wood Plate");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_Plate, "Oak Plank Plate");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate, "Pale Oak Wood Plate");
-        translationBuilder.add(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate, "Pale Oak Plank Plate");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate, "Spruce Wood Plate");
         translationBuilder.add(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate, "Spruce Plank Plate");
         translationBuilder.add(FurnitureKitchenBlocks.BIRCH_WOOD_Plate, "Birch Wood Plate");

@@ -14,7 +14,6 @@ import net.minecraft.world.inventory.SmokerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
-import net.minecraft.world.level.block.entity.FuelValues;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -27,8 +26,8 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
         return Component.translatable(FurnitureStrings.Oven);
     }
 
-    protected int getBurnDuration(FuelValues fuelRegistry, ItemStack stack) {
-        return super.getBurnDuration(fuelRegistry, stack) / 2;
+    protected int getBurnDuration(ItemStack stack) {
+        return super.getBurnDuration(stack) / 2;
     }
 
     protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {

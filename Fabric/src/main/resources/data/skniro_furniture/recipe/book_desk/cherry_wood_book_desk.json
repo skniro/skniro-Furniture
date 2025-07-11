@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:cherry_slab",
-        "W": "minecraft:stripped_cherry_log"
+        "P": {
+            "item": "minecraft:cherry_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_cherry_log"
+        }
     },
     "result": {
         "count": 2,

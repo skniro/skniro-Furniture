@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:acacia_wood_book_desk",
-        "minecraft:stripped_acacia_log"
+        {
+            "item": "skniro_furniture:acacia_wood_book_desk"
+        },
+        {
+            "item": "minecraft:stripped_acacia_log"
+        }
     ],
     "result": {
         "count": 1,

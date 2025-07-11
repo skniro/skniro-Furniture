@@ -59,7 +59,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = ((Direction) state.getValue(AbstractWallCabinetBlock.FACING)).getUnitVec3i();
+        Vec3i vec3i = ((Direction) state.getValue(AbstractWallCabinetBlock.FACING)).getNormal();
         double d = (double) this.worldPosition.getX() + 0.5 + (double) vec3i.getX() / 2.0;
         double e = (double) this.worldPosition.getY() + 0.5 + (double) vec3i.getY() / 2.0;
         double f = (double) this.worldPosition.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;

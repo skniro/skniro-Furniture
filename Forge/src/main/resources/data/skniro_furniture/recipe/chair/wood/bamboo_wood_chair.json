@@ -6,7 +6,9 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:stripped_bamboo_block"
+        "P": {
+            "item": "minecraft:stripped_bamboo_block"
+        }
     },
     "result": {
         "count": 3,

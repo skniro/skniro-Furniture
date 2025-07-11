@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:magenta_carpet",
-        "P": "minecraft:oak_planks"
+        "W": {
+            "item": "minecraft:magenta_carpet"
+        },
+        "P": {
+            "item": "minecraft:oak_planks"
+        }
     },
     "result": {
         "id": "skniro_furniture:oak_plank_coffee_chair_magenta",

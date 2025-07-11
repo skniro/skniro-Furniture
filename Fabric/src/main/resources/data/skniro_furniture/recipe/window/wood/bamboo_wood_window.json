@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:stripped_bamboo_block"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:stripped_bamboo_block"
+        }
     },
     "result": {
         "count": 8,

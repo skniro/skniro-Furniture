@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:acacia_slab",
-        "W": "minecraft:stripped_acacia_log"
+        "P": {
+            "item": "minecraft:acacia_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_acacia_log"
+        }
     },
     "result": {
         "count": 2,

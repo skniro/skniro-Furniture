@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:stripped_birch_log"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:stripped_birch_log"
+        }
     },
     "result": {
         "count": 8,

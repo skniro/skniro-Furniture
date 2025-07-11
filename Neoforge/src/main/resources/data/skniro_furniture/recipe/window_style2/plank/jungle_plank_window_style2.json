@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:jungle_planks"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:jungle_planks"
+        }
     },
     "result": {
         "id": "skniro_furniture:jungle_plank_window_style2",

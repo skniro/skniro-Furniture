@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:magenta_carpet",
-        "P": "minecraft:dark_oak_planks"
+        "W": {
+            "item": "minecraft:magenta_carpet"
+        },
+        "P": {
+            "item": "minecraft:dark_oak_planks"
+        }
     },
     "result": {
         "count": 3,

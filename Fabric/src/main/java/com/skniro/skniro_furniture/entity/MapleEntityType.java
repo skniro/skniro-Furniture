@@ -38,22 +38,7 @@ public class MapleEntityType {
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.ENTITY, name);
-        return (EntityType) Registry.register(Registries.ENTITY_TYPE, Identifier.of(Furniture.MOD_ID, name), builder.build(keyOf(name)));
-    }
-    private static RegistryKey<EntityType<?>> keyOf(String name) {
-        return RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(Furniture.MOD_ID, name));
-    }
-
-    private static EntityType.EntityFactory<BoatEntity> getBoatFactory(Supplier<Item> itemSupplier) {
-        return (type, world) -> {
-            return new BoatEntity(type, world, itemSupplier);
-        };
-    }
-
-    private static EntityType.EntityFactory<ChestBoatEntity> getChestBoatFactory(Supplier<Item> itemSupplier) {
-        return (type, world) -> {
-            return new ChestBoatEntity(type, world, itemSupplier);
-        };
+        return (EntityType) Registry.register(Registries.ENTITY_TYPE, Identifier.of(Furniture.MOD_ID, name), builder.build(name));
     }
 
     public static void registerMapleEntityType() {

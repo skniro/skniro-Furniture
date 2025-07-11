@@ -6,7 +6,9 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:spruce_planks"
+        "P": {
+            "item": "minecraft:spruce_planks"
+        }
     },
     "result": {
         "count": 3,

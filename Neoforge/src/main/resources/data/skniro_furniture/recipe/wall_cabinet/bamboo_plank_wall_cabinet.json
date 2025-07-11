@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "P": "minecraft:stick",
-        "W": "minecraft:bamboo_planks"
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:bamboo_planks"
+        }
     },
     "result": {
         "count": 1,

@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:crimson_wood_kitchen_counter",
-        "minecraft:cauldron"
+        {
+            "item": "skniro_furniture:crimson_wood_kitchen_counter"
+        },
+        {
+            "item": "minecraft:cauldron"
+        }
     ],
     "result": {
         "count": 1,

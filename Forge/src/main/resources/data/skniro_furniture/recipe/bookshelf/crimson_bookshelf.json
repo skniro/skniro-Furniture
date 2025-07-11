@@ -6,8 +6,12 @@
         "###"
     ],
     "key": {
-        "X": "minecraft:book",
-        "#": "minecraft:crimson_planks"
+        "X": {
+            "item": "minecraft:book"
+        },
+        "#": {
+            "item": "minecraft:crimson_planks"
+        }
     },
     "result": {
         "count": 1,

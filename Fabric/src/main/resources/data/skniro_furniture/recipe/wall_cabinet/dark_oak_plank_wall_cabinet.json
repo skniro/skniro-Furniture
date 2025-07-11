@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "P": "minecraft:stick",
-        "W": "minecraft:dark_oak_planks"
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:dark_oak_planks"
+        }
     },
     "result": {
         "count": 1,

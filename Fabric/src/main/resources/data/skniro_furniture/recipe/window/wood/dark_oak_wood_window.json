@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:stripped_dark_oak_log"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
     },
     "result": {
         "count": 8,

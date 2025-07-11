@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:stripped_warped_stem"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:stripped_warped_stem"
+        }
     },
     "result": {
         "count": 8,

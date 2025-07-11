@@ -1,22 +1,21 @@
 package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.datafixers.util.Pair;
-import com.skniro.skniro_furniture.block.init.KitchenCounterBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.data.*;
-import net.minecraft.client.data.models.BlockModelGenerators;
-import net.minecraft.client.data.models.blockstates.Condition;
-import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
-import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.blockstates.PropertyDispatch;
-import net.minecraft.client.data.models.blockstates.Variant;
-import net.minecraft.client.data.models.blockstates.VariantProperties;
-import net.minecraft.client.data.models.model.ModelLocationUtils;
-import net.minecraft.client.data.models.model.ModelTemplate;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.core.Direction;
+import net.minecraft.data.client.*;
+import net.minecraft.data.models.BlockModelGenerators;
+import net.minecraft.data.models.blockstates.Condition;
+import net.minecraft.data.models.blockstates.MultiPartGenerator;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.model.ModelLocationUtils;
+import net.minecraft.data.models.model.ModelTemplate;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,7 +25,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static net.minecraft.client.data.models.BlockModelGenerators.*;
+import static net.minecraft.data.models.BlockModelGenerators.*;
+
 
 public class MapleModelDatagenHelper {
     private final BlockModelGenerators generator;
@@ -37,7 +37,7 @@ public class MapleModelDatagenHelper {
     }
 
     public void registerModSweetBerryBush(Item fruititem, Block block) {
-        generator.registerSimpleFlatItemModel(fruititem);
+        generator.createSimpleFlatItemModel(fruititem);
         generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block)
                 .with(PropertyDispatch.property(BlockStateProperties.AGE_3).generate(stage ->
                         Variant.variant().with(VariantProperties.MODEL,
@@ -96,7 +96,7 @@ public class MapleModelDatagenHelper {
             generator.addSlotStateAndRotationVariants(multipartBlockStateSupplier, propertyCondition, rotation);
         });
         generator.blockStateOutput.accept(multipartBlockStateSupplier);
-        generator.registerSimpleItemModel(block, ModelLocationUtils.getModelLocation(block, "_inventory"));
+        generator.delegateItemModel(block, ModelLocationUtils.getModelLocation(block, "_inventory"));
         CHISELED_BOOKSHELF_MODEL_CACHE.clear();
     }
 

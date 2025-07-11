@@ -22,15 +22,15 @@ public class MapleEntityType {
 
     public static final Supplier<EntityType<ChairEntity>> CHAIR_ENTITY =
             ENTITY_TYPES.register("chair_entity", ()-> EntityType.Builder.of(ChairEntity::new, MobCategory.MISC)
-                    .sized(0.5f, 0.5f).build(keyOf("chair_entity")));
+                    .sized(0.5f, 0.5f).build("chair_entity"));
 
     public static final Supplier<EntityType<CushionEntity>> Cushion_ENTITY =
             ENTITY_TYPES.register("cushion_entity", ()-> EntityType.Builder.of(CushionEntity::new, MobCategory.MISC)
-                    .sized(0.5f, 0.5f).build(keyOf("cushion_entity")));
+                    .sized(0.5f, 0.5f).build("cushion_entity"));
 
     public static final Supplier<EntityType<SofaEntity>> SOFA_ENTITY =
             ENTITY_TYPES.register("sofa_entity", ()-> EntityType.Builder.of(SofaEntity::new, MobCategory.MISC)
-                    .sized(0.5f, 0.5f).build(keyOf("sofa_entity")));
+                    .sized(0.5f, 0.5f).build("sofa_entity"));
 
     private static ResourceKey<EntityType<?>> keyOf(String name) {
         return ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name));

@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:warped_slab",
-        "W": "minecraft:stripped_warped_stem"
+        "P": {
+            "item": "minecraft:warped_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_warped_stem"
+        }
     },
     "result": {
         "count": 2,

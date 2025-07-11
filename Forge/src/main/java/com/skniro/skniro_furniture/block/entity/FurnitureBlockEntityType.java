@@ -19,12 +19,9 @@ public class FurnitureBlockEntityType {
 
     public static final Supplier<BlockEntityType<CabinetBlockEntity>> Cabinet_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("cabinet_block_entity",
-                    () -> new BlockEntityType<>(CabinetBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(CabinetBlockEntity::new,
                                     MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET.get(),
@@ -47,8 +44,6 @@ public class FurnitureBlockEntityType {
                                     MapleFurnitureBlocks.BAMBOO_WOOD_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.BIRCH_PLANKS_Four_Grid_Cabinet.get(),
@@ -71,8 +66,6 @@ public class FurnitureBlockEntityType {
                                     MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET.get(),
                                     MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET.get(),
@@ -96,8 +89,6 @@ public class FurnitureBlockEntityType {
 
                                     MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet.get(),
@@ -118,14 +109,11 @@ public class FurnitureBlockEntityType {
                                     MapleFurnitureBlocks.WARPED_PLANKS_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.BAMBOO_BLOCK_Glass_Four_Grid_Cabinet.get(),
                                     MapleFurnitureBlocks.BAMBOO_PLANKS_Glass_Four_Grid_Cabinet.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<DrawerBlockEntity>> Drawer_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("drawer_block_entity",
-                    () -> new BlockEntityType<>(DrawerBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(DrawerBlockEntity::new,
                                     FurnitureKitchenBlocks.WHITE_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.ORANGE_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.MAGENTA_KITCHEN_COUNTER_DRAWER.get(),
@@ -144,8 +132,6 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.BLACK_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER.get(),
@@ -166,18 +152,13 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_COUNTER_DRAWER.get(),
                                     FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_COUNTER_DRAWER.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<BedsideCabinetBlockEntity>> Bedside_Cabinet_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("bedside_cabinet_block_entity",
-                    () -> new BlockEntityType<>(BedsideCabinetBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(BedsideCabinetBlockEntity::new,
                                     FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET.get(),
-                                    FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET.get(),
-                                    FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET.get(),
@@ -198,18 +179,13 @@ public class FurnitureBlockEntityType {
                                     FurnitureBedroomBlocks.WARPED_HYPHAE_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.BAMBOO_PLANKS_BEDSIDE_CABINET.get(),
                                     FurnitureBedroomBlocks.BAMBOO_BLOCK_BEDSIDE_CABINET.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<KitchenCabinetBlockEntity>> Kitchen_Cabinet_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("kitchen_cabinet_block_entity",
-                    () -> new BlockEntityType<>(KitchenCabinetBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(KitchenCabinetBlockEntity::new,
                                     FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET.get(),
@@ -246,18 +222,13 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.GREEN_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.RED_KITCHEN_CABINET.get(),
                                     FurnitureKitchenBlocks.BLACK_KITCHEN_CABINET.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<DeskCabinetBlockEntity>> Desk_Cabinet_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("desk_cabinet_block_entity",
-                    () -> new BlockEntityType<>(DeskCabinetBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(DeskCabinetBlockEntity::new,
                                     FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET.get(),
-                                    FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET.get(),
-                                    FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET.get(),
@@ -278,18 +249,13 @@ public class FurnitureBlockEntityType {
                                     FurnitureBedroomBlocks.WARPED_HYPHAE_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.BAMBOO_PLANKS_Desk_CABINET.get(),
                                     FurnitureBedroomBlocks.BAMBOO_BLOCK_Desk_CABINET.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<OvenBlockEntity>> OVEN_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("oven_block_entity",
-                    () -> new BlockEntityType<>(OvenBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(OvenBlockEntity::new,
                                     FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get(),
                                     FurnitureKitchenBlocks.OAK_WOOD_OVEN.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN.get(),
                                     FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN.get(),
                                     FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN.get(),
                                     FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN.get(),
@@ -326,18 +292,13 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.GREEN_OVEN.get(),
                                     FurnitureKitchenBlocks.RED_OVEN.get(),
                                     FurnitureKitchenBlocks.BLACK_OVEN.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<WallCabinetBlockEntity>> Wall_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("wall_block_entity",
-                    () -> new BlockEntityType<>(WallCabinetBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(WallCabinetBlockEntity::new,
                                     MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet.get(),
                                     MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet.get(),
-                                    MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet.get(),
                                     MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet.get(),
                                     MapleFurnitureBlocks.BIRCH_PLANKS_Wall_Cabinet.get(),
@@ -374,18 +335,13 @@ public class FurnitureBlockEntityType {
                                     MapleFurnitureBlocks.GREEN_Wall_CABINET.get(),
                                     MapleFurnitureBlocks.RED_Wall_CABINET.get(),
                                     MapleFurnitureBlocks.BLACK_Wall_CABINET.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<TvStandBlockEntity>> TV_Stand_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("tv_stand_block_entity",
-                    () -> new BlockEntityType<>(TvStandBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(TvStandBlockEntity::new,
                                     FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND.get(),
-                                    FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND.get(),
-                                    FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND.get(),
@@ -406,14 +362,11 @@ public class FurnitureBlockEntityType {
                                     FurnitureLivingroomBlocks.WARPED_HYPHAE_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND.get(),
                                     FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<FridgeBlockEntity>> Fridge_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("fridge_block_entity",
-                    () -> new BlockEntityType<>(FridgeBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(FridgeBlockEntity::new,
                                     FurnitureKitchenBlocks.WHITE_Fridge.get(),
                                     FurnitureKitchenBlocks.ORANGE_Fridge.get(),
                                     FurnitureKitchenBlocks.MAGENTA_Fridge.get(),
@@ -430,14 +383,11 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.GREEN_Fridge.get(),
                                     FurnitureKitchenBlocks.RED_Fridge.get(),
                                     FurnitureKitchenBlocks.BLACK_Fridge.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<KitchenSinkBlockEntity>> Kitchen_Sink_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("kitchen_sink_block_entity",
-                    () -> new BlockEntityType<>(KitchenSinkBlockEntity::new,
-                            Set.of(
+                    () -> BlockEntityType.Builder.of(KitchenSinkBlockEntity::new,
                                     FurnitureKitchenBlocks.WHITE_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.MAGENTA_KITCHEN_SINK.get(),
@@ -456,8 +406,6 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.BLACK_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK.get(),
@@ -478,57 +426,50 @@ public class FurnitureBlockEntityType {
                                     FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK.get(),
                                     FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK.get()
-                            )
-                    )
-            );
+                    ).build(null));
 
     public static final Supplier<BlockEntityType<PlateBlockEntity>> Plate_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("plate_block_entity",
-                    () -> new BlockEntityType<>(PlateBlockEntity::new,
-                            Set.of(
-                                    FurnitureKitchenBlocks.WHITE_Plate.get(),
-                                    FurnitureKitchenBlocks.ORANGE_Plate.get(),
-                                    FurnitureKitchenBlocks.MAGENTA_Plate.get(),
-                                    FurnitureKitchenBlocks.LIGHT_BLUE_Plate.get(),
-                                    FurnitureKitchenBlocks.YELLOW_Plate.get(),
-                                    FurnitureKitchenBlocks.LIME_Plate.get(),
-                                    FurnitureKitchenBlocks.PINK_Plate.get(),
-                                    FurnitureKitchenBlocks.GRAY_Plate.get(),
-                                    FurnitureKitchenBlocks.LIGHT_GRAY_Plate.get(),
-                                    FurnitureKitchenBlocks.CYAN_Plate.get(),
-                                    FurnitureKitchenBlocks.PURPLE_Plate.get(),
-                                    FurnitureKitchenBlocks.BLUE_Plate.get(),
-                                    FurnitureKitchenBlocks.BROWN_Plate.get(),
-                                    FurnitureKitchenBlocks.GREEN_Plate.get(),
-                                    FurnitureKitchenBlocks.RED_Plate.get(),
-                                    FurnitureKitchenBlocks.BLACK_Plate.get(),
-                                    FurnitureKitchenBlocks.OAK_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.OAK_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.SPRUCE_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.BIRCH_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.BIRCH_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.JUNGLE_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.ACACIA_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.ACACIA_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.MANGROVE_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.CHERRY_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.CHERRY_WOOD_Plate.get(),
-                                    FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate.get(),
-                                    FurnitureKitchenBlocks.WARPED_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.WARPED_HYPHAE_Plate.get(),
-                                    FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate.get(),
-                                    FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate.get()
-                            )
-                    )
-            );
+                    () -> BlockEntityType.Builder.of(PlateBlockEntity::new,
+                            FurnitureKitchenBlocks.WHITE_Plate.get(),
+                            FurnitureKitchenBlocks.ORANGE_Plate.get(),
+                            FurnitureKitchenBlocks.MAGENTA_Plate.get(),
+                            FurnitureKitchenBlocks.LIGHT_BLUE_Plate.get(),
+                            FurnitureKitchenBlocks.YELLOW_Plate.get(),
+                            FurnitureKitchenBlocks.LIME_Plate.get(),
+                            FurnitureKitchenBlocks.PINK_Plate.get(),
+                            FurnitureKitchenBlocks.GRAY_Plate.get(),
+                            FurnitureKitchenBlocks.LIGHT_GRAY_Plate.get(),
+                            FurnitureKitchenBlocks.CYAN_Plate.get(),
+                            FurnitureKitchenBlocks.PURPLE_Plate.get(),
+                            FurnitureKitchenBlocks.BLUE_Plate.get(),
+                            FurnitureKitchenBlocks.BROWN_Plate.get(),
+                            FurnitureKitchenBlocks.GREEN_Plate.get(),
+                            FurnitureKitchenBlocks.RED_Plate.get(),
+                            FurnitureKitchenBlocks.BLACK_Plate.get(),
+                            FurnitureKitchenBlocks.OAK_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.OAK_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.SPRUCE_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.BIRCH_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.BIRCH_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.JUNGLE_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.ACACIA_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.ACACIA_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.MANGROVE_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.CHERRY_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.CHERRY_WOOD_Plate.get(),
+                            FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate.get(),
+                            FurnitureKitchenBlocks.WARPED_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.WARPED_HYPHAE_Plate.get(),
+                            FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate.get(),
+                            FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate.get()
+                    ).build(null));
 
     public static void registerMapleBlockEntityType(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

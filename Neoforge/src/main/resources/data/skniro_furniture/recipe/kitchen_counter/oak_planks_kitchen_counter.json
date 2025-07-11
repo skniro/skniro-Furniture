@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:oak_slab",
-        "P": "minecraft:oak_planks"
+        "W": {
+            "item": "minecraft:oak_slab"
+        },
+        "P": {
+            "item": "minecraft:oak_planks"
+        }
     },
     "result": {
         "count": 2,

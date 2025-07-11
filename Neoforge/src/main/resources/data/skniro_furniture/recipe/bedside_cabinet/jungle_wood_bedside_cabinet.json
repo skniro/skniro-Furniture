@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:jungle_slab",
-        "W": "minecraft:stripped_jungle_log"
+        "P": {
+            "item": "minecraft:jungle_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_jungle_log"
+        }
     },
     "result": {
         "count": 2,

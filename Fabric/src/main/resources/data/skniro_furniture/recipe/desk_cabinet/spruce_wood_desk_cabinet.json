@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:spruce_wood_book_desk",
-        "minecraft:stripped_spruce_log"
+        {
+            "item": "skniro_furniture:spruce_wood_book_desk"
+        },
+        {
+            "item": "minecraft:stripped_spruce_log"
+        }
     ],
     "result": {
         "count": 1,

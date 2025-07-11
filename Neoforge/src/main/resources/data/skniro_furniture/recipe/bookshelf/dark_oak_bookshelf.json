@@ -6,8 +6,12 @@
         "###"
     ],
     "key": {
-        "X": "minecraft:book",
-        "#": "minecraft:dark_oak_planks"
+        "X": {
+            "item": "minecraft:book"
+        },
+        "#": {
+            "item": "minecraft:dark_oak_planks"
+        }
     },
     "result": {
         "count": 1,

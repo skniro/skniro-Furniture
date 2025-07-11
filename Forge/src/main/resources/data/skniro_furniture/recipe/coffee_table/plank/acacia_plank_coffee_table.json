@@ -6,7 +6,9 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:acacia_planks"
+        "P": {
+            "item": "minecraft:acacia_planks"
+        }
     },
     "result": {
         "count": 3,

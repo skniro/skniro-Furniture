@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:warped_planks_kitchen_counter",
-        "minecraft:furnace"
+        {
+            "item": "skniro_furniture:warped_planks_kitchen_counter"
+        },
+        {
+            "item": "minecraft:furnace"
+        }
     ],
     "result": {
         "count": 1,

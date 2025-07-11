@@ -37,6 +37,11 @@ public abstract class AbstractWallCabinetBlock extends BlockWithEntity {
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
     }
 
+    @Override
+    protected BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (world instanceof ServerWorld serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);

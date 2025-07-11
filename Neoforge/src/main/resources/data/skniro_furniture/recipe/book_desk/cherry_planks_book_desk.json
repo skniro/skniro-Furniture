@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:cherry_slab",
-        "W": "minecraft:cherry_planks"
+        "P": {
+            "item": "minecraft:cherry_slab"
+        },
+        "W": {
+            "item": "minecraft:cherry_planks"
+        }
     },
     "result": {
         "count": 2,

@@ -1,17 +1,12 @@
 package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.datafixers.util.Pair;
-import com.skniro.skniro_furniture.block.init.KitchenCounterBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.client.data.*;
+import net.minecraft.data.client.*;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
@@ -20,7 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static net.minecraft.client.data.BlockStateModelGenerator.*;
+import static net.minecraft.data.client.BlockStateModelGenerator.*;
+
 
 public class MapleModelDatagenHelper {
     private final BlockStateModelGenerator generator;

@@ -6,8 +6,12 @@
         "   "
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:stripped_dark_oak_log"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
     },
     "result": {
         "id": "skniro_furniture:dark_oak_wood_triple_cabinet",

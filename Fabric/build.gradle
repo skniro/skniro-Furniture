@@ -43,7 +43,8 @@ dependencies {
 
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
-    //modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
+
+//modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
     //modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
     //Production environment client test to use
     //include "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
@@ -71,7 +72,7 @@ def dataOutput = 'src/main/generated'
 loom {
     runs {
         datagen {
-            client()
+            server()
 
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"

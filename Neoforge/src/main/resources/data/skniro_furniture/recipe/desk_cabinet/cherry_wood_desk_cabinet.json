@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:cherry_wood_book_desk",
-        "minecraft:stripped_cherry_log"
+        {
+            "item": "skniro_furniture:cherry_wood_book_desk"
+        },
+        {
+            "item": "minecraft:stripped_cherry_log"
+        }
     ],
     "result": {
         "count": 1,

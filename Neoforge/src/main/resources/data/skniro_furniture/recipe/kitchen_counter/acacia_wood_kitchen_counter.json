@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:acacia_slab",
-        "P": "minecraft:stripped_acacia_log"
+        "W": {
+            "item": "minecraft:acacia_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_acacia_log"
+        }
     },
     "result": {
         "count": 3,

@@ -6,8 +6,12 @@
         "###"
     ],
     "key": {
-        "X": "minecraft:book",
-        "#": "minecraft:jungle_planks"
+        "X": {
+            "item": "minecraft:book"
+        },
+        "#": {
+            "item": "minecraft:jungle_planks"
+        }
     },
     "result": {
         "count": 1,

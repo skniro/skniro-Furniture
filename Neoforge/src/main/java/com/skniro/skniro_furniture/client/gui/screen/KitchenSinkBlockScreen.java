@@ -32,14 +32,14 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-        context.blit(RenderType::guiTextured, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
+        context.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
 
         renderProgressArrow(context, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics context, int x, int y) {
         if(menu.isCrafting()) {
-            context.blit(RenderType::guiTextured, TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
+            context.blit(TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
         }
     }
 

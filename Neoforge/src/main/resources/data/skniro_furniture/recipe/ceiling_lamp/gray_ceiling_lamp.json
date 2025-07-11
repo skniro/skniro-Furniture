@@ -6,9 +6,15 @@
         "   "
     ],
     "key": {
-        "P": "minecraft:redstone",
-        "A": "minecraft:glowstone",
-        "W": "minecraft:gray_terracotta"
+        "P": {
+            "item": "minecraft:redstone"
+        },
+        "A": {
+            "item": "minecraft:glowstone"
+        },
+        "W": {
+            "item": "minecraft:gray_terracotta"
+        }
     },
     "result": {
         "count": 2,

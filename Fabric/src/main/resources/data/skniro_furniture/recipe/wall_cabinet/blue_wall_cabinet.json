@@ -6,9 +6,15 @@
         "PWP"
     ],
     "key": {
-        "A": "minecraft:quartz_block",
-        "P": "minecraft:stick",
-        "W": "minecraft:blue_terracotta"
+        "A": {
+            "item": "minecraft:quartz_block"
+        },
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:blue_terracotta"
+        }
     },
     "result": {
         "count": 2,

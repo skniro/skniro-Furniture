@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "P": "minecraft:stick",
-        "W": "minecraft:stripped_cherry_log"
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:stripped_cherry_log"
+        }
     },
     "result": {
         "count": 2,

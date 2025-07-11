@@ -6,8 +6,12 @@
         "   "
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:spruce_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:spruce_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:spruce_plank_triple_cabinet",

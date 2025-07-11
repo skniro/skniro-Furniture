@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:birch_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:birch_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:birch_plank_four_grid_cabinet",

@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:glass",
-        "P": "minecraft:stripped_jungle_log"
+        "W": {
+            "item": "minecraft:glass"
+        },
+        "P": {
+            "item": "minecraft:stripped_jungle_log"
+        }
     },
     "result": {
         "id": "skniro_furniture:jungle_wood_window_style2",

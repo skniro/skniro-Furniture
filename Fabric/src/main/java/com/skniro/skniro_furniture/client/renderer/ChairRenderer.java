@@ -4,9 +4,10 @@ import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.entity.state.EntityRenderState;
+import net.minecraft.util.Identifier;
 
-public class ChairRenderer extends EntityRenderer<ChairEntity, EntityRenderState> {
+
+public class ChairRenderer extends EntityRenderer<ChairEntity> {
 
     public ChairRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
@@ -18,7 +19,7 @@ public class ChairRenderer extends EntityRenderer<ChairEntity, EntityRenderState
     }
 
     @Override
-    public EntityRenderState createRenderState() {
-        return new EntityRenderState();
+    public Identifier getTexture(ChairEntity entity) {
+        return null;
     }
 }

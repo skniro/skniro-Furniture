@@ -51,8 +51,7 @@ public class PlateBlock extends BlockWithEntity {
     }
 
     @Override
-    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos,
-                                         PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(world.getBlockEntity(pos) instanceof PlateBlockEntity BlockEntity) {
             if(BlockEntity.isEmpty() && !stack.isEmpty()) {
                 BlockEntity.setStack(0, stack.copyWithCount(1));
@@ -71,7 +70,7 @@ public class PlateBlock extends BlockWithEntity {
             }
         }
 
-        return ActionResult.SUCCESS;
+        return ItemActionResult.SUCCESS;
     }
 
     @Nullable

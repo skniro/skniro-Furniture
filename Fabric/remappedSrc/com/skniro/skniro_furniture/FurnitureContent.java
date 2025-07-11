@@ -1,23 +1,16 @@
 package com.skniro.skniro_furniture;
 
 
-import com.skniro.skniro_furniture.block.*;
+import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
+import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
+import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
+import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
-import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
-import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
-import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
-import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.item.MapleItems;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
 
 public class FurnitureContent {
@@ -56,22 +49,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.CUSHION_OAK_GREEN);
             content.accept(MapleFurnitureBlocks.CUSHION_OAK_RED);
             content.accept(MapleFurnitureBlocks.CUSHION_OAK_BLACK);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_WHITE);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_ORANGE);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_MAGENTA);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_BLUE);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_YELLOW);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIME);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_PINK);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_GRAY);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_GRAY);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_CYAN);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_PURPLE);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLUE);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BROWN);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_GREEN);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_RED);
-            content.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLACK);
             content.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_WHITE);
             content.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_ORANGE);
             content.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_MAGENTA);
@@ -234,7 +211,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.CUSHION_BAMBOO_BLACK);
 
             content.accept(MapleFurnitureBlocks.TABLE_OAK);
-            content.accept(MapleFurnitureBlocks.TABLE_PALE_OAK);
             content.accept(MapleFurnitureBlocks.TABLE_SPRUCE);
             content.accept(MapleFurnitureBlocks.TABLE_BIRCH);
             content.accept(MapleFurnitureBlocks.TABLE_JUNGLE);
@@ -248,7 +224,6 @@ public class FurnitureContent {
 
             //Window
             content.accept(MapleFurnitureBlocks.Window_WOOD_OAK);
-            content.accept(MapleFurnitureBlocks.Window_WOOD_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Window_WOOD_BIRCH);
             content.accept(MapleFurnitureBlocks.Window_WOOD_SPRUCE);
             content.accept(MapleFurnitureBlocks.Window_WOOD_JUNGLE);
@@ -260,7 +235,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Window_WOOD_CRIMSON);
             content.accept(MapleFurnitureBlocks.Window_WOOD_WARPED);
             content.accept(MapleFurnitureBlocks.Window_PLANK_OAK);
-            content.accept(MapleFurnitureBlocks.Window_PLANK_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Window_PLANK_BIRCH);
             content.accept(MapleFurnitureBlocks.Window_PLANK_SPRUCE);
             content.accept(MapleFurnitureBlocks.Window_PLANK_JUNGLE);
@@ -272,7 +246,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Window_PLANK_CRIMSON);
             content.accept(MapleFurnitureBlocks.Window_PLANK_WARPED);
             content.accept(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2);
-            content.accept(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2);
@@ -284,7 +257,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2);
-            content.accept(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2);
             content.accept(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2);
@@ -297,7 +269,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2);
 
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK);
-            content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE);
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH);
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_JUNGLE);
@@ -309,7 +280,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_BAMBOO);
             content.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_CHERRY);
             content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK);
-            content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE);
             content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH);
             content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_JUNGLE);
@@ -322,7 +292,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_CHERRY);
 
             content.accept(MapleFurnitureBlocks.Chair_WOOD_OAK);
-            content.accept(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Chair_WOOD_SPRUCE);
             content.accept(MapleFurnitureBlocks.Chair_WOOD_BIRCH);
             content.accept(MapleFurnitureBlocks.Chair_WOOD_JUNGLE);
@@ -334,7 +303,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Chair_WOOD_BAMBOO);
             content.accept(MapleFurnitureBlocks.Chair_WOOD_CHERRY);
             content.accept(MapleFurnitureBlocks.Chair_PLANK_OAK);
-            content.accept(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK);
             content.accept(MapleFurnitureBlocks.Chair_PLANK_SPRUCE);
             content.accept(MapleFurnitureBlocks.Chair_PLANK_BIRCH);
             content.accept(MapleFurnitureBlocks.Chair_PLANK_JUNGLE);
@@ -347,7 +315,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.Chair_PLANK_CHERRY);
 
             content.accept(MapleFurnitureBlocks.END_TABLE_OAK);
-            content.accept(MapleFurnitureBlocks.END_TABLE_PALE_OAK);
             content.accept(MapleFurnitureBlocks.END_TABLE_SPRUCE);
             content.accept(MapleFurnitureBlocks.END_TABLE_BIRCH);
             content.accept(MapleFurnitureBlocks.END_TABLE_JUNGLE);
@@ -375,22 +342,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN);
             content.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED);
             content.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_WHITE);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_ORANGE);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_MAGENTA);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_YELLOW);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIME);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PINK);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GRAY);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_CYAN);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PURPLE);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLUE);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BROWN);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GREEN);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_RED);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLACK);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA);
@@ -554,8 +505,6 @@ public class FurnitureContent {
 
             content.accept(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET);
@@ -579,8 +528,6 @@ public class FurnitureContent {
 
             content.accept(MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet);
@@ -604,8 +551,6 @@ public class FurnitureContent {
 
             content.accept(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET);
             content.accept(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET);
@@ -629,8 +574,6 @@ public class FurnitureContent {
 
             content.accept(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet);
             content.accept(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet);
@@ -654,8 +597,6 @@ public class FurnitureContent {
 
             content.accept(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet);
             content.accept(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet);
             content.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet);
             content.accept(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet);
@@ -704,7 +645,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.BAMBOO_BOOKSHELF);
             content.accept(MapleFurnitureBlocks.CRIMSON_BOOKSHELF);
             content.accept(MapleFurnitureBlocks.WARPED_BOOKSHELF);
-            content.accept(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF);
 
             content.accept(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
             content.accept(MapleFurnitureBlocks.WHITE_Ceiling_Lamp);
@@ -746,8 +686,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER);
             content.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER);
             content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER);
             content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER);
             content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER);
@@ -788,8 +726,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
             content.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER);
             content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER);
             content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER);
             content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER);
@@ -830,8 +766,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET);
             content.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET);
             content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET);
             content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET);
             content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET);
@@ -872,8 +806,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureKitchenBlocks.OAK_PLANKS_OVEN);
             content.accept(FurnitureKitchenBlocks.OAK_WOOD_OVEN);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN);
             content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN);
             content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN);
             content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN);
@@ -931,8 +863,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK);
-            content.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);
@@ -953,14 +883,52 @@ public class FurnitureContent {
             content.accept(FurnitureKitchenBlocks.WARPED_HYPHAE_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.BAMBOO_PLANKS_KITCHEN_SINK);
             content.accept(FurnitureKitchenBlocks.BAMBOO_BLOCK_KITCHEN_SINK);
+
+            content.accept(FurnitureKitchenBlocks.WHITE_Plate);
+            content.accept(FurnitureKitchenBlocks.ORANGE_Plate);
+            content.accept(FurnitureKitchenBlocks.MAGENTA_Plate);
+            content.accept(FurnitureKitchenBlocks.LIGHT_BLUE_Plate);
+            content.accept(FurnitureKitchenBlocks.YELLOW_Plate);
+            content.accept(FurnitureKitchenBlocks.LIME_Plate);
+            content.accept(FurnitureKitchenBlocks.PINK_Plate);
+            content.accept(FurnitureKitchenBlocks.GRAY_Plate);
+            content.accept(FurnitureKitchenBlocks.LIGHT_GRAY_Plate);
+            content.accept(FurnitureKitchenBlocks.CYAN_Plate);
+            content.accept(FurnitureKitchenBlocks.PURPLE_Plate);
+            content.accept(FurnitureKitchenBlocks.BLUE_Plate);
+            content.accept(FurnitureKitchenBlocks.BROWN_Plate);
+            content.accept(FurnitureKitchenBlocks.GREEN_Plate);
+            content.accept(FurnitureKitchenBlocks.RED_Plate);
+            content.accept(FurnitureKitchenBlocks.BLACK_Plate);
+
+            content.accept(FurnitureKitchenBlocks.OAK_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.OAK_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.BIRCH_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.JUNGLE_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.JUNGLE_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.ACACIA_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.ACACIA_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.DARK_OAK_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.DARK_OAK_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.MANGROVE_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.MANGROVE_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.CHERRY_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.CHERRY_WOOD_Plate);
+            content.accept(FurnitureKitchenBlocks.CRIMSON_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.CRIMSON_HYPHAE_Plate);
+            content.accept(FurnitureKitchenBlocks.WARPED_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate);
+            content.accept(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
+            content.accept(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
         });
 
 
         ItemGroupEvents.modifyEntriesEvent(Furniture.Furniture_Group_Bedroom_Furniture).register(content -> {
             content.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET);
@@ -984,8 +952,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET);
             content.accept(FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET);
             content.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET);
             content.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET);
             content.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET);
@@ -1009,8 +975,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk);
             content.accept(FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BOOK_Desk);
-            content.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_BOOK_Desk);
             content.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk);
             content.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk);
             content.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk);
@@ -1053,8 +1017,6 @@ public class FurnitureContent {
 
             content.accept(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
             content.accept(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
-            content.accept(FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND);
-            content.accept(FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND);
             content.accept(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
             content.accept(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
             content.accept(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
@@ -1102,21 +1064,6 @@ public class FurnitureContent {
     }
 
     public static void registerMapleCompostableItems() {
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientEntityRenderer() {
-        EntityRendererRegistry.register(MapleEntityType.CHAIR_ENTITY, ChairRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.Cushion_ENTITY, CushinoRenderer::new);
-        EntityRendererRegistry.register(MapleEntityType.SOFA_ENTITY, SofaRenderer::new);
-        BlockEntityRenderers.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
-        BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
-        BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerClientParticle() {
-
     }
 }
 

@@ -13,11 +13,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Supplier;
+
 public class FurnitureCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Furniture.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
+    public static final Supplier<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -38,22 +40,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_OAK_GREEN.get());
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_OAK_RED.get());
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_OAK_BLACK.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_WHITE.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_ORANGE.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_MAGENTA.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_BLUE.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_YELLOW.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIME.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_PINK.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_GRAY.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_GRAY.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_CYAN.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_PURPLE.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLUE.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BROWN.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_GREEN.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_RED.get());
-                        pOutput.accept(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLACK.get());
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_WHITE.get());
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_ORANGE.get());
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_SPRUCE_MAGENTA.get());
@@ -216,7 +202,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.CUSHION_BAMBOO_BLACK.get());
 
                         pOutput.accept(MapleFurnitureBlocks.TABLE_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.TABLE_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_JUNGLE.get());
@@ -230,7 +215,6 @@ public class FurnitureCreativeModeTabs {
 
                         //Window
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Window_WOOD_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_JUNGLE.get());
@@ -242,7 +226,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_CRIMSON.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_WARPED.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Window_PLANK_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_JUNGLE.get());
@@ -254,7 +237,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_CRIMSON.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_WARPED.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2.get());
-                        pOutput.accept(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_JUNGLE_STYLE2.get());
@@ -266,7 +248,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2.get());
-                        pOutput.accept(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2.get());
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_JUNGLE_STYLE2.get());
@@ -279,7 +260,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2.get());
 
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_JUNGLE.get());
@@ -291,7 +271,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_BAMBOO.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_WOOD_CHERRY.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_JUNGLE.get());
@@ -304,7 +283,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Coffee_Table_PLANK_CHERRY.get());
 
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_JUNGLE.get());
@@ -316,7 +294,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_BAMBOO.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_WOOD_CHERRY.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_JUNGLE.get());
@@ -329,7 +306,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.Chair_PLANK_CHERRY.get());
 
                         pOutput.accept(MapleFurnitureBlocks.END_TABLE_OAK.get());
-                        pOutput.accept(MapleFurnitureBlocks.END_TABLE_PALE_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.END_TABLE_SPRUCE.get());
                         pOutput.accept(MapleFurnitureBlocks.END_TABLE_BIRCH.get());
                         pOutput.accept(MapleFurnitureBlocks.END_TABLE_JUNGLE.get());
@@ -357,22 +333,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_WHITE.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_ORANGE.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_MAGENTA.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_YELLOW.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIME.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PINK.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GRAY.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_CYAN.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PURPLE.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLUE.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BROWN.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GREEN.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_RED.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLACK.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA.get());
@@ -536,8 +496,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET.get());
@@ -561,8 +519,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet.get());
@@ -586,8 +542,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET.get());
                         pOutput.accept(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET.get());
@@ -611,8 +565,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet.get());
@@ -636,8 +588,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet.get());
                         pOutput.accept(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet.get());
@@ -686,7 +636,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.BAMBOO_BOOKSHELF.get());
                         pOutput.accept(MapleFurnitureBlocks.CRIMSON_BOOKSHELF.get());
                         pOutput.accept(MapleFurnitureBlocks.WARPED_BOOKSHELF.get());
-                        pOutput.accept(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF.get());
 
                         pOutput.accept(MapleFurnitureBlocks.BLACK_Ceiling_Lamp.get());
                         pOutput.accept(MapleFurnitureBlocks.WHITE_Ceiling_Lamp.get());
@@ -708,14 +657,12 @@ public class FurnitureCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET.get());
@@ -739,8 +686,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET.get());
@@ -764,8 +709,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk.get());
                         pOutput.accept(FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BOOK_Desk.get());
-                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_BOOK_Desk.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk.get());
                         pOutput.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk.get());
                         pOutput.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk.get());
@@ -789,7 +732,7 @@ public class FurnitureCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -812,8 +755,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get());
                         pOutput.accept(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND.get());
-                        pOutput.accept(FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND.get());
-                        pOutput.accept(FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND.get());
                         pOutput.accept(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND.get());
                         pOutput.accept(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND.get());
                         pOutput.accept(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND.get());
@@ -837,7 +778,7 @@ public class FurnitureCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -860,8 +801,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER.get());
@@ -902,8 +841,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER.get());
@@ -944,8 +881,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET.get());
@@ -986,8 +921,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_OVEN.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN.get());
@@ -1045,8 +978,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK.get());
@@ -1087,8 +1018,6 @@ public class FurnitureCreativeModeTabs {
 
                         pOutput.accept(FurnitureKitchenBlocks.OAK_PLANKS_Plate.get());
                         pOutput.accept(FurnitureKitchenBlocks.OAK_WOOD_Plate.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate.get());
-                        pOutput.accept(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate.get());
                         pOutput.accept(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate.get());
                         pOutput.accept(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate.get());

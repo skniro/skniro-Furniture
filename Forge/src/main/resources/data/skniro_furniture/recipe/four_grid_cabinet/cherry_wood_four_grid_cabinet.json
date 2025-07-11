@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:stripped_cherry_log"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:stripped_cherry_log"
+        }
     },
     "result": {
         "id": "skniro_furniture:cherry_wood_four_grid_cabinet",

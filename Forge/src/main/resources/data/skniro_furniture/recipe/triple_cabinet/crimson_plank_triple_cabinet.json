@@ -6,8 +6,12 @@
         "   "
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:crimson_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:crimson_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:crimson_plank_triple_cabinet",

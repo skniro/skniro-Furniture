@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:lime_carpet",
-        "P": "minecraft:oak_planks"
+        "W": {
+            "item": "minecraft:lime_carpet"
+        },
+        "P": {
+            "item": "minecraft:oak_planks"
+        }
     },
     "result": {
         "count": 3,

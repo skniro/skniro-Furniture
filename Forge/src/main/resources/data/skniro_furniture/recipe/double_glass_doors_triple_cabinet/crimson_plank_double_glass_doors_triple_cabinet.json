@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:crimson_plank_triple_cabinet",
-        "minecraft:glass_pane"
+        {
+            "item": "skniro_furniture:crimson_plank_triple_cabinet"
+        },
+        {
+            "item": "minecraft:glass_pane"
+        }
     ],
     "result": {
         "id": "skniro_furniture:crimson_plank_double_glass_doors_triple_cabinet",

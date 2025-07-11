@@ -5,9 +5,10 @@ import com.skniro.skniro_furniture.entity.furniture.SofaEntity;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.entity.state.EntityRenderState;
+import net.minecraft.util.Identifier;
 
-public class SofaRenderer extends EntityRenderer<SofaEntity, EntityRenderState> {
+
+public class SofaRenderer extends EntityRenderer<SofaEntity> {
 
     public SofaRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
@@ -19,7 +20,7 @@ public class SofaRenderer extends EntityRenderer<SofaEntity, EntityRenderState> 
     }
 
     @Override
-    public EntityRenderState createRenderState() {
-        return new EntityRenderState();
+    public Identifier getTexture(SofaEntity entity) {
+        return null;
     }
 }

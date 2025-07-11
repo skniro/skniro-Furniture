@@ -13,15 +13,8 @@ import java.util.function.Function;
 
 public class MapleItems {
 
-    private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        Item item = factory.apply(settings.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name))));
-        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name)), item);
-    }
-
-    private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
-        return (settings) -> {
-            return new BlockItem(block, settings.useItemPrefixedTranslationKey());
-        };
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(Furniture.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

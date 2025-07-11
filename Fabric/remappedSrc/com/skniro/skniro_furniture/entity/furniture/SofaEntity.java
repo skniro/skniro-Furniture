@@ -2,8 +2,6 @@ package com.skniro.skniro_furniture.entity.furniture;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
@@ -20,11 +18,6 @@ public class SofaEntity extends Entity {
     }
 
     @Override
-    public boolean hurtServer(ServerLevel world, DamageSource source, float amount) {
-        return false;
-    }
-
-    @Override
     protected void readAdditionalSaveData(CompoundTag nbt) {
 
     }
@@ -34,7 +27,8 @@ public class SofaEntity extends Entity {
 
     }
 
-    protected void kill(){
+    @Override
+    public void kill(){
         this.remove(RemovalReason.KILLED);
         this.gameEvent(GameEvent.ENTITY_DIE);
     }

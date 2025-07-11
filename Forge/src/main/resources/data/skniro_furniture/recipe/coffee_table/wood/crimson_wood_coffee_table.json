@@ -6,7 +6,9 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:stripped_crimson_stem"
+        "P": {
+            "item": "minecraft:stripped_crimson_stem"
+        }
     },
     "result": {
         "count": 3,

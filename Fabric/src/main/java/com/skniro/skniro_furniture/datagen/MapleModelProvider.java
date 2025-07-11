@@ -5,11 +5,12 @@ import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.api.registry.MapleModelDatagenHelper;
-import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
+
 
 public class MapleModelProvider extends FabricModelProvider {
     public MapleModelProvider(FabricDataOutput dataGenerator){
@@ -35,22 +36,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_OAK_GREEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_OAK_RED);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_OAK_BLACK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_WHITE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_ORANGE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_MAGENTA);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_BLUE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_YELLOW);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIME);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_PINK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_GRAY);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_LIGHT_GRAY);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_CYAN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_PURPLE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLUE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_BROWN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_GREEN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_RED);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_PALE_OAK_BLACK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_SPRUCE_WHITE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_SPRUCE_ORANGE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_SPRUCE_MAGENTA);
@@ -213,7 +198,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.CUSHION_BAMBOO_BLACK);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_JUNGLE);
@@ -227,7 +211,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         //CoffeeTable
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_JUNGLE);
@@ -239,7 +222,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_BAMBOO);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_WOOD_CHERRY);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_PLANK_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_PLANK_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_PLANK_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_PLANK_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Coffee_Table_PLANK_JUNGLE);
@@ -253,7 +235,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         //Chair
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_JUNGLE);
@@ -265,7 +246,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_BAMBOO);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_WOOD_CHERRY);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_JUNGLE);
@@ -278,7 +258,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Chair_PLANK_CHERRY);
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_OAK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_PALE_OAK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_SPRUCE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_BIRCH);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_JUNGLE);
@@ -306,22 +285,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_GREEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_BLACK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_WHITE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_ORANGE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_MAGENTA);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_YELLOW);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIME);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PINK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GRAY);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_LIGHT_GRAY);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_CYAN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_PURPLE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLUE);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BROWN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_GREEN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_RED);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_COFFEE_CHAIR_BLACK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_WHITE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_ORANGE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANK_COFFEE_CHAIR_MAGENTA);
@@ -485,8 +448,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANK_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_TRIPLE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_TRIPLE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_WOOD_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANK_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANK_TRIPLE_CABINET);
@@ -510,8 +471,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_Four_Grid_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_WOOD_Four_Grid_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANKS_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_Four_Grid_Cabinet);
@@ -535,8 +494,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANK_Glass_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_TRIPLE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_PLANK_Glass_TRIPLE_CABINET);
@@ -560,8 +517,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_Glass_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_Glass_Four_Grid_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_Glass_Four_Grid_Cabinet);
@@ -585,8 +540,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_WOOD_Wall_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.OAK_PLANKS_Wall_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_WOOD_Wall_Cabinet);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.PALE_OAK_PLANKS_Wall_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_WOOD_Wall_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.SPRUCE_PLANKS_Wall_Cabinet);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.BIRCH_WOOD_Wall_Cabinet);
@@ -644,8 +597,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_COUNTER_DRAWER);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_COUNTER_DRAWER);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_COUNTER_DRAWER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_COUNTER_DRAWER);
@@ -686,8 +637,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_CABINET);
@@ -728,8 +677,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_OVEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_OVEN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_OVEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_OVEN);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_OVEN);
@@ -753,8 +700,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_WOOD_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_PLANKS_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_WOOD_BEDSIDE_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.BIRCH_PLANKS_BEDSIDE_CABINET);
@@ -778,8 +723,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_PLANKS_Desk_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_WOOD_Desk_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_PLANKS_Desk_CABINET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_WOOD_Desk_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_PLANKS_Desk_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_WOOD_Desk_CABINET);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.BIRCH_PLANKS_Desk_CABINET);
@@ -803,8 +746,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BOOK_Desk);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.PALE_OAK_WOOD_BOOK_Desk);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk);
@@ -828,8 +769,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.OAK_WOOD_TV_STAND);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.PALE_OAK_PLANKS_TV_STAND);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.PALE_OAK_WOOD_TV_STAND);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.SPRUCE_PLANKS_TV_STAND);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.SPRUCE_WOOD_TV_STAND);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureLivingroomBlocks.BIRCH_PLANKS_TV_STAND);
@@ -870,8 +809,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_KITCHEN_SINK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_KITCHEN_SINK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_PLANKS_KITCHEN_SINK);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_WOOD_KITCHEN_SINK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_KITCHEN_SINK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_KITCHEN_SINK);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_KITCHEN_SINK);
@@ -912,8 +849,6 @@ public class MapleModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_PLANKS_Plate);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.OAK_WOOD_Plate);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_PLANKS_Plate);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PALE_OAK_WOOD_Plate);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_PLANKS_Plate);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.SPRUCE_WOOD_Plate);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BIRCH_PLANKS_Plate);
@@ -946,7 +881,6 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
-        furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF, Blocks.PALE_OAK_PLANKS);
 
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
         furnitureModelDatagenHelper.registerLamp(MapleFurnitureBlocks.WHITE_Ceiling_Lamp);

@@ -16,7 +16,7 @@ public class KitchenSinkRecipeInput implements RecipeInput {
     }
 
     @Override
-    public int size() {
+    public int getSize() {
         return 1;
     }
 }

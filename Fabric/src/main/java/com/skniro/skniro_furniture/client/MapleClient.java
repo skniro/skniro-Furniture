@@ -41,7 +41,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.TABLE_MANGROVE,renderLayer2);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.TABLE_BAMBOO,renderLayer2);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.TABLE_CHERRY,renderLayer2);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.TABLE_PALE_OAK,renderLayer2);
 
         RenderLayer renderLayer3 = RenderLayer.getCutout();
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_OAK, renderLayer3);
@@ -54,7 +53,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CHERRY, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_PALE_OAK, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH, renderLayer3);
@@ -66,7 +64,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CHERRY, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_PALE_OAK, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2, renderLayer3);
@@ -78,7 +75,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_PALE_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2, renderLayer3);
@@ -90,7 +86,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_PALE_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO_STYLE2, renderLayer3);
 
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WHITE_OVEN, renderLayer3);
@@ -132,8 +127,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WARPED_HYPHAE_OVEN, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PALE_OAK_PLANKS_OVEN, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PALE_OAK_WOOD_OVEN, renderLayer3);
 
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET, renderLayer3);
@@ -157,8 +150,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.CRIMSON_WOOD_Glass_TRIPLE_CABINET, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_PLANK_Glass_TRIPLE_CABINET, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_WOOD_Glass_TRIPLE_CABINET, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PALE_OAK_PLANK_Glass_TRIPLE_CABINET, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_TRIPLE_CABINET, renderLayer3);
 
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_WOOD_Glass_Four_Grid_Cabinet, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet, renderLayer3);
@@ -182,8 +173,6 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.WARPED_PLANKS_Glass_Four_Grid_Cabinet, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_BLOCK_Glass_Four_Grid_Cabinet, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.BAMBOO_PLANKS_Glass_Four_Grid_Cabinet, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PALE_OAK_WOOD_Glass_Four_Grid_Cabinet, renderLayer3);
-        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PALE_OAK_PLANKS_Glass_Four_Grid_Cabinet, renderLayer3);
 
 
 

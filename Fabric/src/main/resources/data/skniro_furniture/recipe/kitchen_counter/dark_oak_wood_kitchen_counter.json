@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:dark_oak_slab",
-        "P": "minecraft:stripped_dark_oak_log"
+        "W": {
+            "item": "minecraft:dark_oak_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
     },
     "result": {
         "count": 3,

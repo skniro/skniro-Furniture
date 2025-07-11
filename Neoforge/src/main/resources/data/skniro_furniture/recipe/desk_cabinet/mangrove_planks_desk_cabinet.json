@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:mangrove_planks_book_desk",
-        "minecraft:mangrove_planks"
+        {
+            "item": "skniro_furniture:mangrove_planks_book_desk"
+        },
+        {
+            "item": "minecraft:mangrove_planks"
+        }
     ],
     "result": {
         "count": 1,

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " A "
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:quartz"
+        },
+        "P": {
+            "item": "minecraft:orange_terracotta"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:orange_plate"
+    }
+}

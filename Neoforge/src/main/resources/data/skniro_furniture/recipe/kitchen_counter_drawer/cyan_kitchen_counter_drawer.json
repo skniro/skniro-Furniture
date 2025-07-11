@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:cyan_kitchen_counter",
-        "minecraft:barrel"
+        {
+            "item": "skniro_furniture:cyan_kitchen_counter"
+        },
+        {
+            "item": "minecraft:barrel"
+        }
     ],
     "result": {
         "count": 1,

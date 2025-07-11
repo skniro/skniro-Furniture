@@ -15,20 +15,8 @@ import java.util.function.Supplier;
 public class FurnitureItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, Furniture.MOD_ID);
 
-    public static <B extends Item> Supplier<Item> register(String name, Function<Item.Properties, ? extends B> func) {
-        return ITEMS.register(name, () -> {
-            return (Item)func.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name))));
-        });
-    }
-
-    public static <B extends Item> Supplier<Item> register(String name, Function<Item.Properties, ? extends B> func, Item.Properties props) {
-        return ITEMS.register(name, () -> {
-            return (Item)func.apply(props.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name))));
-        });
-    }
-
-    private static <T extends Item> Supplier<Item> registerItem(String name, Function<Item.Properties, ? extends T> item, Item.Properties properties) {
-        Supplier<Item> toReturn = register(name, item, properties.setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name))));
+    private static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> item) {
+        Supplier<T> toReturn = ITEMS.register(name, item);
         return toReturn;
     }
 

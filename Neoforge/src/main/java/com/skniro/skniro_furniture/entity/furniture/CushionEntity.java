@@ -22,11 +22,6 @@ public class CushionEntity extends Entity {
     }
 
     @Override
-    public boolean hurtServer(ServerLevel world, DamageSource source, float amount) {
-        return false;
-    }
-
-    @Override
     protected Vec3 getPassengerAttachmentPoint(Entity passenger, EntityDimensions dimensions, float scaleFactor)
     {
         return new Vec3(0F, dimensions.height() * 0.50F * scaleFactor, 0F);
@@ -43,7 +38,8 @@ public class CushionEntity extends Entity {
 
     }
 
-    protected void kill(){
+    @Override
+    public void kill(){
         this.remove(RemovalReason.KILLED);
         this.gameEvent(GameEvent.ENTITY_DIE);
     }

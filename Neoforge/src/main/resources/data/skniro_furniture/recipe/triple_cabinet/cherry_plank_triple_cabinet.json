@@ -6,8 +6,12 @@
         "   "
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:cherry_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:cherry_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:cherry_plank_triple_cabinet",

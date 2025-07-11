@@ -6,7 +6,9 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:stripped_oak_log"
+        "P": {
+            "item": "minecraft:stripped_oak_log"
+        }
     },
     "result": {
         "count": 3,

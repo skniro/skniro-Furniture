@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:crimson_slab",
-        "P": "minecraft:crimson_planks"
+        "W": {
+            "item": "minecraft:crimson_slab"
+        },
+        "P": {
+            "item": "minecraft:crimson_planks"
+        }
     },
     "result": {
         "count": 2,

@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:acacia_slab",
-        "W": "minecraft:acacia_planks"
+        "P": {
+            "item": "minecraft:acacia_slab"
+        },
+        "W": {
+            "item": "minecraft:acacia_planks"
+        }
     },
     "result": {
         "count": 2,

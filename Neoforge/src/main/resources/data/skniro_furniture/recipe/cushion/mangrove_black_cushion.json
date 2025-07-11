@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "W": "minecraft:black_carpet",
-        "P": "minecraft:mangrove_planks"
+        "W": {
+            "item": "minecraft:black_carpet"
+        },
+        "P": {
+            "item": "minecraft:mangrove_planks"
+        }
     },
     "result": {
         "count": 3,

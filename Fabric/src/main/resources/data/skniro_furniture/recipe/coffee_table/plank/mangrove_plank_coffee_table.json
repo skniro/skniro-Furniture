@@ -6,7 +6,9 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:mangrove_planks"
+        "P": {
+            "item": "minecraft:mangrove_planks"
+        }
     },
     "result": {
         "count": 3,

@@ -4,92 +4,84 @@ package com.skniro.skniro_furniture.recipe;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.recipe.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.PlacementInfo;
 import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeBookCategory;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
+import java.util.Iterator;
+import java.util.List;
 
 
 public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     final ItemStack output;
-    final Ingredient ingredient;
-    @Nullable
-    private PlacementInfo ingredientPlacement;
+    final List<Ingredient> recipeItems;
 
-
-    public KitchenSinkRecipe(Ingredient ingredients, ItemStack output) {
+    public KitchenSinkRecipe(List<Ingredient> recipeItems, ItemStack output) {
         this.output = output;
-        this.ingredient = ingredients;
-    }
-
-    public Ingredient ingredient() {
-        return this.ingredient;
-    }
-
-    public ItemStack output() {
-        return this.output;
+        this.recipeItems = recipeItems;
     }
 
     @Override
-    public boolean matches(KitchenSinkRecipeInput input, Level world) {
-        if (world.isClientSide()) {
-            return false;
+    public boolean matches(KitchenSinkRecipeInput inventory, Level world) {
+        for (int i = 0; i < recipeItems.size(); i++) {
+            if (!recipeItems.get(i).test(inventory.getItem(i))) {
+                return false;
+            }
         }
-        return this.ingredient.test(input.getItem(1));
+        return true;
     }
 
     @Override
-    public ItemStack craft(KitchenSinkRecipeInput input, HolderLookup.Provider lookup) {
-        return output.copy();
+    public ItemStack craft(KitchenSinkRecipeInput inventory, HolderLookup.Provider lookup) {
+        return output;
     }
 
     @Override
-    public RecipeSerializer<? extends Recipe<KitchenSinkRecipeInput>> getSerializer() {
+    public boolean canCraftInDimensions(int width, int height) {
+        return true;
+    }
+
+    @Override
+    public ItemStack getResultItem(HolderLookup.Provider lookup) {
+        return output;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.createWithCapacity(1);
+        list.addAll(recipeItems);
+        return list;
+    }
+
+    @Override
+    public RecipeSerializer<?> getSerializer() {
         return FurnitureRecipeType.Kitchen_Sink_SERIALIZER;
     }
 
     @Override
-    public RecipeType<? extends Recipe<KitchenSinkRecipeInput>> getType() {
+    public RecipeType<?> getType() {
         return FurnitureRecipeType.Kitchen_Sink_TYPE;
     }
 
-    @Override
-    public PlacementInfo placementInfo() {
-        if (this.ingredientPlacement == null) {
-            this.ingredientPlacement = PlacementInfo.create(this.ingredient);
-        }
-
-        return this.ingredientPlacement;
-    }
-
-    @Override
-    public RecipeBookCategory recipeBookCategory() {
-        return null;
-    }
-
     public static class Serializer implements RecipeSerializer<KitchenSinkRecipe> {
+        public static final Serializer INSTANCE = new Serializer();
         public static final MapCodec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC.fieldOf("ingredient").forGetter((recipe) -> {
-                    return recipe.ingredient;
+                Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredient").forGetter((recipe) -> {
+                    return recipe.recipeItems;
                 }),
                 ItemStack.CODEC.fieldOf("result").forGetter((recipe) -> {
                     return recipe.output;
                 })
         ).apply(inst, KitchenSinkRecipe::new));
 
-        public static final StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> STREAM_CODEC =
-                StreamCodec.composite(
-                        Ingredient.CONTENTS_STREAM_CODEC, KitchenSinkRecipe::ingredient,
-                        ItemStack.STREAM_CODEC, KitchenSinkRecipe::output,
-                        KitchenSinkRecipe::new);
+
+        public static final StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> PACKET_CODEC = StreamCodec.of(KitchenSinkRecipe.Serializer::write, KitchenSinkRecipe.Serializer::read);
 
         public Serializer() {
         }
@@ -99,11 +91,32 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
         }
 
         public StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> streamCodec() {
-            return STREAM_CODEC;
+            return PACKET_CODEC;
+        }
+
+        private static KitchenSinkRecipe read(RegistryFriendlyByteBuf buf) {
+            int i = buf.readVarInt();
+            NonNullList<Ingredient> defaultedList = NonNullList.withSize(i, Ingredient.EMPTY);
+            defaultedList.replaceAll((empty) -> {
+                return (Ingredient)Ingredient.CONTENTS_STREAM_CODEC.decode(buf);
+            });
+            ItemStack itemStack = (ItemStack)ItemStack.STREAM_CODEC.decode(buf);
+            return new KitchenSinkRecipe(defaultedList, itemStack);
+        }
+
+        private static void write(RegistryFriendlyByteBuf buf, KitchenSinkRecipe recipe) {
+            buf.writeVarInt(recipe.recipeItems.size());
+            Iterator var2 = recipe.recipeItems.iterator();
+
+            while(var2.hasNext()) {
+                Ingredient ingredient = (Ingredient)var2.next();
+                Ingredient.CONTENTS_STREAM_CODEC.encode(buf, ingredient);
+            }
+
+            ItemStack.STREAM_CODEC.encode(buf, recipe.output);
         }
     }
 }
-
 
 
 

@@ -32,14 +32,14 @@ public class KitchenSinkBlockScreen extends HandledScreen<KitchenSinkBlockScreen
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
-        context.drawTexture(RenderLayer::getGuiTextured, TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight,256,256);
+        context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight,256,256);
 
         renderProgressArrow(context, x, y);
     }
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(RenderLayer::getGuiTextured, TEXTURE, x + 73, y + 34, 176, 12, handler.getScaledProgress(),45,256,256);
+            context.drawTexture(TEXTURE, x + 73, y + 34, 176, 12, handler.getScaledProgress(),45,256,256);
         }
     }
 

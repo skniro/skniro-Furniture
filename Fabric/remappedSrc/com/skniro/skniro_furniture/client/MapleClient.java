@@ -6,15 +6,25 @@ import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.PlateBlockEntityRenderer;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
+import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
+import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
+import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
+import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
-@net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+@Environment(EnvType.CLIENT)
 public class MapleClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -43,6 +53,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CHERRY, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_SPRUCE, renderLayer3);
@@ -53,6 +64,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CHERRY, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BIRCH_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_SPRUCE_STYLE2, renderLayer3);
@@ -63,6 +75,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CHERRY_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_WARPED_STYLE2, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_WOOD_BAMBOO_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_OAK_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BIRCH_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_SPRUCE_STYLE2, renderLayer3);
@@ -73,6 +86,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CHERRY_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_CRIMSON_STYLE2, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_WARPED_STYLE2, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.Window_PLANK_BAMBOO_STYLE2, renderLayer3);
 
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.WHITE_OVEN, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.ORANGE_OVEN, renderLayer3);
@@ -164,7 +178,23 @@ public class MapleClient implements ClientModInitializer {
 
         RenderType renderLayer4 = RenderType.translucent();
         MenuScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler, KitchenSinkBlockScreen::new);
-        FurnitureContent.registerClientEntityRenderer();
-        FurnitureContent.registerClientParticle();
+        registerClientEntityRenderer();
+        registerClientParticle();
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static void registerClientEntityRenderer() {
+        EntityRendererRegistry.register(MapleEntityType.CHAIR_ENTITY, ChairRenderer::new);
+        EntityRendererRegistry.register(MapleEntityType.Cushion_ENTITY, CushinoRenderer::new);
+        EntityRendererRegistry.register(MapleEntityType.SOFA_ENTITY, SofaRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Cabinet_BLOCK_ENTITY, CabinetBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
+    }
+
+    @Environment(EnvType.CLIENT)
+    public static void registerClientParticle() {
+
     }
 }

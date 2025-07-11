@@ -6,7 +6,9 @@
         "WWW"
     ],
     "key": {
-        "W": "minecraft:blue_terracotta"
+        "W": {
+            "item": "minecraft:blue_terracotta"
+        }
     },
     "result": {
         "count": 1,

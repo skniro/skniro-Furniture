@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:dark_oak_planks_book_desk",
-        "minecraft:dark_oak_planks"
+        {
+            "item": "skniro_furniture:dark_oak_planks_book_desk"
+        },
+        {
+            "item": "minecraft:dark_oak_planks"
+        }
     ],
     "result": {
         "count": 1,

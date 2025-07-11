@@ -6,8 +6,12 @@
         "PPP"
     ],
     "key": {
-        "P": "minecraft:dark_oak_slab",
-        "W": "minecraft:stripped_dark_oak_log"
+        "P": {
+            "item": "minecraft:dark_oak_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
     },
     "result": {
         "count": 2,

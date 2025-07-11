@@ -6,8 +6,12 @@
         "AWA"
     ],
     "key": {
-        "A": "minecraft:quartz_block",
-        "W": "minecraft:red_terracotta"
+        "A": {
+            "item": "minecraft:quartz_block"
+        },
+        "W": {
+            "item": "minecraft:red_terracotta"
+        }
     },
     "result": {
         "count": 2,

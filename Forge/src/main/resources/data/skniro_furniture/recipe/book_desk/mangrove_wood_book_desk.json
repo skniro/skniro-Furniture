@@ -6,8 +6,12 @@
         "P P"
     ],
     "key": {
-        "P": "minecraft:mangrove_slab",
-        "W": "minecraft:stripped_mangrove_log"
+        "P": {
+            "item": "minecraft:mangrove_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_mangrove_log"
+        }
     },
     "result": {
         "count": 2,

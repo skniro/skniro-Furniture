@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:acacia_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:acacia_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:acacia_plank_four_grid_cabinet",

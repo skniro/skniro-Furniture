@@ -6,8 +6,12 @@
         "   "
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:jungle_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:jungle_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:jungle_plank_triple_cabinet",

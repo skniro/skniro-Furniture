@@ -1,17 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": "minecraft:oak_planks",
-    "X": "minecraft:book"
-  },
-  "pattern": [
-    "###",
-    "XXX",
-    "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "minecraft:bookshelf"
-  }
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "key": {
+        "#": {
+            "item": "minecraft:oak_planks"
+        },
+        "X": {
+            "item": "minecraft:book"
+        }
+    },
+    "pattern": [
+        "###",
+        "XXX",
+        "###"
+    ],
+    "result": {
+        "count": 1,
+        "id": "minecraft:bookshelf"
+    }
 }

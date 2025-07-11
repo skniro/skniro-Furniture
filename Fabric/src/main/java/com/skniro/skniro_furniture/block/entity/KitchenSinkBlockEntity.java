@@ -146,8 +146,8 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     private void craftItem() {
         Optional<RecipeEntry<KitchenSinkRecipe>> recipe = getCurrentRecipe();
         this.removeStack(INPUT_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().output().getItem(),
-                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().output().getCount()));
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
+                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
     }
 
     @Override
@@ -182,7 +182,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
             return false;
         }
 
-        ItemStack output = recipe.get().value().output();
+        ItemStack output = recipe.get().value().getResult(null);
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
     private Optional<RecipeEntry<KitchenSinkRecipe>> getCurrentRecipe() {

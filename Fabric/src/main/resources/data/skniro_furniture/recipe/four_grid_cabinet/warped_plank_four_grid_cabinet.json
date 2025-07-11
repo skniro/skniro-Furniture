@@ -6,8 +6,12 @@
         "PWP"
     ],
     "key": {
-        "W": "minecraft:stick",
-        "P": "minecraft:warped_slab"
+        "W": {
+            "item": "minecraft:stick"
+        },
+        "P": {
+            "item": "minecraft:warped_slab"
+        }
     },
     "result": {
         "id": "skniro_furniture:warped_plank_four_grid_cabinet",

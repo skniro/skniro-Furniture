@@ -20,11 +20,6 @@ public class SofaEntity extends Entity {
     }
 
     @Override
-    public boolean damage(ServerWorld world, DamageSource source, float amount) {
-        return false;
-    }
-
-    @Override
     protected void readCustomDataFromNbt(NbtCompound nbt) {
 
     }
@@ -34,7 +29,8 @@ public class SofaEntity extends Entity {
 
     }
 
-    protected void kill(){
+    @Override
+    public void kill(){
         this.remove(RemovalReason.KILLED);
         this.emitGameEvent(GameEvent.ENTITY_DIE);
     }

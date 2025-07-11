@@ -1,8 +1,12 @@
 {
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
-        "skniro_furniture:cherry_planks_book_desk",
-        "minecraft:cherry_planks"
+        {
+            "item": "skniro_furniture:cherry_planks_book_desk"
+        },
+        {
+            "item": "minecraft:cherry_planks"
+        }
     ],
     "result": {
         "count": 1,

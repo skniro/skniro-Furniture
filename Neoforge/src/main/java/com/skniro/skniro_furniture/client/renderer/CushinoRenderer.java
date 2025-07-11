@@ -4,9 +4,10 @@ import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.resources.ResourceLocation;
 
-public class CushinoRenderer extends EntityRenderer<CushionEntity, EntityRenderState> {
+
+public class CushinoRenderer extends EntityRenderer<CushionEntity> {
 
     public CushinoRenderer(EntityRendererProvider.Context ctx) {
         super(ctx);
@@ -18,7 +19,7 @@ public class CushinoRenderer extends EntityRenderer<CushionEntity, EntityRenderS
     }
 
     @Override
-    public EntityRenderState createRenderState() {
-        return new EntityRenderState();
+    public ResourceLocation getTextureLocation(CushionEntity cushionEntity) {
+        return null;
     }
 }
