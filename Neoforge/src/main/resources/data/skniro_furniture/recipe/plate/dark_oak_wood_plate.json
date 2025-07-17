@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "PWP",
-        "PWP",
-        "PWP"
+        "   ",
+        "P P",
+        " W "
     ],
     "key": {
         "P": "minecraft:dark_oak_slab",
