@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_base_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:gray_carpet"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "skniro_furniture:coffee_chair/plank/bamboo_plank_coffee_chair_gray"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_base_item",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "skniro_furniture:coffee_chair/plank/bamboo_plank_coffee_chair_gray"
+        ]
+    }
+}
