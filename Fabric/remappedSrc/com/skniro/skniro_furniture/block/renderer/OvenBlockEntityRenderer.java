@@ -23,7 +23,7 @@ import org.joml.Matrix4f;
 
 public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEntity> {
 
-    private static final ResourceLocation LIGHT_TEXTURE = ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "textures/block/oven_light.png");
+    private static final ResourceLocation LIGHT_TEXTURE = ResourceLocation.tryBuild(Furniture.MOD_ID, "textures/block/oven_light.png");
 
     public OvenBlockEntityRenderer(BlockEntityRendererProvider.Context ctx) {}
 
@@ -69,30 +69,30 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
     }
 
     private void drawQuad(Matrix4f mat, VertexConsumer vc, int color, int light) {
-        vc.addVertex(mat, -0.3F,  0.21F, 0F)
-                .setColor(color)
-                .setUv(0F, 0F)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(light)
-                .setNormal(0F, 0F, -1F);
-        vc.addVertex(mat,  0.3F,  0.21F, 0F)
-                .setColor(color)
-                .setUv(1F, 0F)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(light)
-                .setNormal(0F, 0F, -1F);
-        vc.addVertex(mat,  0.3F, -0.21F, 0F)
-                .setColor(color)
-                .setUv(1F, 1F)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(light)
-                .setNormal(0F, 0F, -1F);
-        vc.addVertex(mat, -0.3F, -0.21F, 0F)
-                .setColor(color)
-                .setUv(0F, 1F)
-                .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(light)
-                .setNormal(0F, 0F, -1F);
+        vc.vertex(mat, -0.3F,  0.21F, 0F)
+                .color(color)
+                .uv(0F, 0F)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(light)
+                .normal(0F, 0F, -1F);
+        vc.vertex(mat,  0.3F,  0.21F, 0F)
+                .color(color)
+                .uv(1F, 0F)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(light)
+                .normal(0F, 0F, -1F);
+        vc.vertex(mat,  0.3F, -0.21F, 0F)
+                .color(color)
+                .uv(1F, 1F)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(light)
+                .normal(0F, 0F, -1F);
+        vc.vertex(mat, -0.3F, -0.21F, 0F)
+                .color(color)
+                .uv(0F, 1F)
+                .overlayCoords(OverlayTexture.NO_OVERLAY)
+                .uv2(light)
+                .normal(0F, 0F, -1F);
     }
 
     private void renderItemAsIcon(Direction direction, ItemStack stack, PoseStack matrices,

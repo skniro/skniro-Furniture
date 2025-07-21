@@ -6,13 +6,12 @@ import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.core.HolderLookup;
 import java.util.concurrent.CompletableFuture;
 
 
 public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
-    public MapleLootTableGenerator(FabricDataOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(dataGenerator, registryLookup);
+    public MapleLootTableGenerator(FabricDataOutput dataGenerator) {
+        super(dataGenerator);
     }
     public static final float[] NORMAL_LEAVES_SAPLING_CHANCES = new float[]{0.048F, 0.0425F, 0.062333336F, 0.1F};
 

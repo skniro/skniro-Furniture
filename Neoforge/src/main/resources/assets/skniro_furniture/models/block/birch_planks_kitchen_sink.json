@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/furniture/kitchen_sink",
-  "textures": {
-    "clay": "minecraft:block/birch_planks",
-    "quartz": "minecraft:block/birch_planks",
-    "white": "minecraft:block/birch_planks"
-  }
-}

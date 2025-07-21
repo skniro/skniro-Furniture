@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "P P"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:dark_oak_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_dark_oak_log"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:dark_oak_wood_book_desk"
+    }
+}

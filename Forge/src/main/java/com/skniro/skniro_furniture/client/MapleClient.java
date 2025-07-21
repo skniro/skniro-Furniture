@@ -27,7 +27,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = Furniture.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MapleClient {
-
+    @SuppressWarnings({"deprecation","removal"})
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
 

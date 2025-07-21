@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/furniture/tv_stand",
-  "textures": {
-    "clay": "minecraft:block/stripped_jungle_log",
-    "quartz": "minecraft:block/stripped_jungle_log",
-    "white": "minecraft:block/stripped_jungle_log"
-  }
-}

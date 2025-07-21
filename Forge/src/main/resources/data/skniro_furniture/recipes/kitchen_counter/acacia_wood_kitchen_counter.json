@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:acacia_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_acacia_log"
+        }
+    },
+    "result": {
+        "count": 3,
+        "item": "skniro_furniture:acacia_wood_kitchen_counter"
+    }
+}

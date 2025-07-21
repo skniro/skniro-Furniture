@@ -2,7 +2,6 @@ package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.api.entity.ImplementedInventory;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
@@ -26,15 +25,15 @@ public class PlateBlockEntity extends BlockEntity implements ImplementedInventor
     }
 
     @Override
-    protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries) {
-        super.saveAdditional(nbt, registries);
-        ContainerHelper.saveAllItems(nbt, inventory, registries);
+    protected void saveAdditional(CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        ContainerHelper.saveAllItems(nbt, inventory);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries) {
-        super.loadAdditional(nbt, registries);
-        ContainerHelper.loadAllItems(nbt, inventory, registries);
+    public void load(CompoundTag nbt) {
+        super.load(nbt);
+        ContainerHelper.loadAllItems(nbt, inventory);
     }
 
     @Override
@@ -43,7 +42,7 @@ public class PlateBlockEntity extends BlockEntity implements ImplementedInventor
     }
 
     @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }

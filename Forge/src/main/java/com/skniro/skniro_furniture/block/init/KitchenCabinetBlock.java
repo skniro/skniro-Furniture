@@ -1,14 +1,13 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import com.skniro.skniro_furniture.block.entity.BedsideCabinetBlockEntity;
-import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import com.skniro.skniro_furniture.block.entity.KitchenCabinetBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -30,7 +29,8 @@ public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
         this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
-    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+    @Override
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (world instanceof ServerLevel serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof KitchenCabinetBlockEntity KitchenCounterDrawerBlockEntity) {
@@ -42,7 +42,7 @@ public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
         return InteractionResult.SUCCESS;
     }
 
-    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+    public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof KitchenCabinetBlockEntity) {
             ((KitchenCabinetBlockEntity)blockEntity).tick();

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "PWP",
+        "PWP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:stick"
+        },
+        "W": {
+            "item": "minecraft:stripped_jungle_log"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:jungle_wood_wall_cabinet"
+    }
+}

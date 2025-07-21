@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -31,7 +32,7 @@ public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world instanceof ServerWorld serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof KitchenCabinetBlockEntity KitchenCounterDrawerBlockEntity) {
@@ -43,7 +44,7 @@ public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
         return ActionResult.SUCCESS;
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof KitchenCabinetBlockEntity) {
             ((KitchenCabinetBlockEntity)blockEntity).tick();

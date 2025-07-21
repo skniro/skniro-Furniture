@@ -86,16 +86,16 @@ public class FurnitureBedroomBlocks {
 
 
     private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(Furniture.MOD_ID, name), block);
     }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(Furniture.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name),
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Furniture.MOD_ID, name),
                 new BlockItem(block, new Item.Properties()));
     }
 

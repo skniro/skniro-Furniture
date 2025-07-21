@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/furniture/desk_cabinet",
-  "textures": {
-    "clay": "minecraft:block/dark_oak_planks",
-    "quartz": "minecraft:block/dark_oak_planks",
-    "white": "minecraft:block/dark_oak_planks"
-  }
-}

@@ -3,12 +3,10 @@ package com.skniro.skniro_furniture.block.init;
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.entity.furniture.SofaEntity;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -27,6 +25,9 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class SofaBlock extends HorizontalDirectionalBlock {
     public static final BooleanProperty LEFT = BooleanProperty.create("left");
@@ -63,7 +64,7 @@ public class SofaBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if(!level.isClientSide()) {
             Entity entity = null;
             List<SofaEntity> entities = level.getEntities(MapleEntityType.SOFA_ENTITY.get(), new AABB(pos), chair -> true);

@@ -29,7 +29,7 @@ public class TvStandBlock extends AbstractFurnitureContainerBlock {
         this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
-    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+    protected InteractionResult onUse(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
         if (world instanceof ServerLevel serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof TvStandBlockEntity BlockEntity) {
@@ -41,7 +41,7 @@ public class TvStandBlock extends AbstractFurnitureContainerBlock {
         return InteractionResult.SUCCESS;
     }
 
-    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+    public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof TvStandBlockEntity) {
             ((TvStandBlockEntity)blockEntity).tick();

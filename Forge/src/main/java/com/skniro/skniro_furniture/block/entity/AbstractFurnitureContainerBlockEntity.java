@@ -3,7 +3,6 @@ package com.skniro.skniro_furniture.block.entity;
 import com.skniro.skniro_furniture.block.init.AbstractWallCabinetBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -22,13 +21,13 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractFurnitureContainerBlockEntity extends BaseContainerBlockEntity {
+public abstract class AbstractFurnitureContainerBlockEntity extends RandomizableContainerBlockEntity {
     private final ContainerOpenersCounter stateManager;
     private NonNullList<ItemStack> inventory;
 
@@ -66,15 +65,15 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
         this.level.playSound((Player) null, d, e, f, soundEvent, SoundSource.BLOCKS, 0.5F, this.level.random.nextFloat() * 0.1F + 0.9F);
     }
 
-    protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider registries) {
-        super.saveAdditional(nbt, registries);
-        ContainerHelper.saveAllItems(nbt, this.inventory, registries);
+    public void saveAdditional(CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        ContainerHelper.saveAllItems(nbt, this.inventory);
     }
 
-    protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider registries) {
-        super.loadAdditional(nbt, registries);
+    public void load(CompoundTag nbt) {
+        super.load(nbt);
         this.inventory = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        ContainerHelper.loadAllItems(nbt, this.inventory, registries);
+        ContainerHelper.loadAllItems(nbt, this.inventory);
 
     }
 
@@ -86,7 +85,6 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
     public ItemStack getItem(int slot) {
         return inventory.get(slot);
     }
-
 
     protected NonNullList<ItemStack> getItems() {
         return this.inventory;
@@ -141,7 +139,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
 
 
     @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }

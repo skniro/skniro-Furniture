@@ -11,7 +11,7 @@ import java.util.function.Function;
 public class MapleItems {
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), item);
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Furniture.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

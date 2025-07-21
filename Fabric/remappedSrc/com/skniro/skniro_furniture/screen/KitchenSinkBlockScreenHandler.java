@@ -1,7 +1,7 @@
 package com.skniro.skniro_furniture.screen;
 
 import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
-import net.minecraft.core.BlockPos;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -19,8 +19,8 @@ public class KitchenSinkBlockScreenHandler extends AbstractContainerMenu {
     private final ContainerData propertyDelegate;
     public final KitchenSinkBlockEntity blockEntity;
 
-    public KitchenSinkBlockScreenHandler(int syncId, Inventory playerInventory, BlockPos pos){
-        this(syncId,playerInventory, playerInventory.player.level().getBlockEntity(pos),new SimpleContainerData(2));
+    public KitchenSinkBlockScreenHandler(int syncId, Inventory playerInventory, FriendlyByteBuf packetByteBuf){
+        this(syncId,playerInventory, playerInventory.player.level().getBlockEntity(packetByteBuf.readBlockPos()),new SimpleContainerData(2));
     }
 
 

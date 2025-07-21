@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/furniture/book_desk",
-  "textures": {
-    "clay": "minecraft:block/stripped_birch_log",
-    "quartz": "minecraft:block/stripped_birch_log",
-    "white": "minecraft:block/stripped_birch_log"
-  }
-}

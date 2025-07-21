@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "skniro_furniture:block/bamboo_mosaic",
-    "side": "skniro_furniture:block/bamboo_mosaic",
-    "top": "skniro_furniture:block/bamboo_mosaic"
-  }
-}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "XXX",
+        "###"
+    ],
+    "key": {
+        "X": {
+            "item": "minecraft:book"
+        },
+        "#": {
+            "item": "minecraft:cherry_planks"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:cherry_bookshelf"
+    }
+}

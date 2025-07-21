@@ -4,20 +4,20 @@ import com.skniro.skniro_furniture.block.api.entity.ImplementedInventory;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.recipe.KitchenSinkRecipe;
-import com.skniro.skniro_furniture.recipe.KitchenSinkRecipeInput;
 import com.skniro.skniro_furniture.screen.KitchenSinkBlockScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -31,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
+public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final NonNullList<ItemStack> inventory = NonNullList.withSize(4, ItemStack.EMPTY);
     private float rotation = 0;
     private static final int INPUT_SLOT = 0;
@@ -84,8 +84,8 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     @Override
-    public BlockPos getScreenOpeningData(ServerPlayer player) {
-        return this.worldPosition;
+    public void writeScreenOpeningData(ServerPlayer player, FriendlyByteBuf buf) {
+        buf.writeBlockPos(this.worldPosition);
     }
 
     @Override
@@ -105,19 +105,19 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     @Override
-    protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider registryLookup) {
-        super.saveAdditional(nbt, registryLookup);
-        ContainerHelper.saveAllItems(nbt, inventory, registryLookup);
+    public void saveAdditional(CompoundTag nbt) {
+        super.saveAdditional(nbt);
+        ContainerHelper.saveAllItems(nbt, inventory);
         nbt.putInt("kitchen_sink.progress", progress);
         nbt.putInt("kitchen_sink.max_progress", maxProgress);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider registryLookup) {
-        ContainerHelper.loadAllItems(nbt, inventory, registryLookup);
+    public void load(CompoundTag nbt) {
+        ContainerHelper.loadAllItems(nbt, inventory);
         progress = nbt.getInt("kitchen_sink.progress");
         maxProgress = nbt.getInt("kitchen_sink.max_progress");
-        super.loadAdditional(nbt, registryLookup);
+        super.load(nbt);
     }
 
     public void tick(Level world, BlockPos pos, BlockState state) {
@@ -186,8 +186,12 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
     private Optional<RecipeHolder<KitchenSinkRecipe>> getCurrentRecipe() {
+        SimpleContainer inv = new SimpleContainer(this.getContainerSize());
+        for(int i = 0; i < this.getContainerSize(); i++) {
+            inv.setItem(i, this.getItem(i));
+        }
         return this.getLevel().getServer().getRecipeManager()
-                .getRecipeFor(FurnitureRecipeType.Kitchen_Sink_TYPE, new KitchenSinkRecipeInput(inventory.get(INPUT_SLOT)), this.getLevel());
+                .getRecipeFor(FurnitureRecipeType.Kitchen_Sink_TYPE, inv, this.getLevel());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
@@ -209,7 +213,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
 
 
     @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 }

@@ -1,0 +1,12 @@
+{
+    "type": "skniro_furniture:kitchen_sink",
+    "ingredient": [
+        {
+            "item": "minecraft:bucket"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "item": "minecraft:water_bucket"
+    }
+}

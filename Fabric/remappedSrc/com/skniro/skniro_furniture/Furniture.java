@@ -24,10 +24,10 @@ public class Furniture implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final ModContainer MOD_CONTAINER = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow();
 
-    public static final ResourceKey<CreativeModeTab> Maple_Group_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "maple_group_furniture"));
-    public static final ResourceKey<CreativeModeTab> Furniture_Group_Kitchen_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "furniture_kitchen_group_furniture"));
-    public static final ResourceKey<CreativeModeTab> Furniture_Group_Bedroom_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "furniture_bedroom_group_furniture"));
-    public static final ResourceKey<CreativeModeTab> Furniture_Group_Livingroom_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MOD_ID, "furniture_livingroom_group_furniture"));
+    public static final ResourceKey<CreativeModeTab> Maple_Group_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.tryBuild(MOD_ID, "maple_group_furniture"));
+    public static final ResourceKey<CreativeModeTab> Furniture_Group_Kitchen_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.tryBuild(MOD_ID, "furniture_kitchen_group_furniture"));
+    public static final ResourceKey<CreativeModeTab> Furniture_Group_Bedroom_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.tryBuild(MOD_ID, "furniture_bedroom_group_furniture"));
+    public static final ResourceKey<CreativeModeTab> Furniture_Group_Livingroom_Furniture = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.tryBuild(MOD_ID, "furniture_livingroom_group_furniture"));
 
     @Override
     public void onInitialize() {
@@ -61,7 +61,7 @@ public class Furniture implements ModInitializer {
     }
 
     public static ResourceLocation asResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        return ResourceLocation.tryBuild(MOD_ID, path);
     }
 
 }

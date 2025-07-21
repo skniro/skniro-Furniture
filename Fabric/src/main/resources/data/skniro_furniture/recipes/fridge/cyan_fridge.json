@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "WTW",
+        "WGW"
+    ],
+    "key": {
+        "T": {
+            "item": "minecraft:chest"
+        },
+        "G": {
+            "item": "minecraft:dispenser"
+        },
+        "W": {
+            "item": "minecraft:cyan_terracotta"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:cyan_fridge"
+    }
+}

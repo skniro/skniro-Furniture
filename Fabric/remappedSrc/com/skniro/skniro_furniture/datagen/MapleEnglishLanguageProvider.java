@@ -8,17 +8,16 @@ import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.core.HolderLookup;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
-    public MapleEnglishLanguageProvider(FabricDataOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup){
-        super(dataGenerator,"en_us", registryLookup);
+    public MapleEnglishLanguageProvider(FabricDataOutput dataGenerator){
+        super(dataGenerator,"en_us");
     }
 
     @Override
-    public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder translationBuilder) {
         translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro's Furniture");
         translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"Bedroom Furniture");
         translationBuilder.add(Furniture.Furniture_Group_Kitchen_Furniture,"Kitchen Furniture");

@@ -3,7 +3,7 @@ package com.skniro.skniro_furniture.block;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.*;
 import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -659,16 +659,16 @@ public class MapleFurnitureBlocks {
     public static final Block RED_Wall_CABINET = registerBlock("red_wall_cabinet", new WallCabinetBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque()));
     public static final Block BLACK_Wall_CABINET = registerBlock("black_wall_cabinet", new WallCabinetBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).nonOpaque()));
 
-    public static final Block SPRUCE_BOOKSHELF = registerBlock("spruce_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block BIRCH_BOOKSHELF = registerBlock("birch_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block JUNGLE_BOOKSHELF = registerBlock("jungle_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block ACACIA_BOOKSHELF = registerBlock("acacia_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block DARK_OAK_BOOKSHELF = registerBlock("dark_oak_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.BROWN).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block MANGROVE_BOOKSHELF = registerBlock("mangrove_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.RED).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block CHERRY_BOOKSHELF = registerBlock("cherry_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.PINK).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
-    public static final Block WARPED_BOOKSHELF = registerBlock("warped_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block SPRUCE_BOOKSHELF = registerBlock("spruce_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block BIRCH_BOOKSHELF = registerBlock("birch_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block JUNGLE_BOOKSHELF = registerBlock("jungle_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block ACACIA_BOOKSHELF = registerBlock("acacia_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block DARK_OAK_BOOKSHELF = registerBlock("dark_oak_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.BROWN).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block MANGROVE_BOOKSHELF = registerBlock("mangrove_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.RED).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block CHERRY_BOOKSHELF = registerBlock("cherry_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.PINK).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.YELLOW).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block CRIMSON_BOOKSHELF = registerBlock("crimson_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
+    public static final Block WARPED_BOOKSHELF = registerBlock("warped_bookshelf", new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(Instrument.BASS).strength(1.5F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block WHITE_Ceiling_Lamp = registerBlock("white_ceiling_lamp", new LampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()));
     public static final Block ORANGE_Ceiling_Lamp = registerBlock("orange_ceiling_lamp", new LampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque()));

@@ -485,7 +485,7 @@ public class FurnitureBlockEntityType {
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.fetchChoiceType(References.BLOCK_ENTITY, id);
-        return (BlockEntityType) Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID,id), builder.build(null));
+        return (BlockEntityType) Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ResourceLocation.tryBuild(Furniture.MOD_ID,id), builder.build(null));
     }
 
     public static void registerMapleBlockEntityType() {

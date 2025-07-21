@@ -1,22 +1,22 @@
 package com.skniro.skniro_furniture.recipe;
 
 
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.RegistryByteBuf;
-import net.minecraft.network.codec.PacketCodec;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
-import net.minecraft.recipe.input.RecipeInput;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
 
-import java.util.Iterator;
 import java.util.List;
 
 
-public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
+public class KitchenSinkRecipe implements Recipe<SimpleInventory> {
     final ItemStack output;
     final List<Ingredient> recipeItems;
 
@@ -26,17 +26,15 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     @Override
-    public boolean matches(KitchenSinkRecipeInput inventory, World world) {
-        for (int i = 0; i < recipeItems.size(); i++) {
-            if (!recipeItems.get(i).test(inventory.getStackInSlot(i))) {
-                return false;
-            }
+    public boolean matches(SimpleInventory inventory, World world) {
+        if (world.isClient()) {
+            return false;
         }
-        return true;
+        return recipeItems.get(0).test(inventory.getStack(0));
     }
 
     @Override
-    public ItemStack craft(KitchenSinkRecipeInput inventory, RegistryWrapper.WrapperLookup lookup) {
+    public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
         return output;
     }
 
@@ -46,13 +44,13 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     @Override
-    public ItemStack getResult(RegistryWrapper.WrapperLookup lookup) {
+    public ItemStack getResult(DynamicRegistryManager registryManager) {
         return output;
     }
 
     @Override
     public DefaultedList<Ingredient> getIngredients() {
-        DefaultedList<Ingredient> list = DefaultedList.ofSize(1);
+        DefaultedList<Ingredient> list = DefaultedList.ofSize(this.recipeItems.size());
         list.addAll(recipeItems);
         return list;
     }
@@ -68,50 +66,43 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     public static class Serializer implements RecipeSerializer<KitchenSinkRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final MapCodec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredient").forGetter((recipe) -> {
-                    return recipe.recipeItems;
-                }),
-                ItemStack.CODEC.fieldOf("result").forGetter((recipe) -> {
-                    return recipe.output;
-                })
-        ).apply(inst, KitchenSinkRecipe::new));
+        public static final Codec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
+                validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredient").forGetter(KitchenSinkRecipe::getIngredients),
+                ItemStack.RECIPE_RESULT_CODEC.fieldOf("result").forGetter(r -> r.output)
+        ).apply(in, KitchenSinkRecipe::new));
 
-
-        public static final PacketCodec<RegistryByteBuf, KitchenSinkRecipe> PACKET_CODEC = PacketCodec.ofStatic(KitchenSinkRecipe.Serializer::write, KitchenSinkRecipe.Serializer::read);
-
-        public Serializer() {
+        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
+            return Codecs.validate(Codecs.validate(
+                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
+            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
         }
 
-        public MapCodec<KitchenSinkRecipe> codec() {
+        @Override
+        public Codec<KitchenSinkRecipe> codec() {
             return CODEC;
         }
 
-        public PacketCodec<RegistryByteBuf, KitchenSinkRecipe> packetCodec() {
-            return PACKET_CODEC;
-        }
+        @Override
+        public KitchenSinkRecipe read(PacketByteBuf buf) {
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
-        private static KitchenSinkRecipe read(RegistryByteBuf buf) {
-            int i = buf.readVarInt();
-            DefaultedList<Ingredient> defaultedList = DefaultedList.ofSize(i, Ingredient.EMPTY);
-            defaultedList.replaceAll((empty) -> {
-                return (Ingredient)Ingredient.PACKET_CODEC.decode(buf);
-            });
-            ItemStack itemStack = (ItemStack)ItemStack.PACKET_CODEC.decode(buf);
-            return new KitchenSinkRecipe(defaultedList, itemStack);
-        }
-
-        private static void write(RegistryByteBuf buf, KitchenSinkRecipe recipe) {
-            buf.writeVarInt(recipe.recipeItems.size());
-            Iterator var2 = recipe.recipeItems.iterator();
-
-            while(var2.hasNext()) {
-                Ingredient ingredient = (Ingredient)var2.next();
-                Ingredient.PACKET_CODEC.encode(buf, ingredient);
+            for(int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.fromPacket(buf));
             }
 
-            ItemStack.PACKET_CODEC.encode(buf, recipe.output);
+            ItemStack output = buf.readItemStack();
+            return new KitchenSinkRecipe(inputs, output);
+        }
+
+        @Override
+        public void write(PacketByteBuf buf, KitchenSinkRecipe recipe) {
+            buf.writeInt(recipe.getIngredients().size());
+
+            for (Ingredient ingredient : recipe.getIngredients()) {
+                ingredient.write(buf);
+            }
+
+            buf.writeItemStack(recipe.getResult(null));
         }
     }
 }

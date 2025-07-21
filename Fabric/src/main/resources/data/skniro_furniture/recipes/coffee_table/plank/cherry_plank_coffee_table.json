@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " P ",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:cherry_planks"
+        }
+    },
+    "result": {
+        "count": 3,
+        "item": "skniro_furniture:cherry_plank_coffee_table"
+    }
+}

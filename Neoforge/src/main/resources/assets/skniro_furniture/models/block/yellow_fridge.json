@@ -1,8 +1,0 @@
-{
-    "parent": "skniro_furniture:block/furniture/fridge",
-    "textures": {
-        "clay": "minecraft:block/yellow_concrete",
-        "quartz": "minecraft:block/yellow_concrete",
-        "grey": "skniro_furniture:block/white_terracotta"
-    }
-}

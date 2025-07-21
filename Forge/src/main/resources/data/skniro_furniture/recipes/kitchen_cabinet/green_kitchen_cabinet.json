@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        "AWA",
+        "PWP"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:quartz_block"
+        },
+        "P": {
+            "item": "minecraft:green_terracotta"
+        },
+        "W": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:green_kitchen_cabinet"
+    }
+}

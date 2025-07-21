@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PWP",
+        " A ",
+        "   "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:redstone"
+        },
+        "A": {
+            "item": "minecraft:glowstone"
+        },
+        "W": {
+            "item": "minecraft:orange_terracotta"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:orange_ceiling_lamp"
+    }
+}

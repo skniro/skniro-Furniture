@@ -13,7 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 @Environment(EnvType.CLIENT)
 public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkBlockScreenHandler> {
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "textures/gui/container/kitchen_sink.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.tryBuild(Furniture.MOD_ID, "textures/gui/container/kitchen_sink.png");
 
     public KitchenSinkBlockScreen(KitchenSinkBlockScreenHandler handler, Inventory inventory, Component title) {
         super(handler, inventory, title);

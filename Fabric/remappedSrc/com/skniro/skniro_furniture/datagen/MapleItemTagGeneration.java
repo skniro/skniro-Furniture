@@ -17,9 +17,9 @@ public class MapleItemTagGeneration extends FabricTagProvider<Item> {
     }
 
     public static class ModItemTags {
-        public static final TagKey<Item> C_SAPLING = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "saplings"));
-        public static final TagKey<Item> C_MAPLE_LOGS = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "maple_logs"));
-        public static final TagKey<Item> C_CHERRY_LOGS = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "cherry_logs"));
+        public static final TagKey<Item> C_SAPLING = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild("c", "saplings"));
+        public static final TagKey<Item> C_MAPLE_LOGS = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild("c", "maple_logs"));
+        public static final TagKey<Item> C_CHERRY_LOGS = TagKey.create(Registries.ITEM, ResourceLocation.tryBuild("c", "cherry_logs"));
     }
 
     @Override

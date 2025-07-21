@@ -1,24 +1,25 @@
 package com.skniro.skniro_furniture.recipe;
 
 
-import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.recipe.*;
+import net.minecraft.util.ExtraCodecs;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import java.util.Iterator;
 import java.util.List;
 
 
-public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
+public class KitchenSinkRecipe implements Recipe<SimpleContainer> {
     final ItemStack output;
     final List<Ingredient> recipeItems;
 
@@ -28,17 +29,15 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     @Override
-    public boolean matches(KitchenSinkRecipeInput inventory, Level world) {
-        for (int i = 0; i < recipeItems.size(); i++) {
-            if (!recipeItems.get(i).test(inventory.getItem(i))) {
-                return false;
-            }
+    public boolean matches(SimpleContainer inventory, Level world) {
+        if (world.isClientSide()) {
+            return false;
         }
-        return true;
+        return recipeItems.get(0).test(inventory.getItem(1));
     }
 
     @Override
-    public ItemStack craft(KitchenSinkRecipeInput inventory, HolderLookup.Provider lookup) {
+    public ItemStack craft(SimpleContainer inventory, RegistryAccess registryManager) {
         return output;
     }
 
@@ -48,13 +47,13 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     @Override
-    public ItemStack getResultItem(HolderLookup.Provider lookup) {
+    public ItemStack getResultItem(RegistryAccess registryManager) {
         return output;
     }
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
-        NonNullList<Ingredient> list = NonNullList.createWithCapacity(1);
+        NonNullList<Ingredient> list = NonNullList.createWithCapacity(this.recipeItems.size());
         list.addAll(recipeItems);
         return list;
     }
@@ -70,50 +69,43 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     public static class Serializer implements RecipeSerializer<KitchenSinkRecipe> {
-        public static final Serializer INSTANCE = new Serializer();
-        public static final MapCodec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredient").forGetter((recipe) -> {
-                    return recipe.recipeItems;
-                }),
-                ItemStack.CODEC.fieldOf("result").forGetter((recipe) -> {
-                    return recipe.output;
-                })
-        ).apply(inst, KitchenSinkRecipe::new));
+        public static final Codec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
+                validateAmount(Ingredient.CODEC_NONEMPTY, 9).fieldOf("ingredient").forGetter(KitchenSinkRecipe::getIngredients),
+                ItemStack.ITEM_WITH_COUNT_CODEC.fieldOf("result").forGetter(r -> r.output)
+        ).apply(in, KitchenSinkRecipe::new));
 
-
-        public static final StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> PACKET_CODEC = StreamCodec.of(KitchenSinkRecipe.Serializer::write, KitchenSinkRecipe.Serializer::read);
-
-        public Serializer() {
+        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
+            return ExtraCodecs.validate(ExtraCodecs.validate(
+                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
+            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
         }
 
-        public MapCodec<KitchenSinkRecipe> codec() {
+        @Override
+        public Codec<KitchenSinkRecipe> codec() {
             return CODEC;
         }
 
-        public StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> streamCodec() {
-            return PACKET_CODEC;
-        }
+        @Override
+        public KitchenSinkRecipe fromNetwork(FriendlyByteBuf buf) {
+            NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
 
-        private static KitchenSinkRecipe read(RegistryFriendlyByteBuf buf) {
-            int i = buf.readVarInt();
-            NonNullList<Ingredient> defaultedList = NonNullList.withSize(i, Ingredient.EMPTY);
-            defaultedList.replaceAll((empty) -> {
-                return (Ingredient)Ingredient.CONTENTS_STREAM_CODEC.decode(buf);
-            });
-            ItemStack itemStack = (ItemStack)ItemStack.STREAM_CODEC.decode(buf);
-            return new KitchenSinkRecipe(defaultedList, itemStack);
-        }
-
-        private static void write(RegistryFriendlyByteBuf buf, KitchenSinkRecipe recipe) {
-            buf.writeVarInt(recipe.recipeItems.size());
-            Iterator var2 = recipe.recipeItems.iterator();
-
-            while(var2.hasNext()) {
-                Ingredient ingredient = (Ingredient)var2.next();
-                Ingredient.CONTENTS_STREAM_CODEC.encode(buf, ingredient);
+            for(int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.fromNetwork(buf));
             }
 
-            ItemStack.STREAM_CODEC.encode(buf, recipe.output);
+            ItemStack output = buf.readItem();
+            return new KitchenSinkRecipe(inputs, output);
+        }
+
+        @Override
+        public void write(FriendlyByteBuf buf, KitchenSinkRecipe recipe) {
+            buf.writeInt(recipe.getIngredients().size());
+
+            for (Ingredient ingredient : recipe.getIngredients()) {
+                ingredient.toNetwork(buf);
+            }
+
+            buf.writeItem(recipe.getResultItem(null));
         }
     }
 }

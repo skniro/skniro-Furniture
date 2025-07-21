@@ -4,7 +4,6 @@ import com.skniro.skniro_furniture.block.api.entity.ImplementedInventory;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.recipe.KitchenSinkRecipe;
-import com.skniro.skniro_furniture.recipe.KitchenSinkRecipeInput;
 import com.skniro.skniro_furniture.screen.KitchenSinkBlockScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -12,8 +11,10 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
@@ -31,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
+public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
     private float rotation = 0;
     private static final int INPUT_SLOT = 0;
@@ -84,8 +85,8 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     @Override
-    public BlockPos getScreenOpeningData(ServerPlayerEntity player) {
-        return this.pos;
+    public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
+        buf.writeBlockPos(this.pos);
     }
 
     @Override
@@ -105,19 +106,19 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     @Override
-    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.writeNbt(nbt, registryLookup);
-        Inventories.writeNbt(nbt, inventory, registryLookup);
+    protected void writeNbt(NbtCompound nbt) {
+        super.writeNbt(nbt);
+        Inventories.writeNbt(nbt, inventory);
         nbt.putInt("kitchen_sink.progress", progress);
         nbt.putInt("kitchen_sink.max_progress", maxProgress);
     }
 
     @Override
-    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        Inventories.readNbt(nbt, inventory, registryLookup);
+    public void readNbt(NbtCompound nbt) {
+        Inventories.readNbt(nbt, inventory);
         progress = nbt.getInt("kitchen_sink.progress");
         maxProgress = nbt.getInt("kitchen_sink.max_progress");
-        super.readNbt(nbt, registryLookup);
+        super.readNbt(nbt);
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {
@@ -185,9 +186,14 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
         ItemStack output = recipe.get().value().getResult(null);
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
+
     private Optional<RecipeEntry<KitchenSinkRecipe>> getCurrentRecipe() {
-        return this.getWorld().getServer().getRecipeManager()
-                .getFirstMatch(FurnitureRecipeType.Kitchen_Sink_TYPE, new KitchenSinkRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+        SimpleInventory inv = new SimpleInventory(this.size());
+        for(int i = 0; i < this.size(); i++) {
+            inv.setStack(i, this.getStack(i));
+        }
+        return this.getWorld().getRecipeManager()
+                .getFirstMatch(FurnitureRecipeType.Kitchen_Sink_TYPE, inv, this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
@@ -209,7 +215,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
 
 
     @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+    public NbtCompound toInitialChunkDataNbt() {
+        return createNbt();
     }
 }

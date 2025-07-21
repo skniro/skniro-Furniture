@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "W W",
+        "WWW"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:pink_terracotta"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:pink_sofa"
+    }
+}

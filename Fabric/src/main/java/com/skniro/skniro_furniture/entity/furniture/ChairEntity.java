@@ -15,7 +15,7 @@ public class ChairEntity extends Entity {
     }
 
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
+    protected void initDataTracker() {
 
     }
 

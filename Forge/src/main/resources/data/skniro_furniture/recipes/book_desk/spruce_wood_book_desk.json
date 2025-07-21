@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "P P"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:spruce_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_spruce_log"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:spruce_wood_book_desk"
+    }
+}

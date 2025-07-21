@@ -8,17 +8,16 @@ import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.core.HolderLookup;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvider {
-    public MapleSimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup){
-        super(dataGenerator, "zh_cn", registryLookup);
+    public MapleSimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator){
+        super(dataGenerator, "zh_cn");
     }
 
     @Override
-    public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder translationBuilder) {
 
         translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro的家具");
         translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"卧室家具");

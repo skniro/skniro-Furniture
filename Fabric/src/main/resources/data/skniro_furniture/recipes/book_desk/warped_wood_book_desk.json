@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "P P"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:warped_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_warped_stem"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:warped_wood_book_desk"
+    }
+}

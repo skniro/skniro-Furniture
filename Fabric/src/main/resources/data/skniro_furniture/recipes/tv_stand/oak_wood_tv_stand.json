@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        "P P",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:oak_slab"
+        },
+        "W": {
+            "item": "minecraft:stripped_oak_log"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "skniro_furniture:oak_wood_tv_stand"
+    }
+}

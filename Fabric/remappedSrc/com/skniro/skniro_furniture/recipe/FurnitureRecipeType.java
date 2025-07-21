@@ -10,9 +10,9 @@ import net.minecraft.world.item.crafting.RecipeType;
 
 public interface FurnitureRecipeType<T extends Recipe<?>> {
     public static final RecipeSerializer<KitchenSinkRecipe> Kitchen_Sink_SERIALIZER = Registry.register(
-            BuiltInRegistries.RECIPE_SERIALIZER, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "kitchen_sink"), new KitchenSinkRecipe.Serializer());
+            BuiltInRegistries.RECIPE_SERIALIZER, ResourceLocation.tryBuild(Furniture.MOD_ID, "kitchen_sink"), new KitchenSinkRecipe.Serializer());
     public static final RecipeType<KitchenSinkRecipe> Kitchen_Sink_TYPE = Registry.register(
-            BuiltInRegistries.RECIPE_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "kitchen_sink"), new RecipeType<>() {
+            BuiltInRegistries.RECIPE_TYPE, ResourceLocation.tryBuild(Furniture.MOD_ID, "kitchen_sink"), new RecipeType<>() {
                 @Override
                 public String toString() {
                     return "kitchen_sink";

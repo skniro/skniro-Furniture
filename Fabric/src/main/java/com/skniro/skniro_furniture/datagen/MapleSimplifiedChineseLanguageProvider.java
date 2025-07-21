@@ -14,12 +14,12 @@ import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvider {
-    public MapleSimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup){
-        super(dataGenerator, "zh_cn", registryLookup);
+    public MapleSimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator){
+        super(dataGenerator, "zh_cn");
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder translationBuilder) {
 
         translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro的家具");
         translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"卧室家具");

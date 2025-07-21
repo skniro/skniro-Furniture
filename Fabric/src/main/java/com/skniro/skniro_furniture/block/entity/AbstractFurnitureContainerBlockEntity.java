@@ -3,7 +3,7 @@ package com.skniro.skniro_furniture.block.entity;
 import com.skniro.skniro_furniture.block.init.AbstractWallCabinetBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.entity.LockableContainerBlockEntity;
+import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.block.entity.ViewerCountManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -14,7 +14,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.GenericContainerScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.sound.SoundCategory;
@@ -28,7 +27,7 @@ import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractFurnitureContainerBlockEntity extends LockableContainerBlockEntity {
+public abstract class AbstractFurnitureContainerBlockEntity extends LootableContainerBlockEntity {
     private final ViewerCountManager stateManager;
     private DefaultedList<ItemStack> inventory;
 
@@ -66,18 +65,21 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
         this.world.playSound((PlayerEntity) null, d, e, f, soundEvent, SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
     }
 
-    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
-        super.writeNbt(nbt, registries);
-        Inventories.writeNbt(nbt, this.inventory, registries);
+    @Override
+    protected void writeNbt(NbtCompound nbt) {
+        super.writeNbt(nbt);
+        Inventories.writeNbt(nbt, this.inventory);
     }
 
-    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registries) {
-        super.readNbt(nbt, registries);
+    @Override
+    public void readNbt(NbtCompound nbt) {
+        super.readNbt(nbt);
         this.inventory = DefaultedList.ofSize(this.size(), ItemStack.EMPTY);
-        Inventories.readNbt(nbt, this.inventory, registries);
+        Inventories.readNbt(nbt, this.inventory);
 
     }
 
+    @Override
     public int size() {
         return inventory.size();
     }
@@ -88,11 +90,13 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
     }
 
 
-    protected DefaultedList<ItemStack> getHeldStacks() {
+    @Override
+    protected DefaultedList<ItemStack> method_11282() {
         return this.inventory;
     }
 
-    protected void setHeldStacks(DefaultedList<ItemStack> inventory) {
+    @Override
+    protected void setInvStackList(DefaultedList<ItemStack> inventory) {
         this.inventory = inventory;
     }
 
@@ -106,6 +110,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
         return null;
     }
 
+    @Override
     public void onOpen(PlayerEntity player) {
         if (!this.removed && !player.isSpectator()) {
             this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
@@ -113,6 +118,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
 
     }
 
+    @Override
     public void onClose(PlayerEntity player) {
         if (!this.removed && !player.isSpectator()) {
             this.stateManager.closeContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
@@ -141,7 +147,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
 
 
     @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+    public NbtCompound toInitialChunkDataNbt() {
+        return createNbt();
     }
 }

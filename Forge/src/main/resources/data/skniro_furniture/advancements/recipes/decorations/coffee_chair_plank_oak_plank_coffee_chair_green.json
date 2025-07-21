@@ -1,0 +1,34 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_base_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:green_carpet"
+                        ]
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "skniro_furniture:coffee_chair/plank/oak_plank_coffee_chair_green"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_base_item",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "skniro_furniture:coffee_chair/plank/oak_plank_coffee_chair_green"
+        ]
+    }
+}

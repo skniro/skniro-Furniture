@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "P P",
+        " A "
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:quartz"
+        },
+        "P": {
+            "item": "minecraft:white_terracotta"
+        }
+    },
+    "result": {
+        "count": 3,
+        "item": "skniro_furniture:white_plate"
+    }
+}

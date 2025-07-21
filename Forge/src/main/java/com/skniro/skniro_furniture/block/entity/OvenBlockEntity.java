@@ -2,7 +2,6 @@ package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
@@ -56,8 +55,8 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
 
 
     @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+    public CompoundTag getUpdateTag() {
+        return saveWithoutMetadata();
     }
 
 }

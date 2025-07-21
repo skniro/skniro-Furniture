@@ -16,6 +16,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -39,7 +40,7 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH).with(HALF, DoubleBlockHalf.LOWER)));
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world instanceof ServerWorld serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof FridgeBlockEntity BlockEntity) {
@@ -51,7 +52,7 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
         return ActionResult.SUCCESS;
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof FridgeBlockEntity) {
             ((FridgeBlockEntity)blockEntity).tick();
@@ -59,7 +60,7 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
 
     }
 
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         DoubleBlockHalf doubleBlockHalf = (DoubleBlockHalf)state.get(HALF);
         if (direction.getAxis() == Direction.Axis.Y && doubleBlockHalf == DoubleBlockHalf.LOWER == (direction == Direction.UP)) {
             return neighborState.getBlock() instanceof FridgeBlock && neighborState.get(HALF) != doubleBlockHalf ? (BlockState)neighborState.with(HALF, doubleBlockHalf) : Blocks.AIR.getDefaultState();
@@ -74,7 +75,7 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
     }
 
     @Override
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         if (state.get(HALF) == DoubleBlockHalf.LOWER) {
             BlockPos blockPos = pos.down();
             BlockState blockState = world.getBlockState(blockPos);
@@ -91,7 +92,7 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
     }
 
     @Override
-    protected long getRenderingSeed(BlockState state, BlockPos pos) {
+    public long getRenderingSeed(BlockState state, BlockPos pos) {
         return MathHelper.hashCode(pos.getX(), pos.down(state.get(HALF) == DoubleBlockHalf.LOWER ? 0 : 1).getY(), pos.getZ());
     }
 

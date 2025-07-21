@@ -25,15 +25,15 @@ import java.util.function.Supplier;
 public class MapleEntityType {
     public static final EntityType<ChairEntity> CHAIR_ENTITY =
             register("chair_entity",  EntityType.Builder.create(ChairEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f));
+                    .setDimensions(0.5f, 0.5f));
 
     public static final EntityType<CushionEntity> Cushion_ENTITY =
             register("cushion_entity",  EntityType.Builder.create(CushionEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f));
+                    .setDimensions(0.5f, 0.5f));
 
     public static final EntityType<SofaEntity> SOFA_ENTITY =
             register("sofa_entity",  EntityType.Builder.create(SofaEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.5f, 0.5f));
+                    .setDimensions(0.5f, 0.5f));
 
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {

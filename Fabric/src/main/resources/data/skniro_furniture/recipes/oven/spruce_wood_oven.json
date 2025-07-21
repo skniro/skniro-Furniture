@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "skniro_furniture:spruce_wood_kitchen_counter"
+        },
+        {
+            "item": "minecraft:furnace"
+        }
+    ],
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:spruce_wood_oven"
+    }
+}

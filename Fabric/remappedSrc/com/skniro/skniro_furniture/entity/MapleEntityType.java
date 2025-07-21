@@ -32,7 +32,7 @@ public class MapleEntityType {
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
         Type<?> type = Util.fetchChoiceType(References.ENTITY, name);
-        return (EntityType) Registry.register(BuiltInRegistries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), builder.build(name));
+        return (EntityType) Registry.register(BuiltInRegistries.ENTITY_TYPE, ResourceLocation.tryBuild(Furniture.MOD_ID, name), builder.build(name));
     }
 
     public static void registerMapleEntityType() {

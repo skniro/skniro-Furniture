@@ -1,0 +1,34 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_base_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:stripped_acacia_log"
+                        ]
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "skniro_furniture:four_grid_cabinet/acacia_wood_four_grid_cabinet"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_base_item",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "skniro_furniture:four_grid_cabinet/acacia_wood_four_grid_cabinet"
+        ]
+    }
+}

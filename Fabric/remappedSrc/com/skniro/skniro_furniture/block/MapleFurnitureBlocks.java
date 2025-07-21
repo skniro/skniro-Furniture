@@ -223,17 +223,17 @@ public class MapleFurnitureBlocks {
 
 
     // Table Blocks
-    public static final Block TABLE_OAK = registerBlock("oak_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
-    public static final Block TABLE_SPRUCE = registerBlock("spruce_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
-    public static final Block TABLE_BIRCH = registerBlock("birch_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
-    public static final Block TABLE_JUNGLE = registerBlock("jungle_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
-    public static final Block TABLE_ACACIA = registerBlock("acacia_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
-    public static final Block TABLE_DARK_OAK = registerBlock("dark_oak_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
-    public static final Block TABLE_CRIMSON = registerBlock("crimson_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
-    public static final Block TABLE_WARPED = registerBlock("warped_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
-    public static final Block TABLE_MANGROVE = registerBlock("mangrove_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
-    public static final Block TABLE_BAMBOO = registerBlock("bamboo_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
-    public static final Block TABLE_CHERRY = registerBlock("cherry_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+    public static final Block TABLE_OAK = registerBlock("oak_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final Block TABLE_SPRUCE = registerBlock("spruce_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+    public static final Block TABLE_BIRCH = registerBlock("birch_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+    public static final Block TABLE_JUNGLE = registerBlock("jungle_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+    public static final Block TABLE_ACACIA = registerBlock("acacia_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+    public static final Block TABLE_DARK_OAK = registerBlock("dark_oak_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+    public static final Block TABLE_CRIMSON = registerBlock("crimson_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+    public static final Block TABLE_WARPED = registerBlock("warped_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+    public static final Block TABLE_MANGROVE = registerBlock("mangrove_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final Block TABLE_BAMBOO = registerBlock("bamboo_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+    public static final Block TABLE_CHERRY = registerBlock("cherry_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
 
     //WindowBlockSetType.OAK),
     public static final Block Window_WOOD_OAK = registerBlock("oak_wood_window", new WindowBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion(), BlockSetType.OAK));
@@ -284,28 +284,28 @@ public class MapleFurnitureBlocks {
     public static final Block Window_PLANK_WARPED_STYLE2 = registerBlock("warped_plank_window_style2", new WindowBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion(), BlockSetType.WARPED));
 
     // Coffee Table Blocks
-    public static final Block Coffee_Table_WOOD_OAK = registerBlock("oak_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_BIRCH = registerBlock("birch_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_SPRUCE = registerBlock("spruce_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_JUNGLE = registerBlock("jungle_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_DARK_OAK = registerBlock("dark_oak_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_ACACIA = registerBlock("acacia_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_MANGROVE = registerBlock("mangrove_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_BAMBOO = registerBlock("bamboo_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_CHERRY = registerBlock("cherry_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_CRIMSON = registerBlock("crimson_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_WOOD_WARPED = registerBlock("warped_wood_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_OAK = registerBlock("oak_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_BIRCH = registerBlock("birch_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_SPRUCE = registerBlock("spruce_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_JUNGLE = registerBlock("jungle_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_DARK_OAK = registerBlock("dark_oak_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_ACACIA = registerBlock("acacia_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_MANGROVE = registerBlock("mangrove_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_BAMBOO = registerBlock("bamboo_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_CHERRY = registerBlock("cherry_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_CRIMSON = registerBlock("crimson_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
-    public static final Block Coffee_Table_PLANK_WARPED = registerBlock("warped_plank_coffee_tabl newe", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_OAK = registerBlock("oak_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_BIRCH = registerBlock("birch_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_SPRUCE = registerBlock("spruce_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_JUNGLE = registerBlock("jungle_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_DARK_OAK = registerBlock("dark_oak_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_ACACIA = registerBlock("acacia_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_MANGROVE = registerBlock("mangrove_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_BAMBOO = registerBlock("bamboo_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_CHERRY = registerBlock("cherry_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_CRIMSON = registerBlock("crimson_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_WOOD_WARPED = registerBlock("warped_wood_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_OAK = registerBlock("oak_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_BIRCH = registerBlock("birch_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_SPRUCE = registerBlock("spruce_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_JUNGLE = registerBlock("jungle_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_DARK_OAK = registerBlock("dark_oak_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_ACACIA = registerBlock("acacia_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_MANGROVE = registerBlock("mangrove_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_BAMBOO = registerBlock("bamboo_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_CHERRY = registerBlock("cherry_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_CRIMSON = registerBlock("crimson_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+    public static final Block Coffee_Table_PLANK_WARPED = registerBlock("warped_plank_coffee_table", new TableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
 
     //Chair
     public static final Block Chair_WOOD_OAK = registerBlock("oak_wood_chair", new ChairBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
@@ -691,16 +691,16 @@ public class MapleFurnitureBlocks {
 
 
     private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(Furniture.MOD_ID, name), block);
     }
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(Furniture.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name),
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(Furniture.MOD_ID, name),
                 new BlockItem(block, new Item.Properties()));
     }
 
