@@ -33,18 +33,11 @@ public class SofaBlock extends HorizontalDirectionalBlock {
     public static final BooleanProperty LEFT = BooleanProperty.create("left");
     public static final BooleanProperty RIGHT = BooleanProperty.create("right");
 
-    public static final MapCodec<SofaBlock> CODEC = simpleCodec(SofaBlock::new);
-
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
     public SofaBlock(Properties settings) {
         super(settings);
         this.registerDefaultState(this.stateDefinition.any().setValue(LEFT,false).setValue(RIGHT,false));
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
     }
 
     @Override

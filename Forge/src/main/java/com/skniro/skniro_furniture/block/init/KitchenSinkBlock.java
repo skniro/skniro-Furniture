@@ -21,15 +21,11 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 public class KitchenSinkBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<KitchenSinkBlock> CODEC = simpleCodec(KitchenSinkBlock::new);
-
-    public MapCodec<KitchenSinkBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public RenderShape getRenderShape(BlockState state) {
@@ -76,7 +72,7 @@ public class KitchenSinkBlock extends BaseEntityBlock {
         if (!world.isClientSide) {
             BlockEntity entity = world.getBlockEntity(pos);
             if (entity instanceof KitchenSinkBlockEntity BlockEntity) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(BlockEntity, Component.translatable(FurnitureStrings.Kitchen_Sink)), pos);
+                NetworkHooks.openScreen(((ServerPlayer)player), BlockEntity, pos);
             }
         }
 

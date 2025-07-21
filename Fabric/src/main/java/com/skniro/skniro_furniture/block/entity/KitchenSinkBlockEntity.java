@@ -18,8 +18,6 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.recipe.RecipeEntry;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -145,10 +143,10 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     private void craftItem() {
-        Optional<RecipeEntry<KitchenSinkRecipe>> recipe = getCurrentRecipe();
+        Optional<KitchenSinkRecipe> recipe = getCurrentRecipe();
         this.removeStack(INPUT_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
-                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().getOutput(null).getItem(),
+                this.getStack(OUTPUT_SLOT).getCount() + recipe.get().getOutput(null).getCount()));
     }
 
     @Override
@@ -178,16 +176,16 @@ public class KitchenSinkBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     private boolean hasRecipe() {
-        Optional<RecipeEntry<KitchenSinkRecipe>> recipe = getCurrentRecipe();
+        Optional<KitchenSinkRecipe> recipe = getCurrentRecipe();
         if(recipe.isEmpty()) {
             return false;
         }
 
-        ItemStack output = recipe.get().value().getResult(null);
+        ItemStack output = recipe.get().getOutput(null);
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
-    private Optional<RecipeEntry<KitchenSinkRecipe>> getCurrentRecipe() {
+    private Optional<KitchenSinkRecipe> getCurrentRecipe() {
         SimpleInventory inv = new SimpleInventory(this.size());
         for(int i = 0; i < this.size(); i++) {
             inv.setStack(i, this.getStack(i));

@@ -21,11 +21,6 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenCabinetBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<KitchenCabinetBlock> CODEC = createCodec(KitchenCabinetBlock::new);
-
-    public MapCodec<KitchenCabinetBlock> getCodec() {
-        return CODEC;
-    }
 
     public KitchenCabinetBlock(Settings settings) {
         super(settings);

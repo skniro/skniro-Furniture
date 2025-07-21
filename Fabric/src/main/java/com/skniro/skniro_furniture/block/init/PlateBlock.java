@@ -27,16 +27,10 @@ public class PlateBlock extends BlockWithEntity {
     private static final VoxelShape SHAPE =
             Block.createCuboidShape(4, 0, 4, 12, 1, 12);
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<PlateBlock > CODEC = PlateBlock .createCodec(PlateBlock::new);
 
     public PlateBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
-    }
-
-    @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return CODEC;
     }
 
     @Override

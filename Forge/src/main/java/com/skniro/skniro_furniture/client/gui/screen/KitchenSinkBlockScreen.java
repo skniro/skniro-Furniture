@@ -45,7 +45,7 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
 
     @Override
     public void render(GuiGraphics context , int mouseX, int mouseY, float delta) {
-        renderBackground(context, mouseX, mouseY, delta);
+        renderBackground(context);
         super.render(context, mouseX, mouseY, delta);
         renderTooltip(context, mouseX, mouseY);
     }

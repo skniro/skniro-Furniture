@@ -14,14 +14,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class EndTableBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
-    public static final MapCodec<EndTableBlock> CODEC = simpleCodec(EndTableBlock::new);
     public EndTableBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
     }
 
     @Override

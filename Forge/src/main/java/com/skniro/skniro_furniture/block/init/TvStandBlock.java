@@ -18,11 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class TvStandBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<TvStandBlock> CODEC = simpleCodec(TvStandBlock::new);
-
-    public MapCodec<TvStandBlock> codec() {
-        return CODEC;
-    }
 
     public TvStandBlock(Properties settings) {
         super(settings);

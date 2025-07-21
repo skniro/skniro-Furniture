@@ -33,8 +33,6 @@ public class SofaBlock extends HorizontalFacingBlock {
     public static final BooleanProperty LEFT = BooleanProperty.of("left");
     public static final BooleanProperty RIGHT = BooleanProperty.of("right");
 
-    public static final MapCodec<SofaBlock> CODEC = createCodec(SofaBlock::new);
-
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
     public SofaBlock(Settings settings) {
@@ -42,10 +40,6 @@ public class SofaBlock extends HorizontalFacingBlock {
         this.setDefaultState(this.stateManager.getDefaultState().with(LEFT,false).with(RIGHT,false));
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {

@@ -10,13 +10,8 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 public class FourGridCabinetBlock extends AbstractWallCabinetBlock {
-    public static final MapCodec<FourGridCabinetBlock> CODEC = createCodec(FourGridCabinetBlock::new);
     public FourGridCabinetBlock(Settings settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return CODEC;
-    }
 }

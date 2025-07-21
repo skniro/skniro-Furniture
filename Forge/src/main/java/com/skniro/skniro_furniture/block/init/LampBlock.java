@@ -22,14 +22,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class LampBlock extends Block {
-    public static final MapCodec<LampBlock> CODEC = simpleCodec(LampBlock::new);
     public static final BooleanProperty LIT;
     private static final VoxelShape SHAPE = Block.box(0.0, 14.5, 0.0, 16.0, 16.0, 16.0);
-
-
-    public MapCodec<LampBlock> codec() {
-        return CODEC;
-    }
 
     public LampBlock(Properties settings) {
         super(settings);

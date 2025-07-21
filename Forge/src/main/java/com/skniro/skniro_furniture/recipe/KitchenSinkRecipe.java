@@ -1,31 +1,35 @@
 package com.skniro.skniro_furniture.recipe;
 
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.ExtraCodecs;
+import net.minecraft.util.GsonHelper;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 
 public class KitchenSinkRecipe implements Recipe<SimpleContainer> {
+    private final ResourceLocation id;
     private final ItemStack output;
     private final List<Ingredient> recipeItems;
 
-    public KitchenSinkRecipe(List<Ingredient> recipeItems,ItemStack output) {
+    public KitchenSinkRecipe(List<Ingredient> recipeItems,ItemStack output, ResourceLocation id) {
         this.output = output;
         this.recipeItems = recipeItems;
+        this.id = id;
     }
 
     @Override
@@ -61,6 +65,11 @@ public class KitchenSinkRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
+    public ResourceLocation getId() {
+        return id;
+    }
+
+    @Override
     public RecipeSerializer<?> getSerializer() {
         return FurnitureRecipeType.Kitchen_Sink_SERIALIZER.get();
     }
@@ -72,33 +81,27 @@ public class KitchenSinkRecipe implements Recipe<SimpleContainer> {
 
     public static class Serializer implements RecipeSerializer<KitchenSinkRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-
-        public static final Codec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
-                validateAmount(Ingredient.CODEC_NONEMPTY, 9).fieldOf("ingredient").forGetter(KitchenSinkRecipe::getIngredients),
-                ItemStack.ITEM_WITH_COUNT_CODEC.fieldOf("result").forGetter(r -> r.output)
-        ).apply(in, KitchenSinkRecipe::new));
-
-        private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
-            return ExtraCodecs.validate(ExtraCodecs.validate(
-                    delegate.listOf(), list -> list.size() > max ? DataResult.error(() -> "Recipe has too many ingredients!") : DataResult.success(list)
-            ), list -> list.isEmpty() ? DataResult.error(() -> "Recipe has no ingredients!") : DataResult.success(list));
-        }
-
         @Override
-        public Codec<KitchenSinkRecipe> codec() {
-            return CODEC;
-        }
-
-        @Override
-        public KitchenSinkRecipe fromNetwork(FriendlyByteBuf buf) {
-            NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
+        public KitchenSinkRecipe fromJson(ResourceLocation resourceLocation, JsonObject jsonObject) {
+            ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(jsonObject, "result"));
+            JsonArray ingredients = GsonHelper.getAsJsonArray(jsonObject, "ingredient");
+            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
 
             for(int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromNetwork(buf));
+                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            ItemStack output = buf.readItem();
-            return new KitchenSinkRecipe(inputs, output);
+            return new KitchenSinkRecipe(inputs, output, resourceLocation);
+        }
+
+        @Override
+        public @Nullable KitchenSinkRecipe fromNetwork(ResourceLocation resourceLocation, FriendlyByteBuf friendlyByteBuf) {
+            NonNullList<Ingredient> inputs = NonNullList.withSize(friendlyByteBuf.readInt(), Ingredient.EMPTY);
+            for(int i = 0; i < inputs.size(); i++) {
+                inputs.set(i, Ingredient.fromNetwork(friendlyByteBuf));
+            }
+            ItemStack output = friendlyByteBuf.readItem();
+            return new KitchenSinkRecipe(inputs, output, resourceLocation);
         }
 
         @Override

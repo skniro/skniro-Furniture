@@ -14,15 +14,10 @@ import org.jetbrains.annotations.Nullable;
 
 public class EndTableBlock extends HorizontalFacingBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 8.0, 16.0);
-    public static final MapCodec<EndTableBlock> CODEC = createCodec(EndTableBlock::new);
     public EndTableBlock(Settings settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

@@ -91,7 +91,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LootableCont
 
 
     @Override
-    protected DefaultedList<ItemStack> method_11282() {
+    protected DefaultedList<ItemStack> getInvStackList() {
         return this.inventory;
     }
 

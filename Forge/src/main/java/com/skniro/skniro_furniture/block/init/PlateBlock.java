@@ -29,16 +29,10 @@ public class PlateBlock extends BaseEntityBlock {
     private static final VoxelShape SHAPE =
             Block.box(4, 0, 4, 12, 1, 12);
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<PlateBlock > CODEC = PlateBlock .simpleCodec(PlateBlock::new);
 
     public PlateBlock(Properties settings) {
         super(settings);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
-    }
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override

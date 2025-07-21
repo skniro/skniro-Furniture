@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -25,12 +26,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenCounterDrawerBlock extends BaseEntityBlock {
-    public static final MapCodec<KitchenCounterDrawerBlock> CODEC = simpleCodec(KitchenCounterDrawerBlock::new);
     public static final EnumProperty<Direction> FACING;
-
-    public MapCodec<KitchenCounterDrawerBlock> codec() {
-        return CODEC;
-    }
 
     public KitchenCounterDrawerBlock(Properties settings) {
         super(settings);
@@ -56,8 +52,15 @@ public class KitchenCounterDrawerBlock extends BaseEntityBlock {
     }
 
     public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        Containers.dropContentsOnDestroy(state, newState, world, pos);
-        super.onRemove(state, world, pos, newState, moved);
+        if (!state.is(newState.getBlock())) {
+            BlockEntity $$5 = world.getBlockEntity(pos);
+            if ($$5 instanceof Container) {
+                Containers.dropContents(world, pos, (Container)$$5);
+                world.updateNeighbourForOutputSignal(pos, this);
+            }
+
+            super.onRemove(state, world, pos, newState, moved);
+        }
     }
 
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {

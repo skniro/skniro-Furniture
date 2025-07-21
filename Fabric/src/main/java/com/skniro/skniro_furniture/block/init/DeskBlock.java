@@ -25,15 +25,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class DeskBlock extends HorizontalFacingBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    public static final MapCodec<DeskBlock> CODEC = createCodec(DeskBlock::new);
 
     public DeskBlock(Settings settings) {
         super(settings);
     }
 
-    public MapCodec<DeskBlock> getCodec() {
-        return CODEC;
-    }
 
 
     @Override

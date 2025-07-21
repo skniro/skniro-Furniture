@@ -27,15 +27,10 @@ import java.util.List;
 
 public class CushionBlock extends HorizontalFacingBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 3.5, 16.0);
-    public static final MapCodec<CushionBlock> CODEC = createCodec(CushionBlock::new);
     public CushionBlock(Settings settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
 
     @Override
     public ActionResult onUse(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

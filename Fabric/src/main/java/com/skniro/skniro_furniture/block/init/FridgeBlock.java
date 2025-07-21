@@ -29,11 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class FridgeBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<FridgeBlock> CODEC = createCodec(FridgeBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF;
-    public MapCodec<FridgeBlock> getCodec() {
-        return CODEC;
-    }
 
     public FridgeBlock(Settings settings) {
         super(settings);

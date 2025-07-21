@@ -21,7 +21,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -137,10 +136,10 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     private void craftItem() {
-        Optional<RecipeHolder<KitchenSinkRecipe>> recipe = getCurrentRecipe();
+        Optional<KitchenSinkRecipe> recipe = getCurrentRecipe();
         this.removeItem(INPUT_SLOT, 1);
-        this.setItem(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResultItem(null).getItem(),
-                this.getItem(OUTPUT_SLOT).getCount() + recipe.get().value().getResultItem(null).getCount()));
+        this.setItem(OUTPUT_SLOT, new ItemStack(recipe.get().getResultItem(null).getItem(),
+                this.getItem(OUTPUT_SLOT).getCount() + recipe.get().getResultItem(null).getCount()));
     }
 
     @Override
@@ -170,15 +169,15 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
     }
 
     private boolean hasRecipe() {
-        Optional<RecipeHolder<KitchenSinkRecipe>> recipe = getCurrentRecipe();
+        Optional<KitchenSinkRecipe> recipe = getCurrentRecipe();
         if(recipe.isEmpty()) {
             return false;
         }
 
-        ItemStack output = recipe.get().value().getResultItem(null);
+        ItemStack output = recipe.get().getResultItem(null);
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
-    private Optional<RecipeHolder<KitchenSinkRecipe>> getCurrentRecipe() {
+    private Optional<KitchenSinkRecipe> getCurrentRecipe() {
         SimpleContainer inv = new SimpleContainer(this.getContainerSize());
         for(int i = 0; i < this.getContainerSize(); i++) {
             inv.setItem(i, this.getItem(i));

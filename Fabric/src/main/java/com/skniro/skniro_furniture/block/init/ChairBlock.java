@@ -27,16 +27,9 @@ import java.util.List;
 
 public class ChairBlock extends HorizontalFacingBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
-    public static final MapCodec<ChairBlock> CODEC = createCodec(ChairBlock::new);
     public ChairBlock(Settings settings) {
         super(settings);
     }
-
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
-
 
     @Override
     public ActionResult onUse(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

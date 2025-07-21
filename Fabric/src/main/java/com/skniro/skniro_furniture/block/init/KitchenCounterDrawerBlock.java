@@ -6,6 +6,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
@@ -23,12 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenCounterDrawerBlock extends BlockWithEntity {
-    public static final MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> CODEC = createCodec(com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock::new);
     public static final EnumProperty<Direction> FACING;
-
-    public MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> getCodec() {
-        return CODEC;
-    }
 
     public KitchenCounterDrawerBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -54,8 +50,15 @@ public class KitchenCounterDrawerBlock extends BlockWithEntity {
     }
 
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        ItemScatterer.onStateReplaced(state, newState, world, pos);
-        super.onStateReplaced(state, world, pos, newState, moved);
+        if (!state.isOf(newState.getBlock())) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof Inventory) {
+                ItemScatterer.spawn(world, pos, (Inventory)blockEntity);
+                world.updateComparators(pos, this);
+            }
+
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
     }
 
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

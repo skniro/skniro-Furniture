@@ -20,11 +20,9 @@ public class CushionEntity extends Entity {
     }
 
     @Override
-    protected Vector3f getPassengerAttachmentPoint(Entity passenger, EntityDimensions dimensions, float scaleFactor)
-    {
-        return new Vector3f(0F, dimensions.height * 0.50F * scaleFactor, 0F);
+    public double getPassengersRidingOffset() {
+        return 0.005;
     }
-
 
     @Override
     protected void readAdditionalSaveData(CompoundTag nbt) {

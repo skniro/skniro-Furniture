@@ -23,14 +23,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class LampBlock extends Block {
-    public static final MapCodec<LampBlock> CODEC = createCodec(LampBlock::new);
     public static final BooleanProperty LIT;
     private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 14.5, 0.0, 16.0, 16.0, 16.0);
-
-
-    public MapCodec<LampBlock> getCodec() {
-        return CODEC;
-    }
 
     public LampBlock(AbstractBlock.Settings settings) {
         super(settings);

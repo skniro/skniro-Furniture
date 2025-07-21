@@ -25,11 +25,6 @@ import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
 
 public class WindowBlock extends HorizontalFacingBlock {
-    public static final MapCodec<WindowBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> {
-        return instance.group(createSettingsCodec(),BlockSetType.CODEC.fieldOf("block_set_type").forGetter((block) -> {
-            return block.blockSetType;
-        })).apply(instance, WindowBlock::new);
-    });
     public static final EnumProperty<Direction> FACING;
     public static final EnumProperty<DoorHinge> HINGE;
     public static final BooleanProperty OPEN;
@@ -163,9 +158,6 @@ public class WindowBlock extends HorizontalFacingBlock {
         SOUTH_OPEN_SHAPE = Block.createCuboidShape(14.5, 0.0, 0.0, 16.0, 16.0, 16.0);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
-    }
+
 }
 

@@ -29,11 +29,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class KitchenSinkBlock extends BlockWithEntity {
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<KitchenSinkBlock> CODEC = createCodec(KitchenSinkBlock::new);
-
-    public MapCodec<KitchenSinkBlock> getCodec() {
-        return CODEC;
-    }
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
@@ -97,7 +92,7 @@ public class KitchenSinkBlock extends BlockWithEntity {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
+        return checkType(type, FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 
     static {

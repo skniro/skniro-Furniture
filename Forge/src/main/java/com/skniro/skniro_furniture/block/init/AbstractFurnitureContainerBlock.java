@@ -2,11 +2,13 @@ package com.skniro.skniro_furniture.block.init;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -26,10 +28,17 @@ public abstract class AbstractFurnitureContainerBlock extends BaseEntityBlock {
         return RenderShape.MODEL;
     }
 
-    @Override
+
     public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        Containers.dropContentsOnDestroy(state, newState, world, pos);
-        super.onRemove(state, world, pos, newState, moved);
+        if (!state.is(newState.getBlock())) {
+            BlockEntity $$5 = world.getBlockEntity(pos);
+            if ($$5 instanceof Container) {
+                Containers.dropContents(world, pos, (Container)$$5);
+                world.updateNeighbourForOutputSignal(pos, this);
+            }
+
+            super.onRemove(state, world, pos, newState, moved);
+        }
     }
 
     @Override

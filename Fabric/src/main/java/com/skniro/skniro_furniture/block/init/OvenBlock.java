@@ -22,11 +22,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class OvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<OvenBlock> CODEC = createCodec(OvenBlock::new);
-
-    public MapCodec<OvenBlock> getCodec() {
-        return CODEC;
-    }
 
     public OvenBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -38,7 +33,7 @@ public class OvenBlock extends AbstractFurnaceBlock {
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(world, type, FurnitureBlockEntityType.OVEN_BLOCK_ENTITY);
+        return checkType(world, type, FurnitureBlockEntityType.OVEN_BLOCK_ENTITY);
     }
 
     protected void openScreen(World world, BlockPos pos, PlayerEntity player) {

@@ -20,11 +20,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class OvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<OvenBlock> CODEC = simpleCodec(OvenBlock::new);
-
-    public MapCodec<OvenBlock> codec() {
-        return CODEC;
-    }
 
     public OvenBlock(Properties settings) {
         super(settings);

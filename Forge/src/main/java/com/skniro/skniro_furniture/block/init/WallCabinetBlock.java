@@ -18,11 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class WallCabinetBlock extends AbstractWallCabinetBlock {
-    public static final MapCodec<WallCabinetBlock> CODEC = simpleCodec(WallCabinetBlock::new);
-
-    public MapCodec<WallCabinetBlock> codec() {
-        return CODEC;
-    }
 
     public WallCabinetBlock(Properties settings) {
         super(settings);
