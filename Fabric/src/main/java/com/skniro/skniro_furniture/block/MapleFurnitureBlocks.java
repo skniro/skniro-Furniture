@@ -3,7 +3,9 @@ package com.skniro.skniro_furniture.block;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.*;
 import net.minecraft.block.*;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -741,6 +743,7 @@ public class MapleFurnitureBlocks {
     public static final Block RED_Ceiling_Lamp = registerBlock("red_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque());
     public static final Block BLACK_Ceiling_Lamp = registerBlock("black_ceiling_lamp", LampBlock::new, AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque());
 
+    public static final Block Acacia_BLACK_Paper_Sliding_Door = registerBlock("acacia_black_paper_sliding_door",(settings)-> new SlidingDoorBlock(BlockSetType.ACACIA, settings),AbstractBlock.Settings.create().mapColor(Blocks.OAK_PLANKS.getDefaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY));
 
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {

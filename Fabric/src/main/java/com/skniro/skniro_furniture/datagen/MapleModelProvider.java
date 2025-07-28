@@ -981,6 +981,8 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.GREEN_Fridge);
         furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.RED_Fridge);
         furnitureModelDatagenHelper.registerFridge(FurnitureKitchenBlocks.BLACK_Fridge);
+
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Acacia_BLACK_Paper_Sliding_Door);
     }
 
     @Override

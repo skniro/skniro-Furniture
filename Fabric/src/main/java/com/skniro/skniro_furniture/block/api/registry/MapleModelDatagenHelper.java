@@ -84,4 +84,55 @@ public class MapleModelDatagenHelper {
                 .register(Direction.SOUTH, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R180)))
                 .register(Direction.WEST, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R270)));
     }
+
+    public void registerPaperSlidingDoor(Block doorBlock) {
+        WeightedVariant weightedVariant = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_bottom_left"));
+        WeightedVariant weightedVariant2 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_bottom_left_open"));
+        WeightedVariant weightedVariant3 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_bottom_right"));
+        WeightedVariant weightedVariant4 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_bottom_right_open"));
+        WeightedVariant weightedVariant5 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_left"));
+        WeightedVariant weightedVariant6 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_left_open"));
+        WeightedVariant weightedVariant7 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_right"));
+        WeightedVariant weightedVariant8 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_right_open"));
+        generator.registerItemModel(doorBlock.asItem());
+        generator.blockStateCollector.accept(createDoorBlockState(doorBlock, weightedVariant, weightedVariant2, weightedVariant3, weightedVariant4, weightedVariant5, weightedVariant6, weightedVariant7, weightedVariant8));
+    }
+
+    public static BlockModelDefinitionCreator createDoorBlockState(Block doorBlock, WeightedVariant bottomLeftClosedModel, WeightedVariant bottomLeftOpenModel, WeightedVariant bottomRightClosedModel, WeightedVariant bottomRightOpenModel, WeightedVariant topLeftClosedModel, WeightedVariant topLeftOpenModel, WeightedVariant topRightClosedModel, WeightedVariant topRightOpenModel) {
+        return VariantsBlockModelDefinitionCreator.of(doorBlock)
+                .with(BlockStateVariantMap
+                        .models(Properties.HORIZONTAL_FACING, Properties.DOUBLE_BLOCK_HALF, Properties.DOOR_HINGE, Properties.OPEN)
+                        .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, bottomLeftClosedModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, bottomLeftClosedModel)
+                        .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, bottomLeftClosedModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, false, bottomLeftClosedModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, bottomRightClosedModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, bottomRightClosedModel)
+                        .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, bottomRightClosedModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false, bottomRightClosedModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, bottomLeftOpenModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, bottomLeftOpenModel)
+                        .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, bottomLeftOpenModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT, true, bottomLeftOpenModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, bottomRightOpenModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, bottomRightOpenModel)
+                        .register(Direction.WEST, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, bottomRightOpenModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true, bottomRightOpenModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, topLeftClosedModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, topLeftClosedModel)
+                        .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, topLeftClosedModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, false, topLeftClosedModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, topRightClosedModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, topRightClosedModel)
+                        .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, topRightClosedModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false, topRightClosedModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, topLeftOpenModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, topLeftOpenModel)
+                        .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, topLeftOpenModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT, true, topLeftOpenModel.apply(ROTATE_Y_180))
+                        .register(Direction.EAST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel.apply(ROTATE_Y_270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel)
+                        .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel.apply(ROTATE_Y_90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel.apply(ROTATE_Y_180)));
+    }
 }
