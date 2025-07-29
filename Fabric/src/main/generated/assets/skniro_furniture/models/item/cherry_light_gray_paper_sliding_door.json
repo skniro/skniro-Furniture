@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "skniro_furniture:item/cherry_light_gray_paper_sliding_door"
+  }
+}
