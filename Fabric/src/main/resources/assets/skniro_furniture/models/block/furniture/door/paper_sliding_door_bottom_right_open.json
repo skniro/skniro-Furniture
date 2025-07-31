@@ -7,9 +7,9 @@
 	},
 	"elements": [
 		{
-			"from": [0, 0, 7.5],
-			"to": [16, 0.5, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 8]},
+			"from": [-14, 0, 7.5],
+			"to": [2, 0.5, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 16, 1], "texture": "#wood"},
 				"east": {"uv": [0, 0, 2, 1], "texture": "#wood"},
@@ -20,9 +20,9 @@
 			}
 		},
 		{
-			"from": [0.5, 0.5, 7.5],
-			"to": [15, 16, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [14.5, 2, 8]},
+			"from": [-13.5, 0.5, 7.5],
+			"to": [1, 16, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0.5, 2, 8]},
 			"faces": {
 				"north": {"uv": [16, 0.5, 0, 15], "texture": "#paper"},
 				"east": {"uv": [-10.5, 0, 1, 7], "texture": "#paper"},
@@ -32,9 +32,9 @@
 			}
 		},
 		{
-			"from": [0, 0.5, 7.5],
-			"to": [0.5, 16, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, 1, 8]},
+			"from": [-14, 0.5, 7.5],
+			"to": [-13.5, 16, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-14, 1, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 16], "texture": "#wood"},
 				"east": {"uv": [0, 0, 2, 16], "texture": "#wood"},
@@ -44,9 +44,9 @@
 			}
 		},
 		{
-			"from": [15, 0.5, 7.5],
-			"to": [16, 12.5, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [15.5, 1, 8]},
+			"from": [1, 0.5, 7.5],
+			"to": [2, 12.5, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1.5, 1, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 1, 16], "texture": "#wood"},
 				"east": {"uv": [0, 0, 2, 16], "texture": "#wood"},
@@ -57,9 +57,9 @@
 			}
 		},
 		{
-			"from": [15.5, 12.5, 7.5],
-			"to": [16, 16, 8.5],
-			"rotation": {"angle": 0, "axis": "y", "origin": [16, 1, 8]},
+			"from": [1.5, 12.5, 7.5],
+			"to": [2, 16, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 1, 8]},
 			"faces": {
 				"north": {"uv": [0, 8, 1, 16], "texture": "#wood"},
 				"east": {"uv": [0, 8, 1, 16], "texture": "#wood"},
@@ -69,9 +69,9 @@
 			}
 		},
 		{
-			"from": [15, 12.5, 8],
-			"to": [15.5, 16, 8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [15, 1, 8]},
+			"from": [1, 12.5, 8],
+			"to": [1.5, 16, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 1, 8]},
 			"faces": {
 				"north": {"uv": [0, 8, 1, 16], "texture": "#wood"},
 				"east": {"uv": [0, 8, 1, 16], "texture": "#wood"},
