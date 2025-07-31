@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "PQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_ginkgo_log",
+        "Q": "minecraft:white_dye",
+        "P": "minecraft:paper"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:ginkgo_white_paper_sliding_door"
+    }
+}

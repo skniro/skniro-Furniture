@@ -53,7 +53,8 @@
 				"east": {"uv": [0, 0, 0.5, 7.75], "texture": "#wood"},
 				"south": {"uv": [0, 0, 0.5, 7.75], "texture": "#wood"},
 				"west": {"uv": [0, 0, 0.5, 7.75], "texture": "#wood"},
-				"up": {"uv": [0, 0, 0.5, 0.5], "texture": "#wood"}
+				"up": {"uv": [0, 0, 0.5, 0.5], "texture": "#wood"},
+				"down": {"uv": [3, 3, 6, 6], "texture": "#wood"}
 			}
 		}
 	],

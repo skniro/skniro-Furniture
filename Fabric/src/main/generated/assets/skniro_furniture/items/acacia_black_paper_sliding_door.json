@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "skniro_furniture:item/acacia_black_paper_sliding_door"
+    "model": "skniro_furniture:block/acacia_black_paper_sliding_door"
   }
 }

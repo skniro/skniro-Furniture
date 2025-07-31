@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "skniro_furniture:item/jungle_light_blue_paper_sliding_door"
-  }
-}

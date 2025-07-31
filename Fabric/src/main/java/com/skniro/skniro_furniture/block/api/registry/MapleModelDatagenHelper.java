@@ -94,7 +94,6 @@ public class MapleModelDatagenHelper {
         WeightedVariant weightedVariant6 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_left_open"));
         WeightedVariant weightedVariant7 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_right"));
         WeightedVariant weightedVariant8 = createWeightedVariant(ModelIds.getBlockSubModelId(doorBlock, "_top_right_open"));
-        generator.registerItemModel(doorBlock.asItem());
         generator.blockStateCollector.accept(createDoorBlockState(doorBlock, weightedVariant, weightedVariant2, weightedVariant3, weightedVariant4, weightedVariant5, weightedVariant6, weightedVariant7, weightedVariant8));
     }
 

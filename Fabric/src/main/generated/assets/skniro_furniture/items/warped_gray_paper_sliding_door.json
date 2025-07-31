@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "skniro_furniture:item/warped_gray_paper_sliding_door"
+    "model": "skniro_furniture:block/warped_gray_paper_sliding_door"
   }
 }
