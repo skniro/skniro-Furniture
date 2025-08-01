@@ -45,35 +45,35 @@ import org.jetbrains.annotations.Nullable;
 public class SlidingDoorBlock extends AbstractSlidingDoorBlock {
     public static final MapCodec<SlidingDoorBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(BlockSetType.CODEC.fieldOf("block_set_type").forGetter(SlidingDoorBlock::getBlockSetType), createSettingsCodec()).apply(instance, SlidingDoorBlock::new));
 
-    protected static final VoxelShape CLOSEB_SOUTH = Block.createCuboidShape(0.0D, 0.0D, 8.0D, 16.0D, 16.0D, 9.5D);
-    protected static final VoxelShape CLOSEB_WEST =  Block.createCuboidShape(6.5D, 0.0D, 0.0D, 8.0D, 16.0D, 16.0D);
-    protected static final VoxelShape CLOSEB_NORTH = Block.createCuboidShape(0.0D, 0.0D, 6.5D, 16.0D, 16.0D, 8.0D);
-    protected static final VoxelShape CLOSEB_EAST =  Block.createCuboidShape(8.0D, 0.0D, 0.0D, 9.5D, 16.0D, 16.0D);
+    protected static final VoxelShape CLOSEB_SOUTH = Block.createCuboidShape(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
+    protected static final VoxelShape CLOSEB_WEST =  Block.createCuboidShape(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
+    protected static final VoxelShape CLOSEB_NORTH = Block.createCuboidShape(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
+    protected static final VoxelShape CLOSEB_EAST =  Block.createCuboidShape(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
 
-    protected static final VoxelShape OPENBR_SOUTH = Block.createCuboidShape(14.0D, 0.0D, 8.0D, 30.0D, 16.0D, 9.5D);
-    protected static final VoxelShape OPENBR_WEST =  Block.createCuboidShape(6.5D, 0.0D, 14.0D, 8.0D, 16.0D, 30.0D);
-    protected static final VoxelShape OPENBR_NORTH = Block.createCuboidShape(-14.0D, 0.0D, 6.5D, 2.0D, 16.0D, 8.0D);
-    protected static final VoxelShape OPENBR_EAST =  Block.createCuboidShape(8.0D, 0.0D, -14.0D, 9.5D, 16.0D, 2.0D);
+    protected static final VoxelShape OPENBR_SOUTH = Block.createCuboidShape(14.0D, 0.0D, 7.5D, 30.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENBR_WEST =  Block.createCuboidShape(7.5D, 0.0D, 14.0D, 8.5D, 16.0D, 30.0D);
+    protected static final VoxelShape OPENBR_NORTH = Block.createCuboidShape(-14.0D, 0.0D, 7.5D, 2.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENBR_EAST =  Block.createCuboidShape(7.5D, 0.0D, -14.0D, 8.5D, 16.0D, 2.0D);
 
-    protected static final VoxelShape OPENBL_SOUTH = Block.createCuboidShape(-14.0D, 0.0D, 8.0D, 2.0D, 16.0D, 9.5D);
-    protected static final VoxelShape OPENBL_WEST =  Block.createCuboidShape(6.5D, 0.0D, -14.0D, 8.0D, 16.0D, 2.0D);
-    protected static final VoxelShape OPENBL_NORTH = Block.createCuboidShape(14.0D, 0.0D, 6.5D, 30.0D, 16.0D, 8.0D);
-    protected static final VoxelShape OPENBL_EAST =  Block.createCuboidShape(8.0D, 0.0D, 14.0D, 9.5D, 16.0D, 30.0D);
+    protected static final VoxelShape OPENBL_SOUTH = Block.createCuboidShape(-14.0D, 0.0D, 7.5D, 2.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENBL_WEST =  Block.createCuboidShape(7.5D, 0.0D, -14.0D, 8.5D, 16.0D, 2.0D);
+    protected static final VoxelShape OPENBL_NORTH = Block.createCuboidShape(14.0D, 0.0D, 7.5D, 30.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENBL_EAST =  Block.createCuboidShape(7.5D, 0.0D, 14.0D, 8.5D, 16.0D, 30.0D);
 
-    protected static final VoxelShape CLOSE_SOUTH = Block.createCuboidShape(0.0D, 0.0D, 8.0D, 16.0D, 16.0D, 9.5D);
-    protected static final VoxelShape CLOSE_WEST =  Block.createCuboidShape(6.5D, 0.0D, 0.0D, 8.0D, 16.0D, 16.0D);
-    protected static final VoxelShape CLOSE_NORTH = Block.createCuboidShape(0.0D, 0.0D, 6.5D, 16.0D, 16.0D, 8.0D);
-    protected static final VoxelShape CLOSE_EAST =  Block.createCuboidShape(8.0D, 0.0D, 0.0D, 9.5D, 16.0D, 16.0D);
+    protected static final VoxelShape CLOSET_SOUTH = Block.createCuboidShape(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
+    protected static final VoxelShape CLOSET_WEST =  Block.createCuboidShape(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
+    protected static final VoxelShape CLOSET_NORTH = Block.createCuboidShape(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
+    protected static final VoxelShape CLOSET_EAST =  Block.createCuboidShape(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
 
-    protected static final VoxelShape OPENR_SOUTH = Block.createCuboidShape(14.0D, 0.0D, 8.0D, 30.0D, 16.0D, 9.5D);
-    protected static final VoxelShape OPENR_WEST =  Block.createCuboidShape(6.5D, 0.0D, 14.0D, 8.0D, 16.0D, 30.0D);
-    protected static final VoxelShape OPENR_NORTH = Block.createCuboidShape(-14.0D, 0.0D, 6.5D, 2.0D, 16.0D, 8.0D);
-    protected static final VoxelShape OPENR_EAST =  Block.createCuboidShape(8.0D, 0.0D, -14.0D, 9.5D, 16.0D, 2.0D);
+    protected static final VoxelShape OPENTR_SOUTH = Block.createCuboidShape(14.0D, 0.0D, 7.5D, 30.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENTR_WEST =  Block.createCuboidShape(7.5D, 0.0D, 14.0D, 8.5D, 16.0D, 30.0D);
+    protected static final VoxelShape OPENTR_NORTH = Block.createCuboidShape(-14.0D, 0.0D, 7.5D, 2.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENTR_EAST =  Block.createCuboidShape(7.5D, 0.0D, -14.0D, 8.5D, 16.0D, 2.0D);
 
-    protected static final VoxelShape OPENL_SOUTH = Block.createCuboidShape(-14.0D, 0.0D, 8.0D, 2.0D, 16.0D, 9.5D);
-    protected static final VoxelShape OPENL_WEST = Block.createCuboidShape(6.5D, 0.0D, -14.0D, 8.0D, 16.0D, 2.0D);
-    protected static final VoxelShape OPENL_NORTH = Block.createCuboidShape(14.0D, 0.0D, 6.5D, 30.0D, 16.0D, 8.0D);
-    protected static final VoxelShape OPENL_EAST = Block.createCuboidShape(8.0D, 0.0D, 14.0D, 9.5D, 16.0D, 30.0D);
+    protected static final VoxelShape OPENTL_SOUTH = Block.createCuboidShape(-14.0D, 0.0D, 7.5D, 2.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENTL_WEST = Block.createCuboidShape(7.5D, 0.0D, -14.0D, 8.5D, 16.0D, 2.0D);
+    protected static final VoxelShape OPENTL_NORTH = Block.createCuboidShape(14.0D, 0.0D, 7.5D, 30.0D, 16.0D, 8.5D);
+    protected static final VoxelShape OPENTL_EAST = Block.createCuboidShape(7.5D, 0.0D, 14.0D, 8.5D, 16.0D, 30.0D);
 
     public MapCodec<? extends SlidingDoorBlock> getCodec() {
         return CODEC;
@@ -110,13 +110,13 @@ public class SlidingDoorBlock extends AbstractSlidingDoorBlock {
                 switch (direction) {
                     case NORTH:
                     default:
-                        return open? CLOSE_NORTH : (right? OPENL_NORTH : OPENR_NORTH);
+                        return open? CLOSET_NORTH : (right? OPENTL_NORTH : OPENTR_NORTH);
                     case SOUTH:
-                        return open? CLOSE_SOUTH : (right? OPENL_SOUTH : OPENR_SOUTH);
+                        return open? CLOSET_SOUTH : (right? OPENTL_SOUTH : OPENTR_SOUTH);
                     case WEST:
-                        return open? CLOSE_WEST : (right? OPENL_WEST : OPENR_WEST);
+                        return open? CLOSET_WEST : (right? OPENTL_WEST : OPENTR_WEST);
                     case EAST:
-                        return open? CLOSE_EAST : (right? OPENL_EAST : OPENR_EAST);
+                        return open? CLOSET_EAST : (right? OPENTL_EAST : OPENTR_EAST);
                 }
         }
     }
