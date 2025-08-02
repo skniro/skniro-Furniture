@@ -1,6 +1,7 @@
 {
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
+	"parent": "block/thin_block",
 	"texture_size": [128, 128],
 	"textures": {
 		"particle": "#plank"

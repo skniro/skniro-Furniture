@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_warped_stem",
+        "Q": "minecraft:brown_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:warped_brown_grid_glass_sliding_door"
+    }
+}

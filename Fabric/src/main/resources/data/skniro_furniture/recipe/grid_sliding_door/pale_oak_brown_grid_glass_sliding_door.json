@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_pale_oak_log",
+        "Q": "minecraft:brown_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:pale_oak_brown_grid_glass_sliding_door"
+    }
+}

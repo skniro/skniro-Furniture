@@ -3,6 +3,6 @@
     "textures": {
         "plank": "minecraft:block/warped_planks",
         "glass": "skniro_furniture:block/door/blue_stained_door_glass",
-        "wood": "minecraft:block/stripped_warped_log"
+        "wood": "minecraft:block/stripped_warped_stem"
     }
 }

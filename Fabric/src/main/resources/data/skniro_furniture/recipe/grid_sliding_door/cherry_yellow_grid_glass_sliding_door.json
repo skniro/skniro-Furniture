@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_cherry_log",
+        "Q": "minecraft:yellow_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:cherry_yellow_grid_glass_sliding_door"
+    }
+}

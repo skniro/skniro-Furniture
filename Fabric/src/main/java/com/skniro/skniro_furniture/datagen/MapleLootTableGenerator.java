@@ -1284,6 +1284,7 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         doorDrops(MapleFurnitureBlocks.Pale_Oak_Green_Paper_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.Pale_Oak_Red_Paper_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.Pale_Oak_Black_Paper_Sliding_Door);
+
         doorDrops(MapleFurnitureBlocks.Oak_White_Grid_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.Oak_Orange_Grid_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.Oak_Magenta_Grid_Glass_Sliding_Door);
@@ -1669,5 +1670,18 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         doorDrops(MapleFurnitureBlocks.PaleOak_Green_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.PaleOak_Red_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.PaleOak_Black_Glass_Sliding_Door);
+
+        doorDrops(MapleFurnitureBlocks.Oak_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Spruce_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Birch_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Jungle_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Acacia_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.DarkOak_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Mangrove_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Bamboo_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Cherry_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
+        doorDrops(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
     }
 }

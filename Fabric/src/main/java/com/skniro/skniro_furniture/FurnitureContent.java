@@ -917,6 +917,20 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.Pale_Oak_Red_Paper_Sliding_Door);
             content.add(MapleFurnitureBlocks.Pale_Oak_Black_Paper_Sliding_Door);
 
+
+            content.add(MapleFurnitureBlocks.Oak_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Spruce_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Birch_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Jungle_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Acacia_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.DarkOak_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Mangrove_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Bamboo_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Cherry_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
+            content.add(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
+
             content.add(MapleFurnitureBlocks.Oak_White_Glass_Sliding_Door);
             content.add(MapleFurnitureBlocks.Oak_Orange_Glass_Sliding_Door);
             content.add(MapleFurnitureBlocks.Oak_Magenta_Glass_Sliding_Door);

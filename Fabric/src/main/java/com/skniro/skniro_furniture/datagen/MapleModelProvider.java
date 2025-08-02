@@ -1560,6 +1560,19 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Green_Grid_Glass_Sliding_Door);
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Red_Grid_Glass_Sliding_Door);
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Black_Grid_Glass_Sliding_Door);
+
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Oak_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Spruce_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Birch_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Jungle_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Acacia_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.DarkOak_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Mangrove_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Bamboo_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Cherry_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
+        furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
     }
 
     @Override

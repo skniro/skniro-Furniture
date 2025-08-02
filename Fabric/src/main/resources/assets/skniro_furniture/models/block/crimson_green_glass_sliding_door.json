@@ -3,6 +3,6 @@
     "textures": {
         "plank": "minecraft:block/crimson_planks",
         "glass": "skniro_furniture:block/door/green_stained_door_glass",
-        "wood": "minecraft:block/stripped_crimson_log"
+        "wood": "minecraft:block/stripped_crimson_stem"
     }
 }
