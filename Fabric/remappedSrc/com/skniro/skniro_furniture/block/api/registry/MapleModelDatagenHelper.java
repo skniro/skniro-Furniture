@@ -8,6 +8,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.data.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
@@ -19,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import java.util.HashMap;
 import java.util.List;
@@ -84,5 +86,55 @@ public class MapleModelDatagenHelper {
                 .select(Direction.EAST, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
                 .select(Direction.SOUTH, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                 .select(Direction.WEST, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R270)));
+    }
+
+    public void registerPaperSlidingDoor(Block doorBlock) {
+        MultiVariant weightedVariant = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_bottom_left"));
+        MultiVariant weightedVariant2 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_bottom_left_open"));
+        MultiVariant weightedVariant3 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_bottom_right"));
+        MultiVariant weightedVariant4 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_bottom_right_open"));
+        MultiVariant weightedVariant5 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_top_left"));
+        MultiVariant weightedVariant6 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_top_left_open"));
+        MultiVariant weightedVariant7 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_top_right"));
+        MultiVariant weightedVariant8 = plainVariant(ModelLocationUtils.getModelLocation(doorBlock, "_top_right_open"));
+        generator.blockStateOutput.accept(createDoorBlockState(doorBlock, weightedVariant, weightedVariant2, weightedVariant3, weightedVariant4, weightedVariant5, weightedVariant6, weightedVariant7, weightedVariant8));
+    }
+
+    public static BlockModelDefinitionGenerator createDoorBlockState(Block doorBlock, MultiVariant bottomLeftClosedModel, MultiVariant bottomLeftOpenModel, MultiVariant bottomRightClosedModel, MultiVariant bottomRightOpenModel, MultiVariant topLeftClosedModel, MultiVariant topLeftOpenModel, MultiVariant topRightClosedModel, MultiVariant topRightOpenModel) {
+        return MultiVariantGenerator.dispatch(doorBlock)
+                .with(PropertyDispatch
+                        .initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.DOUBLE_BLOCK_HALF, BlockStateProperties.DOOR_HINGE, BlockStateProperties.OPEN)
+                        .select(Direction.EAST, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, false, bottomLeftClosedModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, false, bottomLeftClosedModel)
+                        .select(Direction.WEST, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, false, bottomLeftClosedModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, false, bottomLeftClosedModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, false, bottomRightClosedModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, false, bottomRightClosedModel)
+                        .select(Direction.WEST, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, false, bottomRightClosedModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, false, bottomRightClosedModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, true, bottomLeftOpenModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, true, bottomLeftOpenModel)
+                        .select(Direction.WEST, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, true, bottomLeftOpenModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHingeSide.LEFT, true, bottomLeftOpenModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, true, bottomRightOpenModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, true, bottomRightOpenModel)
+                        .select(Direction.WEST, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, true, bottomRightOpenModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHingeSide.RIGHT, true, bottomRightOpenModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, false, topLeftClosedModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, false, topLeftClosedModel)
+                        .select(Direction.WEST, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, false, topLeftClosedModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, false, topLeftClosedModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, false, topRightClosedModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, false, topRightClosedModel)
+                        .select(Direction.WEST, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, false, topRightClosedModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, false, topRightClosedModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, true, topLeftOpenModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, true, topLeftOpenModel)
+                        .select(Direction.WEST, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, true, topLeftOpenModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHingeSide.LEFT, true, topLeftOpenModel.with(Y_ROT_180))
+                        .select(Direction.EAST, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel.with(Y_ROT_270))
+                        .select(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel)
+                        .select(Direction.WEST, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel.with(Y_ROT_90))
+                        .select(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel.with(Y_ROT_180)));
     }
 }

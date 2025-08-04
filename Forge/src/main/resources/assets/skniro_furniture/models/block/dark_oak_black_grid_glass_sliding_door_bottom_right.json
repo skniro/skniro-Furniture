@@ -1,0 +1,8 @@
+{
+    "parent": "skniro_furniture:block/furniture/door/grid_glass_sliding_door_bottom_right",
+    "textures": {
+        "glass": "skniro_furniture:block/door/black_stained_door_glass",
+        "plank": "minecraft:block/dark_oak_planks",
+        "wood": "minecraft:block/stripped_dark_oak_log"
+    }
+}

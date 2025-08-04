@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_dark_oak_log",
+        "Q": "minecraft:black_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:dark_oak_black_grid_glass_sliding_door"
+    }
+}

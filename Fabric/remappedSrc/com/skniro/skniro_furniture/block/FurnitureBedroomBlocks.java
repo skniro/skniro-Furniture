@@ -4,6 +4,7 @@ import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.BedsideCabinetBlock;
 import com.skniro.skniro_furniture.block.init.DeskBlock;
 import com.skniro.skniro_furniture.block.init.DeskCabinetBlock;
+import com.skniro.skniro_furniture.block.init.DeskLampBlock;
 import java.util.function.Function;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -15,6 +16,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+
+import static net.minecraft.world.level.block.Blocks.litBlockEmission;
 
 public class FurnitureBedroomBlocks {
     public static final Block OAK_PLANKS_BEDSIDE_CABINET = registerBlock("oak_planks_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
@@ -92,8 +95,22 @@ public class FurnitureBedroomBlocks {
     public static final Block BAMBOO_PLANKS_BOOK_Desk = registerBlock("bamboo_planks_book_desk", DeskBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
     public static final Block BAMBOO_BLOCK_BOOK_Desk = registerBlock("bamboo_wood_book_desk", DeskBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion());
 
-
-
+    public static final Block White_Desk_Lamp = registerBlock("white_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Orange_Desk_Lamp = registerBlock("orange_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Magenta_Desk_Lamp = registerBlock("magenta_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block LightBlue_Desk_Lamp = registerBlock("light_blue_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Yellow_Desk_Lamp = registerBlock("yellow_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Lime_Desk_Lamp = registerBlock("lime_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Pink_Desk_Lamp = registerBlock("pink_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Gray_Desk_Lamp = registerBlock("gray_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block LightGray_Desk_Lamp = registerBlock("light_gray_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Cyan_Desk_Lamp = registerBlock("cyan_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Purple_Desk_Lamp = registerBlock("purple_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Blue_Desk_Lamp = registerBlock("blue_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Brown_Desk_Lamp = registerBlock("brown_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Green_Desk_Lamp = registerBlock("green_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Red_Desk_Lamp = registerBlock("red_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
+    public static final Block Black_Desk_Lamp = registerBlock("black_desk_lamp", DeskLampBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion());
 
 
 

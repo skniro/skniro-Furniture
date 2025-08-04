@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_base_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:light_blue_stained_glass_pane"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "skniro_furniture:glass_sliding_door/cherry_light_blue_glass_sliding_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_base_item",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "skniro_furniture:glass_sliding_door/cherry_light_blue_glass_sliding_door"
+        ]
+    }
+}
