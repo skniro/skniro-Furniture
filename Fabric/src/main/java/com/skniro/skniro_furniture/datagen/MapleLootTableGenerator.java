@@ -1683,5 +1683,22 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         doorDrops(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
         doorDrops(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
+
+        addDrop(FurnitureBedroomBlocks.White_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Orange_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Magenta_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.LightBlue_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Yellow_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Lime_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Pink_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Gray_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.LightGray_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Cyan_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Purple_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Blue_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Brown_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Green_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Red_Desk_Lamp);
+        addDrop(FurnitureBedroomBlocks.Black_Desk_Lamp);
     }
 }

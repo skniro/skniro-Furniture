@@ -1716,6 +1716,23 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(MapleFurnitureBlocks.Warped_Glass_Sliding_Door, "诡异木玻璃滑动门");
         translationBuilder.add(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door, "苍白橡木玻璃滑动门");
 
+        translationBuilder.add(FurnitureBedroomBlocks.White_Desk_Lamp, "白色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Orange_Desk_Lamp, "橙色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Magenta_Desk_Lamp, "品红色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.LightBlue_Desk_Lamp, "淡蓝色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Yellow_Desk_Lamp, "黄色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Lime_Desk_Lamp, "黄绿色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Pink_Desk_Lamp, "粉色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Gray_Desk_Lamp, "灰色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.LightGray_Desk_Lamp, "淡灰色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Cyan_Desk_Lamp, "青色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Purple_Desk_Lamp, "紫色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Blue_Desk_Lamp, "蓝色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Brown_Desk_Lamp, "棕色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Green_Desk_Lamp, "绿色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Red_Desk_Lamp, "红色台灯");
+        translationBuilder.add(FurnitureBedroomBlocks.Black_Desk_Lamp, "黑色台灯");
+
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
             translationBuilder.add(existingFilePath);

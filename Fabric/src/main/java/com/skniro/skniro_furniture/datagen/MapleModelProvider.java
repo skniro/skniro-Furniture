@@ -1573,6 +1573,23 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door);
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
+
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.White_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Orange_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Magenta_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.LightBlue_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Yellow_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Lime_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Pink_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Gray_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.LightGray_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Cyan_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Purple_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Blue_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Brown_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Green_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Red_Desk_Lamp);
+        furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Black_Desk_Lamp);
     }
 
     @Override

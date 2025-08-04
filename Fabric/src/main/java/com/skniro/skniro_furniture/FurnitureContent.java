@@ -1666,6 +1666,23 @@ public class FurnitureContent {
             content.add(FurnitureBedroomBlocks.WARPED_HYPHAE_BOOK_Desk);
             content.add(FurnitureBedroomBlocks.BAMBOO_PLANKS_BOOK_Desk);
             content.add(FurnitureBedroomBlocks.BAMBOO_BLOCK_BOOK_Desk);
+
+            content.add(FurnitureBedroomBlocks.White_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Orange_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Magenta_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.LightBlue_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Yellow_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Lime_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Pink_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Gray_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.LightGray_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Cyan_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Purple_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Blue_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Brown_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Green_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Red_Desk_Lamp);
+            content.add(FurnitureBedroomBlocks.Black_Desk_Lamp);
         });
 
         ItemGroupEvents.modifyEntriesEvent(Furniture.Furniture_Group_Livingroom_Furniture).register(content -> {

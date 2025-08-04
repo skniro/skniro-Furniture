@@ -1695,6 +1695,23 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Warped_Glass_Sliding_Door, "Warped Glass Sliding Door");
         translationBuilder.add(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door, "Pale Oak Glass Sliding Door");
 
+        translationBuilder.add(FurnitureBedroomBlocks.White_Desk_Lamp, "White Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Orange_Desk_Lamp, "Orange Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Magenta_Desk_Lamp, "Magenta Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.LightBlue_Desk_Lamp, "Light Blue Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Yellow_Desk_Lamp, "Yellow Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Lime_Desk_Lamp, "Lime Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Pink_Desk_Lamp, "Pink Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Gray_Desk_Lamp, "Gray Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.LightGray_Desk_Lamp, "Light Gray Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Cyan_Desk_Lamp, "Cyan Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Purple_Desk_Lamp, "Purple Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Blue_Desk_Lamp, "Blue Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Brown_Desk_Lamp, "Brown Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Green_Desk_Lamp, "Green Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Red_Desk_Lamp, "Red Desk Lamp");
+        translationBuilder.add(FurnitureBedroomBlocks.Black_Desk_Lamp, "Black Desk Lamp");
+
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
