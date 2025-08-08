@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "PQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_crimson_stem",
+        "Q": "minecraft:purple_dye",
+        "P": "minecraft:paper"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_purple_paper_sliding_door"
+    }
+}

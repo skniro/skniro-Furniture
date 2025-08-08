@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -20,11 +21,12 @@ import org.jetbrains.annotations.Nullable;
 public abstract class AbstractFurnitureContainerBlock extends BlockWithEntity {
     public static final EnumProperty<Direction> FACING;
 
-    public AbstractFurnitureContainerBlock(AbstractBlock.Settings settings) {
+    public AbstractFurnitureContainerBlock(Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
     }
 
+    @Override
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         ItemScatterer.onStateReplaced(state, newState, world, pos);
         super.onStateReplaced(state, world, pos, newState, moved);

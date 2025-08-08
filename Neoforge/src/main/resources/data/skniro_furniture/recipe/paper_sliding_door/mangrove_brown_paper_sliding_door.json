@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "PQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_mangrove_log",
+        "Q": "minecraft:brown_dye",
+        "P": "minecraft:paper"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:mangrove_brown_paper_sliding_door"
+    }
+}

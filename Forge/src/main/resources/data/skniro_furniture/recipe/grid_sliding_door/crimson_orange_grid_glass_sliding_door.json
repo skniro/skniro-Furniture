@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_crimson_stem",
+        "Q": "minecraft:orange_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_orange_grid_glass_sliding_door"
+    }
+}

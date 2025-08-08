@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_mangrove_log",
+        "Q": "minecraft:purple_stained_glass_pane"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:mangrove_purple_glass_sliding_door"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_acacia_log",
+        "Q": "minecraft:purple_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:acacia_purple_grid_glass_sliding_door"
+    }
+}

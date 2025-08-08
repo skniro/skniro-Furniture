@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": "minecraft:stripped_birch_log",
+        "Q": "minecraft:cyan_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:birch_cyan_grid_glass_sliding_door"
+    }
+}
