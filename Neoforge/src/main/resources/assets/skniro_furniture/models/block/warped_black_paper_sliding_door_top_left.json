@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/door/paper_sliding_door_top_left",
+    "textures": {
+        "paper": "skniro_furniture:block/door/black_paper_top",
+        "wood": "minecraft:block/stripped_warped_stem"
+    }
+}

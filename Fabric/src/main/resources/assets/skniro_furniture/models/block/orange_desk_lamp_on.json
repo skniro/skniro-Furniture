@@ -1,0 +1,8 @@
+{
+    "parent": "skniro_furniture:block/furniture/desk_lamp",
+    "textures": {
+        "clay": "skniro_furniture:block/orange_terracotta",
+        "glass": "skniro_furniture:block/white_stained_glass_lit_on",
+        "quartz": "minecraft:block/quartz_block_bottom"
+    }
+}

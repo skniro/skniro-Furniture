@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:stripped_crimson_log"
+        },
+        "Q": {
+            "item": "minecraft:blue_dye"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_blue_grid_glass_sliding_door"
+    }
+}

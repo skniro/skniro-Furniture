@@ -1,0 +1,6 @@
+{
+  "parent": "skniro_furniture:block/normal_chair",
+  "textures": {
+    "plank": "minecraft:block/pale_oak_planks"
+  }
+}

@@ -4,6 +4,7 @@ import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.BedsideCabinetBlock;
 import com.skniro.skniro_furniture.block.init.DeskBlock;
 import com.skniro.skniro_furniture.block.init.DeskCabinetBlock;
+import com.skniro.skniro_furniture.block.init.DeskLampBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -16,6 +17,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
+
+import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class FurnitureBedroomBlocks {
     public static final Block OAK_PLANKS_BEDSIDE_CABINET = registerBlock("oak_planks_bedside_cabinet", new BedsideCabinetBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
@@ -86,6 +89,23 @@ public class FurnitureBedroomBlocks {
     public static final Block WARPED_HYPHAE_BOOK_Desk = registerBlock("warped_wood_book_desk", new DeskBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
     public static final Block BAMBOO_PLANKS_BOOK_Desk = registerBlock("bamboo_planks_book_desk", new DeskBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
     public static final Block BAMBOO_BLOCK_BOOK_Desk = registerBlock("bamboo_wood_book_desk", new DeskBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
+
+    public static final Block White_Desk_Lamp = registerBlock("white_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Orange_Desk_Lamp = registerBlock("orange_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Magenta_Desk_Lamp = registerBlock("magenta_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block LightBlue_Desk_Lamp = registerBlock("light_blue_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Yellow_Desk_Lamp = registerBlock("yellow_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Lime_Desk_Lamp = registerBlock("lime_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Pink_Desk_Lamp = registerBlock("pink_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Gray_Desk_Lamp = registerBlock("gray_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block LightGray_Desk_Lamp = registerBlock("light_gray_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Cyan_Desk_Lamp = registerBlock("cyan_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Purple_Desk_Lamp = registerBlock("purple_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Blue_Desk_Lamp = registerBlock("blue_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Brown_Desk_Lamp = registerBlock("brown_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Green_Desk_Lamp = registerBlock("green_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Red_Desk_Lamp = registerBlock("red_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
+    public static final Block Black_Desk_Lamp = registerBlock("black_desk_lamp", new DeskLampBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_BLOCK).luminance(createLightLevelFromLitBlockState(15)).strength(0.3F).nonOpaque()));
 
 
     private static Block registerBlockWithoutItem(String name, Block block) {

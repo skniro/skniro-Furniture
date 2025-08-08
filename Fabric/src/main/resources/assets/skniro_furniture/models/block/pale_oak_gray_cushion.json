@@ -1,0 +1,7 @@
+{
+  "parent": "skniro_furniture:block/cushion",
+  "textures": {
+    "wool": "minecraft:block/gray_wool",
+    "plank": "minecraft:block/pale_oak_planks"
+  }
+}

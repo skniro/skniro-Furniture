@@ -4,6 +4,7 @@ import com.mojang.datafixers.util.Pair;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.data.client.*;
 import net.minecraft.item.Item;
@@ -104,5 +105,95 @@ public class MapleModelDatagenHelper {
         public String modelSuffix() {
             return this.modelSuffix;
         }
+    }
+
+    public void registerPaperSlidingDoor(Block doorBlock) {
+        Identifier Identifier = ModelIds.getBlockSubModelId(doorBlock, "_bottom_left");
+        Identifier Identifier2 = ModelIds.getBlockSubModelId(doorBlock, "_bottom_left_open");
+        Identifier Identifier3 = ModelIds.getBlockSubModelId(doorBlock, "_bottom_right");
+        Identifier Identifier4 = ModelIds.getBlockSubModelId(doorBlock, "_bottom_right_open");
+        Identifier Identifier5 = ModelIds.getBlockSubModelId(doorBlock, "_top_left");
+        Identifier Identifier6 = ModelIds.getBlockSubModelId(doorBlock, "_top_left_open");
+        Identifier Identifier7 = ModelIds.getBlockSubModelId(doorBlock, "_top_right");
+        Identifier Identifier8 = ModelIds.getBlockSubModelId(doorBlock, "_top_right_open");
+        generator.blockStateCollector.accept(createDoorBlockState(doorBlock, Identifier, Identifier2, Identifier3, Identifier4, Identifier5, Identifier6, Identifier7, Identifier8));
+    }
+
+    public static VariantsBlockStateSupplier createDoorBlockState(Block doorBlock, Identifier bottomLeftClosedModel, Identifier bottomLeftOpenModel, Identifier bottomRightClosedModel, Identifier bottomRightOpenModel, Identifier topLeftClosedModel, Identifier topLeftOpenModel, Identifier topRightClosedModel, Identifier topRightOpenModel) {
+        return VariantsBlockStateSupplier.create(doorBlock)
+                .coordinate(BlockStateVariantMap
+                        .create(Properties.HORIZONTAL_FACING, Properties.DOUBLE_BLOCK_HALF, Properties.DOOR_HINGE, Properties.OPEN)
+                        .register(Direction.EAST,  DoubleBlockHalf.LOWER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftClosedModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.LOWER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightClosedModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.LOWER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftOpenModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.LOWER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightOpenModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.LOWER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, bottomRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.UPPER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftClosedModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.UPPER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT,  false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightClosedModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, false,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightClosedModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.UPPER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftOpenModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.UPPER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.LEFT,  true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topLeftOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                        .register(Direction.EAST,  DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                        .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightOpenModel))
+                        .register(Direction.WEST,  DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                        .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true,
+                                BlockStateVariant.create().put(VariantSettings.MODEL, topRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                );
     }
 }

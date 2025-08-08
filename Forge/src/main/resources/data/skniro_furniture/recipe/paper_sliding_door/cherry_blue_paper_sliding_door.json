@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "PQ ",
+        "WW "
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:stripped_cherry_log"
+        },
+        "Q": {
+            "item": "minecraft:blue_dye"
+        },
+        "P": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:cherry_blue_paper_sliding_door"
+    }
+}

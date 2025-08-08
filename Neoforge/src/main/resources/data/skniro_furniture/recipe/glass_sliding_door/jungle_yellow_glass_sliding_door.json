@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WW ",
+        "QQ ",
+        "WW "
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:stripped_jungle_log"
+        },
+        "Q": {
+            "item": "minecraft:yellow_stained_glass_pane"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:jungle_yellow_glass_sliding_door"
+    }
+}
