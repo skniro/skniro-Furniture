@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "skniro_furniture:block/green_desk_lamp"
+    },
+    "lit=true": {
+      "model": "skniro_furniture:block/green_desk_lamp_on"
+    }
+  }
+}

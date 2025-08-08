@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/door/paper_sliding_door_bottom_right",
+    "textures": {
+        "paper": "skniro_furniture:block/door/lime_paper_bottom",
+        "wood": "minecraft:block/stripped_oak_log"
+    }
+}

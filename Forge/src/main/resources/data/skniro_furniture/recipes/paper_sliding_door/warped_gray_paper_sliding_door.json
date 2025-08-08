@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "PQ ",
+    "WW "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_warped_log"
+    },
+    "Q": {
+      "item": "minecraft:gray_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:warped_gray_paper_sliding_door",
+    "count": 3
+  }
+}
