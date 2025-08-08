@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "QQ ",
+    "WW "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_mangrove_log"
+    },
+    "Q": {
+      "item": "minecraft:light_gray_stained_glass_pane"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:mangrove_light_gray_glass_sliding_door",
+    "count": 3
+  }
+}

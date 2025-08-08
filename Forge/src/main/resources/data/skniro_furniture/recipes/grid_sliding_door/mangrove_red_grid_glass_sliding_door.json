@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "QQ ",
+    "WW "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_mangrove_log"
+    },
+    "Q": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:mangrove_red_grid_glass_sliding_door",
+    "count": 3
+  }
+}

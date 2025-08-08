@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "QQ ",
+    "WW "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_oak_log"
+    },
+    "Q": {
+      "item": "minecraft:yellow_stained_glass_pane"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:oak_yellow_glass_sliding_door",
+    "count": 3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    " A ",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:redstone"
+    },
+    "A": {
+      "item": "minecraft:glowstone"
+    },
+    "W": {
+      "item": "minecraft:black_terracotta"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:black_desk_lamp",
+    "count": 1
+  }
+}

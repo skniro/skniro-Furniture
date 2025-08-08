@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "PQ ",
+    "WW "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_ginkgo_log"
+    },
+    "Q": {
+      "item": "minecraft:purple_dye"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:ginkgo_purple_paper_sliding_door",
+    "count": 3
+  }
+}

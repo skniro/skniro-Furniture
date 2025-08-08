@@ -1,0 +1,8 @@
+{
+    "parent": "skniro_furniture:block/furniture/door/grid_glass_sliding_door",
+    "textures": {
+        "plank": "minecraft:block/warped_planks",
+        "glass": "skniro_furniture:block/door/magenta_stained_door_glass",
+        "wood": "minecraft:block/stripped_warped_stem"
+    }
+}
