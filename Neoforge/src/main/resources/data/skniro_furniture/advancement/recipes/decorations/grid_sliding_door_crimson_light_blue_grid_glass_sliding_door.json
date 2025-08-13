@@ -6,7 +6,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": "minecraft:stripped_crimson_log"
+                        "items": "minecraft:stripped_crimson_stem"
                     }
                 ]
             }
