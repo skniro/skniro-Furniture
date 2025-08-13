@@ -6,7 +6,7 @@
             "conditions": {
                 "items": [
                     {
-                        "items": "minecraft:paper"
+                        "items": "minecraft:stripped_birch_log"
                     }
                 ]
             }
