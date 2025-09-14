@@ -1,12 +1,14 @@
 package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.datafixers.util.Pair;
+import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import com.skniro.skniro_furniture.block.init.KitchenCounterBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.enums.BedPart;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.client.data.*;
@@ -27,6 +29,7 @@ import static net.minecraft.client.data.BlockStateModelGenerator.*;
 
 public class MapleModelDatagenHelper {
     private final BlockStateModelGenerator generator;;
+    private static final BlockStateVariantMap<ModelVariantOperator> NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS;
 
     public MapleModelDatagenHelper(BlockStateModelGenerator generator) {
         this.generator = generator;
@@ -133,5 +136,40 @@ public class MapleModelDatagenHelper {
                         .register(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel)
                         .register(Direction.WEST, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel.apply(ROTATE_Y_90))
                         .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true, topRightOpenModel.apply(ROTATE_Y_180)));
+    }
+
+
+    public final void registerBed(Block block) {
+        Identifier headModel = ModelIds.getBlockSubModelId(block, "_head");
+        Identifier footModel = ModelIds.getBlockSubModelId(block, "_foot");
+
+        BlockStateVariantMap.DoubleProperty<WeightedVariant,Direction, BedPart> variantMap =
+                BlockStateVariantMap.models(Properties.HORIZONTAL_FACING, FurnitureBedBlock.PART);
+
+        fillSimpleDoubleVariantMap(variantMap, BedPart.HEAD, headModel);
+        fillSimpleDoubleVariantMap(variantMap, BedPart.FOOT, footModel);
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(variantMap));
+    }
+
+    public void registerTV(Block block) {
+        WeightedVariant identifier = createWeightedVariant(ModelIds.getBlockModelId(block));
+        WeightedVariant identifier2 = createWeightedVariant(ModelIds.getBlockSubModelId(block,"_open"));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(createBooleanModelMap(Properties.LIT, identifier2, identifier)).coordinate(NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS));
+    }
+
+    public static BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, BedPart> fillSimpleDoubleVariantMap(
+            BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, BedPart> variantMap,
+            BedPart targetHalf,
+            Identifier baseModelId
+    ) {
+        return variantMap
+                .register(Direction.NORTH, targetHalf, createWeightedVariant(baseModelId))
+                .register(Direction.EAST, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R90)))
+                .register(Direction.SOUTH, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R180)))
+                .register(Direction.WEST, targetHalf, createWeightedVariant(baseModelId).apply(ModelVariantOperator.ROTATION_Y.withValue(AxisRotation.R270)));
+    }
+
+    static {
+        NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS = BlockStateVariantMap.operations(Properties.HORIZONTAL_FACING).register(Direction.EAST, ROTATE_Y_90).register(Direction.SOUTH, ROTATE_Y_180).register(Direction.WEST, ROTATE_Y_270).register(Direction.NORTH, NO_OP);
     }
 }
