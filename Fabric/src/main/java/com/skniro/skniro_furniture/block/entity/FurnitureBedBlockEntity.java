@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.minecraft.block.AbstractBannerBlock;
 import net.minecraft.block.BannerBlock;
 import net.minecraft.block.entity.BlockEntity;
@@ -38,12 +39,6 @@ public class FurnitureBedBlockEntity extends BlockEntity {
     public void setPatterns(BannerPatternsComponent patterns) {
         this.patterns = patterns;
         markDirty();
-    }
-
-    public ItemStack getPickStack() {
-        ItemStack itemStack = new ItemStack(BannerBlock.getForColor(this.baseColor));
-        itemStack.applyComponentsFrom(this.createComponentMap());
-        return itemStack;
     }
 
     @Override

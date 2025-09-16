@@ -71,14 +71,14 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
         return new FurnitureBedBlockEntity(pos, state, this.color);
     }
 
-    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
+/*    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
         BlockEntity var6 = world.getBlockEntity(pos);
         if (var6 instanceof FurnitureBedBlockEntity CustomBedBlockEntity) {
             return CustomBedBlockEntity.getPickStack();
         } else {
             return super.getPickStack(world, pos, state, includeData);
         }
-    }
+    }*/
 
     public DyeColor getColor() {
         return this.color;
@@ -279,11 +279,10 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
     static {
         PART = Properties.BED_PART;
         OCCUPIED = Properties.OCCUPIED;
-        SHAPES_BY_DIRECTION = (Map) Util.make(() -> {
-            VoxelShape footShape = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 5.5, 1.0);
-            Map<Direction, VoxelShape> map = VoxelShapes.createHorizontalFacingShapeMap(
-                    VoxelShapes.union(Block.createColumnShape(16.0, 0.0, 5.5), new VoxelShape[]{footShape}));
-            return map;
+        SHAPES_BY_DIRECTION = (Map)Util.make(() -> {
+            VoxelShape voxelShape = Block.createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)2.0F, (double)2.0F, (double)2.0F);
+            VoxelShape voxelShape2 = VoxelShapes.transform(voxelShape, DirectionTransformation.fromRotations(AxisRotation.R0, AxisRotation.R90));
+            return VoxelShapes.createHorizontalFacingShapeMap(VoxelShapes.union(Block.createColumnShape((double)16.0F, (double)2.0F, (double)7.5F), new VoxelShape[]{voxelShape, voxelShape2}));
         });
     }
 }
