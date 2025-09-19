@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:lime_wool",
+        "P": "minecraft:birch_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:birch_lime_wood_bed"
+    }
+}

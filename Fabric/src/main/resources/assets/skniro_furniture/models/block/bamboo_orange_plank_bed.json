@@ -2,6 +2,6 @@
     "parent": "skniro_furniture:block/furniture/bed",
     "textures": {
         "color": "skniro_furniture:block/bed/orange",
-        "planks": "minecraft:block/bamboo_plank_planks"
+        "planks": "minecraft:block/bamboo_planks"
     }
 }

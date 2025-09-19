@@ -23,7 +23,7 @@ public class FurnitureBedBlockEntity extends BlockEntity {
     private final DyeColor baseColor;
 
     public FurnitureBedBlockEntity(BlockPos pos, BlockState state) {
-        this(pos, state, ((AbstractBannerBlock)state.getBlock()).getColor());
+        this(pos, state, DyeColor.WHITE);
     }
 
 
