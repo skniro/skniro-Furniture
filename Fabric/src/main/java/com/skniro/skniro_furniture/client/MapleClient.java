@@ -404,7 +404,6 @@ public class MapleClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
-        //BlockEntityRendererFactories.register(FurnitureBlockEntityType.Bed_BLOCK_ENTITY, FurnitureBedBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)

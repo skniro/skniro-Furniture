@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": "minecraft:green_terracotta",
+        "R": "minecraft:redstone_lamp"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:green_tv"
+    }
+}

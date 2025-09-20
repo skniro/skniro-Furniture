@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:brown_wool",
+        "P": "minecraft:jungle_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:jungle_brown_wood_bed"
+    }
+}

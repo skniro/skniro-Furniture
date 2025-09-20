@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:red_wool",
+        "P": "minecraft:pale_oak_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:pale_oak_red_wood_bed"
+    }
+}

@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Quadrant;
+import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import com.skniro.skniro_furniture.block.init.KitchenCounterBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -19,6 +20,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
@@ -30,6 +32,7 @@ import static net.minecraft.client.data.models.BlockModelGenerators.*;
 
 public class MapleModelDatagenHelper {
     private final BlockModelGenerators generator;;
+    private static final PropertyDispatch<VariantMutator> NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS;
 
     public MapleModelDatagenHelper(BlockModelGenerators generator) {
         this.generator = generator;
@@ -136,5 +139,40 @@ public class MapleModelDatagenHelper {
                         .select(Direction.SOUTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel)
                         .select(Direction.WEST, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel.with(Y_ROT_90))
                         .select(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHingeSide.RIGHT, true, topRightOpenModel.with(Y_ROT_180)));
+    }
+
+
+    public final void registerBed(Block block) {
+        ResourceLocation headModel = ModelLocationUtils.getModelLocation(block, "_head");
+        ResourceLocation footModel = ModelLocationUtils.getModelLocation(block, "_foot");
+
+        PropertyDispatch.C2<MultiVariant,Direction, BedPart> variantMap =
+                PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, FurnitureBedBlock.PART);
+
+        fillSimpleDoubleVariantMap(variantMap, BedPart.HEAD, headModel);
+        fillSimpleDoubleVariantMap(variantMap, BedPart.FOOT, footModel);
+        generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(block).with(variantMap));
+    }
+
+    public void registerTV(Block block) {
+        MultiVariant identifier = plainVariant(ModelLocationUtils.getModelLocation(block));
+        MultiVariant identifier2 = plainVariant(ModelLocationUtils.getModelLocation(block,"_open"));
+        generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(block).with(createBooleanModelDispatch(BlockStateProperties.LIT, identifier2, identifier)).with(NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS));
+    }
+
+    public static PropertyDispatch.C2<MultiVariant, Direction, BedPart> fillSimpleDoubleVariantMap(
+            PropertyDispatch.C2<MultiVariant, Direction, BedPart> variantMap,
+            BedPart targetHalf,
+            ResourceLocation baseModelId
+    ) {
+        return variantMap
+                .select(Direction.NORTH, targetHalf, plainVariant(baseModelId))
+                .select(Direction.EAST, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
+                .select(Direction.SOUTH, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
+                .select(Direction.WEST, targetHalf, plainVariant(baseModelId).with(VariantMutator.Y_ROT.withValue(Quadrant.R270)));
+    }
+
+    static {
+        NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS = PropertyDispatch.modify(BlockStateProperties.HORIZONTAL_FACING).select(Direction.EAST, Y_ROT_90).select(Direction.SOUTH, Y_ROT_180).select(Direction.WEST, Y_ROT_270).select(Direction.NORTH, NOP);
     }
 }

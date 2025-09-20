@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:green_wool",
+        "P": "minecraft:acacia_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:acacia_green_plank_bed"
+    }
+}

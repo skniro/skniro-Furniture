@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,lit=false": {
+      "model": "skniro_furniture:block/orange_tv",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "skniro_furniture:block/orange_tv_open",
+      "y": 90
+    },
+    "facing=north,lit=false": {
+      "model": "skniro_furniture:block/orange_tv"
+    },
+    "facing=north,lit=true": {
+      "model": "skniro_furniture:block/orange_tv_open"
+    },
+    "facing=south,lit=false": {
+      "model": "skniro_furniture:block/orange_tv",
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "skniro_furniture:block/orange_tv_open",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "skniro_furniture:block/orange_tv",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "skniro_furniture:block/orange_tv_open",
+      "y": 270
+    }
+  }
+}

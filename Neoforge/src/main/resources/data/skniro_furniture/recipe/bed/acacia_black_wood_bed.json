@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:black_wool",
+        "P": "minecraft:acacia_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:acacia_black_wood_bed"
+    }
+}
