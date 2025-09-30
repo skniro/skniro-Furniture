@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": "minecraft:cherry_slab",
+        "P": "minecraft:cherry_planks",
+        "R": "minecraft:redstone_lamp"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:cherry_planks_tv"
+    }
+}

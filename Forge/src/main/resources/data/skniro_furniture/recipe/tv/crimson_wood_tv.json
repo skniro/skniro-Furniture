@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": "minecraft:crimson_slab",
+        "P": "minecraft:stripped_crimson_stem",
+        "R": "minecraft:redstone_lamp"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:crimson_wood_tv"
+    }
+}

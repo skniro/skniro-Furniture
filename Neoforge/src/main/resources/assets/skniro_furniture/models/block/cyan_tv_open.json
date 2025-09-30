@@ -1,0 +1,8 @@
+{
+    "parent": "skniro_furniture:block/furniture/tv_open",
+    "textures": {
+        "clay": "skniro_furniture:block/cyan_terracotta",
+        "quartz": "minecraft:block/quartz_block_top",
+        "screen": "skniro_furniture:block/tv_open"
+    }
+}

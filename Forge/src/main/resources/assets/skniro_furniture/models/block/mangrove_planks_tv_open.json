@@ -1,0 +1,8 @@
+{
+  "parent": "skniro_furniture:block/furniture/tv_open",
+  "textures": {
+    "clay": "minecraft:block/mangrove_planks",
+    "quartz": "minecraft:block/mangrove_planks",
+    "screen": "skniro_furniture:block/tv_open"
+  }
+}

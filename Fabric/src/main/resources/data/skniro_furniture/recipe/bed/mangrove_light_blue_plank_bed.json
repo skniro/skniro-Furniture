@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:light_blue_wool",
+        "P": "minecraft:mangrove_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:mangrove_light_blue_plank_bed"
+    }
+}

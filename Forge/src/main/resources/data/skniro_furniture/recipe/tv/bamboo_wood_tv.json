@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": "minecraft:bamboo_slab",
+        "P": "minecraft:stripped_bamboo_block",
+        "R": "minecraft:redstone_lamp"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:bamboo_wood_tv"
+    }
+}

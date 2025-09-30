@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:black_wool",
+        "P": "minecraft:oak_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:oak_black_plank_bed"
+    }
+}

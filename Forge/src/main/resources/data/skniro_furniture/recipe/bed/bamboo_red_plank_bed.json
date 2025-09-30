@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:red_wool",
+        "P": "minecraft:bamboo_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:bamboo_red_plank_bed"
+    }
+}

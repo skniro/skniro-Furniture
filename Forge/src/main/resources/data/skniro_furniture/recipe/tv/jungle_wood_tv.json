@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": "minecraft:jungle_slab",
+        "P": "minecraft:stripped_jungle_log",
+        "R": "minecraft:redstone_lamp"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:jungle_wood_tv"
+    }
+}

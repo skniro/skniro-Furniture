@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:magenta_wool",
+        "P": "minecraft:acacia_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:acacia_magenta_wood_bed"
+    }
+}

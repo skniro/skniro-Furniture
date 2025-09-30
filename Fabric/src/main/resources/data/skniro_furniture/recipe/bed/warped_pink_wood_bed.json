@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:pink_wool",
+        "P": "minecraft:warped_stem"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:warped_pink_wood_bed"
+    }
+}

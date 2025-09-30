@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:cyan_wool",
+        "P": "minecraft:birch_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:birch_cyan_plank_bed"
+    }
+}

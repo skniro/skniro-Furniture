@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:light_blue_wool",
+        "P": "minecraft:oak_log"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:oak_light_blue_wood_bed"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": "minecraft:lime_wool",
+        "P": "minecraft:crimson_planks"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:crimson_lime_plank_bed"
+    }
+}
