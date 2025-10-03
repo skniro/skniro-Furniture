@@ -1,9 +1,11 @@
 package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.datafixers.util.Pair;
+import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
+import net.minecraft.block.enums.BedPart;
 import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.data.client.*;
@@ -195,5 +197,35 @@ public class MapleModelDatagenHelper {
                         .register(Direction.NORTH, DoubleBlockHalf.UPPER, DoorHinge.RIGHT, true,
                                 BlockStateVariant.create().put(VariantSettings.MODEL, topRightOpenModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
                 );
+    }
+
+    public final void registerBed(Block block) {
+        Identifier headModel = ModelIds.getBlockSubModelId(block, "_head");
+        Identifier footModel = ModelIds.getBlockSubModelId(block, "_foot");
+
+        BlockStateVariantMap.DoubleProperty<Direction, BedPart> variantMap =
+                BlockStateVariantMap.create(Properties.HORIZONTAL_FACING, FurnitureBedBlock.PART);
+
+        fillSimpleDoubleVariantMap(variantMap, BedPart.HEAD, headModel);
+        fillSimpleDoubleVariantMap(variantMap, BedPart.FOOT, footModel);
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(variantMap));
+    }
+
+    public void registerTV(Block block) {
+        Identifier identifier = ModelIds.getBlockModelId(block);
+        Identifier identifier2 = ModelIds.getBlockSubModelId(block,"_open");
+        generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(createBooleanModelMap(Properties.LIT, identifier2, identifier)).coordinate(createNorthDefaultHorizontalRotationStates()));
+    }
+
+    public static BlockStateVariantMap.DoubleProperty<Direction, BedPart> fillSimpleDoubleVariantMap(
+            BlockStateVariantMap.DoubleProperty<Direction, BedPart> variantMap,
+            BedPart targetHalf,
+            Identifier baseModelId
+    ) {
+        return variantMap
+                .register(Direction.NORTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId))
+                .register(Direction.EAST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                .register(Direction.SOUTH, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                .register(Direction.WEST, targetHalf, BlockStateVariant.create().put(VariantSettings.MODEL, baseModelId).put(VariantSettings.Y, VariantSettings.Rotation.R270));
     }
 }

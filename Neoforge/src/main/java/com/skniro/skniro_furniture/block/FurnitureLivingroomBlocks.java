@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.SofaBlock;
+import com.skniro.skniro_furniture.block.init.TVBlock;
 import com.skniro.skniro_furniture.block.init.TvStandBlock;
 import com.skniro.skniro_furniture.item.FurnitureItems;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,10 +11,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class FurnitureLivingroomBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, Furniture.MOD_ID);
@@ -96,6 +100,52 @@ public class FurnitureLivingroomBlocks {
             ()-> new TvStandBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
     public static final Supplier<Block> BAMBOO_BLOCK_TV_STAND = registerBlock("bamboo_wood_tv_stand",
             ()-> new TvStandBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+
+    public static final Supplier<Block> OAK_PLANKS_TV = registerBlock("oak_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> OAK_WOOD_TV = registerBlock("oak_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> SPRUCE_PLANKS_TV = registerBlock("spruce_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> SPRUCE_WOOD_TV = registerBlock("spruce_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> BIRCH_PLANKS_TV = registerBlock("birch_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> BIRCH_WOOD_TV = registerBlock("birch_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> JUNGLE_PLANKS_TV = registerBlock("jungle_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> JUNGLE_WOOD_TV = registerBlock("jungle_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> ACACIA_PLANKS_TV = registerBlock("acacia_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> ACACIA_WOOD_TV = registerBlock("acacia_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> DARK_OAK_PLANKS_TV = registerBlock("dark_oak_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> DARK_OAK_WOOD_TV = registerBlock("dark_oak_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> MANGROVE_PLANKS_TV = registerBlock("mangrove_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> MANGROVE_WOOD_TV = registerBlock("mangrove_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> CHERRY_PLANKS_TV = registerBlock("cherry_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> CHERRY_WOOD_TV = registerBlock("cherry_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> CRIMSON_PLANKS_TV = registerBlock("crimson_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> CRIMSON_HYPHAE_TV = registerBlock("crimson_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> WARPED_PLANKS_TV = registerBlock("warped_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> WARPED_HYPHAE_TV = registerBlock("warped_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> BAMBOO_PLANKS_TV = registerBlock("bamboo_planks_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> BAMBOO_BLOCK_TV = registerBlock("bamboo_wood_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion()));
+
+    public static final Supplier<Block> TV_WHITE = registerBlock("white_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_ORANGE = registerBlock("orange_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_MAGENTA = registerBlock("magenta_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIGHT_BLUE = registerBlock("light_blue_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_YELLOW = registerBlock("yellow_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIME = registerBlock("lime_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_PINK = registerBlock("pink_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_GRAY = registerBlock("gray_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIGHT_GRAY = registerBlock("light_gray_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_CYAN = registerBlock("cyan_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_PURPLE = registerBlock("purple_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BLUE = registerBlock("blue_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BROWN = registerBlock("brown_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_GREEN = registerBlock("green_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_RED = registerBlock("red_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BLACK = registerBlock("black_tv", ()-> new TVBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
+
+    private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
+        return (p_50763_) -> {
+            return (Boolean)p_50763_.getValue(BlockStateProperties.LIT) ? p_50760_ : 0;
+        };
+    }
 
     private static <T extends Block> Supplier<T> registerBlockWithoutItem(String name, Supplier<T> block) {
         Supplier<T> toReturn = BLOCKS.register(name, block);

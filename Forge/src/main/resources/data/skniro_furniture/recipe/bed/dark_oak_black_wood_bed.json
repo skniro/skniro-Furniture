@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:black_wool"
+        },
+        "P": {
+            "item": "minecraft:dark_oak_log"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:dark_oak_black_wood_bed"
+    }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "skniro_furniture:block/juicer",
-  "textures": {
-    "bottom": "minecraft:block/light_gray_concrete",
-    "glass": "minecraft:block/glass",
-    "side": "minecraft:block/black_concrete"
-  }
-}

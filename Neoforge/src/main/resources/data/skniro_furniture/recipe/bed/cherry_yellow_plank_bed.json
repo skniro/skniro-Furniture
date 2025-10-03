@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P  ",
+        "WWW",
+        "PPP"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:yellow_wool"
+        },
+        "P": {
+            "item": "minecraft:cherry_planks"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:cherry_yellow_plank_bed"
+    }
+}

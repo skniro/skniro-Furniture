@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/bed",
+    "textures": {
+        "color": "skniro_furniture:block/bed/white",
+        "planks": "minecraft:block/birch_log"
+    }
+}

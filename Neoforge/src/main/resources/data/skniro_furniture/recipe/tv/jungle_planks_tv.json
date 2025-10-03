@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PPP",
+        " R ",
+        "WWW"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:jungle_slab"
+        },
+        "P": {
+            "item": "minecraft:jungle_planks"
+        },
+        "R": {
+            "item": "minecraft:redstone_lamp"
+        }
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:jungle_planks_tv"
+    }
+}
