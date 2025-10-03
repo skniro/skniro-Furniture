@@ -1,11 +1,12 @@
-// 1.20.1	2025-09-20T18:04:18.471604	skniro's Furniture/Tags for minecraft:block
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\wall_hanging_signs.json
+// 1.20.1	2025-10-03T20:04:16.8026548	skniro's Furniture/Tags for minecraft:block
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\c\tags\blocks\saplings.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\wall_hanging_signs.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\ceiling_hanging_signs.json
 5c98804406496140841b99522211d7bf42940a1c data\minecraft\tags\blocks\mineable\pickaxe.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\c\tags\blocks\plaster.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\saplings.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\fences.json
 360debda731462443494fdc73d34c68b5354ed3b data\minecraft\tags\blocks\enchantment_power_provider.json
+8bbb9f48d25d5a2bf9141ac6f569b00739338911 data\minecraft\tags\blocks\beds.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\c\tags\blocks\maple_logs.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\c\tags\blocks\cherry_logs.json

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:red_wool"
+    },
+    "P": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:spruce_red_wood_bed",
+    "count": 1
+  }
+}

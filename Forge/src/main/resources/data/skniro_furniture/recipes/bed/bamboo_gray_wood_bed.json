@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:gray_wool"
+    },
+    "P": {
+      "item": "minecraft:bamboo_block"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:bamboo_gray_wood_bed",
+    "count": 1
+  }
+}

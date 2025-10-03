@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    " R ",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:birch_slab"
+    },
+    "P": {
+      "item": "minecraft:stripped_birch_log"
+    },
+    "R": {
+      "item": "minecraft:redstone_lamp"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:birch_wood_tv",
+    "count": 1
+  }
+}

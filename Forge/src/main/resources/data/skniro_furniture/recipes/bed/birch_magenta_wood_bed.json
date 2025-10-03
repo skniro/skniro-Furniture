@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:magenta_wool"
+    },
+    "P": {
+      "item": "minecraft:birch_log"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:birch_magenta_wood_bed",
+    "count": 1
+  }
+}
