@@ -4,38 +4,43 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.Furniture;
+import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
 import com.skniro.skniro_furniture.block.entity.OvenBlockEntity;
 import com.skniro.skniro_furniture.block.init.OvenBlock;
+import com.skniro.skniro_furniture.block.renderer.item.ItemRendererHelper;
+import com.skniro.skniro_furniture.block.renderer.state.CabinetBlockEntityRendererState;
+import com.skniro.skniro_furniture.block.renderer.state.KitchenSinkBlockEntityRenderState;
+import com.skniro.skniro_furniture.block.renderer.state.OvenBlockEntityRenderState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.*;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.math.*;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 import org.joml.Matrix4f;
 
-public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEntity> {
+public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEntity, OvenBlockEntityRenderState> {
 
     private static final ResourceLocation LIGHT_TEXTURE = ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "textures/block/oven_light.png");
 
     public OvenBlockEntityRenderer(BlockEntityRendererProvider.Context ctx) {}
 
     @Override
-    public void render(OvenBlockEntity entity, float tickDelta, PoseStack matrices,
-                       MultiBufferSource vertexConsumers, int light, int overlay, Vec3 cameraPos) {
+    public void render(OvenBlockEntityRenderState state, PoseStack matrices, SubmitNodeCollector queue, CameraRenderState cameraRenderState) {
+        var facing = state.blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
 
-        var state = entity.getBlockState();
-        var facing = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
-
-        if (!(state.getBlock() instanceof OvenBlock)) return;
+        if (!(state.blockState.getBlock() instanceof OvenBlock)) return;
         matrices.pushPose();
 
         switch (facing) {
@@ -53,19 +58,19 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
             default -> 0f;
         };
 
-        matrices.mulPose(Axis.YP.rotationDegrees(angle)); // 按 Y 轴旋转
+        matrices.mulPose(Axis.YP.rotationDegrees(angle));
 
-        Matrix4f mat = matrices.last().pose();
-
-        if (state.getValue(OvenBlock.LIT)){
-            VertexConsumer glowVc = vertexConsumers.getBuffer(RenderType.eyes(LIGHT_TEXTURE));
-            drawQuad(mat, glowVc, 0x80FFFF00, light);
+        if (state.blockState.getValue(OvenBlock.LIT)) {
+            queue.submitCustomGeometry(matrices, RenderType.eyes(LIGHT_TEXTURE), (matricesEntry, vertexConsumer) -> {
+                Matrix4f mat = matricesEntry.pose();
+                int light = LightTexture.FULL_BRIGHT; // 保持全亮
+                drawQuad(mat, vertexConsumer, 0x80FFFF00, light);
+            });
         }
 
-        ItemStack stack = entity.getRenderStack();
-        if (!stack.isEmpty()) {
-            renderItemAsIcon(facing, stack, matrices, vertexConsumers, light, overlay);
-        }
+
+        renderItemAsIcon(state, matrices, queue);
+
         matrices.popPose();
     }
 
@@ -96,15 +101,27 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
                 .setNormal(0F, 0F, -1F);
     }
 
-    private void renderItemAsIcon(Direction direction, ItemStack stack, PoseStack matrices,
-                                  MultiBufferSource vertexConsumers, int light, int overlay) {
-
+    private void renderItemAsIcon(OvenBlockEntityRenderState state, PoseStack matrices,
+                                  SubmitNodeCollector queue) {
         matrices.pushPose();
         matrices.scale(0.4f, 0.4f, 0.4f);
         matrices.translate(0.0, 0.3, 0.3);
 
-        Minecraft.getInstance().getItemRenderer()
-                .renderStatic(stack, ItemDisplayContext.GUI, light, overlay, matrices, vertexConsumers, null, 0);
+        state.item.submit(matrices, queue, state.lightCoords, OverlayTexture.NO_OVERLAY,0);
         matrices.popPose();
+    }
+
+    @Override
+    public OvenBlockEntityRenderState createRenderState() {
+        return new OvenBlockEntityRenderState();
+    }
+
+    @Override
+    public void updateRenderState(OvenBlockEntity entity, OvenBlockEntityRenderState state, float tickProgress, Vec3 cameraPos, @Nullable ModelFeatureRenderer.CrumblingOverlay crumblingOverlay) {
+        BlockEntityRenderer.super.extractRenderState(entity, state, tickProgress, cameraPos, crumblingOverlay);
+        ItemModelResolver itemModelResolver = Minecraft.getInstance().getItemModelResolver();
+        itemModelResolver.updateForTopItem(state.item, entity.getRenderStack(), ItemDisplayContext.GUI, entity.getLevel(), null, 1);
+        state.blockPos = entity.getBlockPos();
+        state.blockState = entity.getBlockState();
     }
 }

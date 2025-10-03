@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractFurnitureContainerBlockEntity extends LockableContainerBlockEntity {
     private final ViewerCountManager stateManager;
-    private DefaultedList<ItemStack> inventory;
+    public DefaultedList<ItemStack> inventory;
 
     protected AbstractFurnitureContainerBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState, int size) {
         super(blockEntityType, blockPos, blockState);
@@ -49,7 +49,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
             protected void onViewerCountUpdate(World world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
             }
 
-            protected boolean isPlayerViewing(PlayerEntity player) {
+            public boolean isPlayerViewing(PlayerEntity player) {
                 if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
                     Inventory inventory = ((GenericContainerScreenHandler) player.currentScreenHandler).getInventory();
                     return inventory == AbstractFurnitureContainerBlockEntity.this;
@@ -110,7 +110,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
 
     public void onOpen(PlayerEntity player) {
         if (!this.removed && !player.isSpectator()) {
-            this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
+            this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState(), player.getContainerInteractionRange());
         }
 
     }

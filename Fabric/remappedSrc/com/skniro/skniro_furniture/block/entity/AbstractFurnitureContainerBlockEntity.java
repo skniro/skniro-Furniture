@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractFurnitureContainerBlockEntity extends BaseContainerBlockEntity {
     private final ContainerOpenersCounter stateManager;
-    private NonNullList<ItemStack> inventory;
+    public NonNullList<ItemStack> inventory;
 
     protected AbstractFurnitureContainerBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState, int size) {
         super(blockEntityType, blockPos, blockState);
@@ -49,7 +49,7 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
             protected void openerCountChanged(Level world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
             }
 
-            protected boolean isOwnContainer(Player player) {
+            public boolean isOwnContainer(Player player) {
                 if (player.containerMenu instanceof ChestMenu) {
                     Container inventory = ((ChestMenu) player.containerMenu).getContainer();
                     return inventory == AbstractFurnitureContainerBlockEntity.this;
@@ -108,14 +108,14 @@ public abstract class AbstractFurnitureContainerBlockEntity extends BaseContaine
         return null;
     }
 
-    public void startOpen(Player player) {
+    public void onOpen(Player player) {
         if (!this.remove && !player.isSpectator()) {
-            this.stateManager.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
+            this.stateManager.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState(), player.getContainerInteractionRange());
         }
 
     }
 
-    public void stopOpen(Player player) {
+    public void onClose(Player player) {
         if (!this.remove && !player.isSpectator()) {
             this.stateManager.decrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
         }

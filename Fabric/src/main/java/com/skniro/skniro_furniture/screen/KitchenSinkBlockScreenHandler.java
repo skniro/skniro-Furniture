@@ -20,7 +20,7 @@ public class KitchenSinkBlockScreenHandler extends ScreenHandler {
     public final KitchenSinkBlockEntity blockEntity;
 
     public KitchenSinkBlockScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos){
-        this(syncId,playerInventory, playerInventory.player.getWorld().getBlockEntity(pos),new ArrayPropertyDelegate(2));
+        this(syncId,playerInventory, playerInventory.player.getEntityWorld().getBlockEntity(pos),new ArrayPropertyDelegate(2));
     }
 
 

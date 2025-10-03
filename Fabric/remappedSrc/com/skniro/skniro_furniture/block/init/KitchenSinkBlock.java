@@ -74,7 +74,7 @@ public class KitchenSinkBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!world.isClientSide) {
+        if (!world.isClientSide()) {
             MenuProvider screenHandlerFactory = state.getMenuProvider(world, pos);
 
             if (screenHandlerFactory != null) {

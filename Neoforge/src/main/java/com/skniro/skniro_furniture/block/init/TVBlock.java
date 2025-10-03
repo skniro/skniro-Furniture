@@ -39,7 +39,7 @@ public class TVBlock extends BaseEntityBlock {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
-        if (!world.isClientSide) {
+        if (!world.isClientSide()) {
             boolean lit = state.getValue(LIT);
             world.setBlock(pos, state.setValue(LIT, !lit), 2);
         }

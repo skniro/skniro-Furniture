@@ -144,7 +144,7 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
     }
 
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient && player.shouldSkipBlockDrops()) {
+        if (!world.isClient() && player.shouldSkipBlockDrops()) {
             BedPart bedPart = (BedPart)state.get(PART);
             if (bedPart == BedPart.FOOT) {
                 BlockPos blockPos = pos.offset(getDirectionTowardsOtherPart(bedPart, (Direction)state.get(FACING)));
@@ -246,7 +246,7 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
 
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced(world, pos, state, placer, itemStack);
-        if (!world.isClient) {
+        if (!world.isClient()) {
             BlockPos blockPos = pos.offset((Direction)state.get(FACING));
             world.setBlockState(blockPos, (BlockState)state.with(PART, BedPart.HEAD), 3);
             world.updateNeighbors(pos, Blocks.AIR);

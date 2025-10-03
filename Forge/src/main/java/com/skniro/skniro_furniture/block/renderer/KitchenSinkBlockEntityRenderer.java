@@ -4,33 +4,31 @@ package com.skniro.skniro_furniture.block.renderer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
-import com.skniro.skniro_furniture.block.init.KitchenSinkBlock;
+import com.skniro.skniro_furniture.block.renderer.state.KitchenSinkBlockEntityRenderState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Matrix4f;
+import org.jetbrains.annotations.Nullable;
 
-public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<KitchenSinkBlockEntity> {
+public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<KitchenSinkBlockEntity, KitchenSinkBlockEntityRenderState> {
     public KitchenSinkBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
     }
     @Override
-    public void render(KitchenSinkBlockEntity entity, float tickDelta, PoseStack matrices,
-                       MultiBufferSource vertexConsumers, int light, int overlay, Vec3 cameraPos) {
-        ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
-        ItemStack stack = entity.getRenderStack();
-        Direction direction = entity.getBlockState().getValue(BlockStateProperties.HORIZONTAL_FACING);
+    public void submit(KitchenSinkBlockEntityRenderState state, PoseStack matrices, SubmitNodeCollector queue, CameraRenderState cameraState) {
+        Direction direction = state.blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
         matrices.pushPose();
         switch (direction) {
             case NORTH -> matrices.translate(0.5f, 1.0f, 0.65f);
@@ -45,8 +43,7 @@ public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<Kitch
             case WEST -> matrices.mulPose(Axis.YP.rotationDegrees(90));
             case EAST -> matrices.mulPose(Axis.YP.rotationDegrees(270));
         }
-        itemRenderer.renderStatic(stack, ItemDisplayContext.GUI, getLightLevel(entity.getLevel(),
-                entity.getBlockPos()), OverlayTexture.NO_OVERLAY, matrices, vertexConsumers, entity.getLevel(), 1);
+        state.item.submit(matrices, queue, state.lightCoords, OverlayTexture.NO_OVERLAY,0);
         matrices.popPose();
     }
 
@@ -55,5 +52,20 @@ public class KitchenSinkBlockEntityRenderer implements BlockEntityRenderer<Kitch
         int bLight = world.getBrightness(LightLayer.BLOCK, pos);
         int sLight = world.getBrightness(LightLayer.SKY, pos);
         return LightTexture.pack(bLight, Math.max(sLight, 15));
+    }
+
+    @Override
+    public KitchenSinkBlockEntityRenderState createRenderState() {
+        return new KitchenSinkBlockEntityRenderState();
+    }
+
+    @Override
+    public void extractRenderState(KitchenSinkBlockEntity entity, KitchenSinkBlockEntityRenderState state, float tickProgress, Vec3 cameraPos, @Nullable ModelFeatureRenderer.CrumblingOverlay crumblingOverlay) {
+        BlockEntityRenderer.super.extractRenderState(entity, state, tickProgress, cameraPos, crumblingOverlay);
+        ItemModelResolver itemModelResolver = Minecraft.getInstance().getItemModelResolver();
+        itemModelResolver.updateForTopItem(state.item, entity.getRenderStack(), ItemDisplayContext.GUI, entity.getLevel(), null, 1);
+        state.blockPos = entity.getBlockPos();
+        state.blockState = entity.getBlockState();
+        state.lightCoords = getLightLevel(entity.getLevel(), entity.getBlockPos());
     }
 }

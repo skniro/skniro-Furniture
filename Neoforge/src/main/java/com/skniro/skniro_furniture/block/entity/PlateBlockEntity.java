@@ -39,6 +39,10 @@ public class PlateBlockEntity extends BlockEntity implements ImplementedInventor
         ContainerHelper.loadAllItems(nbt, inventory);
     }
 
+    public ItemStack getRenderStack() {
+        return this.getItem(0);
+    }
+
     @Override
     public Packet<ClientGamePacketListener> getUpdatePacket() {
         return ClientboundBlockEntityDataPacket.create(this);

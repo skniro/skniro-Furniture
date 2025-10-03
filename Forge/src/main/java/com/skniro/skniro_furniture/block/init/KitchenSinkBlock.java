@@ -73,7 +73,7 @@ public class KitchenSinkBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!world.isClientSide) {
+        if (!world.isClientSide()) {
             BlockEntity entity = world.getBlockEntity(pos);
             if (entity instanceof KitchenSinkBlockEntity BlockEntity) {
                 ((ServerPlayer) player).openMenu(new SimpleMenuProvider(BlockEntity, Component.translatable(FurnitureStrings.Kitchen_Sink)), pos);

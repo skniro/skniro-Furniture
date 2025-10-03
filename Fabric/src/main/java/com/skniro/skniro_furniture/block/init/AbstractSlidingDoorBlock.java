@@ -76,7 +76,7 @@ public abstract class AbstractSlidingDoorBlock extends Block {
     }
 
     public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
-        if (!world.isClient && (player.shouldSkipBlockDrops() || !player.canHarvest(state))) {
+        if (!world.isClient() && (player.shouldSkipBlockDrops() || !player.canHarvest(state))) {
             onBreakInCreative(world, pos, state, player);
         }
 

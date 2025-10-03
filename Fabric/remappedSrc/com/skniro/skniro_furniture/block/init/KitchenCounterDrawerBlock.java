@@ -75,7 +75,7 @@ public class KitchenCounterDrawerBlock extends BaseEntityBlock {
         return true;
     }
 
-    protected int getAnalogOutputSignal(BlockState state, Level world, BlockPos pos) {
+    protected int getComparatorOutput(BlockState state, Level world, BlockPos pos) {
         return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(world.getBlockEntity(pos));
     }
 

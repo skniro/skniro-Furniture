@@ -144,7 +144,7 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
     }
 
     public BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
-        if (!world.isClientSide && player.preventsBlockDrops()) {
+        if (!world.isClientSide() && player.preventsBlockDrops()) {
             BedPart bedPart = (BedPart)state.getValue(PART);
             if (bedPart == BedPart.FOOT) {
                 BlockPos blockPos = pos.relative(getNeighbourDirection(bedPart, (Direction)state.getValue(FACING)));
@@ -246,7 +246,7 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
 
     public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.setPlacedBy(world, pos, state, placer, itemStack);
-        if (!world.isClientSide) {
+        if (!world.isClientSide()) {
             BlockPos blockPos = pos.relative((Direction)state.getValue(FACING));
             world.setBlock(blockPos, (BlockState)state.setValue(PART, BedPart.HEAD), 3);
             world.updateNeighborsAt(pos, Blocks.AIR);

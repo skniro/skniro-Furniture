@@ -195,7 +195,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
     int currentCount = this.getItem(OUTPUT_SLOT).getCount();
 
         return maxCount >= currentCount + count;
-}
+    }
 
    @Nullable
    @Override

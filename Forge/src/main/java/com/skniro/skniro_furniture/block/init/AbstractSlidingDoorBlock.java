@@ -77,7 +77,7 @@ public abstract class AbstractSlidingDoorBlock extends Block {
     }
 
     public BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
-        if (!world.isClientSide && (player.preventsBlockDrops() || !player.hasCorrectToolForDrops(state))) {
+        if (!world.isClientSide() && (player.preventsBlockDrops() || !player.hasCorrectToolForDrops(state))) {
             onBreakInCreative(world, pos, state, player);
         }
 

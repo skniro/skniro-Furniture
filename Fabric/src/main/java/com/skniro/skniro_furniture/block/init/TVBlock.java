@@ -36,7 +36,7 @@ public class TVBlock extends BlockWithEntity {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient) {
+        if (!world.isClient()) {
             boolean lit = state.get(LIT);
             world.setBlockState(pos, state.with(LIT, !lit), 2);
         }

@@ -39,6 +39,10 @@ public class PlateBlockEntity extends BlockEntity implements ImplementedInventor
         Inventories.readData(nbt, inventory);
     }
 
+    public ItemStack getRenderStack() {
+        return this.getStack(0);
+    }
+
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
         return BlockEntityUpdateS2CPacket.create(this);
