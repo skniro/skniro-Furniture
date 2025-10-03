@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:blue_wool"
+    },
+    "P": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:crimson_blue_wood_bed",
+    "count": 1
+  }
+}
