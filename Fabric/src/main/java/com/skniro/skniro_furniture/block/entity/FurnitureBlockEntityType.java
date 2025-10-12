@@ -945,6 +945,66 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<GlassTableBlockEntity> GLASS_TABLE_BLOCK_ENTITY =
+            create("glass_table_block_entity",
+                    FabricBlockEntityTypeBuilder.create(GlassTableBlockEntity::new,
+                            MapleFurnitureBlocks.Oak_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Oak_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Spruce_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Spruce_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Birch_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Birch_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Jungle_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Jungle_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Acacia_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Acacia_Plank_Glass_Table,
+                            MapleFurnitureBlocks.DarkOak_Wood_Glass_Table,
+                            MapleFurnitureBlocks.DarkOak_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Mangrove_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Mangrove_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Bamboo_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Bamboo_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Cherry_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Cherry_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Crimson_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Crimson_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Warped_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Warped_Plank_Glass_Table,
+                            MapleFurnitureBlocks.PaleOak_Wood_Glass_Table,
+                            MapleFurnitureBlocks.PaleOak_Plank_Glass_Table
+                    )
+            );
+
+    public static final BlockEntityType<GlassJarBlockEntity> GLASS_JAR_BLOCK_ENTITY =
+            create("glass_jar_block_entity",
+                    FabricBlockEntityTypeBuilder.create(GlassJarBlockEntity::new,
+                            FurnitureKitchenBlocks.Oak_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Oak_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Birch_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Birch_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.Warped_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.Warped_Plank_Glass_Jar,
+                            FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar,
+                            FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar
+                    )
+            );
+
 
 
 

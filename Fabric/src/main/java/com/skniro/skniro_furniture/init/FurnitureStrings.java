@@ -11,4 +11,5 @@ public class FurnitureStrings {
     public static final String Oven = "gui.skniro_furniture.oven";
     public static final String TV_Stand = "gui.skniro_furniture.tv_stand";
     public static final String Wall_Cabinet = "gui.skniro_furniture.wall_cabinet";
+    public static final String Glass_Table = "gui.skniro_furniture.glass_table";
 }

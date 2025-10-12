@@ -224,18 +224,18 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
 
 
         //Table
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_OAK,"橡木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_SPRUCE,"云杉木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_BIRCH,"白桦木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_JUNGLE,"丛林木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_ACACIA,"金合欢木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_DARK_OAK,"深色橡木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_CRIMSON,"绯红木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_WARPED,"诡异木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_MANGROVE,"红树木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_BAMBOO,"竹木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_CHERRY,"樱花木桌");
-        translationBuilder.add(MapleFurnitureBlocks.TABLE_PALE_OAK, "苍白橡木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_OAK,"橡木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_SPRUCE,"云杉木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_BIRCH,"白桦木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_JUNGLE,"丛林木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_ACACIA,"金合欢木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_DARK_OAK,"深色橡木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_CRIMSON,"绯红木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WARPED,"诡异木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_MANGROVE,"红树木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_BAMBOO,"竹木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_CHERRY,"樱花木木板桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_PALE_OAK, "苍白橡木木板桌");
 
         //Window
         translationBuilder.add(MapleFurnitureBlocks.Window_WOOD_OAK,"橡木窗");
@@ -316,18 +316,18 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(MapleFurnitureBlocks.Chair_WOOD_PALE_OAK, "苍白橡木椅子");
         translationBuilder.add(MapleFurnitureBlocks.Chair_PLANK_PALE_OAK, "苍白橡木板椅子");
 
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_OAK,"橡木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_SPRUCE,"云杉木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BIRCH,"白桦木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_JUNGLE,"丛林木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_ACACIA,"金合欢木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_DARK_OAK,"深色橡木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CRIMSON,"绯红木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WARPED,"诡异木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_MANGROVE,"红树木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BAMBOO,"竹木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CHERRY,"樱花木板茶几");
-        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_PALE_OAK, "苍白橡木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_OAK,"橡木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_SPRUCE,"云杉木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BIRCH,"白桦木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_JUNGLE,"丛林木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_ACACIA,"金合欢木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_DARK_OAK,"深色橡木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CRIMSON,"绯红木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WARPED,"诡异木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_MANGROVE,"红树木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_BAMBOO,"竹木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_CHERRY,"樱花木木板茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_PALE_OAK, "苍白橡木木板茶几");
 
         translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET, "橡木板床头柜");
         translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET, "橡木床头柜");
@@ -1084,6 +1084,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureStrings.Oven,"烤箱");
         translationBuilder.add(FurnitureStrings.TV_Stand,"电视柜");
         translationBuilder.add(FurnitureStrings.Wall_Cabinet,"壁柜");
+        translationBuilder.add(FurnitureStrings.Glass_Table,"玻璃桌");
 
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_Plate, "橡木盘子");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_Plate, "橡木板盘子");
@@ -2180,6 +2181,33 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureBedroomBlocks.BED_PALE_OAK_RED_WOOD, "红色苍白橡木床");
         translationBuilder.add(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_PLANK, "黑色苍白橡木板床");
         translationBuilder.add(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_WOOD, "黑色苍白橡木床");
+
+        //Table_WOOD
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_OAK,"橡木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE,"云杉木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_BIRCH,"白桦木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE,"丛林木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_ACACIA,"金合欢木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK,"深色橡木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON,"绯红木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_WARPED,"诡异木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE,"红树木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO,"竹木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_CHERRY,"樱花木桌");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK, "苍白橡木桌");
+
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_OAK, "橡木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_PALE_OAK, "苍白橡木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE, "云杉木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH, "白桦木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE, "丛林木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA, "金合欢木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK, "深色橡木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON, "绯红木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED, "诡异木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE, "红树木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO, "竹木茶几");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY, "樱花木茶几");
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
