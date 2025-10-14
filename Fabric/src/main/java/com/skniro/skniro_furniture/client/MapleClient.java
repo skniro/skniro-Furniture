@@ -4,12 +4,14 @@ import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.*;
+import com.skniro.skniro_furniture.client.gui.screen.GlassJarBlockScreen;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
+import com.skniro.skniro_furniture.screen.GlassJarBlockScreenHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -439,6 +441,7 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar, renderLayer4);
 
         HandledScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler, KitchenSinkBlockScreen::new);
+        HandledScreens.register(FurnitureScreenHandlerType.Glass_Jar_Block_Screen_Handler, GlassJarBlockScreen::new);
         registerClientEntityRenderer();
         registerClientParticle();
     }
@@ -453,6 +456,7 @@ public class MapleClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.GLASS_TABLE_BLOCK_ENTITY, GlassTableBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FurnitureBlockEntityType.GLASS_JAR_BLOCK_ENTITY, GlassJarBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)

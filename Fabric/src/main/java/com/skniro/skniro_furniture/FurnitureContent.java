@@ -2251,5 +2251,9 @@ public class FurnitureContent {
 
     public static void registerMapleCompostableItems() {
     }
+
+    public static void registerFurnitureEvent() {
+    }
+
 }
 

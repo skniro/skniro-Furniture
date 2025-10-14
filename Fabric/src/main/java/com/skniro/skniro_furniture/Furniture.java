@@ -58,6 +58,7 @@ public class Furniture implements ModInitializer {
         FurnitureContent.registerMapleCompostableItems();
         FurnitureContent.registerScreenType();
         FurnitureContent.registerRecipeType();
+        FurnitureContent.registerFurnitureEvent();
     }
 
     public static Identifier asResource(String path) {
