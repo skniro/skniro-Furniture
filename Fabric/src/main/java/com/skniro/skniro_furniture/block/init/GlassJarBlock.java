@@ -33,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class GlassJarBlock extends AbstractFurnitureContainerBlock {
     public static final MapCodec<GlassJarBlock> CODEC = createCodec(GlassJarBlock::new);
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 9.5, 11.0);
     public static final EnumProperty<Direction> FACING = Properties.HORIZONTAL_FACING;
 
     public GlassJarBlock(Settings settings) {

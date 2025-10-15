@@ -29,28 +29,42 @@ public class GlassJarBlockEntityRenderer implements BlockEntityRenderer<GlassJar
                        VertexConsumerProvider vertexConsumers, int light, int overlay) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         ItemStack stack = entity.getStack(0);
+        if (stack.isEmpty()) return;
 
-        int itemCount = Math.min( 15, stack.getCount());
-
+        int itemCount = Math.min(30, stack.getCount());
         Random random = new Random(entity.getPos().asLong());
+
+        matrices.push();
+        matrices.translate(0.51, 0.0, 0.47); // 现在 (0,0,0) = 瓶子中心
+
+        float radius = 0.13f;
+        float baseY = 0.03f;
+        float maxHeight = 0.5f;
+
         for (int i = 0; i < itemCount; i++) {
             matrices.push();
 
-            double offsetX = 0.4 + random.nextDouble() * 0.20;
-            double offsetY = 0.3 + random.nextDouble() * 0.20;
-            double offsetZ = 0.4 + random.nextDouble() * 0.20;
+            double angle = random.nextDouble() * Math.PI * 2;
+            double r = radius * Math.sqrt(random.nextDouble());
+            double offsetX = r * Math.cos(angle);
+            double offsetZ = r * Math.sin(angle);
+
+            double offsetY = baseY + random.nextDouble() * maxHeight * 0.4;
+
             matrices.translate(offsetX, offsetY, offsetZ);
 
-            float scale = 0.45f + random.nextFloat() * 0.1f;
+            float scale = 0.33f + random.nextFloat() * 0.02f;
             matrices.scale(scale, scale, scale);
 
-            float rotation = random.nextFloat() * 260.0f;
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(rotation));
+            float horizontalTilt = 80f + random.nextFloat() * 10f;
+            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(horizontalTilt));
 
-            itemRenderer.renderItem(stack, ModelTransformationMode.GROUND, getLightLevel(entity.getWorld(),
-                    entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+            itemRenderer.renderItem(stack, ModelTransformationMode.GROUND, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+
             matrices.pop();
         }
+
+        matrices.pop();
     }
 
 
