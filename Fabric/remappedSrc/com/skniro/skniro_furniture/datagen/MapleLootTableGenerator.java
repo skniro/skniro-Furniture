@@ -2125,5 +2125,56 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         dropSelf(FurnitureBedroomBlocks.BED_PALE_OAK_RED_WOOD);
         dropSelf(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_PLANK);
         dropSelf(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_WOOD);
+
+        dropSelf(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table);
+        dropSelf(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table);
+
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+        dropSelf(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_PALE_OAK);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+        dropSelf(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
     }
 }

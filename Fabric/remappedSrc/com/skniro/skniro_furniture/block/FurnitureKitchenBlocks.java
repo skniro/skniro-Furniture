@@ -289,8 +289,6 @@ public class FurnitureKitchenBlocks {
 
 
 
-
-
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         Block block = (Block)factory.apply(settings.setId(keyOf(name)));
         registerBlockItem(name, block);

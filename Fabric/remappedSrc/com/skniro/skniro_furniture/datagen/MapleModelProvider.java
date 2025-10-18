@@ -935,6 +935,57 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
         blockStateModelGenerator.createNonTemplateHorizontalBlock(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
 
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table);
+
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_PALE_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+        blockStateModelGenerator.createNonTemplateHorizontalBlock(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);

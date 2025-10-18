@@ -239,6 +239,44 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.TABLE_BAMBOO);
             content.accept(MapleFurnitureBlocks.TABLE_CHERRY);
 
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+            content.accept(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+            content.accept(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+            content.accept(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table);
+            content.accept(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table);
+
             //Window
             content.accept(MapleFurnitureBlocks.Window_WOOD_OAK);
             content.accept(MapleFurnitureBlocks.Window_WOOD_PALE_OAK);
@@ -351,6 +389,19 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.END_TABLE_MANGROVE);
             content.accept(MapleFurnitureBlocks.END_TABLE_BAMBOO);
             content.accept(MapleFurnitureBlocks.END_TABLE_CHERRY);
+
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_PALE_OAK);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+            content.accept(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
 
             content.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_WHITE);
             content.accept(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_ORANGE);
@@ -2175,5 +2226,9 @@ public class FurnitureContent {
 
     public static void registerMapleCompostableItems() {
     }
+
+    public static void registerFurnitureEvent() {
+    }
+
 }
 
