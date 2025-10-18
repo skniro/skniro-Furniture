@@ -1632,31 +1632,6 @@ public class FurnitureContent {
             content.add(FurnitureKitchenBlocks.WARPED_HYPHAE_Plate);
             content.add(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
             content.add(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
-
-            content.add(FurnitureKitchenBlocks.Oak_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Oak_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Birch_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Birch_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Warped_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.Warped_Plank_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar);
-            content.add(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar);
         });
 
 

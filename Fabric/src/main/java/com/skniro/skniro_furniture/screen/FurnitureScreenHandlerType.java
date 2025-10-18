@@ -14,10 +14,6 @@ public class FurnitureScreenHandlerType<T extends ScreenHandler>{
             Registry.register(Registries.SCREEN_HANDLER, Identifier.of(Furniture.MOD_ID, "kitchen_sink_screen_handler"),
                     new ExtendedScreenHandlerType<>(KitchenSinkBlockScreenHandler::new, BlockPos.PACKET_CODEC));
 
-    public static final ScreenHandlerType<GlassJarBlockScreenHandler> Glass_Jar_Block_Screen_Handler =
-            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(Furniture.MOD_ID, "glass_jar_screen_handler"),
-                    new ExtendedScreenHandlerType<>(GlassJarBlockScreenHandler::new, BlockPos.PACKET_CODEC));
-
     public static void RegisterFurnitureScreenHandlerType () {
         Furniture.LOGGER.info("Registering Screen Handler for " + Furniture.MOD_ID);
     }

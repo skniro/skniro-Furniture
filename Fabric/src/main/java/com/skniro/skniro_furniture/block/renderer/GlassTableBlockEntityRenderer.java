@@ -48,8 +48,8 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
                 }
             }
 
-            matrices.translate(0.2f, 0.95f, 0.2f);
-            matrices.scale(0.25f, 0.25f, 0.25f);
+            matrices.translate(0.25f, 0.93f, 0.25f);
+            matrices.scale(0.23f, 0.23f, 0.23f);
 
             for (int i = 0; i < 9; i++) {
                 ItemStack stack = entity.getStack(i);
@@ -58,7 +58,7 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
                     float x = (i % 3) * 1.1f;
                     float z = (i / 3) * 1.1f;
                     matrices.translate(x, 0, z);
-                    itemRenderer.renderItem(stack, ModelTransformationMode.GUI, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
+                    itemRenderer.renderItem(stack, ModelTransformationMode.FIXED, getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(), 1);
                     matrices.pop();
                 }
             }

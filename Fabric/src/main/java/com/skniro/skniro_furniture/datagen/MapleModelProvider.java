@@ -986,31 +986,6 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
 
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Oak_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Oak_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Birch_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Birch_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Warped_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.Warped_Plank_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar);
-
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);

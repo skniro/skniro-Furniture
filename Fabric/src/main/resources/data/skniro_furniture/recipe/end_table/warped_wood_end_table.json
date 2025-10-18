@@ -7,7 +7,7 @@
     ],
     "key": {
         "W": "minecraft:warped_slab",
-        "P": "minecraft:stripped_warped_log"
+        "P": "minecraft:stripped_warped_stem"
     },
     "result": {
         "count": 2,

@@ -4,14 +4,12 @@ import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.*;
-import com.skniro.skniro_furniture.client.gui.screen.GlassJarBlockScreen;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
 import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
-import com.skniro.skniro_furniture.screen.GlassJarBlockScreenHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -415,33 +413,9 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table, renderLayer4);
         BlockRenderLayerMap.INSTANCE.putBlock(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table, renderLayer4);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Oak_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Oak_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Birch_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Birch_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Warped_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.Warped_Plank_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar, renderLayer4);
-        BlockRenderLayerMap.INSTANCE.putBlock(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar, renderLayer4);
+
 
         HandledScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler, KitchenSinkBlockScreen::new);
-        HandledScreens.register(FurnitureScreenHandlerType.Glass_Jar_Block_Screen_Handler, GlassJarBlockScreen::new);
         registerClientEntityRenderer();
         registerClientParticle();
     }
@@ -456,7 +430,6 @@ public class MapleClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.GLASS_TABLE_BLOCK_ENTITY, GlassTableBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(FurnitureBlockEntityType.GLASS_JAR_BLOCK_ENTITY, GlassJarBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)

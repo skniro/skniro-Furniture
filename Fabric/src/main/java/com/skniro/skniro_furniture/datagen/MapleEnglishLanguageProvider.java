@@ -2190,30 +2190,7 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO, "Bamboo Wood End Table");
         translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY, "Cherry Wood End Table");
 
-        translationBuilder.add(FurnitureKitchenBlocks.Oak_Wood_Glass_Jar, "Oak Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Oak_Plank_Glass_Jar, "Oak Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar, "Spruce Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar, "Spruce Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Birch_Wood_Glass_Jar, "Birch Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Birch_Plank_Glass_Jar, "Birch Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar, "Jungle Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar, "Jungle Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar, "Acacia Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar, "Acacia Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar, "Dark Oak Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar, "Dark Oak Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar, "Mangrove Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar, "Mangrove Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar, "Bamboo Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar, "Bamboo Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar, "Cherry Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar, "Cherry Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar, "Crimson Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar, "Crimson Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Warped_Wood_Glass_Jar, "Warped Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.Warped_Plank_Glass_Jar, "Warped Plank Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar, "Pale Oak Wood Glass Jar");
-        translationBuilder.add(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar, "Pale Oak Plank Glass Jar");
+
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();

@@ -7,7 +7,7 @@
     ],
     "key": {
         "W": "minecraft:bamboo_slab",
-        "P": "minecraft:stripped_bamboo_log"
+        "P": "minecraft:stripped_bamboo_block"
     },
     "result": {
         "count": 2,

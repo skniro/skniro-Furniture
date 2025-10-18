@@ -2177,30 +2177,5 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
         addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
         addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
-
-        addDrop(FurnitureKitchenBlocks.Oak_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Oak_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Birch_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Birch_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Warped_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.Warped_Plank_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar);
-        addDrop(FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar);
     }
 }

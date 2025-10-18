@@ -975,36 +975,6 @@ public class FurnitureBlockEntityType {
                     )
             );
 
-    public static final BlockEntityType<GlassJarBlockEntity> GLASS_JAR_BLOCK_ENTITY =
-            create("glass_jar_block_entity",
-                    FabricBlockEntityTypeBuilder.create(GlassJarBlockEntity::new,
-                            FurnitureKitchenBlocks.Oak_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Oak_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Spruce_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Spruce_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Birch_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Birch_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Jungle_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Jungle_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Acacia_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Acacia_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.DarkOak_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.DarkOak_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Mangrove_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Mangrove_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Bamboo_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Bamboo_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Cherry_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Cherry_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Crimson_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Crimson_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.Warped_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.Warped_Plank_Glass_Jar,
-                            FurnitureKitchenBlocks.PaleOak_Wood_Glass_Jar,
-                            FurnitureKitchenBlocks.PaleOak_Plank_Glass_Jar
-                    )
-            );
-
 
 
 
