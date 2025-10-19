@@ -8,10 +8,8 @@ import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.registry.RegistryWrapper;
 
 import java.nio.file.Path;
-import java.util.concurrent.CompletableFuture;
 
 public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
     public MapleEnglishLanguageProvider(FabricDataOutput dataGenerator){
@@ -989,6 +987,9 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureStrings.Oven,"Oven");
         translationBuilder.add(FurnitureStrings.TV_Stand,"TV Stand");
         translationBuilder.add(FurnitureStrings.Wall_Cabinet,"Wall Cabinet");
+        translationBuilder.add(FurnitureStrings.Glass_Table,"Glass Table");
+        translationBuilder.add(FurnitureStrings.Glass_Jar,"Glass Jar");
+
 
         translationBuilder.add(FurnitureKitchenBlocks.OAK_WOOD_Plate, "Oak Wood Plate");
         translationBuilder.add(FurnitureKitchenBlocks.OAK_PLANKS_Plate, "Oak Plank Plate");
@@ -1980,6 +1981,54 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureBedroomBlocks.BED_WARPED_RED_WOOD, "Warped Red Wood Bed");
         translationBuilder.add(FurnitureBedroomBlocks.BED_WARPED_BLACK_PLANK, "Warped Black Plank Bed");
         translationBuilder.add(FurnitureBedroomBlocks.BED_WARPED_BLACK_WOOD, "Warped Black Wood Bed");
+
+        translationBuilder.add(MapleFurnitureBlocks.Oak_Wood_Glass_Table, "Oak Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Oak_Plank_Glass_Table, "Oak Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Spruce_Wood_Glass_Table, "Spruce Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Spruce_Plank_Glass_Table, "Spruce Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Birch_Wood_Glass_Table, "Birch Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Birch_Plank_Glass_Table, "Birch Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Jungle_Wood_Glass_Table, "Jungle Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Jungle_Plank_Glass_Table, "Jungle Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Acacia_Wood_Glass_Table, "Acacia Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Acacia_Plank_Glass_Table, "Acacia Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table, "Dark Oak Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table, "Dark Oak Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table, "Mangrove Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table, "Mangrove Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table, "Bamboo Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table, "Bamboo Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Cherry_Wood_Glass_Table, "Cherry Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Cherry_Plank_Glass_Table, "Cherry Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Crimson_Wood_Glass_Table, "Crimson Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Crimson_Plank_Glass_Table, "Crimson Plank Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Warped_Wood_Glass_Table, "Warped Wood Glass Table");
+        translationBuilder.add(MapleFurnitureBlocks.Warped_Plank_Glass_Table, "Warped Plank Glass Table");
+
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_OAK, "Oak Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE, "Spruce Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_BIRCH, "Birch Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE, "Jungle Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_ACACIA, "Acacia Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK, "Dark Oak Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON, "Crimson Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_WARPED, "Warped Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE, "Mangrove Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO, "Bamboo Wood Table");
+        translationBuilder.add(MapleFurnitureBlocks.TABLE_WOOD_CHERRY, "Cherry Wood Table");
+
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_OAK, "Oak Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE, "Spruce Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH, "Birch Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE, "Jungle Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA, "Acacia Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK, "Dark Oak Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON, "Crimson Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED, "Warped Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE, "Mangrove Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO, "Bamboo Wood End Table");
+        translationBuilder.add(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY, "Cherry Wood End Table");
+
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();

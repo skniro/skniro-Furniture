@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "skniro_furniture:jungle_table"
+    },
+    {
+      "item": "minecraft:cauldron"
+    }
+  ],
+  "result": {
+    "item": "skniro_furniture:jungle_plank_glass_table",
+    "count": 1
+  }
+}
