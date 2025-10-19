@@ -13,7 +13,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkBlockScreenHandler> {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "textures/gui/container/kitchen_sink.png");
 

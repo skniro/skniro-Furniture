@@ -424,7 +424,6 @@ public class MapleClient {
         registerClientParticle();
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static void registerClientEntityRenderer() {
         EntityRenderers.register(MapleEntityType.CHAIR_ENTITY.get(), ChairRenderer::new);
         EntityRenderers.register(MapleEntityType.Cushion_ENTITY.get(), CushinoRenderer::new);
@@ -436,7 +435,6 @@ public class MapleClient {
         BlockEntityRenderers.register(FurnitureBlockEntityType.GLASS_TABLE_BLOCK_ENTITY.get(), GlassTableBlockEntityRenderer::new);
     }
 
-    @OnlyIn(Dist.CLIENT)
     public static void registerClientParticle() {
     }
 
