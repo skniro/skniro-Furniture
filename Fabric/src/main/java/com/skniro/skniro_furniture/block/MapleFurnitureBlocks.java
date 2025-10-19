@@ -1252,6 +1252,53 @@ public class MapleFurnitureBlocks {
     public static final Block Crimson_Glass_Sliding_Door = registerBlock("crimson_glass_sliding_door",  new SlidingDoorBlock(BlockSetType.CRIMSON, AbstractBlock.Settings.create().mapColor(Blocks.CRIMSON_PLANKS.getDefaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block Warped_Glass_Sliding_Door = registerBlock("warped_glass_sliding_door",  new SlidingDoorBlock(BlockSetType.WARPED, AbstractBlock.Settings.create().mapColor(Blocks.WARPED_PLANKS.getDefaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
 
+    public static final Block Oak_Wood_Glass_Table = registerBlock("oak_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Oak_Plank_Glass_Table = registerBlock("oak_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Spruce_Wood_Glass_Table = registerBlock("spruce_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Spruce_Plank_Glass_Table = registerBlock("spruce_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Birch_Wood_Glass_Table = registerBlock("birch_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Birch_Plank_Glass_Table = registerBlock("birch_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Jungle_Wood_Glass_Table = registerBlock("jungle_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Jungle_Plank_Glass_Table = registerBlock("jungle_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Acacia_Wood_Glass_Table = registerBlock("acacia_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Acacia_Plank_Glass_Table = registerBlock("acacia_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block DarkOak_Wood_Glass_Table = registerBlock("dark_oak_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block DarkOak_Plank_Glass_Table = registerBlock("dark_oak_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Mangrove_Wood_Glass_Table = registerBlock("mangrove_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Mangrove_Plank_Glass_Table = registerBlock("mangrove_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Bamboo_Wood_Glass_Table = registerBlock("bamboo_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Bamboo_Plank_Glass_Table = registerBlock("bamboo_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Cherry_Wood_Glass_Table = registerBlock("cherry_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Cherry_Plank_Glass_Table = registerBlock("cherry_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Crimson_Wood_Glass_Table = registerBlock("crimson_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Crimson_Plank_Glass_Table = registerBlock("crimson_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Warped_Wood_Glass_Table = registerBlock("warped_wood_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block Warped_Plank_Glass_Table = registerBlock("warped_plank_glass_table", new GlassTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+
+    public static final Block TABLE_WOOD_OAK = registerBlock("oak_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_SPRUCE = registerBlock("spruce_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_BIRCH = registerBlock("birch_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_JUNGLE = registerBlock("jungle_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_ACACIA = registerBlock("acacia_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_DARK_OAK = registerBlock("dark_oak_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_CRIMSON = registerBlock("crimson_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_WARPED = registerBlock("warped_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_MANGROVE = registerBlock("mangrove_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_BAMBOO = registerBlock("bamboo_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
+    public static final Block TABLE_WOOD_CHERRY = registerBlock("cherry_wood_table", new TableBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
+
+    public static final Block END_TABLE_WOOD_OAK = registerBlock("oak_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_SPRUCE = registerBlock("spruce_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_BIRCH = registerBlock("birch_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.BIRCH_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_JUNGLE = registerBlock("jungle_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_ACACIA = registerBlock("acacia_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_DARK_OAK = registerBlock("dark_oak_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_CRIMSON = registerBlock("crimson_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_WARPED = registerBlock("warped_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_MANGROVE = registerBlock("mangrove_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_BAMBOO = registerBlock("bamboo_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
+    public static final Block END_TABLE_WOOD_CHERRY = registerBlock("cherry_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
+
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Furniture.MOD_ID, name), block);
     }

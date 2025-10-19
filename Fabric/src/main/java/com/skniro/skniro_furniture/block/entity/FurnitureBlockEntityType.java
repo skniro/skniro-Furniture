@@ -887,6 +887,34 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<GlassTableBlockEntity> GLASS_TABLE_BLOCK_ENTITY =
+            create("glass_table_block_entity",
+                    FabricBlockEntityTypeBuilder.create(GlassTableBlockEntity::new,
+                            MapleFurnitureBlocks.Oak_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Oak_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Spruce_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Spruce_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Birch_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Birch_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Jungle_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Jungle_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Acacia_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Acacia_Plank_Glass_Table,
+                            MapleFurnitureBlocks.DarkOak_Wood_Glass_Table,
+                            MapleFurnitureBlocks.DarkOak_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Mangrove_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Mangrove_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Bamboo_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Bamboo_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Cherry_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Cherry_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Crimson_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Crimson_Plank_Glass_Table,
+                            MapleFurnitureBlocks.Warped_Wood_Glass_Table,
+                            MapleFurnitureBlocks.Warped_Plank_Glass_Table
+                    )
+            );
+
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "WWW",
+        "P P"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:mangrove_slab"
+        },
+        "P": {
+            "item": "minecraft:stripped_mangrove_log"
+        }
+    },
+    "result": {
+        "count": 2,
+        "id": "skniro_furniture:mangrove_wood_end_table"
+    }
+}

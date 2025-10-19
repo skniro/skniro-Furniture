@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.Set;
 import java.util.function.Supplier;
 
 
@@ -869,6 +870,33 @@ public class FurnitureBlockEntityType {
                                     FurnitureLivingroomBlocks.TV_GREEN.get(),
                                     FurnitureLivingroomBlocks.TV_RED.get(),
                                     FurnitureLivingroomBlocks.TV_BLACK.get()
+                    ).build(null));
+
+    public static final Supplier<BlockEntityType<GlassTableBlockEntity>> GLASS_TABLE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("glass_table_block_entity",
+                    () -> BlockEntityType.Builder.of(GlassTableBlockEntity::new,
+                            MapleFurnitureBlocks.Oak_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Oak_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Spruce_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Spruce_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Birch_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Birch_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Jungle_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Jungle_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Acacia_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Acacia_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.DarkOak_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.DarkOak_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Mangrove_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Mangrove_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Bamboo_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Bamboo_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Cherry_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Cherry_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Crimson_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Crimson_Plank_Glass_Table.get(),
+                            MapleFurnitureBlocks.Warped_Wood_Glass_Table.get(),
+                            MapleFurnitureBlocks.Warped_Plank_Glass_Table.get()
                     ).build(null));
 
     public static void registerMapleBlockEntityType(IEventBus eventBus) {
