@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:cherry_table",
+        "minecraft:cauldron"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:cherry_plank_glass_table"
+    }
+}

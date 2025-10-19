@@ -6,7 +6,6 @@ import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -2127,5 +2126,56 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureBedroomBlocks.BED_PALE_OAK_RED_WOOD);
         addDrop(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_PLANK);
         addDrop(FurnitureBedroomBlocks.BED_PALE_OAK_BLACK_WOOD);
+
+        addDrop(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+        addDrop(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table);
+        addDrop(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table);
+
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+        addDrop(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_PALE_OAK);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+        addDrop(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
     }
 }

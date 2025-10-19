@@ -1,0 +1,6 @@
+{
+  "parent": "skniro_furniture:block/end_table",
+  "textures": {
+    "plank": "minecraft:block/stripped_oak_log"
+  }
+}
