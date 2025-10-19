@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "skniro_furniture:crimson_table"
+    },
+    {
+      "item": "minecraft:cauldron"
+    }
+  ],
+  "result": {
+    "item": "skniro_furniture:crimson_plank_glass_table",
+    "count": 1
+  }
+}

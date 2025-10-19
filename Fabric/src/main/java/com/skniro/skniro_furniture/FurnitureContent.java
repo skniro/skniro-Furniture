@@ -222,6 +222,41 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.TABLE_BAMBOO);
             content.add(MapleFurnitureBlocks.TABLE_CHERRY);
 
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+            content.add(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+            content.add(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+            content.add(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+            content.add(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+
             //Window
             content.add(MapleFurnitureBlocks.Window_WOOD_OAK);
             content.add(MapleFurnitureBlocks.Window_WOOD_BIRCH);
@@ -325,6 +360,18 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.END_TABLE_MANGROVE);
             content.add(MapleFurnitureBlocks.END_TABLE_BAMBOO);
             content.add(MapleFurnitureBlocks.END_TABLE_CHERRY);
+
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+            content.add(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
 
             content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_WHITE);
             content.add(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_ORANGE);

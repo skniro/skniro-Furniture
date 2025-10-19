@@ -870,6 +870,53 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BAMBOO_PLANKS_Plate);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(FurnitureKitchenBlocks.BAMBOO_BLOCK_Plate);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Oak_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Oak_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Spruce_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Spruce_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Birch_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Birch_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Jungle_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Jungle_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Acacia_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Acacia_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Cherry_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Cherry_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Crimson_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Crimson_Plank_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Warped_Wood_Glass_Table);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.Warped_Plank_Glass_Table);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_OAK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_SPRUCE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_BIRCH);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_JUNGLE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_ACACIA);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_DARK_OAK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_CRIMSON);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_WARPED);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_MANGROVE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_BAMBOO);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.TABLE_WOOD_CHERRY);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_OAK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_SPRUCE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_BIRCH);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_JUNGLE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_ACACIA);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_DARK_OAK);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_CRIMSON);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_WARPED);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_MANGROVE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_BAMBOO);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(MapleFurnitureBlocks.END_TABLE_WOOD_CHERRY);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);

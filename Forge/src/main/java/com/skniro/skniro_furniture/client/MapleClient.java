@@ -4,10 +4,7 @@ import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
-import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.PlateBlockEntityRenderer;
+import com.skniro.skniro_furniture.block.renderer.*;
 import com.skniro.skniro_furniture.client.gui.screen.KitchenSinkBlockScreen;
 import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
@@ -365,6 +362,29 @@ public class MapleClient {
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Crimson_Glass_Sliding_Door.get(), renderLayer4);
         ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Warped_Glass_Sliding_Door.get(), renderLayer4);
 
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Oak_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Oak_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Spruce_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Spruce_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Birch_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Birch_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Jungle_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Jungle_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Acacia_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Acacia_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Cherry_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Cherry_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Crimson_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Crimson_Plank_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Warped_Wood_Glass_Table.get(), renderLayer4);
+        ItemBlockRenderTypes.setRenderLayer(MapleFurnitureBlocks.Warped_Plank_Glass_Table.get(), renderLayer4);
+
         MenuScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler.get(), KitchenSinkBlockScreen::new);
         registerClientEntityRenderer();
         registerClientParticle();
@@ -378,6 +398,7 @@ public class MapleClient {
         BlockEntityRenderers.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY.get(), OvenBlockEntityRenderer::new);
         BlockEntityRenderers.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY.get(), KitchenSinkBlockEntityRenderer::new);
         BlockEntityRenderers.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY.get(), PlateBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.GLASS_TABLE_BLOCK_ENTITY.get(), GlassTableBlockEntityRenderer::new);
     }
 
     public static void registerClientParticle() {
