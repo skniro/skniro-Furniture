@@ -14,13 +14,12 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
-@net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+@Environment(EnvType.CLIENT)
 public class MapleClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -389,6 +388,33 @@ public class MapleClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Warped_Glass_Sliding_Door, renderLayer4);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door, renderLayer4);
 
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Oak_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Oak_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Spruce_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Spruce_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Birch_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Birch_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Jungle_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Jungle_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Acacia_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Acacia_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.DarkOak_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.DarkOak_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Mangrove_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Mangrove_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Bamboo_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Bamboo_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Cherry_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Cherry_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Crimson_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Crimson_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Warped_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Warped_Plank_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.PaleOak_Wood_Glass_Table, renderLayer4);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.PaleOak_Plank_Glass_Table, renderLayer4);
+
+
+
         HandledScreens.register(FurnitureScreenHandlerType.Kitchen_Sink_Block_Screen_Handler, KitchenSinkBlockScreen::new);
         registerClientEntityRenderer();
         registerClientParticle();
@@ -404,6 +430,7 @@ public class MapleClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, OvenBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Kitchen_Sink_BLOCK_ENTITY, KitchenSinkBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FurnitureBlockEntityType.Plate_BLOCK_ENTITY, PlateBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FurnitureBlockEntityType.GLASS_TABLE_BLOCK_ENTITY, GlassTableBlockEntityRenderer::new);
     }
 
     @Environment(EnvType.CLIENT)

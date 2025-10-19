@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "skniro_furniture:spruce_wood_table",
+        "minecraft:glass_pane"
+    ],
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:spruce_wood_glass_table"
+    }
+}
