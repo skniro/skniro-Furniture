@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         "skniro_furniture:cherry_table",
-        "minecraft:cauldron"
+        "minecraft:glass_pane"
     ],
     "result": {
         "count": 1,
