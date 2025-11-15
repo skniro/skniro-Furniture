@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.block.api.world.inventory.FurnitureChestMenu;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -20,6 +21,6 @@ public class DeskCabinetBlockEntity extends AbstractFurnitureContainerBlockEntit
     }
 
     protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
-        return ChestMenu.twoRows(syncId, playerInventory);
+        return FurnitureChestMenu.twoRows(syncId, playerInventory, this);
     }
 }
