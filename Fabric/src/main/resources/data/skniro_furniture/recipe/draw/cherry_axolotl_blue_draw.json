@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_cherry_log",
+        "Q": "minecraft:blue_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:cherry_axolotl_blue_draw"
+    }
+}

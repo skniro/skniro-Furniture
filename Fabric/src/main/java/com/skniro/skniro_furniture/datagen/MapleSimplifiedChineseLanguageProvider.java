@@ -1,10 +1,7 @@
 package com.skniro.skniro_furniture.datagen;
 
 import com.skniro.skniro_furniture.Furniture;
-import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
-import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
-import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
-import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
