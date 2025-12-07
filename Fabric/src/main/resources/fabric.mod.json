@@ -7,7 +7,9 @@
   "authors": [
     "skniro"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://skniro.org"
+  },
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
