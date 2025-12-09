@@ -11,6 +11,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "skniro_furniture:acacia_light_gray_plank_bed",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "head"
+              }
+            }
+          ],
           "name": "skniro_furniture:acacia_light_gray_plank_bed"
         }
       ],

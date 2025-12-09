@@ -11,6 +11,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "skniro_furniture:spruce_lime_wood_bed",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "head"
+              }
+            }
+          ],
           "name": "skniro_furniture:spruce_lime_wood_bed"
         }
       ],
