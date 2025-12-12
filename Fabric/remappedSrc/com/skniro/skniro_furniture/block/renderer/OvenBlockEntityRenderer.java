@@ -22,7 +22,7 @@ import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.math.*;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -32,7 +32,7 @@ import org.joml.Matrix4f;
 
 public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEntity, OvenBlockEntityRenderState> {
 
-    private static final ResourceLocation LIGHT_TEXTURE = ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, "textures/block/oven_light.png");
+    private static final Identifier LIGHT_TEXTURE = Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "textures/block/oven_light.png");
 
     public OvenBlockEntityRenderer(BlockEntityRendererProvider.Context ctx) {}
 

@@ -5,7 +5,7 @@ import com.mojang.math.Quadrant;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.skniro.skniro_furniture.block.entity.FurnitureBedBlockEntity;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -13,7 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.item.DyeColor;
@@ -93,10 +93,6 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
     @Nullable
     public boolean skipRendering(BlockState state, BlockState neighborState, Direction offset) {
         return neighborState.getBlock() instanceof FurnitureBedBlock;
-    }
-
-    public static boolean canSetSpawn(Level world) {
-        return world.dimensionType().bedWorks();
     }
 
     private boolean kickVillagerOutOfBed(Level world, BlockPos pos) {
@@ -281,7 +277,7 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
         OCCUPIED = BlockStateProperties.OCCUPIED;
         SHAPES_BY_DIRECTION = (Map)Util.make(() -> {
             VoxelShape voxelShape = Block.box((double)0.0F, (double)0.0F, (double)0.0F, (double)2.0F, (double)2.0F, (double)2.0F);
-            VoxelShape voxelShape2 = Shapes.rotate(voxelShape, OctahedralGroup.fromXYAngles(Quadrant.R0, Quadrant.R90));
+            VoxelShape voxelShape2 = Shapes.rotate(voxelShape, OctahedralGroup.BLOCK_ROT_Y_90);
             return Shapes.rotateHorizontal(Shapes.or(Block.column((double)16.0F, (double)2.0F, (double)7.5F), new VoxelShape[]{voxelShape, voxelShape2}));
         });
     }

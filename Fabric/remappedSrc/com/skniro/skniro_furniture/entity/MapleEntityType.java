@@ -12,7 +12,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.datafix.fixes.References;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -37,10 +37,10 @@ public class MapleEntityType {
 
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
         Type<?> type = Util.fetchChoiceType(References.ENTITY, name);
-        return (EntityType) Registry.register(BuiltInRegistries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name), builder.build(keyOf(name)));
+        return (EntityType) Registry.register(BuiltInRegistries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name), builder.build(keyOf(name)));
     }
     private static ResourceKey<EntityType<?>> keyOf(String name) {
-        return ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name));
+        return ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name));
     }
 
     private static EntityType.EntityFactory<Boat> getBoatFactory(Supplier<Item> itemSupplier) {

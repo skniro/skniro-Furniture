@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
@@ -33,7 +33,7 @@ public class MapleEntityType {
                     .sized(0.5f, 0.5f).build(keyOf("sofa_entity")));
 
     private static ResourceKey<EntityType<?>> keyOf(String name) {
-        return ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID, name));
+        return ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name));
     }
 
     public static void registerMapleEntityType(BusGroup eventBus) {

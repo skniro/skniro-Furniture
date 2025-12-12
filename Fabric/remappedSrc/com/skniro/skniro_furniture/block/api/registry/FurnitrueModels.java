@@ -5,7 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import java.util.Optional;
 
 @Environment(EnvType.CLIENT)
@@ -32,6 +32,6 @@ public class FurnitrueModels {
     }
 
     private static ModelTemplate block(String parent, String variant, TextureSlot... requiredTextureKeys) {
-        return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID,"block/furniture/door/" + parent)), Optional.of(variant), requiredTextureKeys);
+        return new ModelTemplate(Optional.of(Identifier.fromNamespaceAndPath(Furniture.MOD_ID,"block/furniture/door/" + parent)), Optional.of(variant), requiredTextureKeys);
     }
 }

@@ -51,7 +51,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
         matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(angle));
 
         if (state.blockState.get(OvenBlock.LIT)) {
-            queue.submitCustom(matrices, RenderLayer.getEyes(LIGHT_TEXTURE), (matricesEntry, vertexConsumer) -> {
+            queue.submitCustom(matrices, RenderLayers.eyes(LIGHT_TEXTURE), (matricesEntry, vertexConsumer) -> {
                 Matrix4f mat = matricesEntry.getPositionMatrix();
                 int light = LightmapTextureManager.MAX_LIGHT_COORDINATE; // 保持全亮
                 drawQuad(mat, vertexConsumer, 0x80FFFF00, light);

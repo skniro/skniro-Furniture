@@ -24,21 +24,22 @@ public class MapleClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        BlockRenderLayer renderLayer2 = BlockRenderLayer.CUTOUT_MIPPED;
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_OAK,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_SPRUCE,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_BIRCH,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_JUNGLE,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_ACACIA,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_DARK_OAK,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_CRIMSON,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_WARPED,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_MANGROVE,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_BAMBOO,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_CHERRY,renderLayer2);
-        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_PALE_OAK,renderLayer2);
+        BlockRenderLayer renderLayer2 = BlockRenderLayer.TRIPWIRE;
 
         BlockRenderLayer renderLayer3 = BlockRenderLayer.CUTOUT;
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_OAK,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_SPRUCE,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_BIRCH,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_JUNGLE,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_ACACIA,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_DARK_OAK,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_CRIMSON,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_WARPED,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_MANGROVE,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_BAMBOO,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_CHERRY,renderLayer3);
+        BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.TABLE_PALE_OAK,renderLayer3);
+
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_OAK, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_BIRCH, renderLayer3);
         BlockRenderLayerMap.putBlock(MapleFurnitureBlocks.Window_WOOD_SPRUCE, renderLayer3);

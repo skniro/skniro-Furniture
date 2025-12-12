@@ -3,7 +3,7 @@ package com.skniro.skniro_furniture.block.api.registry;
 import com.skniro.skniro_furniture.Furniture;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
@@ -32,6 +32,6 @@ public class FurnitrueModels {
     }
 
     private static ModelTemplate block(String parent, String variant, TextureSlot... requiredTextureKeys) {
-        return new ModelTemplate(Optional.of(ResourceLocation.fromNamespaceAndPath(Furniture.MOD_ID,"block/furniture/door/" + parent)), Optional.of(variant), requiredTextureKeys);
+        return new ModelTemplate(Optional.of(Identifier.fromNamespaceAndPath(Furniture.MOD_ID,"block/furniture/door/" + parent)), Optional.of(variant), requiredTextureKeys);
     }
 }

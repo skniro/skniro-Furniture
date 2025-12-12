@@ -95,10 +95,6 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
         return neighborState.getBlock() instanceof FurnitureBedBlock;
     }
 
-    public static boolean isBedWorking(World world) {
-        return world.getDimension().bedWorks();
-    }
-
     private boolean wakeVillager(World world, BlockPos pos) {
         List<VillagerEntity> list = world.getEntitiesByClass(VillagerEntity.class, new Box(pos), LivingEntity::isSleeping);
         if (list.isEmpty()) {
@@ -281,7 +277,7 @@ public class FurnitureBedBlock extends BedBlock implements BlockEntityProvider {
         OCCUPIED = Properties.OCCUPIED;
         SHAPES_BY_DIRECTION = (Map)Util.make(() -> {
             VoxelShape voxelShape = Block.createCuboidShape((double)0.0F, (double)0.0F, (double)0.0F, (double)2.0F, (double)2.0F, (double)2.0F);
-            VoxelShape voxelShape2 = VoxelShapes.transform(voxelShape, DirectionTransformation.fromRotations(AxisRotation.R0, AxisRotation.R90));
+            VoxelShape voxelShape2 = VoxelShapes.transform(voxelShape, DirectionTransformation.field_64511);
             return VoxelShapes.createHorizontalFacingShapeMap(VoxelShapes.union(Block.createColumnShape((double)16.0F, (double)2.0F, (double)7.5F), new VoxelShape[]{voxelShape, voxelShape2}));
         });
     }

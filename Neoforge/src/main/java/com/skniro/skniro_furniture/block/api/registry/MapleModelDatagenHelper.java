@@ -12,7 +12,7 @@ import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.renderer.block.model.VariantMutator;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
@@ -58,8 +58,8 @@ public class MapleModelDatagenHelper {
     }
 
     public void registerFridge(Block block) {
-        ResourceLocation bottomModel = ModelLocationUtils.getModelLocation(block, "_bottom");
-        ResourceLocation topModel = ModelLocationUtils.getModelLocation(block, "_top");
+        Identifier bottomModel = ModelLocationUtils.getModelLocation(block, "_bottom");
+        Identifier topModel = ModelLocationUtils.getModelLocation(block, "_top");
 
         PropertyDispatch.C2<MultiVariant,Direction, DoubleBlockHalf> variantMap =
                 PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.DOUBLE_BLOCK_HALF);
@@ -74,7 +74,7 @@ public class MapleModelDatagenHelper {
     public static PropertyDispatch.C2<MultiVariant, Direction, DoubleBlockHalf> fillSimpleDoubleVariantMap(
             PropertyDispatch.C2<MultiVariant, Direction, DoubleBlockHalf> variantMap,
             DoubleBlockHalf targetHalf,
-            ResourceLocation baseModelId
+            Identifier baseModelId
     ) {
         return variantMap
                 .select(Direction.NORTH, targetHalf, plainVariant(baseModelId))
@@ -135,8 +135,8 @@ public class MapleModelDatagenHelper {
 
 
     public final void registerBed(Block block) {
-        ResourceLocation headModel = ModelLocationUtils.getModelLocation(block, "_head");
-        ResourceLocation footModel = ModelLocationUtils.getModelLocation(block, "_foot");
+        Identifier headModel = ModelLocationUtils.getModelLocation(block, "_head");
+        Identifier footModel = ModelLocationUtils.getModelLocation(block, "_foot");
 
         PropertyDispatch.C2<MultiVariant,Direction, BedPart> variantMap =
                 PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, FurnitureBedBlock.PART);
@@ -155,7 +155,7 @@ public class MapleModelDatagenHelper {
     public static PropertyDispatch.C2<MultiVariant, Direction, BedPart> fillSimpleDoubleVariantMap(
             PropertyDispatch.C2<MultiVariant, Direction, BedPart> variantMap,
             BedPart targetHalf,
-            ResourceLocation baseModelId
+            Identifier baseModelId
     ) {
         return variantMap
                 .select(Direction.NORTH, targetHalf, plainVariant(baseModelId))

@@ -154,7 +154,7 @@ public class MapleModelDatagenHelper {
     public void registerTV(Block block) {
         WeightedVariant identifier = createWeightedVariant(ModelIds.getBlockModelId(block));
         WeightedVariant identifier2 = createWeightedVariant(ModelIds.getBlockSubModelId(block,"_open"));
-        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(createBooleanModelMap(Properties.LIT, identifier2, identifier)).coordinate(NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS));
+        generator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block).with(createBooleanModelMap(Properties.LIT, identifier2, identifier)).apply(NORTH_DEFAULT_HORIZONTAL_ROTATION_OPERATIONS));
     }
 
     public static BlockStateVariantMap.DoubleProperty<WeightedVariant, Direction, BedPart> fillSimpleDoubleVariantMap(
