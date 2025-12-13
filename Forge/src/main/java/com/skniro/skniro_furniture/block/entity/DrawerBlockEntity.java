@@ -18,11 +18,9 @@ public class DrawerBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
     @Override
     protected Component getDefaultName() {
-        if(getBlockState().getValue(FridgeBlock.HALF) == DoubleBlockHalf.UPPER) {
-            return Component.translatable(FurnitureStrings.Fridge_UPPER);
-        }
-        return Component.translatable(FurnitureStrings.Fridge_LOWER);
+        return Component.translatable(FurnitureStrings.Drawer);
     }
+
     protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
         return ChestMenu.threeRows(syncId, playerInventory, this);
     }

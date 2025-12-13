@@ -14,6 +14,7 @@ public class DrawerBlockEntity extends AbstractFurnitureContainerBlockEntity {
         super(FurnitureBlockEntityType.Drawer_BLOCK_ENTITY.get(), pos, state,27);
     }
 
+    @Override
     protected Component getDefaultName() {
         return Component.translatable(FurnitureStrings.Drawer);
     }
