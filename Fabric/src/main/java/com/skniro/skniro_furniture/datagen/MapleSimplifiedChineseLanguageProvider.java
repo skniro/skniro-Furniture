@@ -2240,7 +2240,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Oak_Creeper_Draw, "橡木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Oak_Cat_Ragdoll_Draw, "橡木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Oak_Ender_Dragon_Draw, "橡木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Oak_Happy_Ghast_Draw, "橡木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Oak_Happy_Ghast_Draw, "橡木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Oak_Mooshroom_Draw, "橡木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Oak_Panda_Draw, "橡木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Oak_Pig_Draw, "橡木框猪画");
@@ -2256,7 +2256,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Creeper_Draw, "云杉木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Cat_Ragdoll_Draw, "云杉木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Ender_Dragon_Draw, "云杉木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Spruce_Happy_Ghast_Draw, "云杉木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Spruce_Happy_Ghast_Draw, "云杉木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Mooshroom_Draw, "云杉木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Panda_Draw, "云杉木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Spruce_Pig_Draw, "云杉木框猪画");
@@ -2272,7 +2272,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Birch_Creeper_Draw, "白桦木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Birch_Cat_Ragdoll_Draw, "白桦木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Birch_Ender_Dragon_Draw, "白桦木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Birch_Happy_Ghast_Draw, "白桦木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Birch_Happy_Ghast_Draw, "白桦木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Birch_Mooshroom_Draw, "白桦木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Birch_Panda_Draw, "白桦木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Birch_Pig_Draw, "白桦木框猪画");
@@ -2288,7 +2288,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Creeper_Draw, "丛林木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Cat_Ragdoll_Draw, "丛林木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Ender_Dragon_Draw, "丛林木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Jungle_Happy_Ghast_Draw, "丛林木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Jungle_Happy_Ghast_Draw, "丛林木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Mooshroom_Draw, "丛林木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Panda_Draw, "丛林木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Jungle_Pig_Draw, "丛林木框猪画");
@@ -2304,7 +2304,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Creeper_Draw, "金合欢木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Cat_Ragdoll_Draw, "金合欢木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Ender_Dragon_Draw, "金合欢木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Acacia_Happy_Ghast_Draw, "金合欢木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Acacia_Happy_Ghast_Draw, "金合欢木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Mooshroom_Draw, "金合欢木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Panda_Draw, "金合欢木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Acacia_Pig_Draw, "金合欢木框猪画");
@@ -2320,7 +2320,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Creeper_Draw, "深色橡木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Cat_Ragdoll_Draw, "深色橡木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Ender_Dragon_Draw, "深色橡木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.DarkOak_Happy_Ghast_Draw, "深色橡木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.DarkOak_Happy_Ghast_Draw, "深色橡木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Mooshroom_Draw, "深色橡木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Panda_Draw, "深色橡木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.DarkOak_Pig_Draw, "深色橡木框猪画");
@@ -2336,7 +2336,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Creeper_Draw, "红树木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Cat_Ragdoll_Draw, "红树木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Ender_Dragon_Draw, "红树木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Mangrove_Happy_Ghast_Draw, "红树木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Mangrove_Happy_Ghast_Draw, "红树木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Mooshroom_Draw, "红树木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Panda_Draw, "红树木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Mangrove_Pig_Draw, "红树木框猪画");
@@ -2352,7 +2352,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Creeper_Draw, "竹木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Cat_Ragdoll_Draw, "竹木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Ender_Dragon_Draw, "竹木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Bamboo_Happy_Ghast_Draw, "竹木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Bamboo_Happy_Ghast_Draw, "竹木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Mooshroom_Draw, "竹木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Panda_Draw, "竹木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Bamboo_Pig_Draw, "竹木框猪画");
@@ -2368,7 +2368,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Creeper_Draw, "樱花木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Cat_Ragdoll_Draw, "樱花木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Ender_Dragon_Draw, "樱花木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Cherry_Happy_Ghast_Draw, "樱花木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Cherry_Happy_Ghast_Draw, "樱花木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Mooshroom_Draw, "樱花木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Panda_Draw, "樱花木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Cherry_Pig_Draw, "樱花木框猪画");
@@ -2384,7 +2384,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Creeper_Draw, "绯红木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Cat_Ragdoll_Draw, "绯红木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Ender_Dragon_Draw, "绯红木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Crimson_Happy_Ghast_Draw, "绯红木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Crimson_Happy_Ghast_Draw, "绯红木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Mooshroom_Draw, "绯红木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Panda_Draw, "绯红木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Crimson_Pig_Draw, "绯红木框猪画");
@@ -2400,7 +2400,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Warped_Creeper_Draw, "诡异木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Cat_Ragdoll_Draw, "诡异木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Ender_Dragon_Draw, "诡异木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.Warped_Happy_Ghast_Draw, "诡异木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.Warped_Happy_Ghast_Draw, "诡异木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Mooshroom_Draw, "诡异木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Panda_Draw, "诡异木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Pig_Draw, "诡异木框猪画");
@@ -2416,7 +2416,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Creeper_Draw, "淡色橡木框苦力怕画");
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Cat_Ragdoll_Draw, "淡色橡木框布偶猫画");
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Ender_Dragon_Draw, "淡色橡木框末影龙画");
-        translationBuilder.add(FurnitureDrawBlocks.PaleOak_Happy_Ghast_Draw, "淡色橡木框快乐幽灵画");
+        translationBuilder.add(FurnitureDrawBlocks.PaleOak_Happy_Ghast_Draw, "淡色橡木框快乐恶魂画");
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Mooshroom_Draw, "淡色橡木框哞菇画");
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Panda_Draw, "淡色橡木框熊猫画");
         translationBuilder.add(FurnitureDrawBlocks.PaleOak_Pig_Draw, "淡色橡木框猪画");
