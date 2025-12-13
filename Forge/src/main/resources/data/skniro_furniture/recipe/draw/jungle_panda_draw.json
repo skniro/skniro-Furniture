@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_jungle_log",
+        "Q": "minecraft:black_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:jungle_panda_draw"
+    }
+}

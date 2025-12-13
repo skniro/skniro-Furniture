@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_acacia_log",
+        "Q": "minecraft:pink_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:acacia_pig_draw"
+    }
+}

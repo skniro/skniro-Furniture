@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.block.entity;
 
+import com.skniro.skniro_furniture.block.init.FridgeBlock;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -7,6 +8,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 
 public class FridgeBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
@@ -16,7 +18,10 @@ public class FridgeBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable(FurnitureStrings.Fridge);
+        if(getBlockState().getValue(FridgeBlock.HALF) == DoubleBlockHalf.UPPER) {
+            return Component.translatable(FurnitureStrings.Fridge_UPPER);
+        }
+        return Component.translatable(FurnitureStrings.Fridge_LOWER);
     }
 
     @Override
