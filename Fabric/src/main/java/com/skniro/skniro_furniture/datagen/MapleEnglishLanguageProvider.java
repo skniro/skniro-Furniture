@@ -1053,6 +1053,8 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureStrings.Drawer,"Drawer");
         translationBuilder.add(FurnitureStrings.Desk_Cabinet,"Desk Cabinet");
         translationBuilder.add(FurnitureStrings.Fridge,"Fridge");
+        translationBuilder.add(FurnitureStrings.Fridge_UPPER,"Fridge Upper");
+        translationBuilder.add(FurnitureStrings.Fridge_LOWER,"Fridge Lower");
         translationBuilder.add(FurnitureStrings.Kitchen_Cabinet,"Kitchen Cabinet");
         translationBuilder.add(FurnitureStrings.Oven,"Oven");
         translationBuilder.add(FurnitureStrings.TV_Stand,"TV Stand");

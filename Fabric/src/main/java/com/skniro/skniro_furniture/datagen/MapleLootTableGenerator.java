@@ -993,22 +993,22 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureLivingroomBlocks.BAMBOO_PLANKS_TV_STAND);
         addDrop(FurnitureLivingroomBlocks.BAMBOO_BLOCK_TV_STAND);
 
-        addDrop(FurnitureKitchenBlocks.WHITE_Fridge);
-        addDrop(FurnitureKitchenBlocks.ORANGE_Fridge);
-        addDrop(FurnitureKitchenBlocks.MAGENTA_Fridge);
-        addDrop(FurnitureKitchenBlocks.LIGHT_BLUE_Fridge);
-        addDrop(FurnitureKitchenBlocks.YELLOW_Fridge);
-        addDrop(FurnitureKitchenBlocks.LIME_Fridge);
-        addDrop(FurnitureKitchenBlocks.PINK_Fridge);
-        addDrop(FurnitureKitchenBlocks.GRAY_Fridge);
-        addDrop(FurnitureKitchenBlocks.LIGHT_GRAY_Fridge);
-        addDrop(FurnitureKitchenBlocks.CYAN_Fridge);
-        addDrop(FurnitureKitchenBlocks.PURPLE_Fridge);
-        addDrop(FurnitureKitchenBlocks.BLUE_Fridge);
-        addDrop(FurnitureKitchenBlocks.BROWN_Fridge);
-        addDrop(FurnitureKitchenBlocks.GREEN_Fridge);
-        addDrop(FurnitureKitchenBlocks.RED_Fridge);
-        addDrop(FurnitureKitchenBlocks.BLACK_Fridge);
+        addDrop(FurnitureKitchenBlocks.WHITE_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.ORANGE_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.MAGENTA_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.LIGHT_BLUE_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.YELLOW_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.LIME_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.PINK_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.GRAY_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.LIGHT_GRAY_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.CYAN_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.PURPLE_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.BLUE_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.BROWN_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.GREEN_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.RED_Fridge, this::doorDrops);
+        addDrop(FurnitureKitchenBlocks.BLACK_Fridge, this::doorDrops);
 
         addDrop(FurnitureKitchenBlocks.WHITE_KITCHEN_SINK);
         addDrop(FurnitureKitchenBlocks.ORANGE_KITCHEN_SINK);

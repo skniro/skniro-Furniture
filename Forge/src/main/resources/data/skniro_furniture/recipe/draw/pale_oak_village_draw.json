@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_pale_oak_log",
+        "Q": "minecraft:orange_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:pale_oak_village_draw"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_oak_log",
+        "Q": "minecraft:black_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:oak_panda_draw"
+    }
+}

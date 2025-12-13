@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_crimson_stem",
+        "Q": "minecraft:blue_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:crimson_axolotl_blue_draw"
+    }
+}
