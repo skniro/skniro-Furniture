@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": "minecraft:stripped_warped_stem",
+        "Q": "minecraft:light_gray_dye"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:warped_cat_ragdoll_draw"
+    }
+}

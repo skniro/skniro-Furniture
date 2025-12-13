@@ -1,23 +1,21 @@
 package com.skniro.skniro_furniture.item;
 
 import com.skniro.skniro_furniture.Furniture;
-import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
-import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
-import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
-import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 public class FurnitureCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Furniture.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
+    public static final Supplier<CreativeModeTab> Maple_Group_Furniture = CREATIVE_MODE_TABS.register("maple_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(MapleFurnitureBlocks.OAK_PLANKS_Glass_Four_Grid_Cabinet.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.maple_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -227,6 +225,7 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.TABLE_MANGROVE.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_BAMBOO.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_CHERRY.get());
+
 
                         pOutput.accept(MapleFurnitureBlocks.TABLE_WOOD_OAK.get());
                         pOutput.accept(MapleFurnitureBlocks.TABLE_WOOD_PALE_OAK.get());
@@ -756,6 +755,7 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.GREEN_Ceiling_Lamp.get());
                         pOutput.accept(MapleFurnitureBlocks.RED_Ceiling_Lamp.get());
                         pOutput.accept(MapleFurnitureBlocks.BLACK_Ceiling_Lamp.get());
+
 
                         pOutput.accept(MapleFurnitureBlocks.Oak_White_Paper_Sliding_Door.get());
                         pOutput.accept(MapleFurnitureBlocks.Oak_Orange_Paper_Sliding_Door.get());
@@ -1349,10 +1349,203 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.PaleOak_Green_Grid_Glass_Sliding_Door.get());
                         pOutput.accept(MapleFurnitureBlocks.PaleOak_Red_Grid_Glass_Sliding_Door.get());
                         pOutput.accept(MapleFurnitureBlocks.PaleOak_Black_Grid_Glass_Sliding_Door.get());
+
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Oak_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Spruce_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Birch_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Jungle_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Acacia_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.DarkOak_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Mangrove_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Bamboo_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Cherry_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Crimson_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Allay_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Axolotl_Blue_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Bee_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Creeper_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Cat_Ragdoll_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Ender_Dragon_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Happy_Ghast_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Mooshroom_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Panda_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Pig_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Slime_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Steve_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Village_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Wolf_Snowy_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Zombie_Draw.get());
+                        pOutput.accept(FurnitureDrawBlocks.PaleOak_Slime_Magenta_Draw.get());
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Bedroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_bedroom_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -1835,7 +2028,7 @@ public class FurnitureCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Livingroom_Furniture = CREATIVE_MODE_TABS.register( "furniture_livingroom_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureLivingroomBlocks.OAK_PLANKS_TV_STAND.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_livingroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
@@ -1925,7 +2118,7 @@ public class FurnitureCreativeModeTabs {
                     })
                     .build());
 
-    public static final RegistryObject<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
+    public static final Supplier<CreativeModeTab> Furniture_Group_Kitchen_Furniture = CREATIVE_MODE_TABS.register("furniture_kitchen_group_furniture",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureKitchenBlocks.OAK_PLANKS_OVEN.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_kitchen_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {

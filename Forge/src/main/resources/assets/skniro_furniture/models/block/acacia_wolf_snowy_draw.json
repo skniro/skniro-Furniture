@@ -1,0 +1,7 @@
+{
+    "parent": "skniro_furniture:block/furniture/draw/draw",
+    "textures": {
+        "color": "skniro_furniture:block/draw/wolf_snowy",
+        "wood": "minecraft:block/stripped_acacia_log"
+    }
+}

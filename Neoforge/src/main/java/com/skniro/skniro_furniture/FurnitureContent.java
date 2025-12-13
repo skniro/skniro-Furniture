@@ -1,10 +1,7 @@
 package com.skniro.skniro_furniture;
 
 
-import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
-import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
-import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
-import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
 import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
@@ -37,6 +34,7 @@ public class FurnitureContent {
         FurnitureBedroomBlocks.registerBedroomBlocks(modEventBus);
         FurnitureKitchenBlocks.registerKitchenBlocks(modEventBus);
         FurnitureLivingroomBlocks.registerLivingroomBlocks(modEventBus);
+        FurnitureDrawBlocks.registerDrawBlocks(modEventBus);
         FurnitureBlockEntityType.registerMapleBlockEntityType(modEventBus);
     }
 
