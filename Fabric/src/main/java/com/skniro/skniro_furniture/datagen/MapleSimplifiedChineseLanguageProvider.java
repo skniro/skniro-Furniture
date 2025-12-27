@@ -1005,6 +1005,8 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureStrings.Drawer,"抽屉");
         translationBuilder.add(FurnitureStrings.Desk_Cabinet,"桌柜");
         translationBuilder.add(FurnitureStrings.Fridge,"冰箱");
+        translationBuilder.add(FurnitureStrings.Fridge_UPPER,"冰箱上层");
+        translationBuilder.add(FurnitureStrings.Fridge_LOWER,"冰箱下层");
         translationBuilder.add(FurnitureStrings.Kitchen_Cabinet,"厨柜");
         translationBuilder.add(FurnitureStrings.Oven,"烤箱");
         translationBuilder.add(FurnitureStrings.TV_Stand,"电视柜");
