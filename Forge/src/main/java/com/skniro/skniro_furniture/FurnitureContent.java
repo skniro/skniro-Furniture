@@ -33,6 +33,7 @@ public class FurnitureContent {
         FurnitureBedroomBlocks.registerBedroomBlocks(modEventBus);
         FurnitureKitchenBlocks.registerKitchenBlocks(modEventBus);
         FurnitureLivingroomBlocks.registerLivingroomBlocks(modEventBus);
+        FurnitureDrawBlocks.registerDrawBlocks(modEventBus);
         FurnitureBlockEntityType.registerMapleBlockEntityType(modEventBus);
     }
 

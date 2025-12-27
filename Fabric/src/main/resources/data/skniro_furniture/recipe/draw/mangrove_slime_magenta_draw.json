@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:stripped_mangrove_log"
+        },
+        "Q": {
+            "item": "minecraft:magenta_dye"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:mangrove_slime_magenta_draw"
+    }
+}

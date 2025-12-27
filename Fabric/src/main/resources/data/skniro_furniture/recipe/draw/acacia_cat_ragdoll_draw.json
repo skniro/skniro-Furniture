@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " W ",
+        "WQW",
+        " W "
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:stripped_acacia_log"
+        },
+        "Q": {
+            "item": "minecraft:light_gray_dye"
+        }
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:acacia_cat_ragdoll_draw"
+    }
+}
