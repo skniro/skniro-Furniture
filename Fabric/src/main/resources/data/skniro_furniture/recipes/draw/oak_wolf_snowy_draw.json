@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "WQW",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_oak_log"
+    },
+    "Q": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:oak_wolf_snowy_draw",
+    "count": 3
+  }
+}

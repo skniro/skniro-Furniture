@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "WQW",
+    " W "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:stripped_warped_stem"
+    },
+    "Q": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "result": {
+    "item": "skniro_furniture:warped_mooshroom_draw",
+    "count": 3
+  }
+}
