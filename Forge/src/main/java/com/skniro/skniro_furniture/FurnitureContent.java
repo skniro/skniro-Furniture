@@ -3,23 +3,12 @@ package com.skniro.skniro_furniture;
 
 import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
-import com.skniro.skniro_furniture.block.renderer.CabinetBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.KitchenSinkBlockEntityRenderer;
-import com.skniro.skniro_furniture.block.renderer.OvenBlockEntityRenderer;
-import com.skniro.skniro_furniture.client.renderer.ChairRenderer;
-import com.skniro.skniro_furniture.client.renderer.CushinoRenderer;
-import com.skniro.skniro_furniture.client.renderer.SofaRenderer;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.item.FurnitureCreativeModeTabs;
 import com.skniro.skniro_furniture.item.FurnitureItems;
 import com.skniro.skniro_furniture.recipe.FurnitureRecipeType;
 import com.skniro.skniro_furniture.screen.FurnitureScreenHandlerType;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 
 
 public class FurnitureContent {
@@ -33,6 +22,7 @@ public class FurnitureContent {
         FurnitureBedroomBlocks.registerBedroomBlocks(modEventBus);
         FurnitureKitchenBlocks.registerKitchenBlocks(modEventBus);
         FurnitureLivingroomBlocks.registerLivingroomBlocks(modEventBus);
+        FurnitureDrawBlocks.registerDrawBlocks(modEventBus);
         FurnitureBlockEntityType.registerMapleBlockEntityType(modEventBus);
     }
 
