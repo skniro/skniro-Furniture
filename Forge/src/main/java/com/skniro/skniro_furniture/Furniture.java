@@ -23,10 +23,6 @@ public class Furniture {
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-
-
-
-
     public Furniture(FMLJavaModLoadingContext context) {
         var modEventBus = context.getModBusGroup();
         // Register the commonSetup method for modloading
