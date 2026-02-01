@@ -114,49 +114,49 @@ public class FurnitureBedroomBlocks {
             ()-> new DeskCabinetBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
 
     public static final Supplier<Block> OAK_PLANKS_BOOK_Desk = registerBlock("oak_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final Supplier<Block> OAK_WOOD_BOOK_Desk = registerBlock("oak_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
     public static final Supplier<Block> SPRUCE_PLANKS_BOOK_Desk = registerBlock("spruce_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
     public static final Supplier<Block> SPRUCE_WOOD_BOOK_Desk = registerBlock("spruce_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).noOcclusion()));
     public static final Supplier<Block> BIRCH_PLANKS_BOOK_Desk = registerBlock("birch_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
     public static final Supplier<Block> BIRCH_WOOD_BOOK_Desk = registerBlock("birch_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).noOcclusion()));
     public static final Supplier<Block> JUNGLE_PLANKS_BOOK_Desk = registerBlock("jungle_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
     public static final Supplier<Block> JUNGLE_WOOD_BOOK_Desk = registerBlock("jungle_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).noOcclusion()));
     public static final Supplier<Block> ACACIA_PLANKS_BOOK_Desk = registerBlock("acacia_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
     public static final Supplier<Block> ACACIA_WOOD_BOOK_Desk = registerBlock("acacia_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).noOcclusion()));
     public static final Supplier<Block> DARK_OAK_PLANKS_BOOK_Desk = registerBlock("dark_oak_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
     public static final Supplier<Block> DARK_OAK_WOOD_BOOK_Desk = registerBlock("dark_oak_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).noOcclusion()));
     public static final Supplier<Block> MANGROVE_PLANKS_BOOK_Desk = registerBlock("mangrove_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
     public static final Supplier<Block> MANGROVE_WOOD_BOOK_Desk = registerBlock("mangrove_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
     public static final Supplier<Block> CHERRY_PLANKS_BOOK_Desk = registerBlock("cherry_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
     public static final Supplier<Block> CHERRY_WOOD_BOOK_Desk = registerBlock("cherry_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
     public static final Supplier<Block> CRIMSON_PLANKS_BOOK_Desk = registerBlock("crimson_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
     public static final Supplier<Block> CRIMSON_HYPHAE_BOOK_Desk = registerBlock("crimson_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).noOcclusion()));
     public static final Supplier<Block> WARPED_PLANKS_BOOK_Desk = registerBlock("warped_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final Supplier<Block> WARPED_HYPHAE_BOOK_Desk = registerBlock("warped_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS).noOcclusion()));
     public static final Supplier<Block> BAMBOO_PLANKS_BOOK_Desk = registerBlock("bamboo_planks_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
     public static final Supplier<Block> BAMBOO_BLOCK_BOOK_Desk = registerBlock("bamboo_wood_book_desk",
-            ()-> new DeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
+            ()-> new BookDeskBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
 
     public static final Supplier<Block> White_Desk_Lamp = registerBlock("white_desk_lamp",
             ()-> new DeskLampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).noOcclusion()));

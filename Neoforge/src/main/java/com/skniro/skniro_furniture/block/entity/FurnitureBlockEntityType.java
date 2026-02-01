@@ -899,6 +899,33 @@ public class FurnitureBlockEntityType {
                             MapleFurnitureBlocks.Warped_Plank_Glass_Table.get()
                     ).build(null));
 
+    public static final Supplier<BlockEntityType<BookDeskBlockEntity>> BOOK_DESK_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("book_desk_block_entity",
+                    () -> BlockEntityType.Builder.of(BookDeskBlockEntity::new,
+                            FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.BIRCH_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.JUNGLE_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.JUNGLE_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.ACACIA_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.ACACIA_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.DARK_OAK_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.DARK_OAK_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.MANGROVE_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.MANGROVE_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.CHERRY_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.CHERRY_WOOD_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.CRIMSON_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.CRIMSON_HYPHAE_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.WARPED_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.WARPED_HYPHAE_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.BAMBOO_PLANKS_BOOK_Desk.get(),
+                            FurnitureBedroomBlocks.BAMBOO_BLOCK_BOOK_Desk.get()
+                    ).build(null));
+
     public static void registerMapleBlockEntityType(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

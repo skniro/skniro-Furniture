@@ -915,6 +915,34 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final BlockEntityType<BookDeskBlockEntity> BOOK_DESK_BLOCK_ENTITY =
+            create("book_desk_block_entity",
+                    FabricBlockEntityTypeBuilder.create(BookDeskBlockEntity::new,
+                            FurnitureBedroomBlocks.OAK_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.OAK_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.SPRUCE_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.SPRUCE_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.BIRCH_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.BIRCH_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.JUNGLE_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.JUNGLE_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.ACACIA_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.ACACIA_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.DARK_OAK_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.DARK_OAK_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.MANGROVE_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.MANGROVE_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.CHERRY_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.CHERRY_WOOD_BOOK_Desk,
+                            FurnitureBedroomBlocks.CRIMSON_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.CRIMSON_HYPHAE_BOOK_Desk,
+                            FurnitureBedroomBlocks.WARPED_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.WARPED_HYPHAE_BOOK_Desk,
+                            FurnitureBedroomBlocks.BAMBOO_PLANKS_BOOK_Desk,
+                            FurnitureBedroomBlocks.BAMBOO_BLOCK_BOOK_Desk
+                    )
+            );
+
 
     private static <T extends BlockEntity> BlockEntityType create(String id, FabricBlockEntityTypeBuilder<T> builder) {
         Type<?> type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id);
