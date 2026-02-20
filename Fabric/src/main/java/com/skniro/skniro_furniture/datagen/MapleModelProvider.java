@@ -1176,6 +1176,23 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(FurnitureDrawBlocks.PaleOak_Zombie_Draw);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(FurnitureDrawBlocks.PaleOak_Slime_Magenta_Draw);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.LIME_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.PINK_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
