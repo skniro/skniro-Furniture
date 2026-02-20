@@ -33,5 +33,19 @@
 				"down": {"uv": [0, 2, 16, 2], "texture": "#color"}
 			}
 		}
-	]
+	],
+	"display": {
+		"gui": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, 80],
+			"scale": [0.7, 0.7, 0.7]
+		},
+		"fixed": {
+			"translation": [0, 0, -7]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, 4]
+		}
+	}
 }
