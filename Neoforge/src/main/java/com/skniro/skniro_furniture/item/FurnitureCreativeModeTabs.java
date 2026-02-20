@@ -1559,6 +1559,8 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER.get());
                         pOutput.accept(MapleFurnitureBlocks.RED_WOOD_DIVIDER.get());
                         pOutput.accept(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER.get());
+
+                        pOutput.accept(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL.get());
                     })
                     .build());
 

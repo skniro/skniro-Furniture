@@ -1193,6 +1193,8 @@ public class MapleModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotatable(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
+
         MapleModelDatagenHelper furnitureModelDatagenHelper = new MapleModelDatagenHelper(blockStateModelGenerator);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         furnitureModelDatagenHelper.registerModBookshelf(MapleFurnitureBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);

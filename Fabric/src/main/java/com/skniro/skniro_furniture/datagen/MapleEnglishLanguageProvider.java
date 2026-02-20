@@ -2399,6 +2399,7 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER, "Red Wood Divider");
         translationBuilder.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER, "Black Wood Divider");
 
+        translationBuilder.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL, "Teddy Bear");
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();

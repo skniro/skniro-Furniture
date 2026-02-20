@@ -2444,6 +2444,8 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER, "红色木质布帘");
         translationBuilder.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER, "黑色木质布帘");
 
+        translationBuilder.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL, "毛绒玩具熊");
+
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();

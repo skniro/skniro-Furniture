@@ -2390,6 +2390,8 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER);
         addDrop(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
         addDrop(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
+
+        addDrop(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
     }
 
     public LootTable.Builder bedDrops(Block block) {

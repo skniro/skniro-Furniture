@@ -1425,6 +1425,8 @@ public class MapleFurnitureBlocks {
     public static final Block RED_WOOD_DIVIDER = registerBlock("red_wood_divider", DividerBlock::new, AbstractBlock.Settings.copy(Blocks.RED_BANNER).nonOpaque().noCollision().strength(1.0F).burnable());
     public static final Block BLACK_WOOD_DIVIDER = registerBlock("black_wood_divider", DividerBlock::new, AbstractBlock.Settings.copy(Blocks.BLACK_BANNER).nonOpaque().noCollision().strength(1.0F).burnable());
 
+    public static final Block TEDDY_BEAR_NORMAL = registerBlock("teddy_bear_normal", BaseTeddyBearBlock::new, AbstractBlock.Settings.copy(Blocks.BROWN_WOOL).nonOpaque().noCollision().strength(1.0F).burnable());
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));
         registerBlockItem(name, block);

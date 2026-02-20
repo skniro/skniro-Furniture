@@ -1568,6 +1568,8 @@ public class FurnitureContent {
             content.add(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER);
             content.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
             content.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
+
+            content.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
         });
 
 
