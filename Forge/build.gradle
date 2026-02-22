@@ -114,8 +114,6 @@ tasks.named('jar', Jar) {
         ])
         attributes['MixinConfigs'] = "${mod_id}.mixins.json"
     }
-
-    archiveClassifier = 'slim'
 }
 
 publishing {
