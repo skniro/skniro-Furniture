@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " P ",
+        "RRR",
+        "   "
+    ],
+    "key": {
+        "P": "minecraft:stripped_oak_log",
+        "R": "minecraft:light_blue_wool"
+    },
+    "result": {
+        "count": 3,
+        "id": "skniro_furniture:light_blue_wood_divider"
+    }
+}
