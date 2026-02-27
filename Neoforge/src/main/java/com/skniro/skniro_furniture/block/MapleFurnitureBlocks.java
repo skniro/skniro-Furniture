@@ -2475,7 +2475,7 @@ public class MapleFurnitureBlocks {
     public static final Supplier<Block> RED_WOOD_DIVIDER = registerBlock("red_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
     public static final Supplier<Block> BLACK_WOOD_DIVIDER = registerBlock("black_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
 
-    public static final Supplier<Block> TEDDY_BEAR_NORMAL = registerBlock("teddy_bear_normal", BaseTeddyBearBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).noOcclusion().noCollision().strength(1.0F).ignitedByLava());
+    public static final Supplier<Block> TEDDY_BEAR_NORMAL = registerBlock("teddy_bear_normal", ()-> new BaseTeddyBearBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
 
     private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
         return (p_50763_) -> {
