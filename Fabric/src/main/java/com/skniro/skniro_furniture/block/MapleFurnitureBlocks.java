@@ -1294,6 +1294,25 @@ public class MapleFurnitureBlocks {
     public static final Block END_TABLE_WOOD_BAMBOO = registerBlock("bamboo_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.BAMBOO_PLANKS).nonOpaque()));
     public static final Block END_TABLE_WOOD_CHERRY = registerBlock("cherry_wood_end_table", new EndTableBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS).nonOpaque()));
 
+    public static final Block WHITE_WOOD_DIVIDER = registerBlock("white_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.WHITE_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block ORANGE_WOOD_DIVIDER = registerBlock("orange_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.ORANGE_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block MAGENTA_WOOD_DIVIDER = registerBlock("magenta_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.MAGENTA_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block LIGHT_BLUE_WOOD_DIVIDER = registerBlock("light_blue_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.LIGHT_BLUE_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block YELLOW_WOOD_DIVIDER = registerBlock("yellow_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.YELLOW_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block LIME_WOOD_DIVIDER = registerBlock("lime_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.LIME_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block PINK_WOOD_DIVIDER = registerBlock("pink_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.PINK_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block GRAY_WOOD_DIVIDER = registerBlock("gray_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.GRAY_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block LIGHT_GRAY_WOOD_DIVIDER = registerBlock("light_gray_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.LIGHT_GRAY_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block CYAN_WOOD_DIVIDER = registerBlock("cyan_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.CYAN_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block PURPLE_WOOD_DIVIDER = registerBlock("purple_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.PURPLE_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block BLUE_WOOD_DIVIDER = registerBlock("blue_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.BLUE_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block BROWN_WOOD_DIVIDER = registerBlock("brown_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.BROWN_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block GREEN_WOOD_DIVIDER = registerBlock("green_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.GREEN_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block RED_WOOD_DIVIDER = registerBlock("red_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.RED_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+    public static final Block BLACK_WOOD_DIVIDER = registerBlock("black_wood_divider", new DividerBlock(AbstractBlock.Settings.copy(Blocks.BLACK_BANNER).nonOpaque().noCollision().strength(1.0F).burnable()));
+
+    public static final Block TEDDY_BEAR_NORMAL = registerBlock("teddy_bear_normal", new BaseTeddyBearBlock(AbstractBlock.Settings.copy(Blocks.BROWN_WOOL).nonOpaque().noCollision().strength(1.0F).burnable()));
+
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Furniture.MOD_ID, name), block);
     }

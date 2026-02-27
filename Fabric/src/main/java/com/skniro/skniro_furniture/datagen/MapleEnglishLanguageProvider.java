@@ -2205,6 +2205,24 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(FurnitureDrawBlocks.Warped_Zombie_Draw, "Warped Zombie Draw");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw, "Warped Slime Magenta Draw");
 
+        translationBuilder.add(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER, "White Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER, "Orange Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER, "Magenta Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER, "Light Blue Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER, "Yellow Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.LIME_WOOD_DIVIDER, "Lime Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.PINK_WOOD_DIVIDER, "Pink Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER, "Gray Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER, "Light Gray Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER, "Cyan Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER, "Purple Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER, "Blue Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER, "Brown Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER, "Green Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER, "Red Wood Divider");
+        translationBuilder.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER, "Black Wood Divider");
+
+        translationBuilder.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL, "Teddy Bear");
 
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();

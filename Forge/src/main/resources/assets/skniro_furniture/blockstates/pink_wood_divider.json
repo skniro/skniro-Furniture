@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "skniro_furniture:block/pink_wood_divider",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "skniro_furniture:block/pink_wood_divider"
+    },
+    "facing=south": {
+      "model": "skniro_furniture:block/pink_wood_divider",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "skniro_furniture:block/pink_wood_divider",
+      "y": 270
+    }
+  }
+}
