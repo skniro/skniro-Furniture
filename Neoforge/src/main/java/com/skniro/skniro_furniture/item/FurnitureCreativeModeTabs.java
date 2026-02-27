@@ -1418,6 +1418,25 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(FurnitureDrawBlocks.Warped_Wolf_Snowy_Draw.get());
                         pOutput.accept(FurnitureDrawBlocks.Warped_Zombie_Draw.get());
                         pOutput.accept(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw.get());
+
+                        pOutput.accept(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.LIME_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.PINK_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.RED_WOOD_DIVIDER.get());
+                        pOutput.accept(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER.get());
+
+                        pOutput.accept(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL.get());
                     })
                     .build());
 

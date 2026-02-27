@@ -1429,6 +1429,25 @@ public class FurnitureContent {
             content.add(FurnitureDrawBlocks.Warped_Wolf_Snowy_Draw);
             content.add(FurnitureDrawBlocks.Warped_Zombie_Draw);
             content.add(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw);
+
+            content.add(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.LIME_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.PINK_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
+            content.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
+
+            content.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
         });
 
 

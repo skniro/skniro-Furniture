@@ -1307,7 +1307,6 @@ public class MapleFurnitureBlocks {
     public static final Supplier<Block> BLACK_Ceiling_Lamp = registerBlock("black_ceiling_lamp",
             ()-> new LampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK).lightLevel(litBlockEmission(15)).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
 
-
     //Oak
     public static final Supplier<Block> Oak_White_Paper_Sliding_Door = registerBlock("oak_white_paper_sliding_door",
             () -> new SlidingDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().mapColor(Blocks.OAK_PLANKS.defaultMapColor()).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
@@ -2455,6 +2454,25 @@ public class MapleFurnitureBlocks {
     public static final Supplier<Block> END_TABLE_WOOD_MANGROVE = registerBlock("mangrove_wood_end_table", ()-> new EndTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).noOcclusion()));
     public static final Supplier<Block> END_TABLE_WOOD_BAMBOO = registerBlock("bamboo_wood_end_table", ()-> new EndTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).noOcclusion()));
     public static final Supplier<Block> END_TABLE_WOOD_CHERRY = registerBlock("cherry_wood_end_table", ()-> new EndTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).noOcclusion()));
+
+    public static final Supplier<Block> WHITE_WOOD_DIVIDER = registerBlock("white_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> ORANGE_WOOD_DIVIDER = registerBlock("orange_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> MAGENTA_WOOD_DIVIDER = registerBlock("magenta_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> LIGHT_BLUE_WOOD_DIVIDER = registerBlock("light_blue_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> YELLOW_WOOD_DIVIDER = registerBlock("yellow_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> LIME_WOOD_DIVIDER = registerBlock("lime_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> PINK_WOOD_DIVIDER = registerBlock("pink_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> GRAY_WOOD_DIVIDER = registerBlock("gray_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> LIGHT_GRAY_WOOD_DIVIDER = registerBlock("light_gray_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> CYAN_WOOD_DIVIDER = registerBlock("cyan_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> PURPLE_WOOD_DIVIDER = registerBlock("purple_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> BLUE_WOOD_DIVIDER = registerBlock("blue_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> BROWN_WOOD_DIVIDER = registerBlock("brown_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> GREEN_WOOD_DIVIDER = registerBlock("green_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> RED_WOOD_DIVIDER = registerBlock("red_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+    public static final Supplier<Block> BLACK_WOOD_DIVIDER = registerBlock("black_wood_divider", ()-> new DividerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_BANNER).noOcclusion().noCollission().strength(1.0F).ignitedByLava()));
+
+    public static final Supplier<Block> TEDDY_BEAR_NORMAL = registerBlock("teddy_bear_normal", BaseTeddyBearBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).noOcclusion().noCollision().strength(1.0F).ignitedByLava());
 
     private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
         return (p_50763_) -> {
