@@ -2245,6 +2245,25 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(FurnitureDrawBlocks.Warped_Zombie_Draw, "诡异木框僵尸画");
         translationBuilder.add(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw, "诡异木框品红史莱姆画");
 
+        translationBuilder.add(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER, "白色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER, "橙色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER, "品红色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER, "淡蓝色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER, "黄色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.LIME_WOOD_DIVIDER, "黄绿色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.PINK_WOOD_DIVIDER, "粉色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER, "灰色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER, "浅灰色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER, "青色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER, "紫色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER, "蓝色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER, "棕色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER, "绿色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.RED_WOOD_DIVIDER, "红色木质布帘");
+        translationBuilder.add(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER, "黑色木质布帘");
+
+        translationBuilder.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL, "毛绒玩具熊");
+
         try {
             Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
             translationBuilder.add(existingFilePath);

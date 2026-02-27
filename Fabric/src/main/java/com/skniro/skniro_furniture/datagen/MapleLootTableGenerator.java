@@ -2194,6 +2194,25 @@ public class MapleLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(FurnitureDrawBlocks.Warped_Wolf_Snowy_Draw);
         addDrop(FurnitureDrawBlocks.Warped_Zombie_Draw);
         addDrop(FurnitureDrawBlocks.Warped_Slime_Magenta_Draw);
+
+        addDrop(MapleFurnitureBlocks.WHITE_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.LIME_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.PINK_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.GRAY_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.CYAN_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.BLUE_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.BROWN_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.GREEN_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.RED_WOOD_DIVIDER);
+        addDrop(MapleFurnitureBlocks.BLACK_WOOD_DIVIDER);
+
+        addDrop(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL);
     }
 
     public LootTable.Builder bedDrops(Block block) {

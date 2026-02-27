@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WBW",
+        "WWW",
+        "W W"
+    ],
+    "key": {
+        "W": {
+            "item": "minecraft:brown_wool"
+        },
+        "B": {
+            "item": "minecraft:white_wool"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "skniro_furniture:teddy_bear_normal"
+    }
+}
