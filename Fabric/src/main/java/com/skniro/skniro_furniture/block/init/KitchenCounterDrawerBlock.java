@@ -2,60 +2,62 @@ package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.mob.PiglinBrain;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.stat.Stats;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.ItemScatterer;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 
-public class KitchenCounterDrawerBlock extends BlockWithEntity {
-    public static final MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> CODEC = createCodec(com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock::new);
+public class KitchenCounterDrawerBlock extends BaseEntityBlock {
+    public static final MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> CODEC = simpleCodec(com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock::new);
     public static final EnumProperty<Direction> FACING;
 
-    public MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> getCodec() {
+    public MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> codec() {
         return CODEC;
     }
 
-    public KitchenCounterDrawerBlock(AbstractBlock.Settings settings) {
+    public KitchenCounterDrawerBlock(BlockBehaviour.Properties settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
+        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (world instanceof ServerWorld serverWorld) {
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (world instanceof ServerLevel serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof DrawerBlockEntity KitchenCounterDrawerBlockEntity) {
-                player.openHandledScreen(KitchenCounterDrawerBlockEntity);
-                player.incrementStat(Stats.OPEN_BARREL);
+                player.openMenu(KitchenCounterDrawerBlockEntity);
+                player.awardStat(Stats.OPEN_BARREL);
             }
         }
 
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
-    public void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
-        ItemScatterer.onStateReplaced(state, world, pos);
-        super.onStateReplaced(state, world, pos, moved);
+    public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
+        Containers.updateNeighboursAfterDestroy(state, world, pos);
+        super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof DrawerBlockEntity) {
             ((DrawerBlockEntity)blockEntity).tick();
@@ -64,37 +66,37 @@ public class KitchenCounterDrawerBlock extends BlockWithEntity {
     }
 
     @Nullable
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new DrawerBlockEntity(pos, state);
     }
 
-    protected boolean hasComparatorOutput(BlockState state) {
+    protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }
 
-    protected int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    protected int getComparatorOutput(BlockState state, Level world, BlockPos pos) {
+        return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(world.getBlockEntity(pos));
     }
 
-    protected BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+    protected BlockState rotate(BlockState state, Rotation rotation) {
+        return (BlockState)state.setValue(FACING, rotation.rotate((Direction)state.getValue(FACING)));
     }
 
-    protected BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+    protected BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation((Direction)state.getValue(FACING)));
     }
 
     @Nullable
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
     static {
-        FACING = Properties.HORIZONTAL_FACING;
+        FACING = BlockStateProperties.HORIZONTAL_FACING;
     }
 }

@@ -1,39 +1,40 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.init.BookDeskBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.command.permission.LeveledPermissionPredicate;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.WritableBookContentComponent;
-import net.minecraft.component.type.WrittenBookContentComponent;
-import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.screen.LecternScreenHandler;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.server.command.CommandOutput;
-import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.storage.ReadView;
-import net.minecraft.storage.WriteView;
-import net.minecraft.text.Text;
-import net.minecraft.util.Clearable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec2f;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ResolutionContext;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.permissions.LevelBasedPermissionSet;
+import net.minecraft.util.Mth;
+import net.minecraft.world.Clearable;
+import net.minecraft.world.Container;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.LecternMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.WritableBookContent;
+import net.minecraft.world.item.component.WrittenBookContent;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
-public class BookDeskBlockEntity extends BlockEntity implements Clearable, NamedScreenHandlerFactory {
-    private final Inventory inventory = new Inventory() {
-        public int size() {
+public class BookDeskBlockEntity extends BlockEntity implements Clearable, MenuProvider {
+    private final Container inventory = new Container() {
+        public int getContainerSize() {
             return 1;
         }
 
@@ -41,11 +42,11 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
             return BookDeskBlockEntity.this.book.isEmpty();
         }
 
-        public ItemStack getStack(int slot) {
+        public ItemStack getItem(int slot) {
             return slot == 0 ? BookDeskBlockEntity.this.book : ItemStack.EMPTY;
         }
 
-        public ItemStack removeStack(int slot, int amount) {
+        public ItemStack removeItem(int slot, int amount) {
             if (slot == 0) {
                 ItemStack itemStack = BookDeskBlockEntity.this.book.split(amount);
                 if (BookDeskBlockEntity.this.book.isEmpty()) {
@@ -58,7 +59,7 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
             }
         }
 
-        public ItemStack removeStack(int slot) {
+        public ItemStack removeItemNoUpdate(int slot) {
             if (slot == 0) {
                 ItemStack itemStack = BookDeskBlockEntity.this.book;
                 BookDeskBlockEntity.this.book = ItemStack.EMPTY;
@@ -69,29 +70,29 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
             }
         }
 
-        public void setStack(int slot, ItemStack stack) {
+        public void setItem(int slot, ItemStack stack) {
         }
 
-        public int getMaxCountPerStack() {
+        public int getMaxStackSize() {
             return 1;
         }
 
-        public void markDirty() {
-            BookDeskBlockEntity.this.markDirty();
+        public void setChanged() {
+            BookDeskBlockEntity.this.setChanged();
         }
 
-        public boolean canPlayerUse(PlayerEntity player) {
-            return Inventory.canPlayerUse(BookDeskBlockEntity.this, player) && BookDeskBlockEntity.this.hasBook();
+        public boolean stillValid(Player player) {
+            return Container.stillValidBlockEntity(BookDeskBlockEntity.this, player) && BookDeskBlockEntity.this.hasBook();
         }
 
-        public boolean isValid(int slot, ItemStack stack) {
+        public boolean canPlaceItem(int slot, ItemStack stack) {
             return false;
         }
 
-        public void clear() {
+        public void clearContent() {
         }
     };
-    private final PropertyDelegate propertyDelegate = new PropertyDelegate() {
+    private final ContainerData propertyDelegate = new ContainerData() {
         public int get(int index) {
             return index == 0 ? BookDeskBlockEntity.this.currentPage : 0;
         }
@@ -103,7 +104,7 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
 
         }
 
-        public int size() {
+        public int getCount() {
             return 1;
         }
     };
@@ -121,7 +122,7 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
     }
 
     public boolean hasBook() {
-        return this.book.contains(DataComponentTypes.WRITABLE_BOOK_CONTENT) || this.book.contains(DataComponentTypes.WRITTEN_BOOK_CONTENT);
+        return this.book.has(DataComponents.WRITABLE_BOOK_CONTENT) || this.book.has(DataComponents.WRITTEN_BOOK_CONTENT);
     }
 
     public void setBook(ItemStack book) {
@@ -131,21 +132,21 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
     void onBookRemoved() {
         this.currentPage = 0;
         this.pageCount = 0;
-        BookDeskBlock.setHasBook(null, this.getWorld(), this.getPos(), this.getCachedState(), false);
+        BookDeskBlock.setHasBook(null, this.getLevel(), this.getBlockPos(), this.getBlockState(), false);
     }
 
-    public void setBook(ItemStack book, @Nullable PlayerEntity player) {
+    public void setBook(ItemStack book, @Nullable Player player) {
         this.book = this.resolveBook(book, player);
         this.currentPage = 0;
         this.pageCount = getPageCount(this.book);
-        this.markDirty();
+        this.setChanged();
     }
 
     void setCurrentPage(int currentPage) {
-        int i = MathHelper.clamp(currentPage, 0, this.pageCount - 1);
+        int i = Mth.clamp(currentPage, 0, this.pageCount - 1);
         if (i != this.currentPage) {
             this.currentPage = i;
-            this.markDirty();
+            this.setChanged();
         }
 
     }
@@ -156,80 +157,81 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, Named
 
     public int getComparatorOutput() {
         float f = this.pageCount > 1 ? (float)this.getCurrentPage() / ((float)this.pageCount - 1.0F) : 1.0F;
-        return MathHelper.floor(f * 14.0F) + (this.hasBook() ? 1 : 0);
+        return Mth.floor(f * 14.0F) + (this.hasBook() ? 1 : 0);
     }
 
-    private ItemStack resolveBook(ItemStack book, @Nullable PlayerEntity player) {
-        World var4 = this.world;
-        if (var4 instanceof ServerWorld serverWorld) {
-            WrittenBookContentComponent.resolveInStack(book, this.getCommandSource(player, serverWorld), player);
+    private ItemStack resolveBook(ItemStack book, @Nullable Player player) {
+        Level var4 = this.level;
+        if (var4 instanceof ServerLevel serverLevel) {
+            ResolutionContext context = ResolutionContext.create(this.getCommandSource(player, serverLevel));
+            WrittenBookContent.resolveForItem(book, context, this.level.registryAccess());
         }
 
         return book;
     }
 
-    private ServerCommandSource getCommandSource(@Nullable PlayerEntity player, ServerWorld world) {
+    private CommandSourceStack getCommandSource(@Nullable Player player, ServerLevel world) {
         String string;
-        Text text;
+        Component text;
         if (player == null) {
             string = "Book Desk";
-            text = Text.literal("Book Desk");
+            text = Component.literal("Book Desk");
         } else {
-            string = player.getStringifiedName();
+            string = player.getPlainTextName();
             text = player.getDisplayName();
         }
 
-        Vec3d vec3d = Vec3d.ofCenter(this.pos);
-        return new ServerCommandSource(CommandOutput.DUMMY, vec3d, Vec2f.ZERO, world, LeveledPermissionPredicate.GAMEMASTERS, string, text, world.getServer(), player);
+        Vec3 vec3d = Vec3.atCenterOf(this.worldPosition);
+        return new CommandSourceStack(CommandSource.NULL, vec3d, Vec2.ZERO, world, LevelBasedPermissionSet.GAMEMASTER, string, text, world.getServer(), player);
     }
 
-    protected void readData(ReadView view) {
-        super.readData(view);
+    protected void loadAdditional(ValueInput view) {
+        super.loadAdditional(view);
         this.book = view.read("Book", ItemStack.CODEC).map((itemStack) -> this.resolveBook(itemStack, null)).orElse(ItemStack.EMPTY);
         this.pageCount = getPageCount(this.book);
-        this.currentPage = MathHelper.clamp(view.getInt("Page", 0), 0, this.pageCount - 1);
+        this.currentPage = Mth.clamp(view.getIntOr("Page", 0), 0, this.pageCount - 1);
     }
 
-    protected void writeData(WriteView view) {
-        super.writeData(view);
+    protected void saveAdditional(ValueOutput view) {
+        super.saveAdditional(view);
         if (!this.getBook().isEmpty()) {
-            view.put("Book", ItemStack.CODEC, this.getBook());
+            view.store("Book", ItemStack.CODEC, this.getBook());
             view.putInt("Page", this.currentPage);
         }
 
     }
 
-    public void clear() {
+    public void clearContent() {
         this.setBook(ItemStack.EMPTY);
     }
 
-    public void onBlockReplaced(BlockPos pos, BlockState oldState) {
-        if (oldState.get(BookDeskBlock.HAS_BOOK) && this.world != null) {
-            Direction direction = oldState.get(BookDeskBlock.FACING);
+    public void preRemoveSideEffects(BlockPos pos, BlockState oldState) {
+        if (oldState.getValue(BookDeskBlock.HAS_BOOK) && this.level != null) {
+            Direction direction = oldState.getValue(BookDeskBlock.FACING);
             ItemStack itemStack = this.getBook().copy();
-            float f = 0.25F * (float)direction.getOffsetX();
-            float g = 0.25F * (float)direction.getOffsetZ();
-            ItemEntity itemEntity = new ItemEntity(this.world, (double)pos.getX() + (double)0.5F + (double)f, pos.getY() + 1, (double)pos.getZ() + (double)0.5F + (double)g, itemStack);
-            itemEntity.setToDefaultPickupDelay();
-            this.world.spawnEntity(itemEntity);
+            float f = 0.25F * (float)direction.getStepX();
+            float g = 0.25F * (float)direction.getStepZ();
+            ItemEntity itemEntity = new ItemEntity(this.level, (double)pos.getX() + (double)0.5F + (double)f, pos.getY() + 1, (double)pos.getZ() + (double)0.5F + (double)g, itemStack);
+            itemEntity.setDefaultPickUpDelay();
+            this.level.addFreshEntity(itemEntity);
         }
 
     }
 
-    public ScreenHandler createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-        return new LecternScreenHandler(i, this.inventory, this.propertyDelegate);
+    public AbstractContainerMenu createMenu(int i, Inventory playerInventory, Player playerEntity) {
+        return new LecternMenu(i, this.inventory, this.propertyDelegate);
     }
 
-    public Text getDisplayName() {
-        return Text.translatable("container.lectern");
+    public Component getDisplayName() {
+        return Component.translatable("container.lectern");
     }
 
     private static int getPageCount(ItemStack stack) {
-        WrittenBookContentComponent writtenBookContentComponent = stack.get(DataComponentTypes.WRITTEN_BOOK_CONTENT);
+        WrittenBookContent writtenBookContentComponent = stack.get(DataComponents.WRITTEN_BOOK_CONTENT);
         if (writtenBookContentComponent != null) {
             return writtenBookContentComponent.pages().size();
         } else {
-            WritableBookContentComponent writableBookContentComponent = stack.get(DataComponentTypes.WRITABLE_BOOK_CONTENT);
+            WritableBookContent writableBookContentComponent = stack.get(DataComponents.WRITABLE_BOOK_CONTENT);
             return writableBookContentComponent != null ? writableBookContentComponent.pages().size() : 0;
         }
     }

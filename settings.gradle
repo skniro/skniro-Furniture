@@ -20,6 +20,6 @@ pluginManagement {
 }
 
 
-rootProject.name = 'SkniroFurniture-1.21.9'
+rootProject.name = 'SkniroFurniture-26.1'
 //include("Fabric", "Neoforge")
 include("Fabric", "Forge", "Neoforge")

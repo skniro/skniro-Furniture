@@ -1,25 +1,22 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
-import net.minecraft.block.AbstractBannerBlock;
-import net.minecraft.block.BannerBlock;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.component.type.BannerPatternsComponent;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.storage.ReadView;
-import net.minecraft.storage.WriteView;
-import net.minecraft.text.Text;
-import net.minecraft.text.TextCodecs;
-import net.minecraft.util.DyeColor;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentSerialization;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
-import net.minecraft.block.BlockState;
-import net.minecraft.util.math.BlockPos;
 
 public class FurnitureBedBlockEntity extends BlockEntity {
-    private BannerPatternsComponent patterns = BannerPatternsComponent.DEFAULT;
+    private BannerPatternLayers patterns = BannerPatternLayers.EMPTY;
     @Nullable
-    private Text customName;
+    private Component customName;
     private final DyeColor baseColor;
 
     public FurnitureBedBlockEntity(BlockPos pos, BlockState state) {
@@ -32,35 +29,35 @@ public class FurnitureBedBlockEntity extends BlockEntity {
         this.baseColor = baseColor;
     }
 
-    public BannerPatternsComponent getPatterns() {
+    public BannerPatternLayers getPatterns() {
         return patterns;
     }
 
-    public void setPatterns(BannerPatternsComponent patterns) {
+    public void setPatterns(BannerPatternLayers patterns) {
         this.patterns = patterns;
-        markDirty();
+        setChanged();
     }
 
     @Override
-    protected void readData(ReadView view) {
-        super.readData(view);
-        this.customName = tryParseCustomName(view, "CustomName");
-        this.patterns = view.read("patterns", BannerPatternsComponent.CODEC)
-                .orElse(BannerPatternsComponent.DEFAULT);
+    protected void loadAdditional(ValueInput view) {
+        super.loadAdditional(view);
+        this.customName = parseCustomNameSafe(view, "CustomName");
+        this.patterns = view.read("patterns", BannerPatternLayers.CODEC)
+                .orElse(BannerPatternLayers.EMPTY);
     }
 
-    public BlockEntityUpdateS2CPacket toUpdatePacket() {
-        return BlockEntityUpdateS2CPacket.create(this);
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
 
     @Override
-    protected void writeData(WriteView view) {
-        super.writeData(view);
-        if (!patterns.equals(BannerPatternsComponent.DEFAULT)) {
-            view.put("patterns", BannerPatternsComponent.CODEC, patterns);
+    protected void saveAdditional(ValueOutput view) {
+        super.saveAdditional(view);
+        if (!patterns.equals(BannerPatternLayers.EMPTY)) {
+            view.store("patterns", BannerPatternLayers.CODEC, patterns);
         }
-        view.putNullable("CustomName", TextCodecs.CODEC, customName);
+        view.storeNullable("CustomName", ComponentSerialization.CODEC, customName);
     }
 }
 

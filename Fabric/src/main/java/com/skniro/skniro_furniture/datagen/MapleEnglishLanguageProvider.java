@@ -3,20 +3,19 @@ package com.skniro.skniro_furniture.datagen;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.minecraft.core.HolderLookup;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
-    public MapleEnglishLanguageProvider(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup){
+    public MapleEnglishLanguageProvider(FabricPackOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup){
         super(dataGenerator,"en_us", registryLookup);
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro's Furniture");
         translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"Bedroom Furniture");
         translationBuilder.add(Furniture.Furniture_Group_Kitchen_Furniture,"Kitchen Furniture");
@@ -2402,7 +2401,7 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.TEDDY_BEAR_NORMAL, "Teddy Bear");
 
         try {
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();
+            Path existingFilePath = packOutput.getModContainer().findPath("assets/skniro_furniture/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);

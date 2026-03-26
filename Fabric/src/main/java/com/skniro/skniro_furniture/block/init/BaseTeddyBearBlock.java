@@ -2,37 +2,37 @@ package com.skniro.skniro_furniture.block.init;
 
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateManager;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class BaseTeddyBearBlock extends HorizontalFacingBlock {
-    public static final MapCodec<BaseTeddyBearBlock> CODEC = createCodec(BaseTeddyBearBlock::new);
+public class BaseTeddyBearBlock extends HorizontalDirectionalBlock {
+    public static final MapCodec<BaseTeddyBearBlock> CODEC = simpleCodec(BaseTeddyBearBlock::new);
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape SOUTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
     private static final VoxelShape WEST_SHAPE;
 
-    public BaseTeddyBearBlock(Settings settings) {
+    public BaseTeddyBearBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    protected MapCodec<? extends BaseTeddyBearBlock> getCodec() {
+    protected MapCodec<? extends BaseTeddyBearBlock> codec() {
         return CODEC;
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction direction = state.get(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        Direction direction = state.getValue(FACING);
         switch (direction){
             case EAST:
                 return EAST_SHAPE;
@@ -48,18 +48,18 @@ public class BaseTeddyBearBlock extends HorizontalFacingBlock {
 
     @Nullable
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
     static {
-        NORTH_SHAPE = Block.createCuboidShape(5.0, 0.0, 6.0, 11.0, 12.0, 10.6);
-        SOUTH_SHAPE = Block.createCuboidShape(5.0, 0.0, 5.4, 11.0, 12.0, 10.0);
-        EAST_SHAPE = Block.createCuboidShape(5.4, 0.0, 5.0, 10.0, 12.0, 11.0);
-        WEST_SHAPE = Block.createCuboidShape(6.0, 0.0, 5.0, 10.6, 12.0, 11.0);
+        NORTH_SHAPE = Block.box(5.0, 0.0, 6.0, 11.0, 12.0, 10.6);
+        SOUTH_SHAPE = Block.box(5.0, 0.0, 5.4, 11.0, 12.0, 10.0);
+        EAST_SHAPE = Block.box(5.4, 0.0, 5.0, 10.0, 12.0, 11.0);
+        WEST_SHAPE = Block.box(6.0, 0.0, 5.0, 10.6, 12.0, 11.0);
     }
 }

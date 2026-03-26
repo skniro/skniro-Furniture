@@ -2,56 +2,56 @@ package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.FridgeBlockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.stat.Stats;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
-import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 
 public class FridgeBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<FridgeBlock> CODEC = createCodec(FridgeBlock::new);
+    public static final MapCodec<FridgeBlock> CODEC = simpleCodec(FridgeBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF;
-    public MapCodec<FridgeBlock> getCodec() {
+    public MapCodec<FridgeBlock> codec() {
         return CODEC;
     }
 
-    public FridgeBlock(Settings settings) {
+    public FridgeBlock(Properties settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH).with(HALF, DoubleBlockHalf.LOWER)));
+        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH).setValue(HALF, DoubleBlockHalf.LOWER)));
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (world instanceof ServerWorld serverWorld) {
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (world instanceof ServerLevel serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof FridgeBlockEntity BlockEntity) {
-                player.openHandledScreen(BlockEntity);
-                player.incrementStat(Stats.OPEN_BARREL);
+                player.openMenu(BlockEntity);
+                player.awardStat(Stats.OPEN_BARREL);
             }
         }
 
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof FridgeBlockEntity) {
             ((FridgeBlockEntity)blockEntity).tick();
@@ -59,48 +59,48 @@ public class FridgeBlock extends AbstractFurnitureContainerBlock {
 
     }
 
-    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
-        DoubleBlockHalf doubleBlockHalf = (DoubleBlockHalf)state.get(HALF);
+    protected BlockState updateShape(BlockState state, LevelReader world, ScheduledTickAccess tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
+        DoubleBlockHalf doubleBlockHalf = (DoubleBlockHalf)state.getValue(HALF);
         if (direction.getAxis() == Direction.Axis.Y && doubleBlockHalf == DoubleBlockHalf.LOWER == (direction == Direction.UP)) {
-            return neighborState.getBlock() instanceof FridgeBlock && neighborState.get(HALF) != doubleBlockHalf ? (BlockState)neighborState.with(HALF, doubleBlockHalf) : Blocks.AIR.getDefaultState();
+            return neighborState.getBlock() instanceof FridgeBlock && neighborState.getValue(HALF) != doubleBlockHalf ? (BlockState)neighborState.setValue(HALF, doubleBlockHalf) : Blocks.AIR.defaultBlockState();
         } else {
-            return doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
+            return doubleBlockHalf == DoubleBlockHalf.LOWER && direction == Direction.DOWN && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, world, tickView, pos, direction, neighborPos, neighborState, random);
         }
     }
 
     @Override
-    public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        world.setBlockState(pos.up(), (BlockState)state.with(HALF, DoubleBlockHalf.UPPER), 3);
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+        world.setBlock(pos.above(), (BlockState)state.setValue(HALF, DoubleBlockHalf.UPPER), 3);
     }
 
     @Override
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        if (state.get(HALF) == DoubleBlockHalf.LOWER) {
-            BlockPos blockPos = pos.down();
+    protected boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+        if (state.getValue(HALF) == DoubleBlockHalf.LOWER) {
+            BlockPos blockPos = pos.below();
             BlockState blockState = world.getBlockState(blockPos);
-            return blockState.isSideSolidFullSquare(world, blockPos, Direction.UP);
+            return blockState.isFaceSturdy(world, blockPos, Direction.UP);
         } else {
-            BlockState lowerState = world.getBlockState(pos.down());
-            return lowerState.getBlock() == this && lowerState.get(HALF) == DoubleBlockHalf.LOWER;
+            BlockState lowerState = world.getBlockState(pos.below());
+            return lowerState.getBlock() == this && lowerState.getValue(HALF) == DoubleBlockHalf.LOWER;
         }
     }
 
     @Nullable
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new FridgeBlockEntity(pos, state);
     }
 
     @Override
-    protected long getRenderingSeed(BlockState state, BlockPos pos) {
-        return MathHelper.hashCode(pos.getX(), pos.down(state.get(HALF) == DoubleBlockHalf.LOWER ? 0 : 1).getY(), pos.getZ());
+    protected long getSeed(BlockState state, BlockPos pos) {
+        return Mth.getSeed(pos.getX(), pos.below(state.getValue(HALF) == DoubleBlockHalf.LOWER ? 0 : 1).getY(), pos.getZ());
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(HALF, FACING);
     }
 
     static {
-        HALF = Properties.DOUBLE_BLOCK_HALF;
+        HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     }
 }

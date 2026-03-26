@@ -1,57 +1,57 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.init.AbstractWallCabinetBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.entity.LockableContainerBlockEntity;
-import net.minecraft.block.entity.ViewerCountManager;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.screen.GenericContainerScreenHandler;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.storage.ReadView;
-import net.minecraft.storage.WriteView;
-import net.minecraft.text.Text;
-import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3i;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.Vec3i;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Container;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ChestMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractFurnitureContainerBlockEntity extends LockableContainerBlockEntity {
-    private final ViewerCountManager stateManager;
-    public DefaultedList<ItemStack> inventory;
+public abstract class AbstractFurnitureContainerBlockEntity extends BaseContainerBlockEntity {
+    private final ContainerOpenersCounter stateManager;
+    public NonNullList<ItemStack> inventory;
 
     protected AbstractFurnitureContainerBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos, BlockState blockState, int size) {
         super(blockEntityType, blockPos, blockState);
-        this.inventory = DefaultedList.ofSize(size, ItemStack.EMPTY);
-        this.stateManager = new ViewerCountManager() {
-            protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
-                AbstractFurnitureContainerBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_OPEN);
+        this.inventory = NonNullList.withSize(size, ItemStack.EMPTY);
+        this.stateManager = new ContainerOpenersCounter() {
+            protected void onOpen(Level world, BlockPos pos, BlockState state) {
+                AbstractFurnitureContainerBlockEntity.this.playSound(state, SoundEvents.BARREL_OPEN);
             }
 
-            protected void onContainerClose(World world, BlockPos pos, BlockState state) {
-                AbstractFurnitureContainerBlockEntity.this.playSound(state, SoundEvents.BLOCK_BARREL_CLOSE);
+            protected void onClose(Level world, BlockPos pos, BlockState state) {
+                AbstractFurnitureContainerBlockEntity.this.playSound(state, SoundEvents.BARREL_CLOSE);
             }
 
-            protected void onViewerCountUpdate(World world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
+            protected void openerCountChanged(Level world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
             }
 
-            public boolean isPlayerViewing(PlayerEntity player) {
-                if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
-                    Inventory inventory = ((GenericContainerScreenHandler) player.currentScreenHandler).getInventory();
+            public boolean isOwnContainer(Player player) {
+                if (player.containerMenu instanceof ChestMenu) {
+                    Container inventory = ((ChestMenu) player.containerMenu).getContainer();
                     return inventory == AbstractFurnitureContainerBlockEntity.this;
                 } else {
                     return false;
@@ -61,89 +61,89 @@ public abstract class AbstractFurnitureContainerBlockEntity extends LockableCont
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = ((Direction) state.get(AbstractWallCabinetBlock.FACING)).getVector();
-        double d = (double) this.pos.getX() + 0.5 + (double) vec3i.getX() / 2.0;
-        double e = (double) this.pos.getY() + 0.5 + (double) vec3i.getY() / 2.0;
-        double f = (double) this.pos.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;
-        this.world.playSound((PlayerEntity) null, d, e, f, soundEvent, SoundCategory.BLOCKS, 0.5F, this.world.random.nextFloat() * 0.1F + 0.9F);
+        Vec3i vec3i = ((Direction) state.getValue(AbstractWallCabinetBlock.FACING)).getUnitVec3i();
+        double d = (double) this.worldPosition.getX() + 0.5 + (double) vec3i.getX() / 2.0;
+        double e = (double) this.worldPosition.getY() + 0.5 + (double) vec3i.getY() / 2.0;
+        double f = (double) this.worldPosition.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;
+        this.level.playSound((Player) null, d, e, f, soundEvent, SoundSource.BLOCKS, 0.5F, this.level.getRandom().nextFloat() * 0.1F + 0.9F);
     }
 
-    protected void writeData(WriteView nbt) {
-        super.writeData(nbt);
-        Inventories.writeData(nbt, this.inventory);
+    protected void saveAdditional(ValueOutput nbt) {
+        super.saveAdditional(nbt);
+        ContainerHelper.saveAllItems(nbt, this.inventory);
     }
 
-    protected void readData(ReadView nbt) {
-        super.readData(nbt);
-        this.inventory = DefaultedList.ofSize(this.size(), ItemStack.EMPTY);
-        Inventories.readData(nbt, this.inventory);
+    protected void loadAdditional(ValueInput nbt) {
+        super.loadAdditional(nbt);
+        this.inventory = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        ContainerHelper.loadAllItems(nbt, this.inventory);
 
     }
 
-    public int size() {
+    public int getContainerSize() {
         return inventory.size();
     }
 
     @Override
-    public ItemStack getStack(int slot) {
+    public ItemStack getItem(int slot) {
         return inventory.get(slot);
     }
 
 
-    protected DefaultedList<ItemStack> getHeldStacks() {
+    protected NonNullList<ItemStack> getItems() {
         return this.inventory;
     }
 
-    protected void setHeldStacks(DefaultedList<ItemStack> inventory) {
+    protected void setItems(NonNullList<ItemStack> inventory) {
         this.inventory = inventory;
     }
 
     @Override
-    protected Text getContainerName() {
+    protected Component getDefaultName() {
         return null;
     }
 
     @Override
-    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
+    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
         return null;
     }
 
-    public void onOpen(PlayerEntity player) {
-        if (!this.removed && !player.isSpectator()) {
-            this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState(), player.getContainerInteractionRange());
+    public void onOpen(Player player) {
+        if (!this.remove && !player.isSpectator()) {
+            this.stateManager.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState(), player.getContainerInteractionRange());
         }
 
     }
 
-    public void onClose(PlayerEntity player) {
-        if (!this.removed && !player.isSpectator()) {
-            this.stateManager.closeContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
+    public void onClose(Player player) {
+        if (!this.remove && !player.isSpectator()) {
+            this.stateManager.decrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
 
     }
 
     public void tick() {
-        if (!this.removed) {
-            this.stateManager.updateViewerCount(this.getWorld(), this.getPos(), this.getCachedState());
+        if (!this.remove) {
+            this.stateManager.recheckOpeners(this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
 
     }
 
     @Override
-    public void markDirty() {
-        world.updateListeners(pos, getCachedState(), getCachedState(), 3);
-        super.markDirty();
+    public void setChanged() {
+        level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        super.setChanged();
     }
 
     @Nullable
     @Override
-    public Packet<ClientPlayPacketListener> toUpdatePacket() {
-        return BlockEntityUpdateS2CPacket.create(this);
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
 
     @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
+        return saveWithoutMetadata(registryLookup);
     }
 }

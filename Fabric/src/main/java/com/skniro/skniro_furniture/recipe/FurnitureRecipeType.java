@@ -1,18 +1,18 @@
 package com.skniro.skniro_furniture.recipe;
 
 import com.skniro.skniro_furniture.Furniture;
-import net.minecraft.recipe.Recipe;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.RecipeType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 
 public interface FurnitureRecipeType<T extends Recipe<?>> {
     public static final RecipeSerializer<KitchenSinkRecipe> Kitchen_Sink_SERIALIZER = Registry.register(
-            Registries.RECIPE_SERIALIZER, Identifier.of(Furniture.MOD_ID, "kitchen_sink"), new KitchenSinkRecipe.Serializer());
+            BuiltInRegistries.RECIPE_SERIALIZER, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "kitchen_sink"), KitchenSinkRecipe.SERIALIZER);
     public static final RecipeType<KitchenSinkRecipe> Kitchen_Sink_TYPE = Registry.register(
-            Registries.RECIPE_TYPE, Identifier.of(Furniture.MOD_ID, "kitchen_sink"), new RecipeType<>() {
+            BuiltInRegistries.RECIPE_TYPE, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "kitchen_sink"), new RecipeType<>() {
                 @Override
                 public String toString() {
                     return "kitchen_sink";

@@ -8,16 +8,16 @@ import com.skniro.skniro_furniture.block.entity.OvenBlockEntity;
 import com.skniro.skniro_furniture.block.init.OvenBlock;
 import com.skniro.skniro_furniture.block.renderer.state.OvenBlockEntityRenderState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
-import net.minecraft.client.renderer.state.CameraRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.Identifier;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
@@ -57,7 +57,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
         if (state.blockState.getValue(OvenBlock.LIT)) {
             queue.submitCustomGeometry(matrices, RenderTypes.eyes(LIGHT_TEXTURE), (matricesEntry, vertexConsumer) -> {
                 Matrix4f mat = matricesEntry.pose();
-                int light = LightTexture.FULL_BRIGHT; // 保持全亮
+                int light = LightCoordsUtil.FULL_BRIGHT; // 保持全亮
                 drawQuad(mat, vertexConsumer, 0x80FFFF00, light);
             });
         }

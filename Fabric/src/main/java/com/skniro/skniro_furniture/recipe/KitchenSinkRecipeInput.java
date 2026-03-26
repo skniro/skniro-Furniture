@@ -1,7 +1,7 @@
 package com.skniro.skniro_furniture.recipe;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.recipe.input.RecipeInput;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeInput;
 
 public class KitchenSinkRecipeInput implements RecipeInput {
     private final ItemStack input;
@@ -11,7 +11,7 @@ public class KitchenSinkRecipeInput implements RecipeInput {
     }
 
     @Override
-    public ItemStack getStackInSlot(int slot) {
+    public ItemStack getItem(int slot) {
         return input;
     }
 

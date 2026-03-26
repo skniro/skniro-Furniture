@@ -28,8 +28,8 @@
     "skniro_furniture.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.9",
-    "minecraft": "1.21.X",
-    "fabric": "*"
+    "fabricloader": ">=0.18.4",
+    "minecraft": "26.1.X",
+    "fabric-api": "*"
   }
 }

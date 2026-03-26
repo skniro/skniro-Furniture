@@ -1,12 +1,12 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.Generic3x3ContainerScreenHandler;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.DispenserMenu;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class GlassTableBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
@@ -15,12 +15,12 @@ public class GlassTableBlockEntity extends AbstractFurnitureContainerBlockEntity
     }
 
     @Override
-    protected Text getContainerName() {
-        return Text.translatable(FurnitureStrings.Glass_Table);
+    protected Component getDefaultName() {
+        return Component.translatable(FurnitureStrings.Glass_Table);
     }
 
     @Override
-    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new Generic3x3ContainerScreenHandler(syncId, playerInventory, this);
+    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
+        return new DispenserMenu(syncId, playerInventory, this);
     }
 }

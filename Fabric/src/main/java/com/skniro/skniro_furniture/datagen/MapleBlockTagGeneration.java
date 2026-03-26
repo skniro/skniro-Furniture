@@ -3,37 +3,35 @@ package com.skniro.skniro_furniture.datagen;
 import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import java.util.concurrent.CompletableFuture;
 
 import static com.skniro.skniro_furniture.datagen.MapleBlockTagGeneration.ModBlockTags.*;
-import static net.minecraft.registry.tag.BlockTags.*;
+import static net.minecraft.tags.BlockTags.*;
 
 
-public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider {
-    public MapleBlockTagGeneration(FabricDataOutput dataGenerator,CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+public class MapleBlockTagGeneration extends FabricTagsProvider.BlockTagsProvider {
+    public MapleBlockTagGeneration(FabricPackOutput dataGenerator, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(dataGenerator, completableFuture);
     }
 
 
     public static class ModBlockTags {
-        public static final TagKey<Block> C_SAPLING = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "saplings"));
-        public static final TagKey<Block> C_MAPLE_LOGS = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "maple_logs"));
-        public static final TagKey<Block> C_CHERRY_LOGS = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "cherry_logs"));
-        public static final TagKey<Block> C_PLASTER = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "plaster"));
+        public static final TagKey<Block> C_SAPLING = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("c", "saplings"));
+        public static final TagKey<Block> C_MAPLE_LOGS = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("c", "maple_logs"));
+        public static final TagKey<Block> C_CHERRY_LOGS = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("c", "cherry_logs"));
+        public static final TagKey<Block> C_PLASTER = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath("c", "plaster"));
 
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider arg) {
         valueLookupBuilder(SAPLINGS);
         valueLookupBuilder(C_SAPLING);
         valueLookupBuilder(C_MAPLE_LOGS);
@@ -42,7 +40,7 @@ public class MapleBlockTagGeneration extends FabricTagProvider.BlockTagProvider 
         valueLookupBuilder(C_PLASTER);
         valueLookupBuilder(CEILING_HANGING_SIGNS);
         valueLookupBuilder(WALL_HANGING_SIGNS);
-        valueLookupBuilder(PICKAXE_MINEABLE)
+        valueLookupBuilder(MINEABLE_WITH_PICKAXE)
                 .add(FurnitureBedroomBlocks.White_Desk_Lamp)
                 .add(FurnitureBedroomBlocks.Orange_Desk_Lamp)
                 .add(FurnitureBedroomBlocks.Magenta_Desk_Lamp)

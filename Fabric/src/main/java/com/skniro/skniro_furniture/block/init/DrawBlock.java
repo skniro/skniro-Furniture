@@ -1,36 +1,36 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateManager;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class DrawBlock extends HorizontalFacingBlock {
+public class DrawBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape SOUTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
     private static final VoxelShape WEST_SHAPE;
-    public static final MapCodec<DrawBlock> CODEC = createCodec(DrawBlock::new);
-    public DrawBlock(Settings settings) {
+    public static final MapCodec<DrawBlock> CODEC = simpleCodec(DrawBlock::new);
+    public DrawBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction direction = state.get(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        Direction direction = state.getValue(FACING);
         switch (direction){
             case EAST:
                 return EAST_SHAPE;
@@ -46,18 +46,18 @@ public class DrawBlock extends HorizontalFacingBlock {
 
     @Nullable
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
     static {
-        NORTH_SHAPE = Block.createCuboidShape(2.0, 2.0, 15.0, 14.0, 14.0, 16.0);
-        SOUTH_SHAPE = Block.createCuboidShape(2.0, 2.0, 0.0, 14.0, 14.0, 1.0);
-        EAST_SHAPE = Block.createCuboidShape(0.0, 2.0, 2.0, 1.0, 14.0, 14.0);
-        WEST_SHAPE = Block.createCuboidShape(15.0, 2.0, 2.0, 16.0, 14.0, 14.0);
+        NORTH_SHAPE = Block.box(2.0, 2.0, 15.0, 14.0, 14.0, 16.0);
+        SOUTH_SHAPE = Block.box(2.0, 2.0, 0.0, 14.0, 14.0, 1.0);
+        EAST_SHAPE = Block.box(0.0, 2.0, 2.0, 1.0, 14.0, 14.0);
+        WEST_SHAPE = Block.box(15.0, 2.0, 2.0, 16.0, 14.0, 14.0);
     }
 }

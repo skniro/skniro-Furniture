@@ -3,45 +3,45 @@ package com.skniro.skniro_furniture.block.init;
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.BedsideCabinetBlockEntity;
 import com.skniro.skniro_furniture.block.entity.DeskCabinetBlockEntity;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.stat.Stats;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 
 public class DeskCabinetBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<DeskCabinetBlock> CODEC = createCodec(DeskCabinetBlock::new);
+    public static final MapCodec<DeskCabinetBlock> CODEC = simpleCodec(DeskCabinetBlock::new);
 
-    public MapCodec<DeskCabinetBlock> getCodec() {
+    public MapCodec<DeskCabinetBlock> codec() {
         return CODEC;
     }
 
-    public DeskCabinetBlock(Settings settings) {
+    public DeskCabinetBlock(Properties settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
+        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (world instanceof ServerWorld serverWorld) {
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (world instanceof ServerLevel serverWorld) {
             BlockEntity var8 = world.getBlockEntity(pos);
             if (var8 instanceof DeskCabinetBlockEntity BlockEntity) {
-                player.openHandledScreen(BlockEntity);
-                player.incrementStat(Stats.OPEN_BARREL);
+                player.openMenu(BlockEntity);
+                player.awardStat(Stats.OPEN_BARREL);
             }
         }
 
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof DeskCabinetBlockEntity) {
             ((DeskCabinetBlockEntity)blockEntity).tick();
@@ -50,7 +50,7 @@ public class DeskCabinetBlock extends AbstractFurnitureContainerBlock {
     }
 
     @Nullable
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new DeskCabinetBlockEntity(pos, state);
     }
 }

@@ -2,13 +2,13 @@ package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.block.init.FridgeBlock;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.GenericContainerScreenHandler;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ChestMenu;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 
 public class FridgeBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
@@ -17,16 +17,16 @@ public class FridgeBlockEntity extends AbstractFurnitureContainerBlockEntity {
     }
 
     @Override
-    protected Text getContainerName() {
+    protected Component getDefaultName() {
 
-        if(getCachedState().get(FridgeBlock.HALF) == DoubleBlockHalf.UPPER) {
-            return Text.translatable(FurnitureStrings.Fridge_UPPER);
+        if(getBlockState().getValue(FridgeBlock.HALF) == DoubleBlockHalf.UPPER) {
+            return Component.translatable(FurnitureStrings.Fridge_UPPER);
         }
-        return Text.translatable(FurnitureStrings.Fridge_LOWER);
+        return Component.translatable(FurnitureStrings.Fridge_LOWER);
     }
 
     @Override
-    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return GenericContainerScreenHandler.createGeneric9x6(syncId, playerInventory, this);
+    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
+        return ChestMenu.sixRows(syncId, playerInventory, this);
     }
 }

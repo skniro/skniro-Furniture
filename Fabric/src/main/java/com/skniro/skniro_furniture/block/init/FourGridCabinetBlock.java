@@ -1,22 +1,16 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.world.level.block.BaseEntityBlock;
 
 public class FourGridCabinetBlock extends AbstractWallCabinetBlock {
-    public static final MapCodec<FourGridCabinetBlock> CODEC = createCodec(FourGridCabinetBlock::new);
-    public FourGridCabinetBlock(Settings settings) {
+    public static final MapCodec<FourGridCabinetBlock> CODEC = simpleCodec(FourGridCabinetBlock::new);
+    public FourGridCabinetBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
+    protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
 }

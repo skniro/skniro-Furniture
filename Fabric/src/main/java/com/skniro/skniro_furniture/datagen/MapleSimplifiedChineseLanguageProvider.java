@@ -3,20 +3,19 @@ package com.skniro.skniro_furniture.datagen;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.*;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.minecraft.core.HolderLookup;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
 public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvider {
-    public MapleSimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup){
+    public MapleSimplifiedChineseLanguageProvider(FabricPackOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup){
         super(dataGenerator, "zh_cn", registryLookup);
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+    public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
 
         translationBuilder.add(Furniture.Maple_Group_Furniture,"Skniro的家具");
         translationBuilder.add(Furniture.Furniture_Group_Bedroom_Furniture,"卧室家具");
@@ -2448,7 +2447,7 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
 
 
         try {
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
+            Path existingFilePath = packOutput.getModContainer().findPath("assets/skniro_furniture/lang/zh_cn.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);

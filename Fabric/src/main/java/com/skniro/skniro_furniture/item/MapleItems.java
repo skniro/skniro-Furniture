@@ -1,26 +1,26 @@
 package com.skniro.skniro_furniture.item;
 
 import com.skniro.skniro_furniture.Furniture;
-import net.minecraft.block.Block;
-import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import java.util.function.Function;
 
 public class MapleItems {
 
-    private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
-        Item item = factory.apply(settings.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name))));
-        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Furniture.MOD_ID, name)), item);
+    private static Item registerItem(String name, Function<Item.Properties, Item> factory, Item.Properties settings) {
+        Item item = factory.apply(settings.setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name)), item);
     }
 
-    private static Function<Item.Settings, Item> createBlockItemWithUniqueName(Block block) {
+    private static Function<Item.Properties, Item> createBlockItemWithUniqueName(Block block) {
         return (settings) -> {
-            return new BlockItem(block, settings.useItemPrefixedTranslationKey());
+            return new BlockItem(block, settings.useItemDescriptionPrefix());
         };
     }
 

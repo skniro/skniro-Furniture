@@ -6,18 +6,18 @@ import com.skniro.skniro_furniture.block.entity.GlassTableBlockEntity;
 import com.skniro.skniro_furniture.block.init.GlassTableBlock;
 import com.skniro.skniro_furniture.block.renderer.state.GlassTableBlockEntityRendererState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
-import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
-import net.minecraft.client.renderer.state.CameraRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -57,7 +57,7 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
 
     @Override
     public void submit(GlassTableBlockEntityRendererState state, PoseStack matrices, SubmitNodeCollector queue, CameraRenderState cameraRenderState) {
-        ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
+        BlockEntityRenderDispatcher itemRenderer = Minecraft.getInstance().getBlockEntityRenderDispatcher();
         Direction direction = state.blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
 
         matrices.pushPose();
@@ -103,7 +103,7 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
     private int getLightLevel(Level world, BlockPos pos) {
         int bLight = world.getBrightness(LightLayer.BLOCK, pos);
         int sLight = world.getBrightness(LightLayer.SKY, pos);
-        return LightTexture.pack(bLight, Math.max(sLight, 15));
+        return LightCoordsUtil.pack(bLight, Math.max(sLight, 15));
     }
 
     @Override

@@ -143,8 +143,8 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
     private void craftItem() {
         Optional<RecipeHolder<KitchenSinkRecipe>> recipe = getCurrentRecipe();
         this.removeItem(INPUT_SLOT, 1);
-        this.setItem(OUTPUT_SLOT, new ItemStack(recipe.get().value().output().getItem(),
-                this.getItem(OUTPUT_SLOT).getCount() + recipe.get().value().output().getCount()));
+        this.setItem(OUTPUT_SLOT, new ItemStack(recipe.get().value().output().item(),
+                this.getItem(OUTPUT_SLOT).getCount() + recipe.get().value().output().count()));
     }
 
     @Override
@@ -179,7 +179,7 @@ public class KitchenSinkBlockEntity extends BlockEntity implements MenuProvider,
             return false;
         }
 
-        ItemStack output = recipe.get().value().output();
+        ItemStack output = recipe.get().value().output().create();
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
     private Optional<RecipeHolder<KitchenSinkRecipe>> getCurrentRecipe() {

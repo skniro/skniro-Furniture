@@ -1,63 +1,60 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractLampBlock extends Block {
     public static final BooleanProperty LIT;
 
-    public AbstractLampBlock(AbstractBlock.Settings settings) {
+    public AbstractLampBlock(BlockBehaviour.Properties settings) {
         super(settings);
-        this.setDefaultState((BlockState)this.getDefaultState().with(LIT, false));
+        this.registerDefaultState((BlockState)this.defaultBlockState().setValue(LIT, false));
     }
 
     @Override
     @Nullable
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(LIT, ctx.getWorld().isReceivingRedstonePower(ctx.getBlockPos()));
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return (BlockState)this.defaultBlockState().setValue(LIT, ctx.getLevel().hasNeighborSignal(ctx.getClickedPos()));
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient()) {
-            boolean lit = state.get(LIT);
-            world.setBlockState(pos, state.with(LIT, !lit), 2);
+    public InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!world.isClientSide()) {
+            boolean lit = state.getValue(LIT);
+            world.setBlock(pos, state.setValue(LIT, !lit), 2);
         }
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if ((Boolean)state.get(LIT) && !world.isReceivingRedstonePower(pos)) {
-            world.setBlockState(pos, (BlockState)state.cycle(LIT), 2);
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        if ((Boolean)state.getValue(LIT) && !world.hasNeighborSignal(pos)) {
+            world.setBlock(pos, (BlockState)state.cycle(LIT), 2);
         }
 
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{LIT});
     }
 
     static {
-        LIT = Properties.LIT;
+        LIT = BlockStateProperties.LIT;
     }
 }

@@ -1,53 +1,51 @@
 package com.skniro.skniro_furniture.client.gui.screen;
 
-import com.mojang.blaze3d.pipeline.RenderPipeline;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.screen.KitchenSinkBlockScreenHandler;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.gl.RenderPipelines;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.render.RenderLayer;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.player.Inventory;
 
 @Environment(EnvType.CLIENT)
-public class KitchenSinkBlockScreen extends HandledScreen<KitchenSinkBlockScreenHandler> {
-    private static final Identifier TEXTURE = Identifier.of(Furniture.MOD_ID, "textures/gui/container/kitchen_sink.png");
+public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkBlockScreenHandler> {
+    private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "textures/gui/container/kitchen_sink.png");
 
-    public KitchenSinkBlockScreen(KitchenSinkBlockScreenHandler handler, PlayerInventory inventory, Text title) {
+    public KitchenSinkBlockScreen(KitchenSinkBlockScreenHandler handler, Inventory inventory, Component title) {
         super(handler, inventory, title);
     }
 
     @Override
     protected void init() {
         super.init();
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
+        titleLabelX = (imageWidth - font.width(title)) / 2;
     }
 
+
     @Override
-    protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
-        int x = (width - backgroundWidth) / 2;
-        int y = (height - backgroundHeight) / 2;
-        context.drawTexture(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight,256,256);
+    public void extractBackground(final GuiGraphicsExtractor context, final int mouseX, final int mouseY, final float a) {
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+        context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
 
         renderProgressArrow(context, x, y);
     }
 
-    private void renderProgressArrow(DrawContext context, int x, int y) {
-        if(handler.isCrafting()) {
-            context.drawTexture(RenderPipelines.GUI_TEXTURED, TEXTURE, x + 73, y + 34, 176, 12, handler.getScaledProgress(),45,256,256);
+    private void renderProgressArrow(GuiGraphicsExtractor context, int x, int y) {
+        if(menu.isCrafting()) {
+            context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
         }
     }
 
     @Override
-    public void render(DrawContext context , int mouseX, int mouseY, float delta) {
-        renderBackground(context, mouseX, mouseY, delta);
-        super.render(context, mouseX, mouseY, delta);
-        drawMouseoverTooltip(context, mouseX, mouseY);
+    public void extractRenderState(GuiGraphicsExtractor context , int mouseX, int mouseY, float delta) {
+        extractBackground(context, mouseX, mouseY, delta);
+        super.extractRenderState(context, mouseX, mouseY, delta);
+        extractTooltip(context, mouseX, mouseY);
     }
 }
 

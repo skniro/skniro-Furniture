@@ -1,21 +1,21 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.FuelRegistry;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.recipe.RecipeType;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.SmokerScreenHandler;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.SmokerMenu;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
+import net.minecraft.world.level.block.entity.FuelValues;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
@@ -23,42 +23,42 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
         super(FurnitureBlockEntityType.OVEN_BLOCK_ENTITY, pos, state, RecipeType.SMOKING);
     }
 
-    protected Text getContainerName() {
-        return Text.translatable(FurnitureStrings.Oven);
+    protected Component getDefaultName() {
+        return Component.translatable(FurnitureStrings.Oven);
     }
 
-    protected int getFuelTime(FuelRegistry fuelRegistry, ItemStack stack) {
-        return super.getFuelTime(fuelRegistry, stack) / 2;
+    protected int getBurnDuration(FuelValues fuelRegistry, ItemStack stack) {
+        return super.getBurnDuration(fuelRegistry, stack) / 2;
     }
 
-    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new SmokerScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
+        return new SmokerMenu(syncId, playerInventory, this, this.dataAccess);
     }
 
     @Override
-    public void markDirty() {
-        world.updateListeners(pos, getCachedState(), getCachedState(), 3);
-        super.markDirty();
+    public void setChanged() {
+        level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+        super.setChanged();
     }
 
     public ItemStack getRenderStack() {
-        if (this.getStack(INPUT_SLOT_INDEX).isEmpty()){
-            return this.getStack(OUTPUT_SLOT_INDEX);
+        if (this.getItem(SLOT_INPUT).isEmpty()){
+            return this.getItem(SLOT_RESULT);
         } else {
-            return this.getStack(INPUT_SLOT_INDEX);
+            return this.getItem(SLOT_INPUT);
         }
     }
 
     @Nullable
     @Override
-    public Packet<ClientPlayPacketListener> toUpdatePacket() {
-        return BlockEntityUpdateS2CPacket.create(this);
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
 
     @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
+        return saveWithoutMetadata(registryLookup);
     }
 
 }

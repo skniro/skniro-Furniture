@@ -6,14 +6,19 @@ import com.skniro.skniro_furniture.block.entity.CabinetBlockEntity;
 import com.skniro.skniro_furniture.block.init.FourGridCabinetBlock;
 import com.skniro.skniro_furniture.block.init.TripleCabinetBlock;
 import com.skniro.skniro_furniture.block.renderer.state.CabinetBlockEntityRendererState;
-import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
+import net.minecraft.util.LightCoordsUtil;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
-import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,10 +29,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<CabinetBlockEntity, CabinetBlockEntityRendererState> {
     private final ItemModelResolver itemModelManager;
@@ -113,7 +114,7 @@ public class OtherCabinetBlockEntityRenderer implements BlockEntityRenderer<Cabi
     private int getLightLevel(Level world, BlockPos pos) {
         int bLight = world.getBrightness(LightLayer.BLOCK, pos);
         int sLight = world.getBrightness(LightLayer.SKY, pos);
-        return LightTexture.pack(bLight, Math.max(sLight, 15));
+        return LightCoordsUtil.pack(bLight, Math.max(sLight, 15));
     }
 
     @Override

@@ -1,27 +1,30 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class TVBlock extends BlockWithEntity {
-    public MapCodec<TVBlock> CODEC = createCodec(TVBlock::new);
+public class TVBlock extends BaseEntityBlock {
+    public MapCodec<TVBlock> CODEC = simpleCodec(TVBlock::new);
     public static final EnumProperty<Direction> FACING;
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape SOUTH_SHAPE;
@@ -29,23 +32,23 @@ public class TVBlock extends BlockWithEntity {
     private static final VoxelShape WEST_SHAPE;
     public static final BooleanProperty LIT;
 
-    public TVBlock(Settings settings) {
+    public TVBlock(Properties settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH).with(LIT, false)));
+        this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH).setValue(LIT, false)));
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient()) {
-            boolean lit = state.get(LIT);
-            world.setBlockState(pos, state.with(LIT, !lit), 2);
+    public InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (!world.isClientSide()) {
+            boolean lit = state.getValue(LIT);
+            world.setBlock(pos, state.setValue(LIT, !lit), 2);
         }
-        return ActionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction direction = state.get(FACING);
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+        Direction direction = state.getValue(FACING);
         switch (direction){
             case EAST:
                 return EAST_SHAPE;
@@ -60,42 +63,42 @@ public class TVBlock extends BlockWithEntity {
     }
 
     @Override
-    protected BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+    protected BlockState rotate(BlockState state, Rotation rotation) {
+        return (BlockState)state.setValue(FACING, rotation.rotate((Direction)state.getValue(FACING)));
     }
 
     @Override
-    protected BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+    protected BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation((Direction)state.getValue(FACING)));
     }
 
     @Nullable
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, LIT);
     }
 
     @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
+    protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
 
     @Override
-    public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return null;
     }
 
     static {
-        FACING = Properties.HORIZONTAL_FACING;
-        LIT = Properties.LIT;
-        NORTH_SHAPE = Block.createCuboidShape(-7.0, 5.0, 11.0, 24.0, 23.0, 14.0);
-        SOUTH_SHAPE = Block.createCuboidShape(-8.0, 5.0, 2.0, 23.0, 23.0, 5.0);
-        EAST_SHAPE = Block.createCuboidShape(2.0, 5.0, -7.0, 5.0, 23.0, 24.0);
-        WEST_SHAPE = Block.createCuboidShape(11.0, 5.0, -8.0, 14.0, 23.0, 23.0);
+        FACING = BlockStateProperties.HORIZONTAL_FACING;
+        LIT = BlockStateProperties.LIT;
+        NORTH_SHAPE = Block.box(-7.0, 5.0, 11.0, 24.0, 23.0, 14.0);
+        SOUTH_SHAPE = Block.box(-8.0, 5.0, 2.0, 23.0, 23.0, 5.0);
+        EAST_SHAPE = Block.box(2.0, 5.0, -7.0, 5.0, 23.0, 24.0);
+        WEST_SHAPE = Block.box(11.0, 5.0, -8.0, 14.0, 23.0, 23.0);
     }
 }

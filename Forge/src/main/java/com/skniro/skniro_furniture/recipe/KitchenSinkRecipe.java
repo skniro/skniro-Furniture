@@ -3,28 +3,23 @@ package com.skniro.skniro_furniture.recipe;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.PlacementInfo;
-import net.minecraft.world.item.crafting.Recipe;
-import net.minecraft.world.item.crafting.RecipeBookCategory;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
-    final ItemStack output;
+    final ItemStackTemplate output;
     final Ingredient ingredient;
     @Nullable
     private PlacementInfo ingredientPlacement;
 
 
-    public KitchenSinkRecipe(Ingredient ingredients, ItemStack output) {
+    public KitchenSinkRecipe(Ingredient ingredients, ItemStackTemplate output) {
         this.output = output;
         this.ingredient = ingredients;
     }
@@ -33,7 +28,7 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
         return this.ingredient;
     }
 
-    public ItemStack output() {
+    public ItemStackTemplate output() {
         return this.output;
     }
 
@@ -46,8 +41,8 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
     }
 
     @Override
-    public ItemStack assemble(KitchenSinkRecipeInput input, HolderLookup.Provider lookup) {
-        return output.copy();
+    public ItemStack assemble(KitchenSinkRecipeInput input) {
+        return output.create();
     }
 
     @Override
@@ -74,33 +69,44 @@ public class KitchenSinkRecipe implements Recipe<KitchenSinkRecipeInput> {
         return null;
     }
 
-    public static class Serializer implements RecipeSerializer<KitchenSinkRecipe> {
-        public static final MapCodec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC.fieldOf("ingredient").forGetter((recipe) -> {
-                    return recipe.ingredient;
-                }),
-                ItemStack.CODEC.fieldOf("result").forGetter((recipe) -> {
-                    return recipe.output;
-                })
-        ).apply(inst, KitchenSinkRecipe::new));
-
-        public static final StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> STREAM_CODEC =
-                StreamCodec.composite(
-                        Ingredient.CONTENTS_STREAM_CODEC, KitchenSinkRecipe::ingredient,
-                        ItemStack.STREAM_CODEC, KitchenSinkRecipe::output,
-                        KitchenSinkRecipe::new);
-
-        public Serializer() {
-        }
-
-        public MapCodec<KitchenSinkRecipe> codec() {
-            return CODEC;
-        }
-
-        public StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> streamCodec() {
-            return STREAM_CODEC;
-        }
+    @Override
+    public boolean showNotification() {
+        return false;
     }
+
+    @Override
+    public String group() {
+        return "";
+    }
+
+
+    public static final MapCodec<KitchenSinkRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+            Ingredient.CODEC.fieldOf("ingredient").forGetter((recipe) -> {
+                return recipe.ingredient;
+            }),
+            ItemStackTemplate.CODEC.fieldOf("result").forGetter((recipe) -> {
+                return recipe.output;
+            })
+    ).apply(inst, KitchenSinkRecipe::new));
+
+    public static final StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> STREAM_CODEC =
+            StreamCodec.composite(
+                    Ingredient.CONTENTS_STREAM_CODEC, KitchenSinkRecipe::ingredient,
+                    ItemStackTemplate.STREAM_CODEC, KitchenSinkRecipe::output,
+                    KitchenSinkRecipe::new);
+
+    public static final RecipeSerializer<KitchenSinkRecipe> SERIALIZER =
+            new RecipeSerializer<>(CODEC, STREAM_CODEC);
+
+
+    public MapCodec<KitchenSinkRecipe> codec() {
+        return CODEC;
+    }
+
+    public StreamCodec<RegistryFriendlyByteBuf, KitchenSinkRecipe> streamCodec() {
+        return STREAM_CODEC;
+    }
+
 }
 
 

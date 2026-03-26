@@ -5,16 +5,15 @@ import net.minecraft.client.renderer.item.ItemStackRenderState;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Collections;
 import java.util.List;
 
-@OnlyIn(Dist.CLIENT)
 public class CabinetBlockEntityRendererState extends BlockEntityRenderState {
     public List<ItemStackRenderState> triplecabinetItemStates = Collections.emptyList();
     public List<ItemStackRenderState> fourgridcabinetItemStates = Collections.emptyList();
     public NonNullList<ItemStack> stack;
     public Level world;
+    public BlockState blockState;
 }

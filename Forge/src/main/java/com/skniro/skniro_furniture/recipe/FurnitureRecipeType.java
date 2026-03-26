@@ -16,7 +16,7 @@ public interface FurnitureRecipeType<T extends Recipe<?>> {
     public static final DeferredRegister<RecipeType<?>> TYPES =
             DeferredRegister.create(ForgeRegistries.RECIPE_TYPES, Furniture.MOD_ID);
 
-    public static final Supplier<RecipeSerializer<KitchenSinkRecipe>> Kitchen_Sink_SERIALIZER = SERIALIZERS.register("kitchen_sink", KitchenSinkRecipe.Serializer::new);
+    public static final Supplier<RecipeSerializer<KitchenSinkRecipe>> Kitchen_Sink_SERIALIZER = SERIALIZERS.register("kitchen_sink", ()-> KitchenSinkRecipe.SERIALIZER);
     public static final Supplier<RecipeType<KitchenSinkRecipe>> Kitchen_Sink_TYPE = TYPES.register(
             "kitchen_sink", () ->new RecipeType<>() {
                 @Override

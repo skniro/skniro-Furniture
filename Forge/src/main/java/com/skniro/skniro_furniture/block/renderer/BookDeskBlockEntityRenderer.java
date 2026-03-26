@@ -12,20 +12,21 @@ import net.minecraft.client.renderer.blockentity.EnchantTableRenderer;
 import net.minecraft.client.renderer.blockentity.state.LecternRenderState;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.rendertype.RenderTypes;
-import net.minecraft.client.renderer.state.CameraRenderState;
+
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.client.resources.model.MaterialSet;
+import net.minecraft.client.resources.model.sprite.SpriteGetter;
 import net.minecraft.world.level.block.LecternBlock;
 import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
 public class BookDeskBlockEntityRenderer implements BlockEntityRenderer<BookDeskBlockEntity, LecternRenderState> {
-    private final MaterialSet spriteHolder;
+    private final SpriteGetter spriteHolder;
     private final BookModel book;
-    private final BookModel.State bookModelState = new BookModel.State(0.0F, 0.1F, 0.9F, 1.2F);
+    private final BookModel.State bookModelState = BookModel.State.forAnimation(0.0F, 0.1F, 0.9F, 1.2F);
 
     public BookDeskBlockEntityRenderer(BlockEntityRendererProvider.Context ctx) {
-        this.spriteHolder = ctx.materials();
+        this.spriteHolder = ctx.sprites();
         this.book = new BookModel(ctx.bakeLayer(ModelLayers.BOOK));
     }
 

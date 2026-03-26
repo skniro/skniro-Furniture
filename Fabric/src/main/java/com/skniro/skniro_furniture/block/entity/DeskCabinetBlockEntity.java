@@ -1,13 +1,13 @@
 package com.skniro.skniro_furniture.block.entity;
 
 import com.skniro.skniro_furniture.init.FurnitureStrings;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.GenericContainerScreenHandler;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ChestMenu;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class DeskCabinetBlockEntity extends AbstractFurnitureContainerBlockEntity {
 
@@ -16,11 +16,11 @@ public class DeskCabinetBlockEntity extends AbstractFurnitureContainerBlockEntit
     }
 
 
-    protected Text getContainerName() {
-        return Text.translatable(FurnitureStrings.Desk_Cabinet);
+    protected Component getDefaultName() {
+        return Component.translatable(FurnitureStrings.Desk_Cabinet);
     }
 
-    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new GenericContainerScreenHandler(ScreenHandlerType.GENERIC_9X2, syncId, playerInventory, this, 2);
+    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
+        return new ChestMenu(MenuType.GENERIC_9x2, syncId, playerInventory, this, 2);
     }
 }

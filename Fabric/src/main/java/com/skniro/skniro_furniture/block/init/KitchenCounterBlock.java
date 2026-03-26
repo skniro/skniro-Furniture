@@ -1,72 +1,58 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import com.skniro.skniro_furniture.entity.MapleEntityType;
-import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
-import net.minecraft.block.*;
-import net.minecraft.block.enums.StairShape;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.StringIdentifiable;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
-import net.minecraft.world.block.WireOrientation;
-import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.redstone.Orientation;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class KitchenCounterBlock extends HorizontalFacingBlock {
-    public static final BooleanProperty LEFT = BooleanProperty.of("left");
-    public static final BooleanProperty RIGHT = BooleanProperty.of("right");
+public class KitchenCounterBlock extends HorizontalDirectionalBlock {
+    public static final BooleanProperty LEFT = BooleanProperty.create("left");
+    public static final BooleanProperty RIGHT = BooleanProperty.create("right");
 
-    public static final MapCodec<KitchenCounterBlock> CODEC = createCodec(KitchenCounterBlock::new);
+    public static final MapCodec<KitchenCounterBlock> CODEC = simpleCodec(KitchenCounterBlock::new);
 
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
-    public KitchenCounterBlock(Settings settings) {
+    public KitchenCounterBlock(Properties settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(LEFT,false).with(RIGHT,false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(LEFT,false).setValue(RIGHT,false));
     }
 
     @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
         return CODEC;
     }
 
     @Override
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, @Nullable WireOrientation wireOrientation, boolean notify) {
-        super.neighborUpdate(state, world, pos, sourceBlock, wireOrientation, notify);
+    public void neighborChanged(BlockState state, Level world, BlockPos pos, Block sourceBlock, @Nullable Orientation wireOrientation, boolean notify) {
+        super.neighborChanged(state, world, pos, sourceBlock, wireOrientation, notify);
 
-        if (world.isClient()) return;
+        if (world.isClientSide()) return;
 
-        Direction direction = (Direction) state.get(FACING);
-        BlockState blockState = world.getBlockState(pos.offset(direction));
+        Direction direction = (Direction) state.getValue(FACING);
+        BlockState blockState = world.getBlockState(pos.relative(direction));
         if (isCounter(blockState)) {
-            Direction direction2 = (Direction) blockState.get(FACING);
-            if (direction2.getAxis() != ((Direction) state.get(FACING)).getAxis() && isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
+            Direction direction2 = (Direction) blockState.getValue(FACING);
+            if (direction2.getAxis() != ((Direction) state.getValue(FACING)).getAxis() && isDifferentOrientation(state, world, pos, direction2.getOpposite())) {
                 boolean leftConnected = isLeftConnected(world, pos, direction);
                 boolean rightConnected = isRightConnected(world, pos, direction);
 
-                BlockState newState = state.with(LEFT, leftConnected).with(RIGHT, rightConnected);
+                BlockState newState = state.setValue(LEFT, leftConnected).setValue(RIGHT, rightConnected);
                 if (!newState.equals(state)) {
-                    world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
+                    world.setBlock(pos, newState, Block.UPDATE_CLIENTS);
                 }
             }
         }
@@ -76,35 +62,35 @@ public class KitchenCounterBlock extends HorizontalFacingBlock {
         return state.getBlock() instanceof KitchenCounterBlock;
     }
 
-    private static boolean isDifferentOrientation(BlockState state, BlockView world, BlockPos pos, Direction dir) {
-        BlockState blockState = world.getBlockState(pos.offset(dir));
-        return !isCounter(blockState) || blockState.get(FACING) != state.get(FACING);
+    private static boolean isDifferentOrientation(BlockState state, BlockGetter world, BlockPos pos, Direction dir) {
+        BlockState blockState = world.getBlockState(pos.relative(dir));
+        return !isCounter(blockState) || blockState.getValue(FACING) != state.getValue(FACING);
     }
 
-    private boolean isLeftConnected(World world, BlockPos pos, Direction facing) {
-        BlockState neighborState = world.getBlockState(pos.offset(facing.rotateYCounterclockwise()));
-        return neighborState.getBlock() == this && neighborState.get(FACING) == facing;
+    private boolean isLeftConnected(Level world, BlockPos pos, Direction facing) {
+        BlockState neighborState = world.getBlockState(pos.relative(facing.getCounterClockWise()));
+        return neighborState.getBlock() == this && neighborState.getValue(FACING) == facing;
     }
 
-    private boolean isRightConnected(World world, BlockPos pos, Direction facing) {
-        BlockState neighborState = world.getBlockState(pos.offset(facing.rotateYClockwise()));
-        return neighborState.getBlock() == this && neighborState.get(FACING) == facing;
-    }
-
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext context) {
-        Direction facing = context.getHorizontalPlayerFacing().getOpposite();
-
-        return this.getDefaultState().with(FACING, facing);
+    private boolean isRightConnected(Level world, BlockPos pos, Direction facing) {
+        BlockState neighborState = world.getBlockState(pos.relative(facing.getClockWise()));
+        return neighborState.getBlock() == this && neighborState.getValue(FACING) == facing;
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        Direction facing = context.getHorizontalDirection().getOpposite();
+
+        return this.defaultBlockState().setValue(FACING, facing);
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, LEFT, RIGHT);
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 }

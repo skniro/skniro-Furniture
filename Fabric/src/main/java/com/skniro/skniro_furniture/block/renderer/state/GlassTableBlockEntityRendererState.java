@@ -2,19 +2,21 @@ package com.skniro.skniro_furniture.block.renderer.state;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.render.block.entity.state.BlockEntityRenderState;
-import net.minecraft.client.render.item.ItemRenderState;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.world.World;
+import net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.core.NonNullList;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Collections;
 import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class GlassTableBlockEntityRendererState extends BlockEntityRenderState {
-    public List<ItemRenderState> triplecabinetItemStates = Collections.emptyList();
-    public List<ItemRenderState> fourgridcabinetItemStates = Collections.emptyList();
-    public DefaultedList<ItemStack> stack;
-    public World world;
+    public List<ItemStackRenderState> triplecabinetItemStates = Collections.emptyList();
+    public List<ItemStackRenderState> fourgridcabinetItemStates = Collections.emptyList();
+    public NonNullList<ItemStack> stack;
+    public Level world;
+    public BlockState blockState;
 }

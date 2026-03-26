@@ -1,27 +1,27 @@
 package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class LampBlock extends AbstractLampBlock{
-    public static final MapCodec<LampBlock> CODEC = createCodec(LampBlock::new);
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 14.5, 0.0, 16.0, 16.0, 16.0);
+    public static final MapCodec<LampBlock> CODEC = simpleCodec(LampBlock::new);
+    private static final VoxelShape SHAPE = Block.box(0.0, 14.5, 0.0, 16.0, 16.0, 16.0);
 
-    public LampBlock(Settings settings) {
+    public LampBlock(Properties settings) {
         super(settings);
     }
 
-    public MapCodec<LampBlock> getCodec() {
+    public MapCodec<LampBlock> codec() {
         return CODEC;
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 }

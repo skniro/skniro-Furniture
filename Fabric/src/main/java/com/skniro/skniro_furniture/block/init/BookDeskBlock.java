@@ -2,97 +2,100 @@ package com.skniro.skniro_furniture.block.init;
 
 import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.BookDeskBlockEntity;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.TypedEntityData;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.BlockMirror;
-import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TypedEntityData;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 
-public class BookDeskBlock extends BlockWithEntity {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    public static final MapCodec<BookDeskBlock> CODEC = createCodec(BookDeskBlock::new);
+public class BookDeskBlock extends BaseEntityBlock {
+    private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    public static final MapCodec<BookDeskBlock> CODEC = simpleCodec(BookDeskBlock::new);
     public static final EnumProperty<Direction> FACING;
     public static final BooleanProperty HAS_BOOK;
 
-    public BookDeskBlock(Settings settings) {
+    public BookDeskBlock(Properties settings) {
         super(settings);
-        this.setDefaultState(((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(HAS_BOOK, false));
+        this.registerDefaultState(((this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(HAS_BOOK, false));
     }
 
-    public MapCodec<BookDeskBlock> getCodec() {
+    public MapCodec<BookDeskBlock> codec() {
         return CODEC;
     }
 
     @Override
-    protected BlockState rotate(BlockState state, BlockRotation rotation) {
-        return (BlockState)state.with(FACING, rotation.rotate((Direction)state.get(FACING)));
+    protected BlockState rotate(BlockState state, Rotation rotation) {
+        return (BlockState)state.setValue(FACING, rotation.rotate((Direction)state.getValue(FACING)));
     }
 
     @Override
-    protected BlockState mirror(BlockState state, BlockMirror mirror) {
-        return state.rotate(mirror.getRotation((Direction)state.get(FACING)));
+    protected BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation((Direction)state.getValue(FACING)));
     }
 
     @Override
-    protected boolean hasSidedTransparency(BlockState state) {
+    protected boolean useShapeForLightOcclusion(BlockState state) {
         return true;
     }
 
     @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        World world = ctx.getWorld();
-        ItemStack itemStack = ctx.getStack();
-        PlayerEntity playerEntity = ctx.getPlayer();
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        Level world = ctx.getLevel();
+        ItemStack itemStack = ctx.getItemInHand();
+        Player playerEntity = ctx.getPlayer();
         boolean bl = false;
-        if (!world.isClient() && playerEntity != null && playerEntity.isCreativeLevelTwoOp()) {
-            TypedEntityData typedEntityData = itemStack.get(DataComponentTypes.BLOCK_ENTITY_DATA);
+        if (!world.isClientSide() && playerEntity != null && playerEntity.canUseGameMasterBlocks()) {
+            TypedEntityData typedEntityData = itemStack.get(DataComponents.BLOCK_ENTITY_DATA);
             if (typedEntityData != null && typedEntityData.contains("Book")) {
                 bl = true;
             }
         }
 
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite()).with(HAS_BOOK, bl);
+        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite()).setValue(HAS_BOOK, bl);
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new BookDeskBlockEntity(pos, state);
     }
 
-    public static boolean putBookIfAbsent(@Nullable LivingEntity user, World world, BlockPos pos, BlockState state, ItemStack stack) {
-        if (!(Boolean)state.get(HAS_BOOK)) {
-            if (!world.isClient()) {
+    public static boolean putBookIfAbsent(@Nullable LivingEntity user, Level world, BlockPos pos, BlockState state, ItemStack stack) {
+        if (!(Boolean)state.getValue(HAS_BOOK)) {
+            if (!world.isClientSide()) {
                 putBook(user, world, pos, state, stack);
             }
 
@@ -102,30 +105,30 @@ public class BookDeskBlock extends BlockWithEntity {
         }
     }
 
-    private static void putBook(@Nullable LivingEntity user, World world, BlockPos pos, BlockState state, ItemStack stack) {
+    private static void putBook(@Nullable LivingEntity user, Level world, BlockPos pos, BlockState state, ItemStack stack) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof BookDeskBlockEntity bookDeskBlockEntity) {
-            bookDeskBlockEntity.setBook(stack.splitUnlessCreative(1, user));
+            bookDeskBlockEntity.setBook(stack.consumeAndReturn(1, user));
             setHasBook(user, world, pos, state, true);
-            world.playSound(null, pos, SoundEvents.ITEM_BOOK_PUT, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, SoundEvents.BOOK_PUT, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
     }
 
-    public static void setHasBook(@Nullable Entity user, World world, BlockPos pos, BlockState state, boolean hasBook) {
-        BlockState blockState = state.with(HAS_BOOK, hasBook);
-        world.setBlockState(pos, blockState, 3);
-        world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(user, blockState));
+    public static void setHasBook(@Nullable Entity user, Level world, BlockPos pos, BlockState state, boolean hasBook) {
+        BlockState blockState = state.setValue(HAS_BOOK, hasBook);
+        world.setBlock(pos, blockState, 3);
+        world.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(user, blockState));
     }
 
     @Override
-    protected boolean hasComparatorOutput(BlockState state) {
+    protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }
 
     @Override
-    protected int getComparatorOutput(BlockState state, World world, BlockPos pos, Direction direction) {
-        if (state.get(HAS_BOOK)) {
+    protected int getAnalogOutputSignal(BlockState state, Level world, BlockPos pos, Direction direction) {
+        if (state.getValue(HAS_BOOK)) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BookDeskBlockEntity) {
                 return ((BookDeskBlockEntity)blockEntity).getComparatorOutput();
@@ -136,51 +139,51 @@ public class BookDeskBlock extends BlockWithEntity {
     }
 
     @Override
-    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (state.get(HAS_BOOK)) {
-            return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
-        } else if (stack.isIn(ItemTags.LECTERN_BOOKS)) {
-            return putBookIfAbsent(player, world, pos, state, stack) ? ActionResult.SUCCESS : ActionResult.PASS;
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (state.getValue(HAS_BOOK)) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        } else if (stack.is(ItemTags.LECTERN_BOOKS)) {
+            return putBookIfAbsent(player, world, pos, state, stack) ? InteractionResult.SUCCESS : InteractionResult.PASS;
         } else {
-            return stack.isEmpty() && hand == Hand.MAIN_HAND ? ActionResult.PASS : ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
+            return stack.isEmpty() && hand == InteractionHand.MAIN_HAND ? InteractionResult.PASS : InteractionResult.TRY_WITH_EMPTY_HAND;
         }
     }
 
     @Override
-    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (state.get(HAS_BOOK)) {
-            if (!world.isClient()) {
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (state.getValue(HAS_BOOK)) {
+            if (!world.isClientSide()) {
                 this.openScreen(world, pos, player);
             }
 
-            return ActionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         } else {
-            return ActionResult.CONSUME;
+            return InteractionResult.CONSUME;
         }
     }
 
     @Override
-    protected @Nullable NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return !(Boolean)state.get(HAS_BOOK) ? null : super.createScreenHandlerFactory(state, world, pos);
+    protected @Nullable MenuProvider getMenuProvider(BlockState state, Level world, BlockPos pos) {
+        return !(Boolean)state.getValue(HAS_BOOK) ? null : super.getMenuProvider(state, world, pos);
     }
 
-    private void openScreen(World world, BlockPos pos, PlayerEntity player) {
+    private void openScreen(Level world, BlockPos pos, Player player) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof BookDeskBlockEntity) {
-            player.openHandledScreen((BookDeskBlockEntity)blockEntity);
-            player.incrementStat(Stats.INTERACT_WITH_LECTERN);
+            player.openMenu((BookDeskBlockEntity)blockEntity);
+            player.awardStat(Stats.INTERACT_WITH_LECTERN);
         }
 
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, HAS_BOOK);
     }
 
 
     static {
-        FACING = Properties.HORIZONTAL_FACING;
-        HAS_BOOK = Properties.HAS_BOOK;
+        FACING = BlockStateProperties.HORIZONTAL_FACING;
+        HAS_BOOK = BlockStateProperties.HAS_BOOK;
     }
 }

@@ -1,63 +1,62 @@
 package com.skniro.skniro_furniture.block.renderer;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.block.entity.BookDeskBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.LecternBlock;
-import net.minecraft.block.entity.LecternBlockEntity;
-import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayers;
-import net.minecraft.client.render.block.entity.BlockEntityRenderer;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
-import net.minecraft.client.render.block.entity.EnchantingTableBlockEntityRenderer;
-import net.minecraft.client.render.block.entity.state.LecternBlockEntityRenderState;
-import net.minecraft.client.render.command.ModelCommandRenderer;
-import net.minecraft.client.render.command.OrderedRenderCommandQueue;
-import net.minecraft.client.render.entity.model.BookModel;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.state.CameraRenderState;
-import net.minecraft.client.texture.SpriteHolder;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.RotationAxis;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.object.book.BookModel;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.blockentity.EnchantTableRenderer;
+import net.minecraft.client.renderer.blockentity.state.LecternRenderState;
+import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+
+import net.minecraft.client.renderer.state.level.CameraRenderState;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.resources.model.sprite.SpriteGetter;
+import net.minecraft.world.level.block.LecternBlock;
+import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
-public class BookDeskBlockEntityRenderer implements BlockEntityRenderer<BookDeskBlockEntity, LecternBlockEntityRenderState> {
-    private final SpriteHolder spriteHolder;
+public class BookDeskBlockEntityRenderer implements BlockEntityRenderer<BookDeskBlockEntity, LecternRenderState> {
+    private final SpriteGetter spriteHolder;
     private final BookModel book;
-    private final BookModel.BookModelState bookModelState = new BookModel.BookModelState(0.0F, 0.1F, 0.9F, 1.2F);
+    private final BookModel.State bookModelState = BookModel.State.forAnimation(0.0F, 0.1F, 0.9F, 1.2F);
 
-    public BookDeskBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
-        this.spriteHolder = ctx.spriteHolder();
-        this.book = new BookModel(ctx.getLayerModelPart(EntityModelLayers.BOOK));
+    public BookDeskBlockEntityRenderer(BlockEntityRendererProvider.Context ctx) {
+        this.spriteHolder = ctx.sprites();
+        this.book = new BookModel(ctx.bakeLayer(ModelLayers.BOOK));
     }
 
     @Override
-    public LecternBlockEntityRenderState createRenderState() {
-        return new LecternBlockEntityRenderState();
+    public LecternRenderState createRenderState() {
+        return new LecternRenderState();
     }
 
     @Override
-    public void updateRenderState(BookDeskBlockEntity bookDeskBlockEntity, LecternBlockEntityRenderState lecternBlockEntityRenderState, float f, Vec3d vec3d, ModelCommandRenderer.@Nullable CrumblingOverlayCommand crumblingOverlayCommand) {
-        BlockEntityRenderer.super.updateRenderState(bookDeskBlockEntity, lecternBlockEntityRenderState, f, vec3d, crumblingOverlayCommand);
-        lecternBlockEntityRenderState.hasBook = bookDeskBlockEntity.getCachedState().get(LecternBlock.HAS_BOOK);
-        lecternBlockEntityRenderState.bookRotationDegrees = bookDeskBlockEntity.getCachedState().get(LecternBlock.FACING).rotateYClockwise().getPositiveHorizontalDegrees();
+    public void extractRenderState(BookDeskBlockEntity bookDeskBlockEntity, LecternRenderState lecternBlockEntityRenderState, float f, Vec3 vec3d, ModelFeatureRenderer.@Nullable CrumblingOverlay crumblingOverlayCommand) {
+        BlockEntityRenderer.super.extractRenderState(bookDeskBlockEntity, lecternBlockEntityRenderState, f, vec3d, crumblingOverlayCommand);
+        lecternBlockEntityRenderState.hasBook = bookDeskBlockEntity.getBlockState().getValue(LecternBlock.HAS_BOOK);
+        lecternBlockEntityRenderState.yRot = bookDeskBlockEntity.getBlockState().getValue(LecternBlock.FACING).getClockWise().toYRot();
     }
 
     @Override
-    public void render(LecternBlockEntityRenderState lecternBlockEntityRenderState, MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
+    public void submit(LecternRenderState lecternBlockEntityRenderState, PoseStack matrixStack, SubmitNodeCollector orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
         if (lecternBlockEntityRenderState.hasBook) {
-            matrixStack.push();
+            matrixStack.pushPose();
             matrixStack.translate(0.5F, 1.1625F, 0.5F);
             matrixStack.translate(0.0F, 0.0F, 0.0F);
-            matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-lecternBlockEntityRenderState.bookRotationDegrees));
-            matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(90F));
-            matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(180F));
+            matrixStack.mulPose(Axis.YP.rotationDegrees(-lecternBlockEntityRenderState.yRot));
+            matrixStack.mulPose(Axis.ZP.rotationDegrees(90F));
+            matrixStack.mulPose(Axis.XP.rotationDegrees(180F));
             matrixStack.translate(-0.15F, 0.0F, 0.0F);
-            orderedRenderCommandQueue.submitModel(this.book, this.bookModelState, matrixStack, EnchantingTableBlockEntityRenderer.BOOK_TEXTURE.getRenderLayer(RenderLayers::entitySolid), lecternBlockEntityRenderState.lightmapCoordinates, OverlayTexture.DEFAULT_UV, -1, this.spriteHolder.getSprite(EnchantingTableBlockEntityRenderer.BOOK_TEXTURE), 0, lecternBlockEntityRenderState.crumblingOverlay);
-            matrixStack.pop();
+            orderedRenderCommandQueue.submitModel(this.book, this.bookModelState, matrixStack, EnchantTableRenderer.BOOK_TEXTURE.renderType(RenderTypes::entitySolid), lecternBlockEntityRenderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, this.spriteHolder.get(EnchantTableRenderer.BOOK_TEXTURE), 0, lecternBlockEntityRenderState.breakProgress);
+            matrixStack.popPose();
         }
     }
 }

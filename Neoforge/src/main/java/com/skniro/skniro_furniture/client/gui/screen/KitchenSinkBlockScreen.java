@@ -2,7 +2,7 @@ package com.skniro.skniro_furniture.client.gui.screen;
 
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.screen.KitchenSinkBlockScreenHandler;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
@@ -22,8 +22,9 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
         titleLabelX = (imageWidth - font.width(title)) / 2;
     }
 
+
     @Override
-    protected void renderBg(GuiGraphics context, float delta, int mouseX, int mouseY) {
+    public void extractBackground(final GuiGraphicsExtractor context, final int mouseX, final int mouseY, final float a) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
         context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
@@ -31,17 +32,17 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
         renderProgressArrow(context, x, y);
     }
 
-    private void renderProgressArrow(GuiGraphics context, int x, int y) {
+    private void renderProgressArrow(GuiGraphicsExtractor context, int x, int y) {
         if(menu.isCrafting()) {
             context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x + 73, y + 34, 176, 12, menu.getScaledProgress(),45,256,256);
         }
     }
 
     @Override
-    public void render(GuiGraphics context , int mouseX, int mouseY, float delta) {
-        renderBackground(context, mouseX, mouseY, delta);
-        super.render(context, mouseX, mouseY, delta);
-        renderTooltip(context, mouseX, mouseY);
+    public void extractRenderState(GuiGraphicsExtractor context , int mouseX, int mouseY, float delta) {
+        extractBackground(context, mouseX, mouseY, delta);
+        super.extractRenderState(context, mouseX, mouseY, delta);
+        extractTooltip(context, mouseX, mouseY);
     }
 }
 
