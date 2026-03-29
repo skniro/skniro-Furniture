@@ -754,7 +754,6 @@ public class FurnitureCreativeModeTabs {
                         pOutput.accept(MapleFurnitureBlocks.BROWN_Ceiling_Lamp.get());
                         pOutput.accept(MapleFurnitureBlocks.GREEN_Ceiling_Lamp.get());
                         pOutput.accept(MapleFurnitureBlocks.RED_Ceiling_Lamp.get());
-                        pOutput.accept(MapleFurnitureBlocks.BLACK_Ceiling_Lamp.get());
 
 
                         pOutput.accept(MapleFurnitureBlocks.Oak_White_Paper_Sliding_Door.get());

@@ -764,7 +764,6 @@ public class FurnitureContent {
             content.accept(MapleFurnitureBlocks.BROWN_Ceiling_Lamp);
             content.accept(MapleFurnitureBlocks.GREEN_Ceiling_Lamp);
             content.accept(MapleFurnitureBlocks.RED_Ceiling_Lamp);
-            content.accept(MapleFurnitureBlocks.BLACK_Ceiling_Lamp);
 
             content.accept(MapleFurnitureBlocks.Oak_White_Paper_Sliding_Door);
             content.accept(MapleFurnitureBlocks.Oak_Orange_Paper_Sliding_Door);
