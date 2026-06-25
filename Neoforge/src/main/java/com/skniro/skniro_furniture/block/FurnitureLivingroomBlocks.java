@@ -27,22 +27,22 @@ public class FurnitureLivingroomBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, Furniture.MOD_ID);
 
     //Sofa Blocks
-    public static final Supplier<Block> Sofa_WHITE = registerBlock("white_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_ORANGE = registerBlock("orange_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_MAGENTA = registerBlock("magenta_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_LIGHT_BLUE = registerBlock("light_blue_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_YELLOW = registerBlock("yellow_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_LIME = registerBlock("lime_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_PINK = registerBlock("pink_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_GRAY = registerBlock("gray_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_LIGHT_GRAY = registerBlock("light_gray_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_CYAN = registerBlock("cyan_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_PURPLE = registerBlock("purple_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_BLUE = registerBlock("blue_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_BROWN = registerBlock("brown_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_GREEN = registerBlock("green_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_RED = registerBlock("red_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL).noOcclusion()));
-    public static final Supplier<Block> Sofa_BLACK = registerBlock("black_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL).noOcclusion()));
+    public static final Supplier<Block> Sofa_WHITE = registerBlock("white_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()).noOcclusion()));
+    public static final Supplier<Block> Sofa_ORANGE = registerBlock("orange_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.orange()).noOcclusion()));
+    public static final Supplier<Block> Sofa_MAGENTA = registerBlock("magenta_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.magenta()).noOcclusion()));
+    public static final Supplier<Block> Sofa_LIGHT_BLUE = registerBlock("light_blue_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lightBlue()).noOcclusion()));
+    public static final Supplier<Block> Sofa_YELLOW = registerBlock("yellow_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.yellow()).noOcclusion()));
+    public static final Supplier<Block> Sofa_LIME = registerBlock("lime_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lime()).noOcclusion()));
+    public static final Supplier<Block> Sofa_PINK = registerBlock("pink_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.pink()).noOcclusion()));
+    public static final Supplier<Block> Sofa_GRAY = registerBlock("gray_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.gray()).noOcclusion()));
+    public static final Supplier<Block> Sofa_LIGHT_GRAY = registerBlock("light_gray_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lightGray()).noOcclusion()));
+    public static final Supplier<Block> Sofa_CYAN = registerBlock("cyan_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.cyan()).noOcclusion()));
+    public static final Supplier<Block> Sofa_PURPLE = registerBlock("purple_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.purple()).noOcclusion()));
+    public static final Supplier<Block> Sofa_BLUE = registerBlock("blue_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.blue()).noOcclusion()));
+    public static final Supplier<Block> Sofa_BROWN = registerBlock("brown_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.brown()).noOcclusion()));
+    public static final Supplier<Block> Sofa_GREEN = registerBlock("green_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.green()).noOcclusion()));
+    public static final Supplier<Block> Sofa_RED = registerBlock("red_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.red()).noOcclusion()));
+    public static final Supplier<Block> Sofa_BLACK = registerBlock("black_sofa", SofaBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.black()).noOcclusion()));
 
     public static final Supplier<Block> OAK_PLANKS_TV_STAND = registerBlock("oak_planks_tv_stand", TvStandBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
     public static final Supplier<Block> OAK_WOOD_TV_STAND = registerBlock("oak_wood_tv_stand", TvStandBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
@@ -94,23 +94,22 @@ public class FurnitureLivingroomBlocks {
     public static final Supplier<Block> BAMBOO_PLANKS_TV = registerBlock("bamboo_planks_tv", TVBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion());
     public static final Supplier<Block> BAMBOO_BLOCK_TV = registerBlock("bamboo_wood_tv", TVBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).lightLevel(litBlockEmission(15)).noOcclusion());
 
-    public static final Supplier<Block> TV_WHITE = registerBlock("white_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_ORANGE = registerBlock("orange_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_MAGENTA = registerBlock("magenta_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_LIGHT_BLUE = registerBlock("light_blue_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_YELLOW = registerBlock("yellow_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_LIME = registerBlock("lime_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_PINK = registerBlock("pink_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_GRAY = registerBlock("gray_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_LIGHT_GRAY = registerBlock("light_gray_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_CYAN = registerBlock("cyan_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_PURPLE = registerBlock("purple_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_BLUE = registerBlock("blue_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_BROWN = registerBlock("brown_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_GREEN = registerBlock("green_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_RED = registerBlock("red_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-    public static final Supplier<Block> TV_BLACK = registerBlock("black_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL).lightLevel(litBlockEmission(15)).noOcclusion()));
-
+    public static final Supplier<Block> TV_WHITE = registerBlock("white_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.white()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_ORANGE = registerBlock("orange_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.orange()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_MAGENTA = registerBlock("magenta_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.magenta()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIGHT_BLUE = registerBlock("light_blue_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lightBlue()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_YELLOW = registerBlock("yellow_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.yellow()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIME = registerBlock("lime_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lime()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_PINK = registerBlock("pink_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.pink()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_GRAY = registerBlock("gray_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.gray()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_LIGHT_GRAY = registerBlock("light_gray_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.lightGray()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_CYAN = registerBlock("cyan_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.cyan()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_PURPLE = registerBlock("purple_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.purple()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BLUE = registerBlock("blue_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.blue()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BROWN = registerBlock("brown_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.brown()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_GREEN = registerBlock("green_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.green()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_RED = registerBlock("red_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.red()).lightLevel(litBlockEmission(15)).noOcclusion()));
+    public static final Supplier<Block> TV_BLACK = registerBlock("black_tv", TVBlock::new, (BlockBehaviour.Properties.ofFullCopy(Blocks.WOOL.black()).lightLevel(litBlockEmission(15)).noOcclusion()));
 
     private static ToIntFunction<BlockState> litBlockEmission(int p_50760_) {
         return (p_50763_) -> {

@@ -109,15 +109,6 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
         super.fallOn(world, state, pos, entity, fallDistance * (double)0.5F);
     }
 
-    public void updateEntityMovementAfterFallOn(BlockGetter world, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityMovementAfterFallOn(world, entity);
-        } else {
-            this.bounceUp(entity);
-        }
-
-    }
-
     private void bounceUp(Entity entity) {
         Vec3 vec3d = entity.getDeltaMovement();
         if (vec3d.y < (double)0.0F) {
