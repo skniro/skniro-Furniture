@@ -1,0 +1,90 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_table"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.carpentry_basics.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.carpentry_basics.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_plank_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plank_tables"
+          }
+        ]
+      }
+    },
+    "get_coffee_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_tables"
+          }
+        ]
+      }
+    },
+    "get_end_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      }
+    },
+    "get_glass_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_tables"
+          }
+        ]
+      }
+    },
+    "get_book_desk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:book_desks"
+          }
+        ]
+      }
+    },
+    "get_bedside_cabinet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      }
+    },
+    "get_desk_cabinet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:desk_cabinets"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:furnishing"
+}

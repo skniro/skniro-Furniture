@@ -1,0 +1,87 @@
+Compiled from "AdvancementType.java"
+public final class net.minecraft.advancements.AdvancementType extends java.lang.Enum<net.minecraft.advancements.AdvancementType> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.advancements.AdvancementType TASK;
+  public static final net.minecraft.advancements.AdvancementType CHALLENGE;
+  public static final net.minecraft.advancements.AdvancementType GOAL;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.AdvancementType> CODEC;
+  public static net.minecraft.advancements.AdvancementType[] values();
+  public static net.minecraft.advancements.AdvancementType valueOf(java.lang.String);
+  public net.minecraft.ChatFormatting getChatColor();
+  public net.minecraft.network.chat.Component getDisplayName();
+  public java.lang.String getSerializedName();
+  public net.minecraft.network.chat.MutableComponent createAnnouncement(net.minecraft.advancements.AdvancementHolder, net.minecraft.server.level.ServerPlayer);
+  static {};
+}
+Compiled from "Identifier.java"
+public final class net.minecraft.resources.Identifier implements java.lang.Comparable<net.minecraft.resources.Identifier> {
+  public static final com.mojang.serialization.Codec<net.minecraft.resources.Identifier> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.resources.Identifier> STREAM_CODEC;
+  public static final com.mojang.brigadier.exceptions.SimpleCommandExceptionType ERROR_INVALID;
+  public static final char NAMESPACE_SEPARATOR;
+  public static final java.lang.String DEFAULT_NAMESPACE;
+  public static final java.lang.String REALMS_NAMESPACE;
+  public static final java.lang.String ALLOWED_NAMESPACE_CHARACTERS;
+  static final boolean $assertionsDisabled;
+  public static net.minecraft.resources.Identifier fromNamespaceAndPath(java.lang.String, java.lang.String);
+  public static net.minecraft.resources.Identifier parse(java.lang.String);
+  public static net.minecraft.resources.Identifier withDefaultNamespace(java.lang.String);
+  public static net.minecraft.resources.Identifier tryParse(java.lang.String);
+  public static net.minecraft.resources.Identifier tryBuild(java.lang.String, java.lang.String);
+  public static net.minecraft.resources.Identifier bySeparator(java.lang.String, char);
+  public static net.minecraft.resources.Identifier tryBySeparator(java.lang.String, char);
+  public static com.mojang.serialization.DataResult<net.minecraft.resources.Identifier> read(java.lang.String);
+  public java.lang.String getPath();
+  public java.lang.String getNamespace();
+  public net.minecraft.resources.Identifier withPath(java.lang.String);
+  public net.minecraft.resources.Identifier withPath(java.util.function.UnaryOperator<java.lang.String>);
+  public net.minecraft.resources.Identifier withPrefix(java.lang.String);
+  public net.minecraft.resources.Identifier withSuffix(java.lang.String);
+  public java.lang.String toString();
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public int compareTo(net.minecraft.resources.Identifier);
+  public java.nio.file.Path resolveAgainst(java.nio.file.Path);
+  public java.lang.String toDebugFileName();
+  public java.lang.String toLanguageKey();
+  public java.lang.String toShortLanguageKey();
+  public java.lang.String toShortString();
+  public java.lang.String toLanguageKey(java.lang.String);
+  public java.lang.String toLanguageKey(java.lang.String, java.lang.String);
+  public static net.minecraft.resources.Identifier read(com.mojang.brigadier.StringReader) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public static net.minecraft.resources.Identifier readNonEmpty(com.mojang.brigadier.StringReader) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public static boolean isAllowedInIdentifier(char);
+  public static boolean isValidPath(java.lang.String);
+  public static boolean isValidNamespace(java.lang.String);
+  public static boolean validPathChar(char);
+  public int compareTo(java.lang.Object);
+  static {};
+}
+Compiled from "HolderLookup.java"
+public interface net.minecraft.core.HolderLookup$Provider extends net.minecraft.core.HolderGetter$Provider {
+  public abstract java.util.stream.Stream<net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<?>>> listRegistryKeys();
+  public default java.util.stream.Stream<net.minecraft.core.HolderLookup$RegistryLookup<?>> listRegistries();
+  public abstract <T> java.util.Optional<? extends net.minecraft.core.HolderLookup$RegistryLookup<T>> lookup(net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<? extends T>>);
+  public default <T> net.minecraft.core.HolderLookup$RegistryLookup<T> lookupOrThrow(net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<? extends T>>);
+  public default <V> net.minecraft.resources.RegistryOps<V> createSerializationContext(com.mojang.serialization.DynamicOps<V>);
+  public static net.minecraft.core.HolderLookup$Provider create(java.util.stream.Stream<net.minecraft.core.HolderLookup$RegistryLookup<?>>);
+  public default com.mojang.serialization.Lifecycle allRegistriesLifecycle();
+  public default net.minecraft.core.HolderGetter lookupOrThrow(net.minecraft.resources.ResourceKey);
+}
+Compiled from "DisplayInfo.java"
+public class net.minecraft.advancements.DisplayInfo {
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.DisplayInfo> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.advancements.DisplayInfo> STREAM_CODEC;
+  public net.minecraft.advancements.DisplayInfo(net.minecraft.world.item.ItemStackTemplate, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, java.util.Optional<net.minecraft.core.ClientAsset$ResourceTexture>, net.minecraft.advancements.AdvancementType, boolean, boolean, boolean);
+  public void setLocation(float, float);
+  public net.minecraft.network.chat.Component getTitle();
+  public net.minecraft.network.chat.Component getDescription();
+  public net.minecraft.world.item.ItemStackTemplate getIcon();
+  public java.util.Optional<net.minecraft.core.ClientAsset$ResourceTexture> getBackground();
+  public net.minecraft.advancements.AdvancementType getType();
+  public float getX();
+  public float getY();
+  public boolean shouldShowToast();
+  public boolean shouldAnnounceChat();
+  public boolean isHidden();
+  static {};
+}

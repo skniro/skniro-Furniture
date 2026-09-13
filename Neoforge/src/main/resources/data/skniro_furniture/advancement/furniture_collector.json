@@ -1,0 +1,190 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_bookshelf"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.furniture_collector.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.furniture_collector.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_basics": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          },
+          {
+            "items": "#skniro_furniture:chairs"
+          },
+          {
+            "items": "#skniro_furniture:coffee_chairs"
+          },
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      }
+    },
+    "get_carpentry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plank_tables"
+          },
+          {
+            "items": "#skniro_furniture:coffee_tables"
+          },
+          {
+            "items": "#skniro_furniture:end_tables"
+          },
+          {
+            "items": "#skniro_furniture:glass_tables"
+          },
+          {
+            "items": "#skniro_furniture:book_desks"
+          },
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:desk_cabinets"
+          }
+        ]
+      }
+    },
+    "get_kitchen": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counters"
+          },
+          {
+            "items": "#skniro_furniture:counter_drawers"
+          },
+          {
+            "items": "#skniro_furniture:kitchen_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:sinks"
+          },
+          {
+            "items": "#skniro_furniture:ovens"
+          },
+          {
+            "items": "#skniro_furniture:fridges"
+          }
+        ]
+      }
+    },
+    "get_storage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:triple_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:four_grid_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:glass_door_triple_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:glass_door_four_grid_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:wall_cabinets"
+          }
+        ]
+      }
+    },
+    "get_bedroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:beds"
+          },
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          },
+          {
+            "items": "#skniro_furniture:curtains"
+          },
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      }
+    },
+    "get_windows_doors": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows"
+          },
+          {
+            "items": "#skniro_furniture:windows_style2"
+          },
+          {
+            "items": "#skniro_furniture:paper_sliding_doors"
+          },
+          {
+            "items": "#skniro_furniture:grid_glass_sliding_doors"
+          },
+          {
+            "items": "#skniro_furniture:glass_sliding_doors"
+          }
+        ]
+      }
+    },
+    "get_living_room": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          },
+          {
+            "items": "#skniro_furniture:end_tables"
+          },
+          {
+            "items": "#skniro_furniture:tv_stands"
+          },
+          {
+            "items": "#skniro_furniture:tvs"
+          }
+        ]
+      }
+    },
+    "get_decorative": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plates"
+          },
+          {
+            "items": "#skniro_furniture:ceiling_lamps"
+          },
+          {
+            "items": "#skniro_furniture:animal_paintings"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:furnishing"
+}

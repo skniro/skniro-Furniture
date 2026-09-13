@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:black_kitchen_counter"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.kitchen_counter.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.kitchen_counter.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_counter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counters"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:kitchen_beginner"
+}

@@ -1,0 +1,33 @@
+Compiled from "HolderLookup.java"
+public interface net.minecraft.core.HolderLookup<T> extends net.minecraft.core.HolderGetter<T> {
+  public abstract java.util.stream.Stream<net.minecraft.core.Holder$Reference<T>> listElements();
+  public default java.util.stream.Stream<net.minecraft.resources.ResourceKey<T>> listElementIds();
+  public abstract java.util.stream.Stream<net.minecraft.core.HolderSet$Named<T>> listTags();
+  public default java.util.stream.Stream<net.minecraft.tags.TagKey<T>> listTagIds();
+}
+Compiled from "Holder.java"
+public class net.minecraft.core.Holder$Reference<T> implements net.minecraft.core.Holder<T> {
+  protected net.minecraft.core.Holder$Reference(net.minecraft.core.Holder$Reference$Type, net.minecraft.core.HolderOwner<T>, net.minecraft.resources.ResourceKey<T>, T);
+  public static <T> net.minecraft.core.Holder$Reference<T> createStandAlone(net.minecraft.core.HolderOwner<T>, net.minecraft.resources.ResourceKey<T>);
+  public static <T> net.minecraft.core.Holder$Reference<T> createIntrusive(net.minecraft.core.HolderOwner<T>, T);
+  public net.minecraft.resources.ResourceKey<T> key();
+  public T value();
+  public boolean is(net.minecraft.resources.Identifier);
+  public boolean is(net.minecraft.resources.ResourceKey<T>);
+  public boolean is(net.minecraft.tags.TagKey<T>);
+  public boolean is(net.minecraft.core.Holder<T>);
+  public boolean is(java.util.function.Predicate<net.minecraft.resources.ResourceKey<T>>);
+  public boolean canSerializeIn(net.minecraft.core.HolderOwner<T>);
+  public com.mojang.datafixers.util.Either<net.minecraft.resources.ResourceKey<T>, T> unwrap();
+  public java.util.Optional<net.minecraft.resources.ResourceKey<T>> unwrapKey();
+  public net.minecraft.core.Holder$Kind kind();
+  public boolean isBound();
+  public boolean areComponentsBound();
+  void bindKey(net.minecraft.resources.ResourceKey<T>);
+  protected void bindValue(T);
+  void bindTags(java.util.Collection<net.minecraft.tags.TagKey<T>>);
+  public void bindComponents(net.minecraft.core.component.DataComponentMap);
+  public java.util.stream.Stream<net.minecraft.tags.TagKey<T>> tags();
+  public net.minecraft.core.component.DataComponentMap components();
+  public java.lang.String toString();
+}

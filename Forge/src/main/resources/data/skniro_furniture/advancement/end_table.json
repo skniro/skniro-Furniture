@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_end_table"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.end_table.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.end_table.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_end_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:carpentry_basics"
+}

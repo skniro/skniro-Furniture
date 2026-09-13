@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:carpentry_basics",
+  "criteria": {
+    "get_book_desk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:book_desks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.book_desk.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_book_desk"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.book_desk.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_book_desk"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

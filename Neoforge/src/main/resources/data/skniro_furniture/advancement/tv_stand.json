@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_tv_stand"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.tv_stand.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.tv_stand.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_tv_stand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tv_stands"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:living_room_setup"
+}

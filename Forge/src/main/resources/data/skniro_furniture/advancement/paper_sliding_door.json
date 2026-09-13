@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_black_paper_sliding_door"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.paper_sliding_door.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.paper_sliding_door.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_paper_sliding_door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:paper_sliding_doors"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:windows_and_doors"
+}

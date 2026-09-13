@@ -1,0 +1,85 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_glass_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_grid_glass_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:grid_glass_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_paper_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:paper_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_window": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_window_style2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows_style2"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.windows_and_doors.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_window"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.windows_and_doors.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_window"
+    ],
+    [
+      "get_window_style2"
+    ],
+    [
+      "get_paper_sliding_door"
+    ],
+    [
+      "get_grid_glass_sliding_door"
+    ],
+    [
+      "get_glass_sliding_door"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:black_kitchen_sink"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.sink.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.sink.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_sink": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sinks"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:kitchen_beginner"
+}

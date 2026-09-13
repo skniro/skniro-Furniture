@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:black_fridge"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.fridge.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.fridge.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_fridge": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:fridges"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:kitchen_beginner"
+}

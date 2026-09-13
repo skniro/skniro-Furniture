@@ -1,0 +1,72 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_bed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:beds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_bedside_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_curtain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:curtains"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.bedroom_setup.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:acacia_red_wood_bed"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.bedroom_setup.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_bed"
+    ],
+    [
+      "get_bedside_cabinet"
+    ],
+    [
+      "get_curtain"
+    ],
+    [
+      "get_cushion"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:black_ceiling_lamp"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.decorative_art.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.decorative_art.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_plate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plates"
+          }
+        ]
+      }
+    },
+    "get_ceiling_lamp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ceiling_lamps"
+          }
+        ]
+      }
+    },
+    "get_animal_painting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:animal_paintings"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:furnishing"
+}

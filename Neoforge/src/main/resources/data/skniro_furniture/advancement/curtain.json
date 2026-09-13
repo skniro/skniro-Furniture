@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:black_wood_divider"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.curtain.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.curtain.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_curtain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:curtains"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:bedroom_setup"
+}

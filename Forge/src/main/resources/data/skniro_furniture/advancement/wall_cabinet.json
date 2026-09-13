@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_wall_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.wall_cabinet.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.wall_cabinet.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_wall_cabinet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:wall_cabinets"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:storage_master"
+}

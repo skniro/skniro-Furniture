@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:kitchen_beginner",
+  "criteria": {
+    "get_counter_drawer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counter_drawers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.kitchen_counter_drawer.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:black_kitchen_counter_drawer"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.kitchen_counter_drawer.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_counter_drawer"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

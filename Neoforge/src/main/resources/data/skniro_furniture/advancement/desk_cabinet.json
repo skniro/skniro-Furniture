@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_desk_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.desk_cabinet.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.desk_cabinet.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_desk_cabinet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:desk_cabinets"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:carpentry_basics"
+}

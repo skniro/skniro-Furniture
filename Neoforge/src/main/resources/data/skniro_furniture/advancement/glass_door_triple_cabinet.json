@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_double_glass_doors_triple_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.glass_door_triple_cabinet.title"
+    },
+    "description": {
+      "translate": "advancements.skniro_furniture.glass_door_triple_cabinet.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_glass_door_triple_cabinet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_door_triple_cabinets"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "skniro_furniture:triple_cabinet"
+}
