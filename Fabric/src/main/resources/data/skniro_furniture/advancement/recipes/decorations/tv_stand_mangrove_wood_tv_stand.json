@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:tv_stand/mangrove_wood_tv_stand"
+                "recipes": "skniro_furniture:tv_stand/mangrove_wood_tv_stand"
             }
         }
     },

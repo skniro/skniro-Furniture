@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:wall_cabinet/lime_wall_cabinet"
+                "recipes": "skniro_furniture:wall_cabinet/lime_wall_cabinet"
             }
         }
     },

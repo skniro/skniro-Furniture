@@ -9,7 +9,9 @@ import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
+
 import java.util.concurrent.CompletableFuture;
 
 
@@ -779,17 +781,17 @@ public class MapleLootTableGenerator extends FabricBlockLootSubProvider {
         dropSelf(FurnitureKitchenBlocks.BAMBOO_PLANKS_OVEN);
         dropSelf(FurnitureKitchenBlocks.BAMBOO_BLOCK_OVEN);
 
-        add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.BIRCH_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.ACACIA_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.MANGROVE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.CHERRY_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.WARPED_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
-        add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ConstantValue.exactly(3.0F)));
+        add(MapleFurnitureBlocks.SPRUCE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.BIRCH_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.JUNGLE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.ACACIA_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.DARK_OAK_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.MANGROVE_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.CHERRY_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.BAMBOO_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.CRIMSON_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.WARPED_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
+        add(MapleFurnitureBlocks.PALE_OAK_BOOKSHELF, (block) -> this.createSingleItemTableWithSilkTouch(block, Items.BOOK, ContextIntProviders.exactly(3)));
 
         dropSelf(MapleFurnitureBlocks.OAK_PLANK_Glass_TRIPLE_CABINET);
         dropSelf(MapleFurnitureBlocks.OAK_WOOD_Glass_TRIPLE_CABINET);

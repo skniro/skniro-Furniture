@@ -3,19 +3,22 @@ package com.skniro.skniro_furniture.block.entity;
 import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.SmokerMenu;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CookingFuel;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
-import net.minecraft.world.level.block.entity.FuelValues;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt;
 import org.jetbrains.annotations.Nullable;
 
 public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
@@ -27,8 +30,9 @@ public class OvenBlockEntity extends AbstractFurnaceBlockEntity {
         return Component.translatable(FurnitureStrings.Oven);
     }
 
-    protected int getBurnDuration(FuelValues fuelRegistry, ItemStack stack) {
-        return super.getBurnDuration(fuelRegistry, stack) / 2;
+    @Override
+    protected int getBurnDuration(final ServerLevel level, final ItemStack fuelItem) {
+        return ResolvableInt.getFromItem(fuelItem, DataComponents.COOKING_FUEL, CookingFuel::burnTime, this.getLootContext(level), 0);
     }
 
     protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {

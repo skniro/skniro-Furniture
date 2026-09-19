@@ -19,7 +19,9 @@ version="${forge_mod_version}"
 displayName="${mod_name}"
 authors="${mod_authors}"
 description='''${mod_description}'''
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+updateJSONURL="https://raw.githubusercontent.com/skniro/maven3/main/com/skniro/SkniroFurniture/update/forge.json" #optional
+displayURL="https://www.skniro.org"
+issueTrackerURL="https://github.com/skniro/skniro-Furniture/issues"
 [[dependencies.skniro_furniture]] #optional
 # the modid of the dependency
 modId = "forge" #mandatory

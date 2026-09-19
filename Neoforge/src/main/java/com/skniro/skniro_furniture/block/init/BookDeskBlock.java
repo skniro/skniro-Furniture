@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.BookDeskBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -39,7 +38,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class BookDeskBlock extends BaseEntityBlock {
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    public static final MapCodec<BookDeskBlock> CODEC = simpleCodec(BookDeskBlock::new);
     public static final EnumProperty<Direction> FACING;
     public static final BooleanProperty HAS_BOOK;
 
@@ -48,9 +46,6 @@ public class BookDeskBlock extends BaseEntityBlock {
         this.registerDefaultState(((this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(HAS_BOOK, false));
     }
 
-    public MapCodec<BookDeskBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     protected BlockState rotate(BlockState state, Rotation rotation) {

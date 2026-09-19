@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:spruce_wood_table"
+                "recipes": "skniro_furniture:table/spruce_wood_table"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:spruce_wood_table"
+            "skniro_furniture:table/spruce_wood_table"
         ]
     }
 }

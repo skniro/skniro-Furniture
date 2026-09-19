@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:cherry_steve_draw"
+                "recipes": "skniro_furniture:draw/cherry_steve_draw"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:cherry_steve_draw"
+            "skniro_furniture:draw/cherry_steve_draw"
         ]
     }
 }

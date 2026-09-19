@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:book_desk/jungle_planks_book_desk"
+                "recipes": "skniro_furniture:book_desk/jungle_planks_book_desk"
             }
         }
     },

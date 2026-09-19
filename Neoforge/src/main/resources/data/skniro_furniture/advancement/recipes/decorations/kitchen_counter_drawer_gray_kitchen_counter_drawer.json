@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:kitchen_counter_drawer/gray_kitchen_counter_drawer"
+                "recipes": "skniro_furniture:kitchen_counter_drawer/gray_kitchen_counter_drawer"
             }
         }
     },

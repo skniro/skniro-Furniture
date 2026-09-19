@@ -33,12 +33,12 @@ public class PlateBlockEntityRenderer implements BlockEntityRenderer<PlateBlockE
         matrices.pushPose();
         matrices.translate(0.5f, 0.01f, 0.5f);
         matrices.scale(0.35f, 0.35f, 0.35f);
-        matrices.mulPose(Axis.XP.rotationDegrees(90));
+        matrices.rotate(Axis.XP.rotationDegrees(90));
         switch (direction) {
-            case NORTH -> matrices.mulPose(Axis.YP.rotationDegrees(0));
-            case SOUTH -> matrices.mulPose(Axis.YP.rotationDegrees(180));
-            case WEST -> matrices.mulPose(Axis.ZP.rotationDegrees(90));
-            case EAST -> matrices.mulPose(Axis.ZP.rotationDegrees(180));
+            case NORTH -> matrices.rotate(Axis.YP.rotationDegrees(0));
+            case SOUTH -> matrices.rotate(Axis.YP.rotationDegrees(180));
+            case WEST -> matrices.rotate(Axis.ZP.rotationDegrees(90));
+            case EAST -> matrices.rotate(Axis.ZP.rotationDegrees(180));
         }
         state.item.submit(matrices, queue, state.lightCoords, OverlayTexture.NO_OVERLAY,0);
         matrices.popPose();

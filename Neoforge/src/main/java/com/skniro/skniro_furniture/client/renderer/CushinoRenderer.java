@@ -13,7 +13,7 @@ public class CushinoRenderer extends EntityRenderer<CushionEntity, EntityRenderS
     }
 
     @Override
-    public boolean shouldRender(CushionEntity livingEntity, Frustum camera, double camX, double camY, double camZ) {
+    public boolean shouldRender(CushionEntity livingEntity, Frustum camera, double camX, double camY, double camZ, final float partialTicks) {
         return true;
     }
 

@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:bamboo_white_plank_bed"
+                "recipes": "skniro_furniture:bed/bamboo_white_plank_bed"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:bamboo_white_plank_bed"
+            "skniro_furniture:bed/bamboo_white_plank_bed"
         ]
     }
 }

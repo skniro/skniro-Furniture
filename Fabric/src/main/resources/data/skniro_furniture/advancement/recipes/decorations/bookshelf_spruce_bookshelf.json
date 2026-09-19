@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:bookshelf/spruce_bookshelf"
+                "recipes": "skniro_furniture:bookshelf/spruce_bookshelf"
             }
         }
     },

@@ -2,27 +2,23 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "block": "skniro_furniture:light_gray_fridge",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "half": "lower"
-              }
+          "condition": {
+            "type": "minecraft:match_block",
+            "blocks": "skniro_furniture:light_gray_fridge",
+            "state": {
+              "half": "lower"
             }
-          ],
+          },
           "name": "skniro_furniture:light_gray_fridge"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ]
 }

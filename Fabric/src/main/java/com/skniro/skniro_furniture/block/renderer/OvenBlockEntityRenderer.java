@@ -52,7 +52,7 @@ public class OvenBlockEntityRenderer implements BlockEntityRenderer<OvenBlockEnt
             default -> 0f;
         };
 
-        matrices.mulPose(Axis.YP.rotationDegrees(angle));
+        matrices.rotate(Axis.YP.rotationDegrees(angle));
 
         if (state.blockState.getValue(OvenBlock.LIT)) {
             queue.submitCustomGeometry(matrices, RenderTypes.eyes(LIGHT_TEXTURE), (matricesEntry, vertexConsumer) -> {

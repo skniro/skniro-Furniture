@@ -1,7 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
@@ -24,11 +22,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class WindowBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<WindowBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> {
-        return instance.group(propertiesCodec(),BlockSetType.CODEC.fieldOf("block_set_type").forGetter((block) -> {
-            return block.blockSetType;
-        })).apply(instance, WindowBlock::new);
-    });
     public static final EnumProperty<Direction> FACING;
     public static final EnumProperty<DoorHingeSide> HINGE;
     public static final BooleanProperty OPEN;
@@ -162,9 +155,5 @@ public class WindowBlock extends HorizontalDirectionalBlock {
         SOUTH_OPEN_SHAPE = Block.box(14.5, 0.0, 0.0, 16.0, 16.0, 16.0);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
-    }
 }
 

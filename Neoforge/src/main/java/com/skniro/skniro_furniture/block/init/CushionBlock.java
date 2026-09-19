@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
 import net.minecraft.core.BlockPos;
@@ -26,15 +25,10 @@ import java.util.List;
 
 public class CushionBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 3.5, 16.0);
-    public static final MapCodec<CushionBlock> CODEC = simpleCodec(CushionBlock::new);
     public CushionBlock(Properties settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {

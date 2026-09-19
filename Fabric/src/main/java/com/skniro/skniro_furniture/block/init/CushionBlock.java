@@ -26,15 +26,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CushionBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 3.5, 16.0);
-    public static final MapCodec<CushionBlock> CODEC = simpleCodec(CushionBlock::new);
     public CushionBlock(Properties settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {

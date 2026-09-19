@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:kitchen_sink/blue_kitchen_sink"
+                "recipes": "skniro_furniture:kitchen_sink/blue_kitchen_sink"
             }
         }
     },

@@ -18,15 +18,10 @@ public class DrawBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SOUTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
     private static final VoxelShape WEST_SHAPE;
-    public static final MapCodec<DrawBlock> CODEC = simpleCodec(DrawBlock::new);
     public DrawBlock(Properties settings) {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {

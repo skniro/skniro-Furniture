@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:book_desk/birch_wood_book_desk"
+                "recipes": "skniro_furniture:book_desk/birch_wood_book_desk"
             }
         }
     },

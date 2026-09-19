@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:coffee_chair/plank/birch_plank_coffee_chair_blue"
+                "recipes": "skniro_furniture:coffee_chair/plank/birch_plank_coffee_chair_blue"
             }
         }
     },

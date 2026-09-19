@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:bedside_cabinet/jungle_planks_bedside_cabinet"
+                "recipes": "skniro_furniture:bedside_cabinet/jungle_planks_bedside_cabinet"
             }
         }
     },

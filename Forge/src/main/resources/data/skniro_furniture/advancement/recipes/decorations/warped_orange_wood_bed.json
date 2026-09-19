@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:warped_orange_wood_bed"
+                "recipes": "skniro_furniture:bed/warped_orange_wood_bed"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:warped_orange_wood_bed"
+            "skniro_furniture:bed/warped_orange_wood_bed"
         ]
     }
 }

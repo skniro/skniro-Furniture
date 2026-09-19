@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:table/cherry_table"
+                "recipes": "skniro_furniture:table/cherry_table"
             }
         }
     },

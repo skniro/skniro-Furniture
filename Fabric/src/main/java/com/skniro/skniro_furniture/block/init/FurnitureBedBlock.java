@@ -51,7 +51,6 @@ import java.util.Map;
 import java.util.Optional;
 
 public class FurnitureBedBlock extends BedBlock implements EntityBlock {
-    public static final MapCodec<FurnitureBedBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(DyeColor.CODEC.fieldOf("color").forGetter(FurnitureBedBlock::getColor), propertiesCodec()).apply(instance, FurnitureBedBlock::new));
     public static final EnumProperty<BedPart> PART;
     public static final BooleanProperty OCCUPIED;
     private static final Map SHAPES_BY_DIRECTION;

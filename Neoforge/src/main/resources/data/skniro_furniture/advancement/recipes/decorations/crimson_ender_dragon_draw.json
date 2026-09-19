@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:crimson_ender_dragon_draw"
+                "recipes": "skniro_furniture:draw/crimson_ender_dragon_draw"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:crimson_ender_dragon_draw"
+            "skniro_furniture:draw/crimson_ender_dragon_draw"
         ]
     }
 }

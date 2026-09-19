@@ -28,12 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenCounterDrawerBlock extends BaseEntityBlock {
-    public static final MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> CODEC = simpleCodec(com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock::new);
     public static final EnumProperty<Direction> FACING;
-
-    public MapCodec<com.skniro.skniro_furniture.block.init.KitchenCounterDrawerBlock> codec() {
-        return CODEC;
-    }
 
     public KitchenCounterDrawerBlock(BlockBehaviour.Properties settings) {
         super(settings);

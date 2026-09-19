@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:pale_oak_planks_tv"
+                "recipes": "skniro_furniture:tv/pale_oak_planks_tv"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:pale_oak_planks_tv"
+            "skniro_furniture:tv/pale_oak_planks_tv"
         ]
     }
 }

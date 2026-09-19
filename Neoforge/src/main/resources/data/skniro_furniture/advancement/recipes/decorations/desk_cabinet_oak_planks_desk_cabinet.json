@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:desk_cabinet/oak_planks_desk_cabinet"
+                "recipes": "skniro_furniture:desk_cabinet/oak_planks_desk_cabinet"
             }
         }
     },

@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:window/plank/crimson_plank_window"
+                "recipes": "skniro_furniture:window/plank/crimson_plank_window"
             }
         }
     },

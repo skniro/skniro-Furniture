@@ -13,7 +13,7 @@ public class SofaRenderer extends EntityRenderer<SofaEntity, EntityRenderState> 
     }
 
     @Override
-    public boolean shouldRender(SofaEntity livingEntity, Frustum camera, double camX, double camY, double camZ) {
+    public boolean shouldRender(SofaEntity livingEntity, Frustum camera, double camX, double camY, double camZ, final float partialTicks) {
         return true;
     }
 

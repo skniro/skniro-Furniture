@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:cushion/oak_white_cushion"
+                "recipes": "skniro_furniture:cushion/oak_white_cushion"
             }
         }
     },

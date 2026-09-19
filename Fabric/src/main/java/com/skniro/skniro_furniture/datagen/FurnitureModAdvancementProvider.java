@@ -6,9 +6,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementType;
+import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.advancements.triggers.Criterion;
 import net.minecraft.advancements.triggers.InventoryChangeTrigger;
+import net.minecraft.core.ClientAsset;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -17,11 +19,13 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
@@ -236,25 +240,28 @@ public class FurnitureModAdvancementProvider extends FabricAdvancementProvider {
 		Map<String, AdvancementHolder> parents = new HashMap<>();
 
 		for (Spec spec : SPECS) {
-			// Only the root advancement carries a background image for the tab.
-			Identifier background = spec.parent() == null ? id("block/bookshelf") : null;
+			// Only the root advancement may carry the tab background image; the game rejects
+			// a background on any advancement that has a parent.
+			Optional<ClientAsset.ResourceTexture> background = spec.parent() == null
+					? Optional.of(new ClientAsset.ResourceTexture(id("block/bookshelf")))
+					: Optional.empty();
 			Advancement.Builder builder = Advancement.Builder.advancement()
-					.display(
-							item(items, spec.icon()),
+					.display(new DisplayInfo(
+							new ItemStackTemplate(item(items, spec.icon()).asItem()),
 							Component.translatable("advancements." + Furniture.MOD_ID + "." + spec.name() + ".title"),
 							Component.translatable("advancements." + Furniture.MOD_ID + "." + spec.name() + ".description"),
 							background,
 							spec.frame(),
 							true,
 							true,
-							false);
+							false));
 			if (spec.parent() != null) {
 				builder.parent(parents.get(spec.parent()));
 			}
 			for (String[] criterion : spec.criteria()) {
 				builder.addCriterion(criterion[0], hasTags(items, Arrays.copyOfRange(criterion, 1, criterion.length)));
 			}
-			parents.put(spec.name(), builder.save(consumer, Furniture.MOD_ID + ":" + spec.name()));
+			parents.put(spec.name(), builder.save(consumer, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, spec.name())));
 		}
 	}
 }

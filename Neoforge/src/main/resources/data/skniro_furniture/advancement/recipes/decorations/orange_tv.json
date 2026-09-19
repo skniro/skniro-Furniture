@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:orange_tv"
+                "recipes": "skniro_furniture:tv/orange_tv"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:orange_tv"
+            "skniro_furniture:tv/orange_tv"
         ]
     }
 }

@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:desk_lamp/light_gray_desk_lamp"
+                "recipes": "skniro_furniture:desk_lamp/light_gray_desk_lamp"
             }
         }
     },

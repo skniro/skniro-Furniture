@@ -66,15 +66,15 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
                 case NORTH -> {}
                 case SOUTH -> {
                     matrices.translate(1, 0, 1);
-                    matrices.mulPose(Axis.YP.rotationDegrees(180));
+                    matrices.rotate(Axis.YP.rotationDegrees(180));
                 }
                 case WEST -> {
                     matrices.translate(0, 0, 1);
-                    matrices.mulPose(Axis.YP.rotationDegrees(90));
+                    matrices.rotate(Axis.YP.rotationDegrees(90));
                 }
                 case EAST -> {
                     matrices.translate(1, 0, 0);
-                    matrices.mulPose(Axis.YP.rotationDegrees(270));
+                    matrices.rotate(Axis.YP.rotationDegrees(270));
                 }
             }
 

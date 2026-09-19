@@ -51,11 +51,14 @@ public class BookDeskBlockEntityRenderer implements BlockEntityRenderer<BookDesk
             matrixStack.pushPose();
             matrixStack.translate(0.5F, 1.1625F, 0.5F);
             matrixStack.translate(0.0F, 0.0F, 0.0F);
-            matrixStack.mulPose(Axis.YP.rotationDegrees(-lecternBlockEntityRenderState.yRot));
-            matrixStack.mulPose(Axis.ZP.rotationDegrees(90F));
-            matrixStack.mulPose(Axis.XP.rotationDegrees(180F));
+            matrixStack.rotate(Axis.YP.rotationDegrees(-lecternBlockEntityRenderState.yRot));
+            matrixStack.rotate(Axis.ZP.rotationDegrees(90F));
+            matrixStack.rotate(Axis.XP.rotationDegrees(180F));
             matrixStack.translate(-0.15F, 0.0F, 0.0F);
-            orderedRenderCommandQueue.submitModel(this.book, this.bookModelState, matrixStack, EnchantTableRenderer.BOOK_TEXTURE.renderType(RenderTypes::entitySolid), lecternBlockEntityRenderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, this.spriteHolder.get(EnchantTableRenderer.BOOK_TEXTURE), 0, lecternBlockEntityRenderState.breakProgress);
+            orderedRenderCommandQueue.submitModel(this.book, this.bookModelState, matrixStack, lecternBlockEntityRenderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, EnchantTableRenderer.BOOK_TEXTURE, this.spriteHolder, 0);
+            if (lecternBlockEntityRenderState.breakProgress != null) {
+                orderedRenderCommandQueue.order(1).submitCrumblingOverlay(this.book, this.bookModelState, matrixStack, EnchantTableRenderer.BOOK_TEXTURE.renderType(RenderTypes::entitySolid), lecternBlockEntityRenderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, lecternBlockEntityRenderState.breakProgress);
+            }
             matrixStack.popPose();
         }
     }

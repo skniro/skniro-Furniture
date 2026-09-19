@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:kitchen_sink/warped_planks_kitchen_sink"
+                "recipes": "skniro_furniture:kitchen_sink/warped_planks_kitchen_sink"
             }
         }
     },

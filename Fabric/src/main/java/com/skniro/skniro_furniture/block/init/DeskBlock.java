@@ -16,17 +16,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class DeskBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    public static final MapCodec<DeskBlock> CODEC = simpleCodec(DeskBlock::new);
 
     public DeskBlock(Properties settings) {
         super(settings);
     }
-
-    public MapCodec<DeskBlock> codec() {
-        return CODEC;
-    }
-
-
+    
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;

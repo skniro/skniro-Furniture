@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:window/plank/dark_oak_plank_window"
+                "recipes": "skniro_furniture:window/plank/dark_oak_plank_window"
             }
         }
     },

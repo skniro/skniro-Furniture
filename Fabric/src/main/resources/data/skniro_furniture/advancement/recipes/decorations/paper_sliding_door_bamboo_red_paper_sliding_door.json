@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:paper_sliding_door/bamboo_red_paper_sliding_door"
+                "recipes": "skniro_furniture:paper_sliding_door/bamboo_red_paper_sliding_door"
             }
         }
     },

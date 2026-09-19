@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:window_style2/wood/jungle_wood_window_style2"
+                "recipes": "skniro_furniture:window_style2/wood/jungle_wood_window_style2"
             }
         }
     },

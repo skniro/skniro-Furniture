@@ -182,7 +182,7 @@ public class BookDeskBlockEntity extends BlockEntity implements Clearable, MenuP
         }
 
         Vec3 vec3d = Vec3.atCenterOf(this.worldPosition);
-        return new CommandSourceStack(CommandSource.NULL, vec3d, Vec2.ZERO, world, LevelBasedPermissionSet.GAMEMASTER, string, text, world.getServer(), player);
+        return player != null ? new CommandSourceStack(CommandSource.NULL, vec3d, Vec2.ZERO, world, LevelBasedPermissionSet.GAMEMASTER, world.getServer(), player) : new CommandSourceStack(CommandSource.NULL, vec3d, Vec2.ZERO, world, LevelBasedPermissionSet.GAMEMASTER, text, world.getServer());
     }
 
     protected void loadAdditional(ValueInput view) {

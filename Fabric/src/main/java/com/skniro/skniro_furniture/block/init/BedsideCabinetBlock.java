@@ -18,11 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class BedsideCabinetBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<BedsideCabinetBlock> CODEC = simpleCodec(BedsideCabinetBlock::new);
-
-    public MapCodec<BedsideCabinetBlock> codec() {
-        return CODEC;
-    }
 
     public BedsideCabinetBlock(Properties settings) {
         super(settings);

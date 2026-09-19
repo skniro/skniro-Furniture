@@ -16,8 +16,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class SlidingDoorBlock extends AbstractSlidingDoorBlock {
-    public static final MapCodec<SlidingDoorBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(BlockSetType.CODEC.fieldOf("block_set_type").forGetter(SlidingDoorBlock::getBlockSetType), propertiesCodec()).apply(instance, SlidingDoorBlock::new));
-
     protected static final VoxelShape CLOSEB_SOUTH = Block.box(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
     protected static final VoxelShape CLOSEB_WEST =  Block.box(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
     protected static final VoxelShape CLOSEB_NORTH = Block.box(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
@@ -47,10 +45,6 @@ public class SlidingDoorBlock extends AbstractSlidingDoorBlock {
     protected static final VoxelShape OPENTL_WEST = Block.box(7.5D, 0.0D, -14.0D, 8.5D, 16.0D, 2.0D);
     protected static final VoxelShape OPENTL_NORTH = Block.box(14.0D, 0.0D, 7.5D, 30.0D, 16.0D, 8.5D);
     protected static final VoxelShape OPENTL_EAST = Block.box(7.5D, 0.0D, 14.0D, 8.5D, 16.0D, 30.0D);
-
-    public MapCodec<? extends SlidingDoorBlock> codec() {
-        return CODEC;
-    }
 
     public SlidingDoorBlock(BlockSetType type, BlockBehaviour.Properties settings) {
         super( type, settings);

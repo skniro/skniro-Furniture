@@ -33,11 +33,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class KitchenSinkBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<KitchenSinkBlock> CODEC = simpleCodec(KitchenSinkBlock::new);
-
-    public MapCodec<KitchenSinkBlock> codec() {
-        return CODEC;
-    }
 
     public KitchenSinkBlock(Properties settings) {
         super(settings);

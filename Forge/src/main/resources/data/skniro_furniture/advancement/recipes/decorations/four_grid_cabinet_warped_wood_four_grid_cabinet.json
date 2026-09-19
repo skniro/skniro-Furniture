@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:four_grid_cabinet/warped_wood_four_grid_cabinet"
+                "recipes": "skniro_furniture:four_grid_cabinet/warped_wood_four_grid_cabinet"
             }
         }
     },

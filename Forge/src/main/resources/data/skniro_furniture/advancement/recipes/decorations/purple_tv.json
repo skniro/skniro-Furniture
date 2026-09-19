@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:purple_tv"
+                "recipes": "skniro_furniture:tv/purple_tv"
             }
         }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
         "recipes": [
-            "skniro_furniture:purple_tv"
+            "skniro_furniture:tv/purple_tv"
         ]
     }
 }

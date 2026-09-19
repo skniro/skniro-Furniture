@@ -14,7 +14,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "skniro_furniture:coffee_table/wood/dark_oak_wood_coffee_table"
+                "recipes": "skniro_furniture:coffee_table/wood/dark_oak_wood_coffee_table"
             }
         }
     },

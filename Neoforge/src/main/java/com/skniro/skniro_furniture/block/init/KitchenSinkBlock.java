@@ -1,14 +1,10 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
-import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -30,11 +26,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class KitchenSinkBlock extends BaseEntityBlock {
     public static final EnumProperty<Direction> FACING;
-    public static final MapCodec<KitchenSinkBlock> CODEC = simpleCodec(KitchenSinkBlock::new);
-
-    public MapCodec<KitchenSinkBlock> codec() {
-        return CODEC;
-    }
 
     public KitchenSinkBlock(Properties settings) {
         super(settings);
@@ -65,16 +56,17 @@ public class KitchenSinkBlock extends BaseEntityBlock {
         if (blockEntity instanceof KitchenSinkBlockEntity) {
             Containers.dropContents(world, pos, (Container) blockEntity);
             world.updateNeighbourForOutputSignal(pos,this);
-            super.affectNeighborsAfterRemoval(state, world, pos, moved);
         }
+        super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!world.isClientSide()) {
-            BlockEntity entity = world.getBlockEntity(pos);
-            if (entity instanceof KitchenSinkBlockEntity BlockEntity) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(BlockEntity, Component.translatable(FurnitureStrings.Kitchen_Sink)), pos);
+            MenuProvider screenHandlerFactory = state.getMenuProvider(world, pos);
+
+            if (screenHandlerFactory != null) {
+                player.openMenu(screenHandlerFactory);
             }
         }
 
