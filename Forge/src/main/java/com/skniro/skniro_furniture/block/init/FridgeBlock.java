@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.FridgeBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -28,11 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class FridgeBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<FridgeBlock> CODEC = simpleCodec(FridgeBlock::new);
     public static final EnumProperty<DoubleBlockHalf> HALF;
-    public MapCodec<FridgeBlock> codec() {
-        return CODEC;
-    }
 
     public FridgeBlock(Properties settings) {
         super(settings);

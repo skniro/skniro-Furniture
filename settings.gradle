@@ -21,5 +21,5 @@ pluginManagement {
 
 
 rootProject.name = 'SkniroFurniture-26.3'
-include("Fabric", "Neoforge")
-//include("Fabric", "Forge", "Neoforge")
+//include("Fabric", "Neoforge")
+include("Fabric", "Forge", "Neoforge")

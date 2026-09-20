@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.entity.OvenBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -16,16 +15,10 @@ import net.minecraft.world.level.block.AbstractFurnaceBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class OvenBlock extends AbstractFurnaceBlock {
-    public static final MapCodec<OvenBlock> CODEC = simpleCodec(OvenBlock::new);
-
-    public MapCodec<OvenBlock> codec() {
-        return CODEC;
-    }
 
     public OvenBlock(Properties settings) {
         super(settings);

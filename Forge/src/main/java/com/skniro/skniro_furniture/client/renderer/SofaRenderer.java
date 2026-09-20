@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.client.renderer;
 
-import com.skniro.skniro_furniture.entity.furniture.CushionEntity;
 import com.skniro.skniro_furniture.entity.furniture.SofaEntity;
 import net.minecraft.client.renderer.culling.Frustum;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -14,7 +13,7 @@ public class SofaRenderer extends EntityRenderer<SofaEntity, EntityRenderState> 
     }
 
     @Override
-    public boolean shouldRender(SofaEntity livingEntity, Frustum camera, double camX, double camY, double camZ) {
+    public boolean shouldRender(SofaEntity livingEntity, Frustum camera, double camX, double camY, double camZ, final float partialTicks) {
         return true;
     }
 

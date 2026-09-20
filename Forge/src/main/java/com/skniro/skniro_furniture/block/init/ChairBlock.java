@@ -1,11 +1,7 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.entity.MapleEntityType;
 import com.skniro.skniro_furniture.entity.furniture.ChairEntity;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
@@ -23,17 +19,14 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ChairBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
-    public static final MapCodec<ChairBlock> CODEC = simpleCodec(ChairBlock::new);
     public ChairBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
     }
 
 

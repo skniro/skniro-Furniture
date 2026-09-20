@@ -51,6 +51,7 @@ public abstract class AbstractWallCabinetBlock extends BaseEntityBlock {
         return InteractionResult.SUCCESS;
     }
 
+    @Override
     public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
         Containers.updateNeighboursAfterDestroy(state, world, pos);
         super.affectNeighborsAfterRemoval(state, world, pos, moved);

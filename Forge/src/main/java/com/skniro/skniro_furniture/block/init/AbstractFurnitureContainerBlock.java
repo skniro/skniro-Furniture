@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -26,10 +25,12 @@ public abstract class AbstractFurnitureContainerBlock extends BaseEntityBlock {
         this.registerDefaultState((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)));
     }
 
+    @Override
     public void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
         Containers.updateNeighboursAfterDestroy(state, world, pos);
         super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
+
     protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }

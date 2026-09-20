@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -13,16 +12,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class TableBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<TableBlock> CODEC = simpleCodec(TableBlock::new);
     private static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
 
     public TableBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
-        return CODEC;
     }
 
     @Override

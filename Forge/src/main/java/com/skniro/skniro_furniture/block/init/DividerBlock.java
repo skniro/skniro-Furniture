@@ -1,7 +1,6 @@
 package com.skniro.skniro_furniture.block.init;
 
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -15,7 +14,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class DividerBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<DividerBlock> CODEC = simpleCodec(DividerBlock::new);
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape SOUTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
@@ -25,10 +23,6 @@ public class DividerBlock extends HorizontalDirectionalBlock {
         super(settings);
     }
 
-    @Override
-    protected MapCodec<? extends DividerBlock> codec() {
-        return CODEC;
-    }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {

@@ -1,7 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
-import com.skniro.skniro_furniture.block.entity.BedsideCabinetBlockEntity;
 import com.skniro.skniro_furniture.block.entity.TvStandBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,11 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class TvStandBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<TvStandBlock> CODEC = simpleCodec(TvStandBlock::new);
 
-    public MapCodec<TvStandBlock> codec() {
-        return CODEC;
-    }
 
     public TvStandBlock(Properties settings) {
         super(settings);

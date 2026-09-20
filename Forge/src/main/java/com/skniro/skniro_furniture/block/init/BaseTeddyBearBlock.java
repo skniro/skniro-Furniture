@@ -1,7 +1,6 @@
 package com.skniro.skniro_furniture.block.init;
 
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -15,7 +14,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class BaseTeddyBearBlock extends HorizontalDirectionalBlock {
-    public static final MapCodec<BaseTeddyBearBlock> CODEC = simpleCodec(BaseTeddyBearBlock::new);
     private static final VoxelShape NORTH_SHAPE;
     private static final VoxelShape SOUTH_SHAPE;
     private static final VoxelShape EAST_SHAPE;
@@ -23,11 +21,6 @@ public class BaseTeddyBearBlock extends HorizontalDirectionalBlock {
 
     public BaseTeddyBearBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends BaseTeddyBearBlock> codec() {
-        return CODEC;
     }
 
     @Override

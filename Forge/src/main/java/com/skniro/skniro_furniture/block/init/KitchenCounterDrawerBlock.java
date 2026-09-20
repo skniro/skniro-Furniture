@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
 import com.skniro.skniro_furniture.block.entity.DrawerBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -27,12 +26,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class KitchenCounterDrawerBlock extends BaseEntityBlock {
-    public static final MapCodec<KitchenCounterDrawerBlock> CODEC = simpleCodec(KitchenCounterDrawerBlock::new);
     public static final EnumProperty<Direction> FACING;
-
-    public MapCodec<KitchenCounterDrawerBlock> codec() {
-        return CODEC;
-    }
 
     public KitchenCounterDrawerBlock(Properties settings) {
         super(settings);
@@ -73,7 +67,7 @@ public class KitchenCounterDrawerBlock extends BaseEntityBlock {
         return true;
     }
 
-    protected int getAnalogOutputSignal(BlockState state, Level world, BlockPos pos) {
+    protected int getComparatorOutput(BlockState state, Level world, BlockPos pos) {
         return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(world.getBlockEntity(pos));
     }
 

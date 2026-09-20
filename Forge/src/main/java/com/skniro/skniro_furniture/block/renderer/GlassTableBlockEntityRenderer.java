@@ -5,23 +5,19 @@ import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.block.entity.GlassTableBlockEntity;
 import com.skniro.skniro_furniture.block.init.GlassTableBlock;
 import com.skniro.skniro_furniture.block.renderer.state.GlassTableBlockEntityRendererState;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
-import net.minecraft.client.renderer.state.level.CameraRenderState;
-import net.minecraft.util.LightCoordsUtil;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.item.ItemModelResolver;
 import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.world.entity.ItemOwner;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -29,6 +25,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassTableBlockEntity, GlassTableBlockEntityRendererState> {
     private final ItemModelResolver itemModelManager;
@@ -66,15 +66,15 @@ public class GlassTableBlockEntityRenderer implements BlockEntityRenderer<GlassT
                 case NORTH -> {}
                 case SOUTH -> {
                     matrices.translate(1, 0, 1);
-                    matrices.mulPose(Axis.YP.rotationDegrees(180));
+                    matrices.rotate(Axis.YP.rotationDegrees(180));
                 }
                 case WEST -> {
                     matrices.translate(0, 0, 1);
-                    matrices.mulPose(Axis.YP.rotationDegrees(90));
+                    matrices.rotate(Axis.YP.rotationDegrees(90));
                 }
                 case EAST -> {
                     matrices.translate(1, 0, 0);
-                    matrices.mulPose(Axis.YP.rotationDegrees(270));
+                    matrices.rotate(Axis.YP.rotationDegrees(270));
                 }
             }
 

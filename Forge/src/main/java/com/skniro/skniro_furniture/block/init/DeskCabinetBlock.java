@@ -1,7 +1,5 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.mojang.serialization.MapCodec;
-import com.skniro.skniro_furniture.block.entity.BedsideCabinetBlockEntity;
 import com.skniro.skniro_furniture.block.entity.DeskCabinetBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,11 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class DeskCabinetBlock extends AbstractFurnitureContainerBlock {
-    public static final MapCodec<DeskCabinetBlock> CODEC = simpleCodec(DeskCabinetBlock::new);
 
-    public MapCodec<DeskCabinetBlock> codec() {
-        return CODEC;
-    }
 
     public DeskCabinetBlock(Properties settings) {
         super(settings);
