@@ -1,6 +1,5 @@
 package com.skniro.skniro_furniture.entity.furniture;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
@@ -44,6 +43,5 @@ public class SofaEntity extends Entity {
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
-        this.kill();
     }
 }

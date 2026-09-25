@@ -1,8 +1,8 @@
 package com.skniro.skniro_furniture.entity.furniture;
 
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityDimensions;
@@ -12,7 +12,6 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Vector3f;
 
 public class CushionEntity extends Entity {
     public CushionEntity(EntityType<?> type, Level world) {
@@ -37,12 +36,12 @@ public class CushionEntity extends Entity {
 
 
     @Override
-    protected void readAdditionalSaveData(ValueInput valueInput) {
+    protected void readAdditionalSaveData(ValueInput nbt) {
 
     }
 
     @Override
-    protected void addAdditionalSaveData(ValueOutput valueOutput) {
+    protected void addAdditionalSaveData(ValueOutput nbt) {
 
     }
 
@@ -54,6 +53,9 @@ public class CushionEntity extends Entity {
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
-        this.kill();
+        if (!this.level().isClientSide() && this.getRemovalReason() == null) {
+            this.playSound(SoundEvents.CUSHION_GET_UP, 1.0F, 1.0F);
+        }
+
     }
 }

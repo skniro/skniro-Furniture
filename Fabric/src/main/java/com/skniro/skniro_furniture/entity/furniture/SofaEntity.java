@@ -43,6 +43,5 @@ public class SofaEntity extends Entity {
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
-        this.kill();
     }
 }
