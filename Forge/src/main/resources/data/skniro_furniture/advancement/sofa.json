@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:furniture_intro",
+  "criteria": {
+    "get_sofa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.sofa.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:black_sofa"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.sofa.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_sofa"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

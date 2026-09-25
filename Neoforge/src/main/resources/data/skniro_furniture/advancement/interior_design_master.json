@@ -1,0 +1,189 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_bed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:beds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_bedside_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_curtain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:curtains"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_end_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_fridge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:fridges"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_kitchen_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:kitchen_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_kitchen_counter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counters"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_oven": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ovens"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sink": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sinks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sofa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tvs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv_stand": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tv_stands"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.interior_design_master.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_kitchen_sink"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.interior_design_master.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_kitchen_counter"
+    ],
+    [
+      "get_kitchen_cabinet"
+    ],
+    [
+      "get_sink"
+    ],
+    [
+      "get_oven"
+    ],
+    [
+      "get_fridge"
+    ],
+    [
+      "get_bed"
+    ],
+    [
+      "get_bedside_cabinet"
+    ],
+    [
+      "get_curtain"
+    ],
+    [
+      "get_cushion"
+    ],
+    [
+      "get_sofa"
+    ],
+    [
+      "get_end_table"
+    ],
+    [
+      "get_tv_stand"
+    ],
+    [
+      "get_tv"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:kitchen_beginner",
+  "criteria": {
+    "get_oven": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ovens"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.oven.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:black_oven"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.oven.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_oven"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

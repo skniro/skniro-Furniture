@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:living_room_setup",
+  "criteria": {
+    "get_tv": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tvs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.tv.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_tv"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.tv.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_tv"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

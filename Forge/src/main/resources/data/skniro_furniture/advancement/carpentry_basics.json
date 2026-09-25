@@ -1,0 +1,111 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_bedside_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_book_desk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:book_desks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_coffee_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_desk_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:desk_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_end_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_plank_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plank_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.carpentry_basics.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:acacia_table"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.carpentry_basics.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_plank_table"
+    ],
+    [
+      "get_coffee_table"
+    ],
+    [
+      "get_end_table"
+    ],
+    [
+      "get_glass_table"
+    ],
+    [
+      "get_book_desk"
+    ],
+    [
+      "get_bedside_cabinet"
+    ],
+    [
+      "get_desk_cabinet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "get_furniture": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:furniture"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "skniro_furniture:block/bookshelf",
+    "description": {
+      "translate": "advancements.skniro_furniture.furnishing.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_chair"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.furnishing.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_furniture"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

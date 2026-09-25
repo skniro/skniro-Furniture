@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:carpentry_basics",
+  "criteria": {
+    "get_bedside_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.bedside_cabinet.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_bedside_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.bedside_cabinet.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_bedside_cabinet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

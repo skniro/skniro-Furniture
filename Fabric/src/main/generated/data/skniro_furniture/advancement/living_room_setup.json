@@ -1,0 +1,72 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_end_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sofa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tvs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv_stand": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tv_stands"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.living_room_setup.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:black_sofa"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.living_room_setup.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_sofa"
+    ],
+    [
+      "get_end_table"
+    ],
+    [
+      "get_tv_stand"
+    ],
+    [
+      "get_tv"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

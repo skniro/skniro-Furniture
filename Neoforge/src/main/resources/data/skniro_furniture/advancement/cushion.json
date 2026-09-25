@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:furniture_intro",
+  "criteria": {
+    "get_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.cushion.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_black_cushion"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.cushion.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_cushion"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

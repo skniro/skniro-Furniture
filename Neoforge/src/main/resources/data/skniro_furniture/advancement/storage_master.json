@@ -1,0 +1,85 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_four_grid_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:four_grid_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_door_four_grid_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_door_four_grid_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_door_triple_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_door_triple_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_triple_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:triple_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_wall_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:wall_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.storage_master.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_triple_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.storage_master.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_triple_cabinet"
+    ],
+    [
+      "get_glass_door_triple_cabinet"
+    ],
+    [
+      "get_four_grid_cabinet"
+    ],
+    [
+      "get_glass_door_four_grid_cabinet"
+    ],
+    [
+      "get_wall_cabinet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:furniture_intro",
+  "criteria": {
+    "get_coffee_chair": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_chairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.coffee_chair.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_coffee_chair_black"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.coffee_chair.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_coffee_chair"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:storage_master",
+  "criteria": {
+    "get_triple_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:triple_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.triple_cabinet.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_triple_cabinet"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.triple_cabinet.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_triple_cabinet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

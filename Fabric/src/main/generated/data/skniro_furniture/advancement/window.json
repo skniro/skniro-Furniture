@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:windows_and_doors",
+  "criteria": {
+    "get_window": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.window.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_window"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.window.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_window"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

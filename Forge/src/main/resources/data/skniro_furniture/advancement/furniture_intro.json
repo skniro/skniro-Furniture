@@ -1,0 +1,72 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_chair": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:chairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_coffee_chair": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_chairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sofa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.furniture_intro.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_chair"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.furniture_intro.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_cushion"
+    ],
+    [
+      "get_chair"
+    ],
+    [
+      "get_coffee_chair"
+    ],
+    [
+      "get_sofa"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

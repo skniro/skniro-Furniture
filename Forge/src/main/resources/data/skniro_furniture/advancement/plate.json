@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:decorative_art",
+  "criteria": {
+    "get_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plates"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.plate.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_plate"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.plate.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_plate"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

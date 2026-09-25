@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:carpentry_basics",
+  "criteria": {
+    "get_plank_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plank_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.plank_table.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_table"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.plank_table.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_plank_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

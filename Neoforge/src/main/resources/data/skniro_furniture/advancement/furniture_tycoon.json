@@ -1,0 +1,462 @@
+{
+  "parent": "skniro_furniture:furnishing",
+  "criteria": {
+    "get_animal_painting": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:animal_paintings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_bed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:beds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_bedside_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:bedside_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_book_desk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:book_desks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_ceiling_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ceiling_lamps"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_chair": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:chairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_coffee_chair": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_chairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_coffee_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_counter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counters"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_counter_drawer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:counter_drawers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_curtain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:curtains"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_cushion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:cushions"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_desk_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:desk_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_end_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:end_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_four_grid_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:four_grid_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_fridge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:fridges"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_door_four_grid_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_door_four_grid_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_door_triple_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_door_triple_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_glass_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:glass_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_grid_glass_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:grid_glass_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_kitchen_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:kitchen_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_oven": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ovens"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_paper_sliding_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:paper_sliding_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_plank_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plank_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:plates"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sink": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sinks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_sofa": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:sofas"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_triple_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:triple_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tvs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_tv_stand": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:tv_stands"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_wall_cabinet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:wall_cabinets"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_window": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_window_style2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:windows_style2"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.furniture_tycoon.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "skniro_furniture:acacia_planks_book_desk"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.furniture_tycoon.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_cushion"
+    ],
+    [
+      "get_chair"
+    ],
+    [
+      "get_coffee_chair"
+    ],
+    [
+      "get_sofa"
+    ],
+    [
+      "get_plank_table"
+    ],
+    [
+      "get_coffee_table"
+    ],
+    [
+      "get_end_table"
+    ],
+    [
+      "get_glass_table"
+    ],
+    [
+      "get_book_desk"
+    ],
+    [
+      "get_bedside_cabinet"
+    ],
+    [
+      "get_desk_cabinet"
+    ],
+    [
+      "get_counter"
+    ],
+    [
+      "get_counter_drawer"
+    ],
+    [
+      "get_kitchen_cabinet"
+    ],
+    [
+      "get_sink"
+    ],
+    [
+      "get_oven"
+    ],
+    [
+      "get_fridge"
+    ],
+    [
+      "get_triple_cabinet"
+    ],
+    [
+      "get_four_grid_cabinet"
+    ],
+    [
+      "get_glass_door_triple_cabinet"
+    ],
+    [
+      "get_glass_door_four_grid_cabinet"
+    ],
+    [
+      "get_wall_cabinet"
+    ],
+    [
+      "get_bed"
+    ],
+    [
+      "get_curtain"
+    ],
+    [
+      "get_window"
+    ],
+    [
+      "get_window_style2"
+    ],
+    [
+      "get_paper_sliding_door"
+    ],
+    [
+      "get_grid_glass_sliding_door"
+    ],
+    [
+      "get_glass_sliding_door"
+    ],
+    [
+      "get_tv_stand"
+    ],
+    [
+      "get_tv"
+    ],
+    [
+      "get_plate"
+    ],
+    [
+      "get_ceiling_lamp"
+    ],
+    [
+      "get_animal_painting"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

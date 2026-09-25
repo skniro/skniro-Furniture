@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:decorative_art",
+  "criteria": {
+    "get_animal_painting": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:animal_paintings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.animal_painting.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_allay_draw"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.animal_painting.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_animal_painting"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

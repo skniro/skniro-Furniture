@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:carpentry_basics",
+  "criteria": {
+    "get_coffee_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:coffee_tables"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.coffee_table.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_plank_coffee_table"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.coffee_table.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_coffee_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:bedroom_setup",
+  "criteria": {
+    "get_bed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:beds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.bed.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:acacia_red_wood_bed"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.bed.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_bed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

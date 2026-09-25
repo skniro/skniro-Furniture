@@ -1,0 +1,32 @@
+{
+  "parent": "skniro_furniture:decorative_art",
+  "criteria": {
+    "get_ceiling_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#skniro_furniture:ceiling_lamps"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.skniro_furniture.ceiling_lamp.description"
+    },
+    "icon": {
+      "id": "skniro_furniture:black_ceiling_lamp"
+    },
+    "title": {
+      "translate": "advancements.skniro_furniture.ceiling_lamp.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_ceiling_lamp"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
