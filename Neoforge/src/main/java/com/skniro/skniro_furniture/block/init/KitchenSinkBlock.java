@@ -2,9 +2,12 @@ package com.skniro.skniro_furniture.block.init;
 
 import com.skniro.skniro_furniture.block.entity.FurnitureBlockEntityType;
 import com.skniro.skniro_furniture.block.entity.KitchenSinkBlockEntity;
+import com.skniro.skniro_furniture.init.FurnitureStrings;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -63,10 +66,9 @@ public class KitchenSinkBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (!world.isClientSide()) {
-            MenuProvider screenHandlerFactory = state.getMenuProvider(world, pos);
-
-            if (screenHandlerFactory != null) {
-                player.openMenu(screenHandlerFactory);
+            BlockEntity entity = world.getBlockEntity(pos);
+            if (entity instanceof KitchenSinkBlockEntity BlockEntity) {
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(BlockEntity, Component.translatable(FurnitureStrings.Kitchen_Sink)), pos);
             }
         }
 
