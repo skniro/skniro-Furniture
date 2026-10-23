@@ -35,23 +35,45 @@ minecraft {
 
 
 
-        register('client'){
+        // Run names are prefixed with "forge" so the generated tasks (runForgeClient, ...)
+        // do not clash with Fabric Loom's runClient/runServer in the sibling project.
+        register('forgeClient'){
             systemProperty 'forge.enabledGameTestNamespaces', mod_id
         }
 
-        register('server'){
+        register('forgeServer'){
             systemProperty 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
         }
 
-        register('gameTestServer'){
+        register('forgeGameTestServer'){
             systemProperty 'forge.enabledGameTestNamespaces', mod_id
         }
 
-        register('data'){
+        register('forgeData'){
             workingDir = layout.projectDirectory.dir('run-data')
             args '--mod', mod_id, '--all', '--output', layout.projectDirectory.dir('src/generated/resources'), '--existing', layout.projectDirectory.dir('src/main/resources')
         }
+    }
+}
+
+// Slime Launcher looks a run's launch configuration (main class, arguments, ...) up by
+// run name in the userdev metadata's runs.json. The runs above are renamed to avoid
+// clashing with Fabric's tasks, so register the standard Forge configs under the
+// prefixed names as aliases before the runs are launched.
+tasks.matching { it.name.startsWith('slimeLauncherMetadataFor') }.configureEach { metadataTask ->
+    def runsJsonFile = metadataTask.outputs.files.files.find { it.name == 'runs.json' }
+
+    doLast {
+        def json = new groovy.json.JsonSlurper().parse(runsJsonFile, 'UTF-8')
+        def aliases = [:]
+        ['client', 'server', 'data', 'gameTestServer'].each { runName ->
+            def config = json[runName]
+            if (config instanceof Map)
+                aliases["forge${runName.capitalize()}"] = new LinkedHashMap(config)
+        }
+        json.putAll(aliases)
+        runsJsonFile.setText(groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(json)), 'UTF-8')
     }
 }
 
