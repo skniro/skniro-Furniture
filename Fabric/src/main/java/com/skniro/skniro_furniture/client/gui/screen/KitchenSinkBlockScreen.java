@@ -28,6 +28,7 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
 
     @Override
     public void extractBackground(final GuiGraphicsExtractor context, final int mouseX, final int mouseY, final float a) {
+        super.extractBackground(context, mouseX, mouseY, a);
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
         context.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, x, y, 0, 0, imageWidth, imageHeight,256,256);
@@ -43,7 +44,6 @@ public class KitchenSinkBlockScreen extends AbstractContainerScreen<KitchenSinkB
 
     @Override
     public void extractRenderState(GuiGraphicsExtractor context , int mouseX, int mouseY, float delta) {
-        extractBackground(context, mouseX, mouseY, delta);
         super.extractRenderState(context, mouseX, mouseY, delta);
         extractTooltip(context, mouseX, mouseY);
     }
