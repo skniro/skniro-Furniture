@@ -3,12 +3,19 @@ package com.skniro.skniro_furniture.datagen;
 import com.skniro.skniro_furniture.block.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.level.storage.loot.predicates.MatchBlock;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
@@ -2396,6 +2403,18 @@ public class MapleLootTableGenerator extends FabricBlockLootSubProvider {
     }
 
     public LootTable.Builder bedDrops(Block block) {
-        return this.createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD);
+        LootPool.Builder pool = LootPool.lootPool()
+                .setRolls(ContextIntProviders.exactly(1))
+                .add(LootItem.lootTableItem(block)
+                        .when(MatchBlock.blockMatches(this.blocks, block,
+                                StatePropertiesPredicate.Builder.properties()
+                                        .hasProperty(BedBlock.PART, BedPart.HEAD)))
+                        .apply(CopyComponentsFunction
+                                .copyComponentsFromBlockEntity(LootContextParams.BLOCK_ENTITY)
+                                .include(DataComponents.BASE_COLOR)
+                                .include(DataComponents.BANNER_PATTERNS)
+                                .include(DataComponents.CUSTOM_NAME)));
+        this.applyExplosionCondition(block, pool);
+        return LootTable.lootTable().withPool(pool);
     }
 }

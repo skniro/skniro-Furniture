@@ -6,15 +6,21 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.skniro.skniro_furniture.block.entity.FurnitureBedBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Util;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.villager.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
+import net.minecraft.world.item.BannerItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -28,6 +34,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoubleBlockCombiner;
 import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BannerBlockEntity;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -39,6 +47,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -49,6 +58,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Consumer;
 
 public class FurnitureBedBlock extends BedBlock implements EntityBlock {
     public static final EnumProperty<BedPart> PART;
@@ -67,7 +77,7 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new FurnitureBedBlockEntity(pos, state, this.color);
+        return new FurnitureBedBlockEntity(pos, state);
     }
 
 /*    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
@@ -81,6 +91,99 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
 
     public DyeColor getColor() {
         return this.color;
+    }
+
+    @Override
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (stack.isEmpty()) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        DyeColor dyeColor = stack.get(DataComponents.DYE);
+        if (dyeColor != null) {
+            if (!world.isClientSide()) {
+                this.updateBothHalves(world, pos, state, bed -> bed.setBaseColor(dyeColor));
+                world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                stack.consume(1, player);
+            }
+            return InteractionResult.SUCCESS;
+        }
+
+        if (stack.getItem() instanceof BannerItem bannerItem) {
+            BannerPatternLayers patterns = stack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY);
+            DyeColor color = stack.getOrDefault(DataComponents.BASE_COLOR, bannerItem.getColor());
+            if (!world.isClientSide()) {
+                this.updateBothHalves(world, pos, state, bed -> bed.setDecorations(color, patterns));
+                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                stack.consume(1, player);
+            }
+            return InteractionResult.SUCCESS;
+        }
+
+        var providedPatterns = stack.get(DataComponents.PROVIDES_BANNER_PATTERNS);
+        if (providedPatterns != null && providedPatterns.size() > 0) {
+            InteractionHand otherHand = hand == InteractionHand.MAIN_HAND ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
+            ItemStack otherStack = player.getItemInHand(otherHand);
+            DyeColor layerColor = otherStack.get(DataComponents.DYE);
+            if (layerColor != null) {
+                if (!world.isClientSide()) {
+                    var pattern = providedPatterns.get(0);
+                    this.updateBothHalves(world, pos, state, bed -> {
+                        if (bed.getPatterns().layers().size() < BannerBlockEntity.MAX_PATTERNS) {
+                            BannerPatternLayers layers = new BannerPatternLayers.Builder()
+                                    .addAll(bed.getPatterns())
+                                    .add(pattern, layerColor)
+                                    .build();
+                            bed.setPatterns(layers);
+                        }
+                    });
+                    world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    otherStack.consume(1, player);
+                }
+                return InteractionResult.SUCCESS;
+            }
+        }
+
+        return super.useItemOn(stack, state, world, pos, player, hand, hit);
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
+        if (player.isSecondaryUseActive() && this.hasDecorations(world, pos, state)) {
+            if (!world.isClientSide()) {
+                this.updateBothHalves(world, pos, state, FurnitureBedBlockEntity::clearDecorations);
+                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return super.useWithoutItem(state, world, pos, player, hit);
+    }
+
+    private void updateBothHalves(Level world, BlockPos pos, BlockState state, Consumer<FurnitureBedBlockEntity> action) {
+        BedPart part = state.getValue(PART);
+        Direction facing = state.getValue(FACING);
+        BlockPos otherPos = part == BedPart.FOOT ? pos.relative(facing) : pos.relative(facing.getOpposite());
+        if (world.getBlockEntity(pos) instanceof FurnitureBedBlockEntity bed) {
+            action.accept(bed);
+        }
+        BlockState otherState = world.getBlockState(otherPos);
+        if (otherState.is(this) && otherState.getValue(PART) != part
+                && world.getBlockEntity(otherPos) instanceof FurnitureBedBlockEntity otherBed) {
+            action.accept(otherBed);
+        }
+    }
+
+    private boolean hasDecorations(Level world, BlockPos pos, BlockState state) {
+        BedPart part = state.getValue(PART);
+        Direction facing = state.getValue(FACING);
+        BlockPos otherPos = part == BedPart.FOOT ? pos.relative(facing) : pos.relative(facing.getOpposite());
+        if (world.getBlockEntity(pos) instanceof FurnitureBedBlockEntity bed && bed.isDecorated()) {
+            return true;
+        }
+        BlockState otherState = world.getBlockState(otherPos);
+        return otherState.is(this) && otherState.getValue(PART) != part
+                && world.getBlockEntity(otherPos) instanceof FurnitureBedBlockEntity otherBed
+                && otherBed.isDecorated();
     }
 
     @Nullable
@@ -237,6 +340,12 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
             world.setBlock(blockPos, (BlockState)state.setValue(PART, BedPart.HEAD), 3);
             world.updateNeighborsAt(pos, Blocks.AIR);
             state.updateNeighbourShapes(world, pos, 3);
+
+            if (world.getBlockEntity(pos) instanceof FurnitureBedBlockEntity foot && foot.isDecorated()
+                    && world.getBlockEntity(blockPos) instanceof FurnitureBedBlockEntity head) {
+                head.copyDecorationFrom(foot);
+                foot.markUpdated();
+            }
         }
 
     }

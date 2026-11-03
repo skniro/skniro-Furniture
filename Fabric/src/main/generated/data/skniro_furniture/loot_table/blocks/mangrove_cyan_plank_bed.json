@@ -15,6 +15,15 @@
               "part": "head"
             }
           },
+          "modifier": {
+            "type": "minecraft:copy_components",
+            "include": [
+              "minecraft:base_color",
+              "minecraft:banner_patterns",
+              "minecraft:custom_name"
+            ],
+            "source": "block_entity"
+          },
           "name": "skniro_furniture:mangrove_cyan_plank_bed"
         }
       ],
