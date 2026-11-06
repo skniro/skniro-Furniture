@@ -28,8 +28,11 @@ import org.jetbrains.annotations.Nullable;
 public class DividerBlockEntityRenderer implements BlockEntityRenderer<DividerBlockEntity, DividerBlockEntityRendererState> {
     private static final float U_MIN = 1.0F / 64.0F;
     private static final float U_MAX = 21.0F / 64.0F;
-    private static final float V_MIN = 1.0F / 64.0F;
-    private static final float V_MAX = 41.0F / 64.0F;
+    // A banner flag is 20x40 texels while the divider cloth is 16x15, so using the
+    // whole flag squashes the pattern. Sample the centered 20x20 square instead;
+    // it maps to 16x15 with the same texel aspect as the divider cloth texture.
+    private static final float V_MIN = 11.0F / 64.0F;
+    private static final float V_MAX = 31.0F / 64.0F;
     private static final float PX = 1.0F / 16.0F;
     private static final float FACE_OFFSET = 0.006F;
     private static final float LAYER_STEP = 0.001F;
