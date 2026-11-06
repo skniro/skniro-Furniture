@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import com.skniro.skniro_furniture.block.entity.FurnitureBedBlockEntity;
 import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
+import com.skniro.skniro_furniture.block.renderer.state.BannerDecoratedBlockEntityRenderState;
 import com.skniro.skniro_furniture.block.renderer.state.FurnitureBedBlockEntityRendererState;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -59,23 +60,7 @@ public class FurnitureBedBlockEntityRenderer implements BlockEntityRenderer<Furn
         BlockState blockState = entity.getBlockState();
         state.facing = blockState.getValue(FurnitureBedBlock.FACING);
         state.part = blockState.getValue(FurnitureBedBlock.PART);
-        state.decorated = entity.isDecorated();
-        state.baseColor = 0xFFFFFFFF;
-        state.baseSprite = null;
-        state.layers.clear();
-        if (!state.decorated) {
-            return;
-        }
-        state.baseColor = 0xFF000000 | entity.getBaseColor().getTextureDiffuseColor();
-        state.baseSprite = this.sprites.get(Sheets.BANNER_PATTERN_BASE);
-        for (BannerPatternLayers.Layer layer : entity.getPatterns().layers()) {
-            if (state.layers.size() >= MAX_RENDERED_LAYERS) {
-                break;
-            }
-            state.layers.add(new FurnitureBedBlockEntityRendererState.Layer(
-                    this.sprites.get(Sheets.getBannerSprite(layer.pattern())),
-                    0xFF000000 | layer.color().getTextureDiffuseColor()));
-        }
+        state.extractBanner(this.sprites, entity);
     }
 
     @Override
@@ -108,7 +93,7 @@ public class FurnitureBedBlockEntityRenderer implements BlockEntityRenderer<Furn
         collector.order(1).submitCustomGeometry(poseStack, renderType, (pose, consumer) ->
                 drawSheet(pose, consumer, baseSprite, baseColor, part, SHEET_Y, light));
         for (int i = 0; i < state.layers.size(); i++) {
-            FurnitureBedBlockEntityRendererState.Layer layer = state.layers.get(i);
+            BannerDecoratedBlockEntityRenderState.Layer layer = state.layers.get(i);
             float y = SHEET_Y + (i + 1) * LAYER_STEP;
             collector.order(2 + i).submitCustomGeometry(poseStack, renderType, (pose, consumer) ->
                     drawSheet(pose, consumer, layer.sprite(), layer.color(), part, y, light));

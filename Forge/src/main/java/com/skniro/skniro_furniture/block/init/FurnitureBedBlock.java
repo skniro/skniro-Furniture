@@ -40,12 +40,13 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-public class FurnitureBedBlock extends BedBlock implements EntityBlock {
+public class FurnitureBedBlock extends BedBlock implements EntityBlock, BannerDecoratedBlock {
     public static final EnumProperty<BedPart> PART;
     public static final BooleanProperty OCCUPIED;
     private static final Map SHAPES_BY_DIRECTION;
@@ -80,95 +81,33 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock {
 
     @Override
     protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (stack.isEmpty()) {
-            return InteractionResult.TRY_WITH_EMPTY_HAND;
-        }
-
-        DyeColor dyeColor = stack.get(DataComponents.DYE);
-        if (dyeColor != null) {
-            if (!world.isClientSide()) {
-                this.updateBothHalves(world, pos, state, bed -> bed.setBaseColor(dyeColor));
-                world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                stack.consume(1, player);
-            }
-            return InteractionResult.SUCCESS;
-        }
-
-        if (stack.getItem() instanceof BannerItem bannerItem) {
-            BannerPatternLayers patterns = stack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY);
-            DyeColor color = stack.getOrDefault(DataComponents.BASE_COLOR, bannerItem.getColor());
-            if (!world.isClientSide()) {
-                this.updateBothHalves(world, pos, state, bed -> bed.setDecorations(color, patterns));
-                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                stack.consume(1, player);
-            }
-            return InteractionResult.SUCCESS;
-        }
-
-        var providedPatterns = stack.get(DataComponents.PROVIDES_BANNER_PATTERNS);
-        if (providedPatterns != null && providedPatterns.size() > 0) {
-            InteractionHand otherHand = hand == InteractionHand.MAIN_HAND ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
-            ItemStack otherStack = player.getItemInHand(otherHand);
-            DyeColor layerColor = otherStack.get(DataComponents.DYE);
-            if (layerColor != null) {
-                if (!world.isClientSide()) {
-                    var pattern = providedPatterns.get(0);
-                    this.updateBothHalves(world, pos, state, bed -> {
-                        if (bed.getPatterns().layers().size() < BannerBlockEntity.MAX_PATTERNS) {
-                            BannerPatternLayers layers = new BannerPatternLayers.Builder()
-                                    .addAll(bed.getPatterns())
-                                    .add(pattern, layerColor)
-                                    .build();
-                            bed.setPatterns(layers);
-                        }
-                    });
-                    world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    otherStack.consume(1, player);
-                }
-                return InteractionResult.SUCCESS;
-            }
-        }
-
-        return super.useItemOn(stack, state, world, pos, player, hand, hit);
+        InteractionResult result = BannerDecorationHelper.useItemOn(stack, world, pos, state, player, hand);
+        return result != InteractionResult.PASS
+                ? result
+                : super.useItemOn(stack, state, world, pos, player, hand, hit);
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
-        if (player.isSecondaryUseActive() && this.hasDecorations(world, pos, state)) {
-            if (!world.isClientSide()) {
-                this.updateBothHalves(world, pos, state, FurnitureBedBlockEntity::clearDecorations);
-                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-            }
+        if (player.isSecondaryUseActive()
+                && BannerDecorationHelper.clearIfDecorated(world, pos, this.getDecorationPositions(world, pos, state))) {
             return InteractionResult.SUCCESS;
         }
         return super.useWithoutItem(state, world, pos, player, hit);
     }
 
-    private void updateBothHalves(Level world, BlockPos pos, BlockState state, Consumer<FurnitureBedBlockEntity> action) {
+    @Override
+    public List<BlockPos> getDecorationPositions(Level world, BlockPos pos, BlockState state) {
         BedPart part = state.getValue(PART);
         Direction facing = state.getValue(FACING);
         BlockPos otherPos = part == BedPart.FOOT ? pos.relative(facing) : pos.relative(facing.getOpposite());
-        if (world.getBlockEntity(pos) instanceof FurnitureBedBlockEntity bed) {
-            action.accept(bed);
-        }
+        List<BlockPos> positions = new ArrayList<>();
+        positions.add(pos);
         BlockState otherState = world.getBlockState(otherPos);
-        if (otherState.is(this) && otherState.getValue(PART) != part
-                && world.getBlockEntity(otherPos) instanceof FurnitureBedBlockEntity otherBed) {
-            action.accept(otherBed);
+        if (otherState.is(this) && otherState.getValue(PART) != part) {
+            positions.add(otherPos);
         }
-    }
-
-    private boolean hasDecorations(Level world, BlockPos pos, BlockState state) {
-        BedPart part = state.getValue(PART);
-        Direction facing = state.getValue(FACING);
-        BlockPos otherPos = part == BedPart.FOOT ? pos.relative(facing) : pos.relative(facing.getOpposite());
-        if (world.getBlockEntity(pos) instanceof FurnitureBedBlockEntity bed && bed.isDecorated()) {
-            return true;
-        }
-        BlockState otherState = world.getBlockState(otherPos);
-        return otherState.is(this) && otherState.getValue(PART) != part
-                && world.getBlockEntity(otherPos) instanceof FurnitureBedBlockEntity otherBed
-                && otherBed.isDecorated();
+        return positions;
     }
 
     @Nullable
