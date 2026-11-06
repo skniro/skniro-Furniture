@@ -1,6 +1,18 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "skniro_furniture:block/bamboo_light_blue_cushion"
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "skniro_furniture:block/bamboo_light_blue_cushion"
+      },
+      {
+        "type": "minecraft:special",
+        "base": "skniro_furniture:block/bamboo_light_blue_cushion",
+        "model": {
+          "type": "skniro_furniture:cushion_surface"
+        }
+      }
+    ]
   }
 }

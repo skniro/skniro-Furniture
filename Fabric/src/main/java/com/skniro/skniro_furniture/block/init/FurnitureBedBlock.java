@@ -95,23 +95,6 @@ public class FurnitureBedBlock extends BedBlock implements EntityBlock, BannerDe
     }
 
     @Override
-    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        InteractionResult result = BannerDecorationHelper.useItemOn(stack, world, pos, state, player, hand);
-        return result != InteractionResult.PASS
-                ? result
-                : super.useItemOn(stack, state, world, pos, player, hand, hit);
-    }
-
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos, Player player, BlockHitResult hit) {
-        if (player.isSecondaryUseActive()
-                && BannerDecorationHelper.clearIfDecorated(world, pos, this.getDecorationPositions(world, pos, state))) {
-            return InteractionResult.SUCCESS;
-        }
-        return super.useWithoutItem(state, world, pos, player, hit);
-    }
-
-    @Override
     public List<BlockPos> getDecorationPositions(Level world, BlockPos pos, BlockState state) {
         BedPart part = state.getValue(PART);
         Direction facing = state.getValue(FACING);

@@ -5,12 +5,15 @@ import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.init.CushionBlock;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
 import java.util.Set;
 import java.util.function.Supplier;
 
@@ -42,6 +45,21 @@ public class FurnitureBlockEntityType {
                             )
                     )
             );
+
+    public static final Supplier<BlockEntityType<CushionBlockEntity>> Cushion_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("cushion_block_entity",
+                    () -> new BlockEntityType<>(CushionBlockEntity::new, Set.copyOf(cushionBlocks())));
+
+    /** All registered cushion variants (192 blocks). Registry events run blocks before block entity types. */
+    private static List<Block> cushionBlocks() {
+        List<Block> blocks = BuiltInRegistries.BLOCK.stream()
+                .filter(block -> block instanceof CushionBlock)
+                .toList();
+        if (blocks.isEmpty()) {
+            throw new IllegalStateException("Cushion blocks must be registered before the cushion block entity type");
+        }
+        return blocks;
+    }
 
     public static final Supplier<BlockEntityType<MirrorBlockEntity>> Mirror_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mirror_block_entity",

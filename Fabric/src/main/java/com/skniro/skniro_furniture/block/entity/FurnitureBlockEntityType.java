@@ -6,6 +6,7 @@ import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.init.CushionBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -15,6 +16,8 @@ import net.minecraft.util.datafix.fixes.References;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+
+import java.util.List;
 
 
 public class FurnitureBlockEntityType {
@@ -37,6 +40,22 @@ public class FurnitureBlockEntityType {
                             MapleFurnitureBlocks.GREEN_WOOD_DIVIDER,
                             MapleFurnitureBlocks.RED_WOOD_DIVIDER,
                             MapleFurnitureBlocks.BLACK_WOOD_DIVIDER));
+
+    public static final BlockEntityType<CushionBlockEntity> Cushion_BLOCK_ENTITY =
+            create("cushion_block_entity",
+                    FabricBlockEntityTypeBuilder.create(CushionBlockEntity::new)
+                            .addBlocks(cushionBlocks()));
+
+    /** All registered cushion variants (192 blocks). Blocks are registered before this class initializes. */
+    private static List<Block> cushionBlocks() {
+        List<Block> blocks = BuiltInRegistries.BLOCK.stream()
+                .filter(block -> block instanceof CushionBlock)
+                .toList();
+        if (blocks.isEmpty()) {
+            throw new IllegalStateException("Cushion blocks must be registered before the cushion block entity type");
+        }
+        return blocks;
+    }
 
     public static final BlockEntityType<MirrorBlockEntity> Mirror_BLOCK_ENTITY =
             create("mirror_block_entity",

@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.block;
 
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.*;
+import com.skniro.skniro_furniture.item.FurnitureBannerItem;
 import com.skniro.skniro_furniture.item.FurnitureItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -570,8 +571,14 @@ public class FurnitureBedroomBlocks {
     }
 
     private static <T extends Block> Supplier<Item> registerBlockItem(String name, Supplier<T> block) {
-        return FurnitureItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().useBlockDescriptionPrefix().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name)))));
+        return FurnitureItems.ITEMS.register(name, () -> {
+            Block actualBlock = block.get();
+            Item.Properties properties = new Item.Properties().useBlockDescriptionPrefix()
+                    .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name)));
+            return actualBlock instanceof FurnitureBedBlock
+                    ? new FurnitureBannerItem(actualBlock, properties)
+                    : new BlockItem(actualBlock, properties);
+        });
     }
 
     public static void registerBedroomBlocks(IEventBus eventBus) {

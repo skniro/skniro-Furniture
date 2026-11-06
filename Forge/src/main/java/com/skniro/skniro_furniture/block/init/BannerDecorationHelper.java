@@ -8,7 +8,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BannerItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -44,17 +43,6 @@ public final class BannerDecorationHelper {
             if (!world.isClientSide()) {
                 apply(world, positions, be -> be.setBaseColor(dyeColor));
                 world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                stack.consume(1, player);
-            }
-            return InteractionResult.SUCCESS;
-        }
-
-        if (stack.getItem() instanceof BannerItem bannerItem) {
-            BannerPatternLayers patterns = stack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY);
-            DyeColor color = stack.getOrDefault(DataComponents.BASE_COLOR, bannerItem.getColor());
-            if (!world.isClientSide()) {
-                apply(world, positions, be -> be.setDecorations(color, patterns));
-                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 stack.consume(1, player);
             }
             return InteractionResult.SUCCESS;

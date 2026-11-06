@@ -1,6 +1,18 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "skniro_furniture:block/pale_oak_pink_wood_bed"
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "skniro_furniture:block/pale_oak_pink_wood_bed"
+      },
+      {
+        "type": "minecraft:special",
+        "base": "skniro_furniture:block/pale_oak_pink_wood_bed",
+        "model": {
+          "type": "skniro_furniture:bed_sheet"
+        }
+      }
+    ]
   }
 }

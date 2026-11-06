@@ -25,7 +25,7 @@ import java.util.function.Consumer;
  * Renders the banner pattern layers of a divider item on top of the divider model.
  * Used by the loom result and by patterned divider items in inventories.
  */
-public class DividerBannerSpecialRenderer implements SpecialModelRenderer<BannerPatternLayers> {
+public class DividerBannerSpecialRenderer implements SpecialModelRenderer<ItemBannerDecoration> {
     private static final float U_MIN = 1.0F / 64.0F;
     private static final float U_MAX = 21.0F / 64.0F;
     // A banner flag is 20x40 texels while the divider cloth is 16x15, so using the
@@ -51,22 +51,22 @@ public class DividerBannerSpecialRenderer implements SpecialModelRenderer<Banner
     }
 
     @Override
-    public BannerPatternLayers extractArgument(ItemStack stack) {
-        return stack.getOrDefault(DataComponents.BANNER_PATTERNS, BannerPatternLayers.EMPTY);
+    public ItemBannerDecoration extractArgument(ItemStack stack) {
+        return ItemBannerDecoration.of(stack, this.baseColor);
     }
 
     @Override
-    public void submit(BannerPatternLayers patterns, PoseStack poseStack, SubmitNodeCollector collector,
+    public void submit(ItemBannerDecoration decoration, PoseStack poseStack, SubmitNodeCollector collector,
                        int light, int overlay, boolean foil, int outlineColor) {
-        if (patterns.layers().isEmpty()) {
+        if (decoration == null) {
             return;
         }
 
         TextureAtlasSprite baseSprite = this.sprites.get(Sheets.BANNER_PATTERN_BASE);
-        int baseArgb = 0xFF000000 | this.baseColor.getTextureDiffuseColor();
-        submitFace(poseStack, collector, baseSprite, baseArgb, CLOTH_Z - FACE_OFFSET, -1.0F, light, overlay, 1);
-        submitFace(poseStack, collector, baseSprite, baseArgb, CLOTH_Z + FACE_OFFSET, 1.0F, light, overlay, 1);
+        submitFace(poseStack, collector, baseSprite, decoration.baseColor(), CLOTH_Z - FACE_OFFSET, -1.0F, light, overlay, 1);
+        submitFace(poseStack, collector, baseSprite, decoration.baseColor(), CLOTH_Z + FACE_OFFSET, 1.0F, light, overlay, 1);
 
+        BannerPatternLayers patterns = decoration.patterns();
         for (int i = 0; i < patterns.layers().size(); i++) {
             BannerPatternLayers.Layer layer = patterns.layers().get(i);
             TextureAtlasSprite sprite = this.sprites.get(Sheets.getBannerSprite(layer.pattern()));
@@ -116,18 +116,18 @@ public class DividerBannerSpecialRenderer implements SpecialModelRenderer<Banner
         consumer.accept(new Vector3f(1.0F, CLOTH_MAX_Y, 1.0F));
     }
 
-    public record Unbaked(DyeColor baseColor) implements SpecialModelRenderer.Unbaked<BannerPatternLayers> {
+    public record Unbaked(DyeColor baseColor) implements SpecialModelRenderer.Unbaked<ItemBannerDecoration> {
         public static final MapCodec<Unbaked> MAP_CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
                 DyeColor.CODEC.fieldOf("color").forGetter(Unbaked::baseColor)
         ).apply(instance, Unbaked::new));
 
         @Override
-        public MapCodec<? extends SpecialModelRenderer.Unbaked<BannerPatternLayers>> type() {
+        public MapCodec<? extends SpecialModelRenderer.Unbaked<ItemBannerDecoration>> type() {
             return MAP_CODEC;
         }
 
         @Override
-        public SpecialModelRenderer<BannerPatternLayers> bake(SpecialModelRenderer.BakingContext context) {
+        public SpecialModelRenderer<ItemBannerDecoration> bake(SpecialModelRenderer.BakingContext context) {
             return new DividerBannerSpecialRenderer(context.sprites(), this.baseColor);
         }
     }

@@ -1,5 +1,6 @@
 {
 	"parent": "block/thin_block",
+	"gui_light": "front",
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
 	"texture_size": [64, 64],

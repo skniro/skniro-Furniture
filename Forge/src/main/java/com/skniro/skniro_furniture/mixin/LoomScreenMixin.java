@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.mixin;
 
-import com.skniro.skniro_furniture.block.init.DividerBlock;
+import com.skniro.skniro_furniture.block.init.BannerDecoratedBlock;
+import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.LoomScreen;
 import net.minecraft.client.model.object.banner.BannerFlagModel;
@@ -33,7 +34,7 @@ public class LoomScreenMixin {
                                                     DyeColor color, BannerPatternLayers patterns,
                                                     int x0, int y0, int x1, int y1) {
         ItemStack preview = this.skniroFurniture$previewStack();
-        if (preview.getItem() instanceof BannerItem banner && banner.getBlock() instanceof DividerBlock) {
+        if (preview.getItem() instanceof BannerItem banner && banner.getBlock() instanceof BannerDecoratedBlock) {
             return;
         }
         graphics.bannerPattern(flag, color, patterns, x0, y0, x1, y1);
@@ -43,14 +44,15 @@ public class LoomScreenMixin {
     private void skniroFurniture$renderDividerPreview(GuiGraphicsExtractor graphics, int mouseX, int mouseY,
                                                       float partialTick, CallbackInfo ci) {
         ItemStack preview = this.skniroFurniture$previewStack();
-        if (!(preview.getItem() instanceof BannerItem banner) || !(banner.getBlock() instanceof DividerBlock)) {
+        if (!(preview.getItem() instanceof BannerItem banner) || !(banner.getBlock() instanceof BannerDecoratedBlock)) {
             return;
         }
+        float scale = banner.getBlock() instanceof FurnitureBedBlock ? 0.85F : 1.25F;
         AbstractContainerScreenAccessor accessor = (AbstractContainerScreenAccessor) (Object) this;
         graphics.pose().pushMatrix();
         graphics.pose().translate(accessor.skniroFurniture$getLeftPos() + 141.0F,
                 accessor.skniroFurniture$getTopPos() + 18.0F);
-        graphics.pose().scale(1.25F, 1.25F);
+        graphics.pose().scale(scale, scale);
         graphics.item(preview, 0, 0);
         graphics.pose().popMatrix();
     }

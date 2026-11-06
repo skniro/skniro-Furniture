@@ -19,6 +19,7 @@ public class MapleDataGeneration implements DataGeneratorEntrypoint {
         pack.addProvider(MapleRecipeGeneration::new);
         pack.addProvider(MapleWorldGenerator::new);
         pack.addProvider(FurnitureModAdvancementProvider::new);
+        pack.addProvider(FurnitureDecoratedItemModelProvider::new);
     }
 
     @Override
