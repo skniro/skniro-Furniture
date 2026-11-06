@@ -1834,6 +1834,31 @@ public class MapleModelProvider extends FabricModelProvider {
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.Warped_Glass_Sliding_Door);
         furnitureModelDatagenHelper.registerPaperSlidingDoor(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door);
 
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.OAK_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR);
+        furnitureModelDatagenHelper.registerMirror(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR);
+
         furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.White_Desk_Lamp);
         furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Orange_Desk_Lamp);
         furnitureModelDatagenHelper.registerLamp(FurnitureBedroomBlocks.Magenta_Desk_Lamp);

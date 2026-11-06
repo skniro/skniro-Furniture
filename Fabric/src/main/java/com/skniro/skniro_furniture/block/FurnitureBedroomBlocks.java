@@ -20,6 +20,32 @@ import net.minecraft.world.level.material.PushReaction;
 import static net.minecraft.world.level.block.Blocks.litBlockEmission;
 
 public class FurnitureBedroomBlocks {
+
+    public static final Block OAK_PLANKS_MIRROR = registerMirror("oak_planks_mirror");
+    public static final Block OAK_WOOD_MIRROR = registerMirror("oak_wood_mirror");
+    public static final Block PALE_OAK_PLANKS_MIRROR = registerMirror("pale_oak_planks_mirror");
+    public static final Block PALE_OAK_WOOD_MIRROR = registerMirror("pale_oak_wood_mirror");
+    public static final Block SPRUCE_PLANKS_MIRROR = registerMirror("spruce_planks_mirror");
+    public static final Block SPRUCE_WOOD_MIRROR = registerMirror("spruce_wood_mirror");
+    public static final Block BIRCH_PLANKS_MIRROR = registerMirror("birch_planks_mirror");
+    public static final Block BIRCH_WOOD_MIRROR = registerMirror("birch_wood_mirror");
+    public static final Block JUNGLE_PLANKS_MIRROR = registerMirror("jungle_planks_mirror");
+    public static final Block JUNGLE_WOOD_MIRROR = registerMirror("jungle_wood_mirror");
+    public static final Block ACACIA_PLANKS_MIRROR = registerMirror("acacia_planks_mirror");
+    public static final Block ACACIA_WOOD_MIRROR = registerMirror("acacia_wood_mirror");
+    public static final Block DARK_OAK_PLANKS_MIRROR = registerMirror("dark_oak_planks_mirror");
+    public static final Block DARK_OAK_WOOD_MIRROR = registerMirror("dark_oak_wood_mirror");
+    public static final Block MANGROVE_PLANKS_MIRROR = registerMirror("mangrove_planks_mirror");
+    public static final Block MANGROVE_WOOD_MIRROR = registerMirror("mangrove_wood_mirror");
+    public static final Block CHERRY_PLANKS_MIRROR = registerMirror("cherry_planks_mirror");
+    public static final Block CHERRY_WOOD_MIRROR = registerMirror("cherry_wood_mirror");
+    public static final Block CRIMSON_PLANKS_MIRROR = registerMirror("crimson_planks_mirror");
+    public static final Block CRIMSON_HYPHAE_MIRROR = registerMirror("crimson_wood_mirror");
+    public static final Block WARPED_PLANKS_MIRROR = registerMirror("warped_planks_mirror");
+    public static final Block WARPED_HYPHAE_MIRROR = registerMirror("warped_wood_mirror");
+    public static final Block BAMBOO_PLANKS_MIRROR = registerMirror("bamboo_planks_mirror");
+    public static final Block BAMBOO_BLOCK_MIRROR = registerMirror("bamboo_wood_mirror");
+
     public static final Block OAK_PLANKS_BEDSIDE_CABINET = registerBlock("oak_planks_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
     public static final Block OAK_WOOD_BEDSIDE_CABINET = registerBlock("oak_wood_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
     public static final Block PALE_OAK_PLANKS_BEDSIDE_CABINET = registerBlock("pale_oak_planks_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS).noOcclusion());
@@ -508,6 +534,10 @@ public class FurnitureBedroomBlocks {
     public static final Block BED_PALE_OAK_BLACK_PLANK = registerBlock("pale_oak_black_plank_bed", (settings) -> new FurnitureBedBlock(DyeColor.BLACK, settings), BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).sound(SoundType.WOOD).strength(0.2F).noOcclusion().ignitedByLava().pushReaction(PushReaction.POPPED));
     public static final Block BED_PALE_OAK_BLACK_WOOD = registerBlock("pale_oak_black_wood_bed", (settings) -> new FurnitureBedBlock(DyeColor.BLACK, settings), BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).sound(SoundType.WOOD).strength(0.2F).noOcclusion().ignitedByLava().pushReaction(PushReaction.POPPED));
 
+
+    private static Block registerMirror(String name) {
+        return registerBlock(name, MirrorBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.GLASS).noOcclusion());
+    }
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         Block block = (Block)factory.apply(settings.setId(keyOf(name)));

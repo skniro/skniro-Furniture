@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PGP",
+        "PIP",
+        "PGP"
+    ],
+    "key": {
+        "P": "minecraft:stripped_crimson_stem",
+        "G": "minecraft:glass",
+        "I": "minecraft:iron_ingot"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:crimson_wood_mirror"
+    }
+}

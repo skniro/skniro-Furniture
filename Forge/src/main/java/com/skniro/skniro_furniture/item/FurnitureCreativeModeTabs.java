@@ -1566,6 +1566,31 @@ public class FurnitureCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get()))
                     .title(Component.translatable("itemGroup.skniro_furniture.furniture_bedroom_group_furniture"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.OAK_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR.get());
+                        pOutput.accept(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR.get());
+
                         pOutput.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET.get());
                         pOutput.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET.get());

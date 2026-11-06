@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PGP",
+        "PIP",
+        "PGP"
+    ],
+    "key": {
+        "P": "minecraft:stripped_bamboo_block",
+        "G": "minecraft:glass",
+        "I": "minecraft:iron_ingot"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:bamboo_wood_mirror"
+    }
+}

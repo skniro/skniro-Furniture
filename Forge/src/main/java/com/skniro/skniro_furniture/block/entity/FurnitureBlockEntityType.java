@@ -18,6 +18,38 @@ import java.util.function.Supplier;
 public class FurnitureBlockEntityType {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Furniture.MOD_ID);
 
+    public static final Supplier<BlockEntityType<MirrorBlockEntity>> Mirror_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mirror_block_entity",
+                    () -> new BlockEntityType<>(MirrorBlockEntity::new,
+                            Set.of(
+                                    FurnitureBedroomBlocks.OAK_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.OAK_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR.get(),
+                                    FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR.get(),
+                                    FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR.get(),
+                                    FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR.get(),
+                                    FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR.get()
+                            )
+                    )
+            );
+
     public static final Supplier<BlockEntityType<CabinetBlockEntity>> Cabinet_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("cabinet_block_entity",
                     () -> new BlockEntityType<>(CabinetBlockEntity::new,

@@ -1789,6 +1789,31 @@ public class MapleEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(MapleFurnitureBlocks.Warped_Glass_Sliding_Door, "Warped Glass Sliding Door");
         translationBuilder.add(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door, "Pale Oak Glass Sliding Door");
 
+        translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR, "Oak Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_MIRROR, "Oak Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR, "Pale Oak Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR, "Pale Oak Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR, "Spruce Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR, "Spruce Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR, "Birch Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR, "Birch Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR, "Jungle Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR, "Jungle Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR, "Acacia Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR, "Acacia Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR, "Dark Oak Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR, "Dark Oak Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR, "Mangrove Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR, "Mangrove Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR, "Cherry Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR, "Cherry Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR, "Crimson Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR, "Crimson Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR, "Warped Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR, "Warped Wood Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR, "Bamboo Planks Mirror");
+        translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR, "Bamboo Wood Mirror");
+
         translationBuilder.add(FurnitureBedroomBlocks.White_Desk_Lamp, "White Desk Lamp");
         translationBuilder.add(FurnitureBedroomBlocks.Orange_Desk_Lamp, "Orange Desk Lamp");
         translationBuilder.add(FurnitureBedroomBlocks.Magenta_Desk_Lamp, "Magenta Desk Lamp");

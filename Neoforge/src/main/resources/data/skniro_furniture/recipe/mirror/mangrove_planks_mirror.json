@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "PGP",
+        "PIP",
+        "PGP"
+    ],
+    "key": {
+        "P": "minecraft:mangrove_planks",
+        "G": "minecraft:glass",
+        "I": "minecraft:iron_ingot"
+    },
+    "result": {
+        "count": 1,
+        "id": "skniro_furniture:mangrove_planks_mirror"
+    }
+}

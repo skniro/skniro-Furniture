@@ -1810,6 +1810,31 @@ public class MapleSimplifiedChineseLanguageProvider extends FabricLanguageProvid
         translationBuilder.add(MapleFurnitureBlocks.Warped_Glass_Sliding_Door, "诡异木玻璃滑动门");
         translationBuilder.add(MapleFurnitureBlocks.PaleOak_Glass_Sliding_Door, "苍白橡木玻璃滑动门");
 
+        translationBuilder.add(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR, "橡木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.OAK_WOOD_MIRROR, "橡木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR, "苍白橡木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR, "苍白橡木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR, "云杉木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR, "云杉木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR, "桦木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR, "桦木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR, "丛林木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR, "丛林木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR, "金合欢木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR, "金合欢木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR, "深色橡木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR, "深色橡木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR, "红树林木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR, "红树林木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR, "樱花木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR, "樱花木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR, "绯红木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR, "绯红木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR, "诡异木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR, "诡异木镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR, "竹木木板镜子");
+        translationBuilder.add(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR, "竹木镜子");
+
         translationBuilder.add(FurnitureBedroomBlocks.White_Desk_Lamp, "白色台灯");
         translationBuilder.add(FurnitureBedroomBlocks.Orange_Desk_Lamp, "橙色台灯");
         translationBuilder.add(FurnitureBedroomBlocks.Magenta_Desk_Lamp, "品红色台灯");

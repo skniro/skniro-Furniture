@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "skniro_furniture:bamboo_wood_mirror"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

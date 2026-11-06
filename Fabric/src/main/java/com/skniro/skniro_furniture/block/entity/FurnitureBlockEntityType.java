@@ -17,6 +17,34 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 
 
 public class FurnitureBlockEntityType {
+    public static final BlockEntityType<MirrorBlockEntity> Mirror_BLOCK_ENTITY =
+            create("mirror_block_entity",
+                    FabricBlockEntityTypeBuilder.create(MirrorBlockEntity::new,
+                            FurnitureBedroomBlocks.OAK_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.OAK_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR,
+                            FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR,
+                            FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR,
+                            FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR,
+                            FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR));
+
     public static final BlockEntityType<CabinetBlockEntity> Cabinet_BLOCK_ENTITY =
             create("cabinet_block_entity",
                     FabricBlockEntityTypeBuilder.create(CabinetBlockEntity::new,

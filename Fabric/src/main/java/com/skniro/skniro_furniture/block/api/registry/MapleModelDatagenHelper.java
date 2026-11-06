@@ -1,6 +1,7 @@
 package com.skniro.skniro_furniture.block.api.registry;
 
 import com.mojang.math.Quadrant;
+import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.minecraft.client.data.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -67,6 +68,19 @@ public class MapleModelDatagenHelper {
 
         fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.LOWER, bottomModel);
         fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.UPPER, topModel);
+
+        generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(block).with(variantMap));
+    }
+
+    public void registerMirror(Block block) {
+        Identifier lowerModel = ModelLocationUtils.getModelLocation(block);
+        Identifier upperModel = Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "block/mirror_top");
+
+        PropertyDispatch.C2<MultiVariant,Direction, DoubleBlockHalf> variantMap =
+                PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_FACING, BlockStateProperties.DOUBLE_BLOCK_HALF);
+
+        fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.LOWER, lowerModel);
+        fillSimpleDoubleVariantMap(variantMap, DoubleBlockHalf.UPPER, upperModel);
 
         generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(block).with(variantMap));
     }

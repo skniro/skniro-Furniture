@@ -29,6 +29,32 @@ import net.minecraftforge.registries.RegistryObject;
 public class FurnitureBedroomBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Furniture.MOD_ID);
 
+
+    public static final Supplier<Block> OAK_PLANKS_MIRROR = registerMirror("oak_planks_mirror");
+    public static final Supplier<Block> OAK_WOOD_MIRROR = registerMirror("oak_wood_mirror");
+    public static final Supplier<Block> PALE_OAK_PLANKS_MIRROR = registerMirror("pale_oak_planks_mirror");
+    public static final Supplier<Block> PALE_OAK_WOOD_MIRROR = registerMirror("pale_oak_wood_mirror");
+    public static final Supplier<Block> SPRUCE_PLANKS_MIRROR = registerMirror("spruce_planks_mirror");
+    public static final Supplier<Block> SPRUCE_WOOD_MIRROR = registerMirror("spruce_wood_mirror");
+    public static final Supplier<Block> BIRCH_PLANKS_MIRROR = registerMirror("birch_planks_mirror");
+    public static final Supplier<Block> BIRCH_WOOD_MIRROR = registerMirror("birch_wood_mirror");
+    public static final Supplier<Block> JUNGLE_PLANKS_MIRROR = registerMirror("jungle_planks_mirror");
+    public static final Supplier<Block> JUNGLE_WOOD_MIRROR = registerMirror("jungle_wood_mirror");
+    public static final Supplier<Block> ACACIA_PLANKS_MIRROR = registerMirror("acacia_planks_mirror");
+    public static final Supplier<Block> ACACIA_WOOD_MIRROR = registerMirror("acacia_wood_mirror");
+    public static final Supplier<Block> DARK_OAK_PLANKS_MIRROR = registerMirror("dark_oak_planks_mirror");
+    public static final Supplier<Block> DARK_OAK_WOOD_MIRROR = registerMirror("dark_oak_wood_mirror");
+    public static final Supplier<Block> MANGROVE_PLANKS_MIRROR = registerMirror("mangrove_planks_mirror");
+    public static final Supplier<Block> MANGROVE_WOOD_MIRROR = registerMirror("mangrove_wood_mirror");
+    public static final Supplier<Block> CHERRY_PLANKS_MIRROR = registerMirror("cherry_planks_mirror");
+    public static final Supplier<Block> CHERRY_WOOD_MIRROR = registerMirror("cherry_wood_mirror");
+    public static final Supplier<Block> CRIMSON_PLANKS_MIRROR = registerMirror("crimson_planks_mirror");
+    public static final Supplier<Block> CRIMSON_HYPHAE_MIRROR = registerMirror("crimson_wood_mirror");
+    public static final Supplier<Block> WARPED_PLANKS_MIRROR = registerMirror("warped_planks_mirror");
+    public static final Supplier<Block> WARPED_HYPHAE_MIRROR = registerMirror("warped_wood_mirror");
+    public static final Supplier<Block> BAMBOO_PLANKS_MIRROR = registerMirror("bamboo_planks_mirror");
+    public static final Supplier<Block> BAMBOO_BLOCK_MIRROR = registerMirror("bamboo_wood_mirror");
+
     public static final Supplier<Block> OAK_PLANKS_BEDSIDE_CABINET = registerBlock("oak_planks_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
     public static final Supplier<Block> OAK_WOOD_BEDSIDE_CABINET = registerBlock("oak_wood_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion());
     public static final Supplier<Block> PALE_OAK_PLANKS_BEDSIDE_CABINET = registerBlock("pale_oak_planks_bedside_cabinet", BedsideCabinetBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.PALE_OAK_PLANKS).noOcclusion());
@@ -533,6 +559,10 @@ public class FurnitureBedroomBlocks {
     private static <B extends Block> RegistryObject<Block> registerBlockWithoutItem(String name, Function<BlockBehaviour.Properties, ? extends B> block, BlockBehaviour.Properties properties) {
         RegistryObject<Block> register = register(name, block, properties.setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name))));
         return register;
+    }
+
+    private static Supplier<Block> registerMirror(String name) {
+        return registerBlock(name, MirrorBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.GLASS).noOcclusion());
     }
 
     private static <B extends Block> RegistryObject<Block> registerBlock(String name, Function<BlockBehaviour.Properties, ? extends B> block, BlockBehaviour.Properties properties) {

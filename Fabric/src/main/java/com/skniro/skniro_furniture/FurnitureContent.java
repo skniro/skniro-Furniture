@@ -1845,6 +1845,31 @@ public class FurnitureContent {
 
 
         CreativeModeTabEvents.modifyOutputEvent(Furniture.Furniture_Group_Bedroom_Furniture).register(content -> {
+            content.accept(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.OAK_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR);
+            content.accept(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR);
+            content.accept(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR);
+            content.accept(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR);
+            content.accept(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR);
+
             content.accept(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET);
             content.accept(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET);

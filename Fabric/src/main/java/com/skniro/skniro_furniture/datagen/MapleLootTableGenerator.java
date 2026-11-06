@@ -545,6 +545,31 @@ public class MapleLootTableGenerator extends FabricBlockLootSubProvider {
         dropSelf(MapleFurnitureBlocks.BAMBOO_BLOCK_Four_Grid_Cabinet);
         dropSelf(MapleFurnitureBlocks.BAMBOO_PLANKS_Four_Grid_Cabinet);
 
+        dropSelf(FurnitureBedroomBlocks.OAK_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.OAK_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.PALE_OAK_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.PALE_OAK_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.SPRUCE_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.SPRUCE_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.BIRCH_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.BIRCH_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.JUNGLE_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.JUNGLE_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.ACACIA_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.ACACIA_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.DARK_OAK_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.DARK_OAK_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.MANGROVE_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.MANGROVE_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.CHERRY_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.CHERRY_WOOD_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.CRIMSON_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.CRIMSON_HYPHAE_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.WARPED_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.WARPED_HYPHAE_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.BAMBOO_PLANKS_MIRROR);
+        dropSelf(FurnitureBedroomBlocks.BAMBOO_BLOCK_MIRROR);
+
         dropSelf(FurnitureBedroomBlocks.OAK_PLANKS_BEDSIDE_CABINET);
         dropSelf(FurnitureBedroomBlocks.OAK_WOOD_BEDSIDE_CABINET);
         dropSelf(FurnitureBedroomBlocks.PALE_OAK_PLANKS_BEDSIDE_CABINET);
