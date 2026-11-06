@@ -64,6 +64,16 @@ processResources {
     }
 }
 
+fabricApi {
+    configureTests {
+        createSourceSet = true
+        modId = 'skniro_furniture_gametest'
+        enableGameTests = false
+        enableClientGameTests = true
+        eula = true
+    }
+}
+
 def dataOutput = 'src/main/generated'
 
 loom {

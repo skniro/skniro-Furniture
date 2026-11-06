@@ -1,6 +1,19 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "skniro_furniture:block/orange_wood_divider"
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "skniro_furniture:block/orange_wood_divider"
+      },
+      {
+        "type": "minecraft:special",
+        "base": "skniro_furniture:block/orange_wood_divider",
+        "model": {
+          "type": "skniro_furniture:divider_banner",
+          "color": "orange"
+        }
+      }
+    ]
   }
 }

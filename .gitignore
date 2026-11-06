@@ -120,3 +120,6 @@ run/
 /Neoforge/src/main/generated/.cache/
 /Neoforge/runs/
 *.txt
+/Fabric/src/gametest/java/com/skniro/skniro_furniture/gametest/DividerItemRenderClientGameTest.java
+/Fabric/src/gametest/java/com/skniro/skniro_furniture/gametest/DividerLoomGuiClientGameTest.java
+/Fabric/src/gametest/resources/fabric.mod.json

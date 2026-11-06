@@ -1,13 +1,10 @@
 package com.skniro.skniro_furniture.block.init;
 
-import com.skniro.skniro_furniture.block.entity.PaperSlidingDoorBlockEntity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -15,9 +12,8 @@ import net.minecraft.world.level.block.state.properties.DoorHingeSide;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
-public class SlidingDoorBlock extends AbstractSlidingDoorBlock implements EntityBlock {
+public class SlidingDoorBlock extends AbstractSlidingDoorBlock {
     protected static final VoxelShape CLOSEB_SOUTH = Block.box(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
     protected static final VoxelShape CLOSEB_WEST =  Block.box(7.5D, 0.0D, 0.0D, 8.5D, 16.0D, 16.0D);
     protected static final VoxelShape CLOSEB_NORTH = Block.box(0.0D, 0.0D, 7.5D, 16.0D, 16.0D, 8.5D);
@@ -53,11 +49,6 @@ public class SlidingDoorBlock extends AbstractSlidingDoorBlock implements Entity
         this.registerDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(FACING, Direction.NORTH)).setValue(OPEN, false)).setValue(HINGE, DoorHingeSide.LEFT)).setValue(POWERED, false)).setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new PaperSlidingDoorBlockEntity(pos, state);
-    }
 
     protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);

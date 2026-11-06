@@ -9,6 +9,7 @@ public class MapleDataGeneration implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(MapleModelProvider::new);
+        pack.addProvider(DividerItemModelProvider::new);
         pack.addProvider(MapleSimplifiedChineseLanguageProvider::new);
         //pack.addProvider(MapleTraditionalChineseLanguageProvider::new);
         pack.addProvider(MapleEnglishLanguageProvider::new);
