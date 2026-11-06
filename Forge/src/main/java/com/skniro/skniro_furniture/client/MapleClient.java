@@ -434,6 +434,7 @@ public class MapleClient {
         BlockEntityRenderers.register(FurnitureBlockEntityType.BOOK_DESK_BLOCK_ENTITY.get(), BookDeskBlockEntityRenderer::new);
         BlockEntityRenderers.register(FurnitureBlockEntityType.Bed_BLOCK_ENTITY.get(), FurnitureBedBlockEntityRenderer::new);
         BlockEntityRenderers.register(FurnitureBlockEntityType.Mirror_BLOCK_ENTITY.get(), MirrorBlockEntityRenderer::new);
+        BlockEntityRenderers.register(FurnitureBlockEntityType.Divider_BLOCK_ENTITY.get(), DividerBlockEntityRenderer::new);
     }
 
     public static void registerClientParticle() {

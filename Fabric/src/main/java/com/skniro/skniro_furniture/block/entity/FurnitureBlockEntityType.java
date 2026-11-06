@@ -18,6 +18,26 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 
 
 public class FurnitureBlockEntityType {
+    public static final BlockEntityType<DividerBlockEntity> Divider_BLOCK_ENTITY =
+            create("divider_block_entity",
+                    FabricBlockEntityTypeBuilder.create(DividerBlockEntity::new,
+                            MapleFurnitureBlocks.WHITE_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.LIME_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.PINK_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.GRAY_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.CYAN_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.BLUE_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.BROWN_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.GREEN_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.RED_WOOD_DIVIDER,
+                            MapleFurnitureBlocks.BLACK_WOOD_DIVIDER));
+
     public static final BlockEntityType<MirrorBlockEntity> Mirror_BLOCK_ENTITY =
             create("mirror_block_entity",
                     FabricBlockEntityTypeBuilder.create(MirrorBlockEntity::new,

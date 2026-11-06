@@ -217,6 +217,30 @@ public class FurnitureBlockEntityType {
                     )
             );
 
+    public static final Supplier<BlockEntityType<DividerBlockEntity>> Divider_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("divider_block_entity",
+                    () -> new BlockEntityType<>(DividerBlockEntity::new,
+                            Set.of(
+                                    MapleFurnitureBlocks.WHITE_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.ORANGE_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.MAGENTA_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.LIGHT_BLUE_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.YELLOW_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.LIME_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.PINK_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.GRAY_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.LIGHT_GRAY_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.CYAN_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.PURPLE_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.BLUE_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.BROWN_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.GREEN_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.RED_WOOD_DIVIDER.get(),
+                                    MapleFurnitureBlocks.BLACK_WOOD_DIVIDER.get()
+                            )
+                    )
+            );
+
     public static final Supplier<BlockEntityType<MirrorBlockEntity>> Mirror_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("mirror_block_entity",
                     () -> new BlockEntityType<>(MirrorBlockEntity::new,
