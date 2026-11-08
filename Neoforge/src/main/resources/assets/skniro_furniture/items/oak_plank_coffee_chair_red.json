@@ -1,6 +1,18 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "skniro_furniture:block/oak_plank_coffee_chair_red"
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "skniro_furniture:block/oak_plank_coffee_chair_red"
+      },
+      {
+        "type": "minecraft:special",
+        "base": "skniro_furniture:block/oak_plank_coffee_chair_red",
+        "model": {
+          "type": "skniro_furniture:coffee_chair_surface"
+        }
+      }
+    ]
   }
 }

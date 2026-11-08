@@ -6,6 +6,7 @@ import com.skniro.skniro_furniture.block.FurnitureBedroomBlocks;
 import com.skniro.skniro_furniture.block.FurnitureKitchenBlocks;
 import com.skniro.skniro_furniture.block.FurnitureLivingroomBlocks;
 import com.skniro.skniro_furniture.block.MapleFurnitureBlocks;
+import com.skniro.skniro_furniture.block.init.CoffeeChairBlock;
 import com.skniro.skniro_furniture.block.init.CushionBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
@@ -53,6 +54,22 @@ public class FurnitureBlockEntityType {
                 .toList();
         if (blocks.isEmpty()) {
             throw new IllegalStateException("Cushion blocks must be registered before the cushion block entity type");
+        }
+        return blocks;
+    }
+
+    public static final BlockEntityType<CoffeeChairBlockEntity> CoffeeChair_BLOCK_ENTITY =
+            create("coffee_chair_block_entity",
+                    FabricBlockEntityTypeBuilder.create(CoffeeChairBlockEntity::new)
+                            .addBlocks(coffeeChairBlocks()));
+
+    /** All registered coffee chair variants (192 blocks). Blocks are registered before this class initializes. */
+    private static List<Block> coffeeChairBlocks() {
+        List<Block> blocks = BuiltInRegistries.BLOCK.stream()
+                .filter(block -> block instanceof CoffeeChairBlock)
+                .toList();
+        if (blocks.isEmpty()) {
+            throw new IllegalStateException("Coffee chair blocks must be registered before the coffee chair block entity type");
         }
         return blocks;
     }

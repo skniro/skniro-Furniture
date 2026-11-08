@@ -8,6 +8,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:copy_components",
+            "include": [
+              "minecraft:base_color",
+              "minecraft:banner_patterns",
+              "minecraft:custom_name"
+            ],
+            "source": "block_entity"
+          },
           "name": "skniro_furniture:oak_plank_coffee_chair_light_blue"
         }
       ],

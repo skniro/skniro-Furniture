@@ -1,5 +1,6 @@
 package com.skniro.skniro_furniture.item;
 
+import com.skniro.skniro_furniture.block.init.CoffeeChairBlock;
 import com.skniro.skniro_furniture.block.init.CushionBlock;
 import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.minecraft.world.item.BannerItem;
@@ -30,6 +31,9 @@ public class FurnitureBannerItem extends BannerItem {
         }
         if (block instanceof CushionBlock cushion) {
             return cushion.getColor();
+        }
+        if (block instanceof CoffeeChairBlock chair) {
+            return chair.getColor();
         }
         return DyeColor.WHITE;
     }

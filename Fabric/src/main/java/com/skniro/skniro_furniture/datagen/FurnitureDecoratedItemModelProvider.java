@@ -3,6 +3,7 @@ package com.skniro.skniro_furniture.datagen;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.skniro.skniro_furniture.Furniture;
+import com.skniro.skniro_furniture.block.init.CoffeeChairBlock;
 import com.skniro.skniro_furniture.block.init.CushionBlock;
 import com.skniro.skniro_furniture.block.init.FurnitureBedBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -20,8 +21,8 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Emits composite item definitions for beds and cushions so banner patterns can be
- * rendered on the item icon / loom preview.
+ * Emits composite item definitions for beds, cushions and coffee chairs so banner
+ * patterns can be rendered on the item icon / loom preview.
  */
 public class FurnitureDecoratedItemModelProvider implements DataProvider {
     private final PackOutput output;
@@ -44,6 +45,8 @@ public class FurnitureDecoratedItemModelProvider implements DataProvider {
                 specialType = "bed_sheet";
             } else if (block instanceof CushionBlock) {
                 specialType = "cushion_surface";
+            } else if (block instanceof CoffeeChairBlock) {
+                specialType = "coffee_chair_surface";
             } else {
                 continue;
             }

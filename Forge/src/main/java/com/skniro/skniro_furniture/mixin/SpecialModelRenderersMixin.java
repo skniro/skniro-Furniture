@@ -2,6 +2,7 @@ package com.skniro.skniro_furniture.mixin;
 
 import com.skniro.skniro_furniture.Furniture;
 import com.skniro.skniro_furniture.client.renderer.BedSheetSpecialRenderer;
+import com.skniro.skniro_furniture.client.renderer.CoffeeChairSurfaceSpecialRenderer;
 import com.skniro.skniro_furniture.client.renderer.CushionSurfaceSpecialRenderer;
 import com.skniro.skniro_furniture.client.renderer.DividerBannerSpecialRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderers;
@@ -33,6 +34,10 @@ public class SpecialModelRenderersMixin {
         if (!ID_MAPPER.values().contains(CushionSurfaceSpecialRenderer.Unbaked.MAP_CODEC)) {
             ID_MAPPER.put(Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "cushion_surface"),
                     CushionSurfaceSpecialRenderer.Unbaked.MAP_CODEC);
+        }
+        if (!ID_MAPPER.values().contains(CoffeeChairSurfaceSpecialRenderer.Unbaked.MAP_CODEC)) {
+            ID_MAPPER.put(Identifier.fromNamespaceAndPath(Furniture.MOD_ID, "coffee_chair_surface"),
+                    CoffeeChairSurfaceSpecialRenderer.Unbaked.MAP_CODEC);
         }
     }
 }

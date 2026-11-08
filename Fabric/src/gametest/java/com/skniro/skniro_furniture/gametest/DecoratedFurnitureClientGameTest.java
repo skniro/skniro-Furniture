@@ -49,6 +49,18 @@ public class DecoratedFurnitureClientGameTest implements FabricClientGameTest {
             sp.getServer().runCommand("weather clear");
             sp.getServer().runCommand("fill 6 99 4 15 99 15 minecraft:oak_planks");
             sp.getServer().runCommand("setblock 10 100 10 minecraft:loom");
+            sp.getServer().runOnServer(server -> {
+                if (!(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_RED
+                        instanceof com.skniro.skniro_furniture.block.init.CoffeeChairBlock red)
+                        || red.getColor() != net.minecraft.world.item.DyeColor.RED) {
+                    throw new AssertionError("Coffee chair colour was not resolved from its block id");
+                }
+                if (!(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_LIGHT_BLUE
+                        instanceof com.skniro.skniro_furniture.block.init.CoffeeChairBlock lightBlue)
+                        || lightBlue.getColor() != net.minecraft.world.item.DyeColor.LIGHT_BLUE) {
+                    throw new AssertionError("Coffee chair light_blue colour was resolved incorrectly");
+                }
+            });
             sp.getServer().runCommand("tp @a 10.5 100.0 13.5 180 0");
             sp.getConnection().waitForChunksRender();
             context.getInput().lookAt(new BlockPos(10, 100, 10));
@@ -72,11 +84,20 @@ public class DecoratedFurnitureClientGameTest implements FabricClientGameTest {
                 throw new AssertionError("Loom did not decorate the bed item");
             }
 
-            // Put both results in the hotbar to verify the item special renderers.
+            // Loom: coffee chair + dye + pattern
+            setupLoom(context, sp, new ItemStack(MapleFurnitureBlocks.OAK_PLANK_COFFEE_CHAIR_WHITE));
+            context.takeScreenshot("loom_coffee_chair_pattern");
+            ItemStack chairResult = loomResult(sp);
+            if (chairResult == null || !chairResult.has(DataComponents.BANNER_PATTERNS)) {
+                throw new AssertionError("Loom did not decorate the coffee chair item");
+            }
+
+            // Put the results in the hotbar to verify the item special renderers.
             sp.getServer().runOnServer(server -> {
                 ServerPlayer player = server.getPlayerList().getPlayers().get(0);
                 player.getInventory().setItem(0, cushionResult.copy());
                 player.getInventory().setItem(1, bedResult.copy());
+                player.getInventory().setItem(2, chairResult.copy());
                 player.getInventory().setSelectedSlot(0);
                 if (player.containerMenu instanceof LoomMenu menu) {
                     player.closeContainer();
@@ -132,6 +153,29 @@ public class DecoratedFurnitureClientGameTest implements FabricClientGameTest {
                 }
             });
 
+            // Place the decorated coffee chair item.
+            sp.getServer().runOnServer(server -> {
+                ServerPlayer player = server.getPlayerList().getPlayers().get(0);
+                player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND, chairResult.copy());
+                BlockPos target = new BlockPos(14, 99, 8);
+                net.minecraft.world.item.context.UseOnContext useOn = new net.minecraft.world.item.context.UseOnContext(
+                        player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                        new net.minecraft.world.phys.BlockHitResult(
+                                net.minecraft.world.phys.Vec3.atCenterOf(target).add(0.0, 0.5, 0.0),
+                                net.minecraft.core.Direction.UP, target, false));
+                net.minecraft.world.InteractionResult result = player.getItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND).useOn(useOn);
+                System.out.println("[gametest] coffee chair item useOn -> " + result);
+                if (!(server.overworld().getBlockState(new BlockPos(14, 100, 8)).getBlock()
+                        instanceof com.skniro.skniro_furniture.block.init.CoffeeChairBlock)) {
+                    throw new AssertionError("Decorated coffee chair item did not place a coffee chair");
+                }
+                if (!(server.overworld().getBlockEntity(new BlockPos(14, 100, 8))
+                        instanceof com.skniro.skniro_furniture.block.entity.AbstractBannerDecoratedBlockEntity be)
+                        || be.getPatterns().layers().isEmpty()) {
+                    throw new AssertionError("Placed coffee chair lost its banner patterns");
+                }
+            });
+
             // Placed cushion with decorations.
             sp.getServer().runCommand("setblock 8 100 10 skniro_furniture:oak_white_cushion[facing=north]");
             sp.getServer().runCommand("data merge block 8 100 10 {patterns:[{pattern:\"" + PATTERN + "\",color:\"red\"}],base_color:\"white\"}");
@@ -151,6 +195,15 @@ public class DecoratedFurnitureClientGameTest implements FabricClientGameTest {
             context.getInput().lookAt(new BlockPos(11, 100, 12));
             context.waitTicks(20);
             context.takeScreenshot("decorated_bed_world");
+
+            // Placed coffee chair with decorations.
+            sp.getServer().runCommand("setblock 7 100 14 skniro_furniture:oak_plank_coffee_chair_white[facing=north]");
+            sp.getServer().runCommand("data merge block 7 100 14 {patterns:[{pattern:\"" + PATTERN + "\",color:\"red\"}],base_color:\"white\"}");
+            sp.getServer().runCommand("tp @a 7.5 101.5 17.5 180 0");
+            sp.getConnection().waitForChunksRender();
+            context.getInput().lookAt(new BlockPos(7, 100, 14));
+            context.waitTicks(100);
+            context.takeScreenshot("decorated_coffee_chair_world");
 
             // Drop preservation: break a decorated cushion away from the player.
             sp.getServer().runCommand("tp @a 10.5 110.0 40.5 180 0");

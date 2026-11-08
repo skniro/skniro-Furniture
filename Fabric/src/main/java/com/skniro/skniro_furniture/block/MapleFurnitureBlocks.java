@@ -1454,7 +1454,7 @@ public class MapleFurnitureBlocks {
     private static Item registerBlockItem(String name, Block block) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name));
         Item.Properties properties = new Item.Properties().useBlockDescriptionPrefix().setId(itemKey);
-        Item item = block instanceof CushionBlock
+        Item item = block instanceof CushionBlock || block instanceof CoffeeChairBlock
                 ? new FurnitureBannerItem(block, properties)
                 : new BlockItem(block, properties);
         return Registry.register(BuiltInRegistries.ITEM, itemKey, item);

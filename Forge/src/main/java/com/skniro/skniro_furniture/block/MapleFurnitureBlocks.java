@@ -1475,7 +1475,7 @@ public class MapleFurnitureBlocks {
             Block actualBlock = block.get();
             Item.Properties properties = new Item.Properties().useBlockDescriptionPrefix()
                     .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Furniture.MOD_ID, name)));
-            return actualBlock instanceof CushionBlock
+            return actualBlock instanceof CushionBlock || actualBlock instanceof CoffeeChairBlock
                     ? new FurnitureBannerItem(actualBlock, properties)
                     : new BlockItem(actualBlock, properties);
         });
